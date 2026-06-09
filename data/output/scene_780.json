@@ -1,0 +1,130 @@
+{
+  "frame_metadata": {
+    "frame_id": 780,
+    "timestamp": 1780675086.537921,
+    "camera_resolution": [
+      1280,
+      720
+    ]
+  },
+  "scene": {
+    "floor_detected": false,
+    "floor_normal": [
+      0,
+      1,
+      0
+    ],
+    "camera_height": 0.0,
+    "scene_summary": "person 1개, toothbrush 2개, cell phone 1개, book 2개가 감지됨"
+  },
+  "objects": [
+    {
+      "id": 0,
+      "label": "person",
+      "yolo": {
+        "confidence": 0.91,
+        "bbox_2d": [
+          355,
+          216,
+          1081,
+          713
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 1,
+      "label": "toothbrush",
+      "yolo": {
+        "confidence": 0.51,
+        "bbox_2d": [
+          509,
+          382,
+          573,
+          560
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 2,
+      "label": "cell phone",
+      "yolo": {
+        "confidence": 0.37,
+        "bbox_2d": [
+          856,
+          289,
+          1037,
+          554
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 3,
+      "label": "book",
+      "yolo": {
+        "confidence": 0.34,
+        "bbox_2d": [
+          1054,
+          400,
+          1107,
+          498
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 4,
+      "label": "toothbrush",
+      "yolo": {
+        "confidence": 0.32,
+        "bbox_2d": [
+          509,
+          382,
+          570,
+          712
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 5,
+      "label": "book",
+      "yolo": {
+        "confidence": 0.31,
+        "bbox_2d": [
+          1108,
+          539,
+          1146,
+          611
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "frame_metadata": {
+    "frame_id": 630,
+    "timestamp": 1780676811.9082801,
+    "camera_resolution": [
+      1280,
+      720
+    ]
+  },
+  "scene": {
+    "floor_detected": false,
+    "floor_normal": [
+      0,
+      1,
+      0
+    ],
+    "camera_height": 0.0,
+    "scene_summary": "person 1개, chair 2개, book 9개가 감지됨"
+  },
+  "objects": [
+    {
+      "id": 0,
+      "label": "person",
+      "yolo": {
+        "confidence": 0.93,
+        "bbox_2d": [
+          325,
+          101,
+          1203,
+          713
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 1,
+      "label": "chair",
+      "yolo": {
+        "confidence": 0.45,
+        "bbox_2d": [
+          821,
+          389,
+          992,
+          512
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 2,
+      "label": "book",
+      "yolo": {
+        "confidence": 0.31,
+        "bbox_2d": [
+          1236,
+          497,
+          1273,
+          567
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 3,
+      "label": "chair",
+      "yolo": {
+        "confidence": 0.3,
+        "bbox_2d": [
+          1087,
+          582,
+          1225,
+          718
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 4,
+      "label": "book",
+      "yolo": {
+        "confidence": 0.26,
+        "bbox_2d": [
+          1174,
+          349,
+          1279,
+          450
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 5,
+      "label": "book",
+      "yolo": {
+        "confidence": 0.25,
+        "bbox_2d": [
+          1231,
+          497,
+          1264,
+          567
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 6,
+      "label": "book",
+      "yolo": {
+        "confidence": 0.23,
+        "bbox_2d": [
+          1239,
+          611,
+          1276,
+          695
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 7,
+      "label": "book",
+      "yolo": {
+        "confidence": 0.22,
+        "bbox_2d": [
+          1255,
+          371,
+          1279,
+          445
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 8,
+      "label": "book",
+      "yolo": {
+        "confidence": 0.22,
+        "bbox_2d": [
+          1253,
+          611,
+          1279,
+          695
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 9,
+      "label": "book",
+      "yolo": {
+        "confidence": 0.21,
+        "bbox_2d": [
+          1265,
+          493,
+          1279,
+          567
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 10,
+      "label": "book",
+      "yolo": {
+        "confidence": 0.2,
+        "bbox_2d": [
+          1210,
+          485,
+          1279,
+          570
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 11,
+      "label": "book",
+      "yolo": {
+        "confidence": 0.2,
+        "bbox_2d": [
+          1177,
+          370,
+          1270,
+          450
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    }
+  ]
+}

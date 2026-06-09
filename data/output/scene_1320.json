@@ -1,0 +1,94 @@
+{
+  "frame_metadata": {
+    "frame_id": 1320,
+    "timestamp": 1780675118.6048052,
+    "camera_resolution": [
+      1280,
+      720
+    ]
+  },
+  "scene": {
+    "floor_detected": false,
+    "floor_normal": [
+      0,
+      1,
+      0
+    ],
+    "camera_height": 0.0,
+    "scene_summary": "person 1개, toothbrush 1개, book 2개가 감지됨"
+  },
+  "objects": [
+    {
+      "id": 0,
+      "label": "person",
+      "yolo": {
+        "confidence": 0.8,
+        "bbox_2d": [
+          366,
+          203,
+          1038,
+          716
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 1,
+      "label": "toothbrush",
+      "yolo": {
+        "confidence": 0.59,
+        "bbox_2d": [
+          803,
+          485,
+          887,
+          603
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 2,
+      "label": "book",
+      "yolo": {
+        "confidence": 0.3,
+        "bbox_2d": [
+          1108,
+          539,
+          1146,
+          611
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 3,
+      "label": "book",
+      "yolo": {
+        "confidence": 0.26,
+        "bbox_2d": [
+          1058,
+          401,
+          1106,
+          498
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    }
+  ]
+}

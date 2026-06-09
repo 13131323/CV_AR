@@ -1,0 +1,112 @@
+{
+  "frame_metadata": {
+    "frame_id": 1620,
+    "timestamp": 1780675136.438569,
+    "camera_resolution": [
+      1280,
+      720
+    ]
+  },
+  "scene": {
+    "floor_detected": false,
+    "floor_normal": [
+      0,
+      1,
+      0
+    ],
+    "camera_height": 0.0,
+    "scene_summary": "person 1개, toothbrush 1개, cell phone 1개, book 2개가 감지됨"
+  },
+  "objects": [
+    {
+      "id": 0,
+      "label": "person",
+      "yolo": {
+        "confidence": 0.94,
+        "bbox_2d": [
+          320,
+          140,
+          1063,
+          713
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 1,
+      "label": "toothbrush",
+      "yolo": {
+        "confidence": 0.72,
+        "bbox_2d": [
+          583,
+          334,
+          680,
+          520
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 2,
+      "label": "cell phone",
+      "yolo": {
+        "confidence": 0.38,
+        "bbox_2d": [
+          414,
+          337,
+          581,
+          531
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 3,
+      "label": "book",
+      "yolo": {
+        "confidence": 0.3,
+        "bbox_2d": [
+          1108,
+          540,
+          1147,
+          611
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 4,
+      "label": "book",
+      "yolo": {
+        "confidence": 0.26,
+        "bbox_2d": [
+          1058,
+          401,
+          1106,
+          498
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    }
+  ]
+}

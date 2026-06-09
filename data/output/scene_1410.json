@@ -1,0 +1,58 @@
+{
+  "frame_metadata": {
+    "frame_id": 1410,
+    "timestamp": 1780675124.168847,
+    "camera_resolution": [
+      1280,
+      720
+    ]
+  },
+  "scene": {
+    "floor_detected": false,
+    "floor_normal": [
+      0,
+      1,
+      0
+    ],
+    "camera_height": 0.0,
+    "scene_summary": "person 1개, remote 1개가 감지됨"
+  },
+  "objects": [
+    {
+      "id": 0,
+      "label": "person",
+      "yolo": {
+        "confidence": 0.9,
+        "bbox_2d": [
+          350,
+          140,
+          1248,
+          713
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 1,
+      "label": "remote",
+      "yolo": {
+        "confidence": 0.31,
+        "bbox_2d": [
+          812,
+          325,
+          1076,
+          681
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    }
+  ]
+}

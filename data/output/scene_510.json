@@ -1,0 +1,58 @@
+{
+  "frame_metadata": {
+    "frame_id": 510,
+    "timestamp": 1780676804.8982,
+    "camera_resolution": [
+      1280,
+      720
+    ]
+  },
+  "scene": {
+    "floor_detected": false,
+    "floor_normal": [
+      0,
+      1,
+      0
+    ],
+    "camera_height": 0.0,
+    "scene_summary": "person 1개, chair 1개가 감지됨"
+  },
+  "objects": [
+    {
+      "id": 0,
+      "label": "person",
+      "yolo": {
+        "confidence": 0.94,
+        "bbox_2d": [
+          333,
+          127,
+          1280,
+          715
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 1,
+      "label": "chair",
+      "yolo": {
+        "confidence": 0.24,
+        "bbox_2d": [
+          780,
+          393,
+          986,
+          491
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    }
+  ]
+}
