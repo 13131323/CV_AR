@@ -32,6 +32,8 @@ from llm.interpreter import interpret, interpret_batch
 
 # 실험 로그 log14(phone_hand) 세션 실측값: bottle로 오탐지된 스마트폰(손에 든 상태)
 SAMPLE_PHONE_HAND = SemanticInterpretationInput(
+    object_id=0,
+    bbox_2d=[100, 100, 200, 200],
     detected_class="bottle",
     confidence=0.41,
     mask_area=10838,
@@ -44,6 +46,8 @@ SAMPLE_PHONE_HAND = SemanticInterpretationInput(
 
 # 실험 로그 log15(tumbler_hand) 세션 실측값: bottle로 탐지된 텀블러(손에 든 상태)
 SAMPLE_TUMBLER_HAND = SemanticInterpretationInput(
+    object_id=1,
+    bbox_2d=[300, 300, 400, 400],
     detected_class="bottle",
     confidence=0.57,
     mask_area=25535,
@@ -93,8 +97,8 @@ def run_batch_call_test():
             f"interaction={output_data.interaction_state} "
             f"confidence={output_data.confidence:.2f}"
         )
-        if output_data.reasoning:
-            print(f"  이유: {output_data.reasoning}")
+        print(f"  배경 묘사: {output_data.visual_context}")
+        print(f"  행동 추론: {output_data.affordance_reasoning}")
 
 
 if __name__ == "__main__":

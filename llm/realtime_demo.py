@@ -16,13 +16,15 @@
 """
 
 import time
+import cv2
+from PIL import Image
 
 from vision.stream import WebcamStream
 from vision.detector import ObjectDetector
-from vision.segmenter import ObjectSegmenter
-from vision.depth import DepthEstimator
-from vision.spatial import Spatial3DConverter, SceneDepthAttacher
-from vision.relations import SpatialRelationGraph
+from vision.segmentation.segmenter import ObjectSegmenter, SceneDepthAttacher
+from vision.depth.depth_estimator import DepthEstimator
+from vision.spatial.transformer import Spatial3DConverter
+from vision.reasoning.relation_graph import SpatialRelationGraph
 
 from llm.feature_extractor import build_inputs_from_scene, DEFAULT_CONTEXT
 from llm.interpreter import interpret_batch
@@ -42,10 +44,10 @@ def build_scene_graph_for_frame(frame, frame_count: int) -> dict:
     result = detector.detect(frame)
     scene_data = detector.build_scene(result, frame, frame_count)
 
-    scene_data = segmenter.segment_objects(frame, scene_data)
+    annotated_frame, scene_data, masks_list = segmenter.segment_objects(frame, scene_data)
 
     depth_map = depth_estimator.get_depth_map(frame)
-    scene_data = depth_attacher.attach_depth(scene_data, scene_data["objects"], depth_map)
+    scene_data = depth_attacher.attach_depth(scene_data, masks_list, depth_map)
 
     scene_data = spatial_converter.process_scene_3d(scene_data)
     scene_data = relation_graph.process_scene_relations(scene_data)
@@ -65,11 +67,28 @@ def main():
     relation_graph = SpatialRelationGraph()
 
     frame_count = 0
+    last_sent_inputs = None
 
     print("=" * 60)
-    print("Layer 4(Geometry) -> Layer 5(Semantic Interpretation) 실시간 관통 데모")
+    print("Layer 4(Geometry) -> Layer 5(Semantic Interpretation) VLM 실시간 데모")
     print("'q'를 누르면 종료됩니다.")
     print("=" * 60)
+
+    def is_significant_change(prev_inputs, curr_inputs):
+        if prev_inputs is None:
+            return True
+        if len(prev_inputs) != len(curr_inputs):
+            return True
+        for p_obj, c_obj in zip(prev_inputs, curr_inputs):
+            if p_obj.detected_class != c_obj.detected_class:
+                return True
+            # Check mask area difference > 20%
+            if abs(p_obj.mask_area - c_obj.mask_area) / max(p_obj.mask_area, 1) > 0.2:
+                return True
+            # Check target_z difference > 0.5m
+            if abs(p_obj.target_z - c_obj.target_z) > 0.5:
+                return True
+        return False
 
     try:
         while True:
@@ -80,7 +99,7 @@ def main():
 
             frame_count += 1
 
-            # 5프레임마다 한 번씩만 LLM 호출 (실시간 부하/비용 절감)
+            # 5프레임마다 연산
             if frame_count % 5 != 0:
                 continue
 
@@ -90,14 +109,34 @@ def main():
             if not inputs:
                 continue
 
-            # 객체 수만큼 API를 따로 호출하면 지연/Rate Limit 위험이 있으므로
-            # 한 프레임의 모든 객체를 단 1회의 배치 호출로 처리한다.
+            # 수치가 크게 변했을 때만 Gemini 호출
+            if not is_significant_change(last_sent_inputs, inputs):
+                continue
+                
+            last_sent_inputs = inputs
+
+            # 시각적 식별을 위해 원본 프레임에 Bounding Box와 ID 그리기
+            annotated_frame = frame.copy()
+            for inp in inputs:
+                if inp.bbox_2d:
+                    x1, y1, x2, y2 = map(int, inp.bbox_2d)
+                    cv2.rectangle(annotated_frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                    cv2.putText(annotated_frame, f"Obj {inp.object_id}", (x1, y1 - 10), 
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
+            
+            # OpenCV BGR을 PIL RGB로 변환
+            pil_image = Image.fromarray(cv2.cvtColor(annotated_frame, cv2.COLOR_BGR2RGB))
+            # 전송량 최적화를 위해 리사이즈 (가로 640 고정)
+            wpercent = (640 / float(pil_image.size[0]))
+            hsize = int((float(pil_image.size[1]) * float(wpercent)))
+            pil_image = pil_image.resize((640, hsize), Image.Resampling.LANCZOS)
+
             batch_input = SemanticInterpretationBatchInput(context=DEFAULT_CONTEXT, objects=inputs)
 
-            print(f"\n--- [FRAME {frame_count}] 탐지된 객체 {len(inputs)}개 일괄 추론 ---")
+            print(f"\n--- [FRAME {frame_count}] 수치 변화 감지! 객체 {len(inputs)}개 이미지 전송 및 일괄 추론 ---")
             t0 = time.time()
             try:
-                batch_output = interpret_batch(batch_input)
+                batch_output = interpret_batch(batch_input, image=pil_image)
             except RuntimeError as e:
                 print(f"[Gemini 배치 호출 실패] {e}")
                 continue
@@ -106,16 +145,12 @@ def main():
 
             for input_data, output_data in zip(inputs, batch_output.results):
                 print(
-                    f"  class={input_data.detected_class:<10} "
-                    f"mask_area={input_data.mask_area:<8} "
-                    f"target_z={input_data.target_z:<6} "
-                    f"-> identity={output_data.object_identity:<12} "
-                    f"state={output_data.object_state:<10} "
-                    f"interaction={output_data.interaction_state:<16} "
-                    f"conf={output_data.confidence:.2f}"
+                    f"  [Obj {input_data.object_id}] YOLO={input_data.detected_class:<10} -> VLM={output_data.object_identity:<12} (conf: {output_data.confidence:.2f})\n"
+                    f"      배경 묘사: {output_data.visual_context}\n"
+                    f"      사물 상태: {output_data.object_state}\n"
+                    f"      어포던스 추론: {output_data.affordance_reasoning}\n"
+                    f"      최종 상호작용: {output_data.interaction_state}\n"
                 )
-                if output_data.reasoning:
-                    print(f"      이유: {output_data.reasoning}")
 
     finally:
         stream.release()
