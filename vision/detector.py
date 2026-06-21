@@ -18,9 +18,10 @@ class ObjectDetector:
 
     def detect(self, frame):
         """
-        오직 YOLOv8 추론만 담당하여 결과 객체를 반환합니다. (순수 비전 엔진)
+        [7단계 가드 반영] conf=0.25 임계값을 적용하여 
+        배경 노이즈나 그림자를 객체로 오탐지하는 현상을 원천 차단합니다.
         """
-        results = self.model(frame, device=self.device, verbose=False, conf=0.20)
+        results = self.model(frame, device=self.device, verbose=False, conf=0.25)
         return results[0]
 
     def build_scene(self, result, frame, frame_count):
@@ -130,3 +131,5 @@ if __name__ == "__main__":
             break
             
     stream.release()
+
+    
