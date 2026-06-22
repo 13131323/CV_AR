@@ -30,15 +30,20 @@ class SemanticInterpretationInput(BaseModel):
 class SemanticInterpretationOutput(BaseModel):
     """Semantic Interpretation Layer -> 다음 레이어(Action Planning) 출력 (CoT 적용)"""
 
-    visual_context: str = Field(..., description="이미지 상의 배경과 주변 환경 묘사")
+    visual_context: str = Field(..., description="이미지 상의 배경과 주변 환경 묘사 (최대 1문장, 15단어 이내)")
     object_identity: str = Field(..., description="보정된 실제 사물 정체성 (예: smartphone)")
     object_state: Literal[
         "elevated", "on_floor", "on_surface", "unknown"
     ] = Field(..., description="사물 자체의 순수 물리적 위상 상태 (관계 정보 제외)")
-    affordance_reasoning: str = Field(..., description="배경 환경과 사물 상태를 고려하여 아바타가 할 수 있는 행동 추론")
+    affordance_reasoning: str = Field(..., description="아바타가 할 수 있는 행동 추론 (최대 1문장, 15단어 이내)")
     interaction_state: Literal[
         "held_by_user", "currently_in_use", "available", "not_interactable"
     ] = Field(..., description="최종 도출된 사용자/아바타와의 상호작용 가능성 (어포던스)")
+    is_interactable: bool = Field(..., description="아바타가 이 객체와 상호작용 가능한지 여부 (사람은 false)")
+    affordances: list[str] = Field(..., description="구체적인 어포던스 액션 목록 (예: ['observe', 'approach'])")
+    action_policy: Literal[
+        "ignore_for_avatar", "approach_and_interact", "observe_only"
+    ] = Field(..., description="아바타의 최종 행동 정책 (사람은 ignore_for_avatar)")
     confidence: float = Field(
         ...,
         ge=0.0,

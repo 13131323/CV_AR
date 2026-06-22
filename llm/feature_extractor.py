@@ -55,7 +55,9 @@ def build_inputs_from_scene(
     context: str = DEFAULT_CONTEXT,
 ) -> list[SemanticInterpretationInput]:
     """scene_data 한 프레임 전체에서 객체별 입력 리스트를 추출한다."""
-    return [
-        build_input_from_object(obj, idx, context=context)
-        for idx, obj in enumerate(scene_data.get("objects", []))
-    ]
+    inputs = []
+    for idx, obj in enumerate(scene_data.get("objects", [])):
+        if obj["label"] == "person" and obj["yolo"]["confidence"] < 0.5:
+            continue
+        inputs.append(build_input_from_object(obj, idx, context=context))
+    return inputs

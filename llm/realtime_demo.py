@@ -68,6 +68,7 @@ def main():
 
     frame_count = 0
     last_sent_inputs = None
+    last_api_call_time = 0.0
 
     print("=" * 60)
     print("Layer 4(Geometry) -> Layer 5(Semantic Interpretation) VLM 실시간 데모")
@@ -82,11 +83,11 @@ def main():
         for p_obj, c_obj in zip(prev_inputs, curr_inputs):
             if p_obj.detected_class != c_obj.detected_class:
                 return True
-            # Check mask area difference > 20%
-            if abs(p_obj.mask_area - c_obj.mask_area) / max(p_obj.mask_area, 1) > 0.2:
+            # 크기가 50% 이상 변했을 때만 감지 (손떨림 노이즈 무시)
+            if abs(p_obj.mask_area - c_obj.mask_area) / max(p_obj.mask_area, 1) > 0.5:
                 return True
-            # Check target_z difference > 0.5m
-            if abs(p_obj.target_z - c_obj.target_z) > 0.5:
+            # 깊이(z) 값이 2.0 이상 크게 튀었을 때만 감지 (상대 깊이 노이즈 무시)
+            if abs(p_obj.target_z - c_obj.target_z) > 2.0:
                 return True
         return False
 
@@ -109,11 +110,17 @@ def main():
             if not inputs:
                 continue
 
-            # 수치가 크게 변했을 때만 Gemini 호출
+            # 수치가 크게 변했을 때만 판단
             if not is_significant_change(last_sent_inputs, inputs):
                 continue
                 
+            # API 무료 티어 제한 방지 (최소 10초 간격 유지)
+            current_time = time.time()
+            if current_time - last_api_call_time < 10.0:
+                continue
+                
             last_sent_inputs = inputs
+            last_api_call_time = current_time
 
             # 시각적 식별을 위해 원본 프레임에 Bounding Box와 ID 그리기
             annotated_frame = frame.copy()
@@ -126,10 +133,10 @@ def main():
             
             # OpenCV BGR을 PIL RGB로 변환
             pil_image = Image.fromarray(cv2.cvtColor(annotated_frame, cv2.COLOR_BGR2RGB))
-            # 전송량 최적화를 위해 리사이즈 (가로 640 고정)
-            wpercent = (640 / float(pil_image.size[0]))
+            # 전송량 최적화를 위해 리사이즈 (가로 448 고정)
+            wpercent = (448 / float(pil_image.size[0]))
             hsize = int((float(pil_image.size[1]) * float(wpercent)))
-            pil_image = pil_image.resize((640, hsize), Image.Resampling.LANCZOS)
+            pil_image = pil_image.resize((448, hsize), Image.Resampling.LANCZOS)
 
             batch_input = SemanticInterpretationBatchInput(context=DEFAULT_CONTEXT, objects=inputs)
 
@@ -137,8 +144,9 @@ def main():
             t0 = time.time()
             try:
                 batch_output = interpret_batch(batch_input, image=pil_image)
-            except RuntimeError as e:
-                print(f"[Gemini 배치 호출 실패] {e}")
+            except Exception as e:
+                print(f"[Gemini API 호출 에러 - 무료 티어 제한 도달] 60초 동안 VLM 호출을 일시 중지합니다. 에러: {e}")
+                last_api_call_time = time.time() + 60.0 # 60초 페널티 강제 쿨다운
                 continue
             elapsed = time.time() - t0
             print(f"-> 추론 완료 ({elapsed:.2f}s)")
@@ -148,8 +156,9 @@ def main():
                     f"  [Obj {input_data.object_id}] YOLO={input_data.detected_class:<10} -> VLM={output_data.object_identity:<12} (conf: {output_data.confidence:.2f})\n"
                     f"      배경 묘사: {output_data.visual_context}\n"
                     f"      사물 상태: {output_data.object_state}\n"
-                    f"      어포던스 추론: {output_data.affordance_reasoning}\n"
-                    f"      최종 상호작용: {output_data.interaction_state}\n"
+                    f"      행동 추론: {output_data.affordance_reasoning}\n"
+                    f"      상호작용성: {output_data.interaction_state} (is_interactable={output_data.is_interactable})\n"
+                    f"      행동 정책: {output_data.action_policy} | 세부 액션: {output_data.affordances}\n"
                 )
 
     finally:

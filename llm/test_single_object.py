@@ -94,11 +94,13 @@ def run_batch_call_test():
         print(
             f"  -> identity={output_data.object_identity} "
             f"state={output_data.object_state} "
-            f"interaction={output_data.interaction_state} "
+            f"interaction={output_data.interaction_state} (interactable={output_data.is_interactable}) "
             f"confidence={output_data.confidence:.2f}"
         )
         print(f"  배경 묘사: {output_data.visual_context}")
         print(f"  행동 추론: {output_data.affordance_reasoning}")
+        print(f"  세부 액션: {output_data.affordances}")
+        print(f"  행동 정책: {output_data.action_policy}")
 
 
 if __name__ == "__main__":
