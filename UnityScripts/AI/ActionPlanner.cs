@@ -39,7 +39,7 @@ namespace CV_AR.Semantic
         {
             isWaitingForApi = false;
 
-            if (output.results.Count == 0)
+            if (output.results == null || output.results.Count == 0)
             {
                 Debug.Log("[ActionPlanner] 감지된 객체가 없습니다. 대기(Idle) 상태 전환.");
                 return;
@@ -47,34 +47,54 @@ namespace CV_AR.Semantic
 
             // 시연용: 첫 번째 객체에 대해서만 행동 결정
             SemanticObject targetObj = output.results[0];
-            Debug.Log($"[ActionPlanner] 타겟 객체: {targetObj.object_identity} | 상태: {targetObj.object_state}");
+            Debug.Log($"[ActionPlanner] 타겟 객체: {targetObj.identity.class_name} | 소셜 상태: {targetObj.semantic_state.social_state}");
 
-            switch (targetObj.action_policy)
+            // ----------------------------------------------------
+            // 1. 유니티 클라이언트 측 방어 로직 (Override GPT Policy)
+            // ----------------------------------------------------
+            string finalPolicy = targetObj.planner_directives.action_policy;
+
+            // GPT가 혹시라도 사람이 들고 있는 물건(held_by_user)에 접근하라고 권고했을 경우 강제로 무시
+            if (targetObj.semantic_state.social_state == "held_by_user" || targetObj.semantic_state.social_state == "in_use_by_other")
             {
-                case "ignore_for_avatar":
-                    // 사람이나 상호작용 불가능한 물체
+                if (finalPolicy == "APPROACH_AND_INTERACT")
+                {
+                    Debug.LogWarning("[ActionPlanner 안전장치 작동] GPT가 사용 중인 객체에 접근을 권고했으나, 이를 무시(OBSERVE_ONLY)로 강제 변환합니다.");
+                    finalPolicy = "OBSERVE_ONLY";
+                }
+            }
+
+            // 사람 자체에 접근하려는 시도 원천 차단
+            if (targetObj.identity.is_person)
+            {
+                finalPolicy = "IGNORE";
+            }
+
+            // ----------------------------------------------------
+            // 2. 최종 행동 실행 (Action Execution)
+            // ----------------------------------------------------
+            switch (finalPolicy)
+            {
+                case "IGNORE":
                     Debug.Log("[ActionPlanner] 결정: 무시 (Ignore). 현재 행동 계속 수행.");
                     break;
 
-                case "observe_only":
-                    // 스마트폰 등 사용 중인 물체
+                case "OBSERVE_ONLY":
                     Debug.Log("[ActionPlanner] 결정: 관찰 (Observe). 아바타의 시선을 객체로 향함.");
-                    // TODO: Head IK 또는 LookAt 로직 호출
+                    // TODO: Head IK 또는 LookAt 로직 호출 (targetObj.object_id 를 기반으로 Geometry 최신 좌표 추적)
                     break;
 
-                case "approach_and_interact":
-                    // 컵, 책 등
-                    string action = (targetObj.affordances != null && targetObj.affordances.Count > 0) 
-                                    ? targetObj.affordances[0] 
-                                    : "조사하기";
-                    
+                case "APPROACH_AND_INTERACT":
+                    string action = targetObj.planner_directives.animation_trigger;
                     Debug.Log($"[ActionPlanner] 결정: 접근 및 상호작용 (Approach & Interact). 액션: {action}");
-                    // TODO: NavMeshAgent를 통해 객체의 target_z 좌표로 이동
-                    // TODO: 도달 시 action(예: grasp)에 맞는 애니메이션 재생
+                    
+                    // TODO: targetObj.object_id 를 키값으로 사용하여, 파이썬 Geometry Layer에서 초당 30번 쏘아주는 
+                    //       최신 3D 좌표(target_z)를 실시간으로 받아와 NavMeshAgent의 목적지로 갱신해야 함!
+                    //       (GPT가 응답하는 데 걸린 1.5초 전의 옛날 좌표를 믿으면 안 됨)
                     break;
 
                 default:
-                    Debug.Log($"[ActionPlanner] 알 수 없는 Policy: {targetObj.action_policy}");
+                    Debug.Log($"[ActionPlanner] 알 수 없는 Policy: {finalPolicy}");
                     break;
             }
         }

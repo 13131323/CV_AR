@@ -20,49 +20,61 @@ class SemanticInterpretationInput(BaseModel):
     centroid_y: int = Field(..., description="마스크 중심점의 y좌표 (픽셀, 화면 세로축)")
     target_z: float = Field(..., description="카메라로부터 객체까지의 추정 거리(m), spatial_3d.z")
     near_distance: Optional[float] = Field(None, description="가장 가까운 인접 객체와의 거리(m)")
-    floor_depth_delta: Optional[float] = Field(None, description="바닥 추정 깊이와 객체 깊이의 차이(m)")
+    floor_depth_delta: Optional[float] = Field(
+        None, description="바닥 추정 깊이와 객체 깊이의 차이(m) (바닥 접촉 추론 참고용)"
+    )
+    raw_spatial_guess: Optional[str] = Field(
+        None, description="Geometry Layer가 휴리스틱으로 추정한 공간 정보 (예: on_floor, behind_user). 참고용 후보 신호."
+    )
     context: str = Field(
         default="1인칭 시점, 실내 공간을 스마트폰 카메라로 촬영 중",
         description="촬영 상황/카메라 시점 맥락",
     )
 
 
-class SemanticInterpretationOutput(BaseModel):
-    """Semantic Interpretation Layer -> 다음 레이어(Action Planning) 출력 (CoT 적용)"""
+class Identity(BaseModel):
+    class_name: str = Field(..., description="GPT가 이미지와 문맥을 보고 최종 보정한 실제 사물 정체성")
+    is_person: bool = Field(..., description="해당 객체가 사람(person) 또는 사람의 신체 일부인지 여부")
 
-    visual_context: str = Field(..., description="이미지 상의 배경과 주변 환경 묘사 (최대 1문장, 15단어 이내)")
-    object_identity: str = Field(..., description="보정된 실제 사물 정체성 (예: smartphone)")
-    object_state: Literal[
-        "elevated", "on_floor", "on_surface", "unknown"
-    ] = Field(..., description="사물 자체의 순수 물리적 위상 상태 (관계 정보 제외)")
-    affordance_reasoning: str = Field(..., description="아바타가 할 수 있는 행동 추론 (최대 1문장, 15단어 이내)")
-    interaction_state: Literal[
-        "held_by_user", "currently_in_use", "available", "not_interactable"
-    ] = Field(..., description="최종 도출된 사용자/아바타와의 상호작용 가능성 (어포던스)")
-    is_interactable: bool = Field(..., description="아바타가 이 객체와 상호작용 가능한지 여부 (사람은 false)")
-    affordances: list[str] = Field(..., description="구체적인 어포던스 액션 목록 (예: ['observe', 'approach'])")
-    action_policy: Literal[
-        "ignore_for_avatar", "approach_and_interact", "observe_only"
-    ] = Field(..., description="아바타의 최종 행동 정책 (사람은 ignore_for_avatar)")
-    confidence: float = Field(
-        ...,
-        ge=0.0,
-        le=1.0,
-        description=(
-            "LLM이 자체 보고한 확신도. 통계적으로 보정(calibrate)된 값이 아니므로 "
-            "정량 평가 지표로 사용하지 말 것. 필터링용 soft signal로만 참고."
-        ),
+class SpatialContext(BaseModel):
+    camera_relative: str = Field(..., description="카메라(사용자)와의 상대적 위치 (예: in_front_of_user, far_away)")
+    environment_relative: Literal["on_floor", "on_surface", "elevated", "floating", "held"] = Field(
+        ..., description="지형지물과의 위상 관계 보정 결과"
     )
+
+class SemanticState(BaseModel):
+    social_state: Literal["available", "held_by_user", "in_use_by_other"] = Field(
+        ..., description="사물의 점유/사용 상태. 아바타가 건드려도 되는지 판별하는 핵심 정보."
+    )
+    affordances: list[str] = Field(..., description="이 사물에 대해 가능한 행동 목록 (예: ['drink', 'grasp', 'read'])")
+
+class PlannerDirectives(BaseModel):
+    action_policy: Literal["APPROACH_AND_INTERACT", "OBSERVE_ONLY", "IGNORE"] = Field(
+        ..., description="ActionPlanner를 위한 권고 행동 정책 (권고안일 뿐 최종 명령은 아님)"
+    )
+    animation_trigger: str = Field(..., description="상호작용 시 사용할 애니메이션 이름 (예: grasp, drink, nod)")
+    is_safe_to_approach: bool = Field(..., description="위험물이나 타인이 사용중인 물건이 아닌지 여부")
+
+
+class SemanticInterpretationOutput(BaseModel):
+    """Semantic Interpretation Layer -> 다음 레이어(Action Planning) 출력 (V2 계층 구조)"""
+    
+    object_id: int = Field(..., description="입력받은 object_id를 그대로 반환하여 ActionPlanner가 최신 좌표를 매핑하도록 함")
+    identity: Identity
+    corrected_spatial_relation: SpatialContext
+    semantic_state: SemanticState
+    planner_directives: PlannerDirectives
+    reasoning: str = Field(..., description="상태 판단 및 정책 도출 이유 (한국어, 1문장 내외)")
 
 
 class SemanticInterpretationBatchInput(BaseModel):
-    """한 프레임에 탐지된 객체 여러 개를 한 번에 Gemini에 전달하기 위한 컨테이너"""
+    """한 프레임에 탐지된 객체 여러 개를 한 번에 GPT에 전달하기 위한 컨테이너"""
 
     context: str
     objects: list[SemanticInterpretationInput]
 
 
 class SemanticInterpretationBatchOutput(BaseModel):
-    """Gemini가 한 번에 반환하는 객체별 결과 리스트"""
+    """GPT가 한 번에 반환하는 객체별 결과 리스트"""
 
     results: list[SemanticInterpretationOutput]

@@ -48,10 +48,14 @@ def test_openai_integration():
         print("\n[성공] OpenAI 응답을 정상적으로 파싱했습니다!")
         print("="*50)
         for obj in result.results:
-            print(f"객체: {obj.object_identity}")
-            print(f"행동 정책: {obj.action_policy}")
-            print(f"상호작용 가능 여부: {obj.is_interactable}")
-            print(f"이유: {obj.affordance_reasoning}")
+            print(f"객체 ID: {obj.object_id}")
+            print(f"정체성: {obj.identity.class_name} (사람 여부: {obj.identity.is_person})")
+            print(f"공간 위치: {obj.corrected_spatial_relation.camera_relative}, {obj.corrected_spatial_relation.environment_relative}")
+            print(f"상태: {obj.semantic_state.social_state}")
+            print(f"어포던스: {obj.semantic_state.affordances}")
+            print(f"행동 정책: {obj.planner_directives.action_policy} (안전 여부: {obj.planner_directives.is_safe_to_approach})")
+            print(f"애니메이션 트리거: {obj.planner_directives.animation_trigger}")
+            print(f"이유: {obj.reasoning}")
             print("-" * 30)
     except Exception as e:
         print(f"\n[실패] 에러 발생: {e}")

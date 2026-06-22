@@ -33,23 +33,40 @@ async def receive_loop():
                     
                     # 시연용: 첫 번째 객체에 대해서만 행동 결정
                     target_obj = results[0]
-                    obj_identity = target_obj.get("object_identity", "Unknown")
-                    action_policy = target_obj.get("action_policy", "Unknown")
-                    affordances = target_obj.get("affordances", [])
                     
-                    print(f" -> 타겟 객체: {obj_identity}")
+                    identity = target_obj.get("identity", {})
+                    semantic_state = target_obj.get("semantic_state", {})
+                    planner = target_obj.get("planner_directives", {})
                     
-                    if action_policy == "ignore_for_avatar":
+                    obj_identity = identity.get("class_name", "Unknown")
+                    is_person = identity.get("is_person", False)
+                    social_state = semantic_state.get("social_state", "Unknown")
+                    
+                    final_policy = planner.get("action_policy", "Unknown")
+                    animation_trigger = planner.get("animation_trigger", "")
+                    
+                    print(f" -> 타겟 객체: {obj_identity} | 소셜 상태: {social_state}")
+                    
+                    # 1. 유니티 클라이언트 측 이중 방어 로직 (Override GPT Policy)
+                    if social_state in ["held_by_user", "in_use_by_other"]:
+                        if final_policy == "APPROACH_AND_INTERACT":
+                            print(" -> [안전장치 작동] 사용 중인 객체 접근 권고를 무시(OBSERVE_ONLY)로 강제 변환합니다.")
+                            final_policy = "OBSERVE_ONLY"
+                            
+                    if is_person:
+                        final_policy = "IGNORE"
+                    
+                    # 2. 최종 행동 실행
+                    if final_policy == "IGNORE":
                         print(" -> 결정: 무시 (Ignore). 현재 행동 계속 수행.")
-                    elif action_policy == "observe_only":
+                    elif final_policy == "OBSERVE_ONLY":
                         print(" -> 결정: 관찰 (Observe). 아바타의 시선을 객체로 향함 (LookAt 활성화).")
-                    elif action_policy == "approach_and_interact":
-                        action = affordances[0] if affordances else "조사하기"
+                    elif final_policy == "APPROACH_AND_INTERACT":
                         print(f" -> 결정: 접근 및 상호작용 (Approach & Interact).")
-                        print(f" -> (NavMeshAgent를 통해 타겟의 실시간 target_z 좌표로 이동 시작!)")
-                        print(f" -> (도달 시 애니메이션 재생 트리거: {action})")
+                        print(f" -> (NavMeshAgent를 통해 타겟의 실시간 최신 3D 좌표로 이동 시작!)")
+                        print(f" -> (도달 시 애니메이션 재생 트리거: {animation_trigger})")
                     else:
-                        print(f" -> 알 수 없는 Policy: {action_policy}")
+                        print(f" -> 알 수 없는 Policy: {final_policy}")
                         
                 print("="*60 + "\n")
                 
