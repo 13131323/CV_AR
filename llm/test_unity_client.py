@@ -68,7 +68,12 @@ async def receive_loop():
                     else:
                         print(f" -> 알 수 없는 Policy: {final_policy}")
                         
-                print("="*60 + "\n")
+                    print("="*60 + "\n")
+                
+                elif msg.get("status") == "FAST_STREAM":
+                    # 너무 많이 찍히면 보기 힘드므로 1줄로 작게 표시
+                    data = msg.get("data", [])
+                    print(f"   [SpatialTracker] 실시간 좌표 수신: {len(data)}개 객체 추적 중...", end="\r")
                 
     except ConnectionRefusedError:
         print("[Virtual Client] 에러: 서버를 찾을 수 없습니다. python -m llm.server_websocket 을 먼저 실행해주세요.")
