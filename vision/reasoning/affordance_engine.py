@@ -26,6 +26,13 @@ class AffordanceEngine:
             "umbrella": ["graspable", "openable"]
         }
 
+        self.semantic_prior_db = {
+            "cell phone": {"real_area": 12000.0, "aspect_ratio": 2.16}, # 일반적인 스마트폰 평균 스케일
+            "bottle": {"real_area": 15400.0, "aspect_ratio": 3.14},
+            "suitcase": {"real_area": 220000.0, "aspect_ratio": 1.37},
+            "chair": {"real_area": 250000.0, "aspect_ratio": 1.0}
+        }
+
         # 정적 속성 -> 실행 행동 매핑 사전
         self.property_to_action = {
             "graspable": "grasp",
@@ -86,19 +93,41 @@ class AffordanceEngine:
                         agent_distance = r.get("distance", 1.0)
                         break
 
-            # floor_depth_delta를 활용한 공간 상태(State) 추론
+            # --- [수정 및 주입 구간] ---
+            # 5장 분석 반영: 단안 렌즈 원근 왜곡 보정을 위한 Semantic Prior 바인딩
             floor_margin = obj.get("floor_depth_delta", 0.0)
-            object_state = "unknown"
+            mask_area = obj.get("mask_area", 15000.0) # scene_data에서 2D 마스크 픽셀 면적 파싱 (기본값 설정)
+            
+            # spatial_3d에서 실제 depth(z) 성분 추출 (카메라-객체 간 거리)
+            target_z = obj.get("spatial_3d", {}).get("z", 1.0) 
+            
+            # 가상 카메라 초점 거리 상수 (프로젝트 캘리브레이션 값 바인딩)
+            focal_length = 500.0 
 
+            object_state = "unknown"
+            
+            # 클래스별 실제 크기 Prior 로드 및 Mask_norm 정규화 연산
+            if label in self.semantic_prior_db:
+                prior_area = self.semantic_prior_db[label]["real_area"]
+                # 보정 수식: Mask_norm = (mask_area * z^2) / (f^2 * A_real)
+                mask_norm = (mask_area * (target_z ** 2)) / ((focal_length ** 2) * prior_area)
+            else:
+                mask_norm = 1.0 # Prior 데이터가 없는 사물은 기본 가중치 유지
+
+            # 정규화된 척도(mask_norm)와 거리를 연동하여 거리 독립적인 상태 추론 수행
             if abs(floor_margin) <= 0.5:
                 object_state = "placed_on_floor"
             elif floor_margin > 0.5:
-                object_state = "elevated" # 책상 위, 손에 들림 등을 모두 포괄하는 안전한 상태 정의
+                # 5장 분석 결과 반영: 임계값이 거리(3m vs 4.86m)에 무너지지 않도록 mask_norm 조건 결합
+                if mask_norm < 0.8: 
+                    object_state = "elevated"        # 탁자나 선반 위 고정 상태
+                else:
+                    object_state = "held_in_hand"     # 손에 들려 원근왜곡이 상쇄된 동적 상태
             elif floor_margin < -0.5:
                 object_state = "background_layer"
 
-            # 씬 그래프 탑레벨에 명시적 공간 상태 주입
             obj["state"] = object_state
+            # ---------------------------
 
             # 속성 + 기하 정량 마진 기반 행동 결정 규칙 엔진
             active_actions = []
@@ -150,8 +179,8 @@ if __name__ == "__main__":
     mock_scene_data = {
         "objects": [
             { "id": 0, "label": "person", "spatial_3d": {"x": 0.0, "y": 1.0, "z": 2.0} },
-            { "id": 1, "label": "chair", "spatial_3d": {"x": 0.5, "y": 1.1, "z": 2.1}, "floor_depth_delta": -0.1 }, 
-            { "id": 2, "label": "cell phone", "spatial_3d": {"x": -0.2, "y": 0.8, "z": 1.1}, "floor_depth_delta": 3.5 } 
+            { "id": 1, "label": "chair", "spatial_3d": {"x": 0.5, "y": 1.1, "z": 2.1}, "floor_depth_delta": -0.1, "mask_area": 80000.0 }, 
+            { "id": 2, "label": "cell phone", "spatial_3d": {"x": -0.2, "y": 0.8, "z": 1.1}, "floor_depth_delta": 3.5, "mask_area": 10838.0 } 
         ],
         "relations": [
             { "subject_id": 0, "predicate": "near", "object_id": 1, "distance": 0.5 },

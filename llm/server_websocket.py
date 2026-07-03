@@ -11,7 +11,7 @@ import cv2
 import threading
 from PIL import Image
 
-from vision.stream import WebcamStream
+from vision.stream import WebcamStream, CAMERA_MATRIX
 from vision.detector import ObjectDetector
 from vision.segmentation.segmenter import ObjectSegmenter, SceneDepthAttacher
 from vision.depth.depth_estimator import DepthEstimator
@@ -42,8 +42,12 @@ def init_vision_modules():
     segmenter = ObjectSegmenter()
     depth_estimator = DepthEstimator()
     depth_attacher = SceneDepthAttacher()
-    spatial_converter = Spatial3DConverter()
+    spatial_converter = Spatial3DConverter(
+        camera_matrix=CAMERA_MATRIX
+    )
+
     relation_graph = SpatialRelationGraph()
+
     print("[서버] 비전 모듈 초기화 완료.")
 
 def build_scene_graph_for_frame(frame, frame_count: int) -> dict:
@@ -176,9 +180,10 @@ def ai_worker_thread():
 
 
 def main_vision_loop():
+    global latest_frame, annotated_frame_to_display, spatial_converter
     stream = WebcamStream()
+
     
-    global latest_frame, annotated_frame_to_display
     print("[서버] 실시간 카메라 UI 렌더링 시작...")
     
     try:
