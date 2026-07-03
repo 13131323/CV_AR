@@ -1,5 +1,4 @@
 import numpy as np
-from vision.stream import CAMERA_MATRIX
 
 class AffordanceEngine:
     def __init__(self):
@@ -101,17 +100,13 @@ class AffordanceEngine:
             
             # spatial_3d에서 실제 depth(z) 성분 추출 (카메라-객체 간 거리)
             target_z = obj.get("spatial_3d", {}).get("z", 1.0) 
-            
-            # 가상 카메라 초점 거리 상수 (프로젝트 캘리브레이션 값 바인딩)
-            focal_length = CAMERA_MATRIX[0, 0]  # fx 값 사용
 
             object_state = "unknown"
             
             # 클래스별 실제 크기 Prior 로드 및 Mask_norm 정규화 연산
             if label in self.semantic_prior_db:
                 prior_area = self.semantic_prior_db[label]["real_area"]
-                # 보정 수식: Mask_norm = (mask_area * z^2) / (f^2 * A_real)
-                mask_norm = (mask_area * (target_z ** 2)) / ((focal_length ** 2) * prior_area)
+                mask_norm = (mask_area * (target_z ** 2)) /  prior_area
                 print(
                     f"{label}: "
                     f"mask={mask_area:.1f}, "
