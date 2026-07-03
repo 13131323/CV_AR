@@ -123,6 +123,9 @@ class AffordanceEngine:
                 mask_norm = 1.0 # Prior 데이터가 없는 사물은 기본 가중치 유지
 
             # 정규화된 척도(mask_norm)와 거리를 연동하여 거리 독립적인 상태 추론 수행
+            # TODO:
+            # 실제 로그를 수집하여 mask_norm 분포를 분석한 뒤
+            # held_in_hand / elevated 분류 임계값(threshold)을 결정한다.
             if abs(floor_margin) <= 0.5:
                 object_state = "placed_on_floor"
             elif floor_margin > 0.5:
