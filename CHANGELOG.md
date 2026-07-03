@@ -219,8 +219,8 @@ Semantic Prior를 함께 사용하도록 구조 변경
 로그 출력 추가
 
 ```
-chair: mask=80000.0, z=2.10, prior=250000.0, mask_norm=0.00000154
-cell phone: mask=10838.0, z=1.10, prior=12000.0, mask_norm=0.00000119
+chair: mask=80000.0, z=2.10, prior=250000.0, mask_norm=1.41120000
+cell phone: mask=10838.0, z=1.10, prior=12000.0, mask_norm=1.09283167
 ```
 
 형태로 계산 결과 확인
