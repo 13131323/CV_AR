@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CV_AR.Avatar;
@@ -9,6 +10,7 @@ namespace CV_AR.Semantic
     public class ActionPlanner : MonoBehaviour
     {
         private const int MaxActionQueueSize = 5;
+        private const float ActionCompletionDelaySeconds = 1.0f;
 
         private SemanticClient client;
         private SpatialTracker spatialTracker;
@@ -230,13 +232,23 @@ namespace CV_AR.Semantic
 
             QueuedAction completedAction = actionQueue.Dequeue();
             queuedObjectIds.Remove(completedAction.ObjectId);
-            isActionInProgress = false;
 
             Debug.Log(
                 $"[ActionPlanner] 큐 완료: {completedAction.ObjectName} " +
                 $"(ID: {completedAction.ObjectId}) | 남은 큐: {actionQueue.Count}/{MaxActionQueueSize}"
             );
 
+            // 상호작용 직후 바로 다음 대상으로 출발하지 않고 1초 동안 대기합니다.
+            // 대기 중에는 isActionInProgress를 유지하여 새 작업이 즉시 실행되는 것을 막습니다.
+            StartCoroutine(StartNextActionAfterDelay());
+        }
+
+        private IEnumerator StartNextActionAfterDelay()
+        {
+            Debug.Log($"[ActionPlanner] 상호작용 완료 후 {ActionCompletionDelaySeconds:0.0}초 대기");
+            yield return new WaitForSeconds(ActionCompletionDelaySeconds);
+
+            isActionInProgress = false;
             TryStartNextAction();
         }
     }
