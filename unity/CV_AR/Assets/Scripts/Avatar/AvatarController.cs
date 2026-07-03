@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,11 +8,11 @@ namespace CV_AR.Avatar
     [RequireComponent(typeof(Animator))]
     public class AvatarController : MonoBehaviour
     {
-        private NavMeshAgent agent;
-        private Animator animator;
+        public event Action<int> OnActionCompleted;
 
+        private NavMeshAgent agent;
         private Semantic.SpatialTracker spatialTracker;
-        
+
         private int currentTargetId = -1;
         private string pendingAnimationTrigger = "";
         private bool isApproaching = false;
@@ -19,7 +20,6 @@ namespace CV_AR.Avatar
         private void Awake()
         {
             agent = GetComponent<NavMeshAgent>();
-            animator = GetComponent<Animator>();
         }
 
         public void Initialize(Semantic.SpatialTracker tracker)
@@ -32,8 +32,15 @@ namespace CV_AR.Avatar
             currentTargetId = objectId;
             pendingAnimationTrigger = animationTrigger;
             isApproaching = true;
-            
-            Debug.Log($"[AvatarController] {objectId}번 객체를 향해 이동 시작. 도착 시 {animationTrigger} 실행 예정.");
+
+            Debug.Log($"[AvatarController] 대상 객체 ID: {objectId} | 받은 animation_trigger: {animationTrigger}");
+            Debug.Log($"[AvatarController] {objectId}번 객체를 향해 이동 시작. 도착 후 {animationTrigger} 액션 수행 예정.");
+        }
+
+        public void SimulateAction(int objectId, string animationTrigger)
+        {
+            Debug.Log($"[AvatarController] {objectId}번 객체에 대해 {animationTrigger} 액션 수행 시뮬레이션.");
+            Debug.Log($"[AvatarController] 아바타가 {animationTrigger} 액션을 수행했습니다.");
         }
 
         public void StopAction()
@@ -41,7 +48,7 @@ namespace CV_AR.Avatar
             isApproaching = false;
             currentTargetId = -1;
             agent.ResetPath();
-            animator.SetTrigger("idle");
+            Debug.Log("[AvatarController] 아바타 액션 중지 / Idle");
         }
 
         private void Update()
@@ -49,9 +56,9 @@ namespace CV_AR.Avatar
             if (!isApproaching || spatialTracker == null || currentTargetId == -1)
                 return;
 
-            // 매 프레임마다 SpatialTracker에서 최신 좌표를 가져와 덮어씀
+            // 기존 동작대로 SpatialTracker에서 객체의 최신 좌표를 받아 계속 목적지를 갱신합니다.
             Vector3 latestPos = spatialTracker.GetLatestWorldPosition(currentTargetId);
-            
+
             if (latestPos != Vector3.negativeInfinity)
             {
                 agent.SetDestination(latestPos);
@@ -62,14 +69,23 @@ namespace CV_AR.Avatar
                 Debug.LogWarning($"[Avatar 오류] 최신 좌표 추적 실패 (Target ID: {currentTargetId})");
             }
 
-            // 도착 판정 (경로가 있고, 도착 거리 이내로 들어왔을 때만)
-            if (agent.hasPath && !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+            // 목적지에 도착하면 NavMeshAgent가 완료된 경로를 제거하여 hasPath=false가 될 수 있습니다.
+            // 따라서 hasPath를 필수로 요구하지 않고, 경로 계산 완료 + 도착 거리 + 정지 상태로 판정합니다.
+            bool hasArrived =
+                !agent.pathPending &&
+                !float.IsInfinity(agent.remainingDistance) &&
+                agent.remainingDistance <= agent.stoppingDistance &&
+                (!agent.hasPath || agent.velocity.sqrMagnitude < 0.01f);
+
+            if (hasArrived)
             {
-                Debug.Log($"[AvatarController] 목적지 도달! (남은 거리: {agent.remainingDistance}) 애니메이션 실행: {pendingAnimationTrigger}");
-                animator.SetTrigger(pendingAnimationTrigger);
-                
+                int completedObjectId = currentTargetId;
+                Debug.Log($"[AvatarController] {currentTargetId}번 객체에 대해 {pendingAnimationTrigger} 액션 수행 시뮬레이션.");
+                Debug.Log($"[AvatarController] 아바타가 {pendingAnimationTrigger} 액션을 수행했습니다.");
+
                 isApproaching = false;
                 currentTargetId = -1;
+                OnActionCompleted?.Invoke(completedObjectId);
             }
         }
     }

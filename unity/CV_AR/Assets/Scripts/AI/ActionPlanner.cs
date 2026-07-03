@@ -8,13 +8,28 @@ namespace CV_AR.Semantic
     [RequireComponent(typeof(SpatialTracker))]
     public class ActionPlanner : MonoBehaviour
     {
+        private const int MaxActionQueueSize = 5;
+
         private SemanticClient client;
         private SpatialTracker spatialTracker;
-        
+
         [Header("References")]
         public AvatarController avatarController;
 
         private bool isWaitingForApi = false;
+        private bool isActionInProgress = false;
+
+        // 현재 실행 중인 항목도 맨 앞에 남겨 두므로 Queue.Count 자체가 전체 작업 수입니다.
+        private readonly Queue<QueuedAction> actionQueue = new Queue<QueuedAction>();
+        private readonly HashSet<int> queuedObjectIds = new HashSet<int>();
+
+        private class QueuedAction
+        {
+            public int ObjectId;
+            public string ObjectName;
+            public string ActionName;
+            public string AffordanceLog;
+        }
 
         private void Awake()
         {
@@ -34,12 +49,22 @@ namespace CV_AR.Semantic
         {
             client.OnDataReceived += HandleSemanticData;
             client.OnApiLimitExceeded += HandleApiLimit;
+
+            if (avatarController != null)
+            {
+                avatarController.OnActionCompleted += HandleActionCompleted;
+            }
         }
 
         private void OnDisable()
         {
             client.OnDataReceived -= HandleSemanticData;
             client.OnApiLimitExceeded -= HandleApiLimit;
+
+            if (avatarController != null)
+            {
+                avatarController.OnActionCompleted -= HandleActionCompleted;
+            }
         }
 
         private void HandleApiLimit()
@@ -54,78 +79,165 @@ namespace CV_AR.Semantic
 
             if (output.results == null || output.results.Count == 0)
             {
-                Debug.Log("[ActionPlanner] 감지된 객체가 없습니다. 대기(Idle) 상태 전환.");
+                Debug.Log("[ActionPlanner] 감지된 객체가 없습니다.");
                 return;
             }
 
-            // 여러 객체 중 상호작용 가능한 첫 번째 객체를 찾습니다.
-            SemanticObject bestTarget = null;
-            string bestPolicy = "IGNORE";
+            int addedCount = 0;
 
-            foreach (var targetObj in output.results)
+            // VLM 결과 배열 순서를 그대로 유지하며 APPROACH_AND_INTERACT 객체만 FIFO 큐에 넣습니다.
+            foreach (SemanticObject targetObj in output.results)
             {
-                string policy = targetObj.planner_directives.action_policy;
-
-                // 1. 방어 로직 (Override)
-                if (targetObj.semantic_state.social_state == "held_by_user" || targetObj.semantic_state.social_state == "in_use_by_other")
+                string policy = GetSafePolicy(targetObj);
+                if (policy != "APPROACH_AND_INTERACT")
                 {
-                    if (policy == "APPROACH_AND_INTERACT")
-                    {
-                        policy = "OBSERVE_ONLY";
-                    }
+                    continue;
                 }
 
-                if (targetObj.identity.is_person)
+                if (actionQueue.Count >= MaxActionQueueSize)
                 {
-                    policy = "IGNORE";
+                    Debug.Log($"[ActionPlanner] 액션 큐가 가득 찼습니다. 최대 {MaxActionQueueSize}개만 유지합니다.");
+                    break;
                 }
 
-                if (policy == "APPROACH_AND_INTERACT")
+                // 실행 중이거나 대기 중인 같은 객체가 반복 VLM 결과로 중복 등록되는 것을 막습니다.
+                if (queuedObjectIds.Contains(targetObj.object_id))
                 {
-                    bestTarget = targetObj;
-                    bestPolicy = policy;
-                    break; // 상호작용 가능한 객체를 찾으면 즉시 루프 종료
+                    continue;
                 }
-                else if (policy == "OBSERVE_ONLY" && bestTarget == null)
+
+                List<string> affordances = targetObj.semantic_state.affordances ?? new List<string>();
+                string actionName = ResolveAction(targetObj, affordances);
+                if (actionName == null)
                 {
-                    bestTarget = targetObj;
-                    bestPolicy = policy;
+                    continue;
+                }
+
+                string affordanceLog = affordances.Count > 0
+                    ? string.Join("/", affordances)
+                    : "없음";
+
+                actionQueue.Enqueue(new QueuedAction
+                {
+                    ObjectId = targetObj.object_id,
+                    ObjectName = targetObj.identity.class_name,
+                    ActionName = actionName,
+                    AffordanceLog = affordanceLog,
+                });
+                queuedObjectIds.Add(targetObj.object_id);
+                addedCount++;
+
+                Debug.Log(
+                    $"[ActionPlanner] 큐 등록: {targetObj.identity.class_name} " +
+                    $"(ID: {targetObj.object_id}) | affordances: {affordanceLog} | " +
+                    $"action: {actionName} | 큐: {actionQueue.Count}/{MaxActionQueueSize}"
+                );
+            }
+
+            Debug.Log($"[ActionPlanner] 이번 VLM 결과에서 {addedCount}개 등록 | 현재 큐: {actionQueue.Count}/{MaxActionQueueSize}");
+            TryStartNextAction();
+        }
+
+        private string GetSafePolicy(SemanticObject targetObj)
+        {
+            string policy = targetObj.planner_directives.action_policy;
+
+            // 기존 방어 정책: 점유된 객체에는 접근하지 않습니다.
+            if ((targetObj.semantic_state.social_state == "held_by_user" ||
+                 targetObj.semantic_state.social_state == "in_use_by_other") &&
+                policy == "APPROACH_AND_INTERACT")
+            {
+                policy = "OBSERVE_ONLY";
+            }
+
+            // 사람은 항상 상호작용 큐에서 제외합니다.
+            if (targetObj.identity.is_person)
+            {
+                policy = "IGNORE";
+            }
+
+            if (!targetObj.planner_directives.is_safe_to_approach)
+            {
+                policy = "IGNORE";
+            }
+
+            return policy;
+        }
+
+        private string ResolveAction(SemanticObject targetObj, List<string> affordances)
+        {
+            string actionName = targetObj.planner_directives.animation_trigger;
+
+            if (string.IsNullOrWhiteSpace(actionName) || actionName == "None")
+            {
+                Debug.LogWarning($"[ActionPlanner] ID {targetObj.object_id}: 실행할 animation_trigger가 없습니다.");
+                return null;
+            }
+
+            if (affordances.Contains(actionName))
+            {
+                return actionName;
+            }
+
+            // VLM trigger가 목록과 다르면 Observe가 아닌 첫 번째 affordance를 우선 사용합니다.
+            string fallbackAction = "Observe";
+            foreach (string affordance in affordances)
+            {
+                if (affordance != "Observe")
+                {
+                    fallbackAction = affordance;
+                    break;
                 }
             }
 
-            if (bestTarget == null)
+            Debug.LogWarning(
+                $"[ActionPlanner] ID {targetObj.object_id}: trigger '{actionName}'가 affordances에 없어 " +
+                $"fallback '{fallbackAction}'을 사용합니다."
+            );
+            return fallbackAction;
+        }
+
+        private void TryStartNextAction()
+        {
+            if (isActionInProgress || actionQueue.Count == 0)
             {
-                // 상호작용 가능한 객체가 없으면 첫 번째 객체를 로깅용으로 사용
-                bestTarget = output.results[0];
-                bestPolicy = "IGNORE";
+                return;
             }
 
-            Debug.Log($"[ActionPlanner] 타겟 객체: {bestTarget.identity.class_name} | 결정: {bestPolicy}");
-
-            // 2. 최종 행동 실행
-            switch (bestPolicy)
+            if (avatarController == null)
             {
-                case "IGNORE":
-                    Debug.Log("[ActionPlanner] 무시 (Ignore)");
-                    break;
-
-                case "OBSERVE_ONLY":
-                    Debug.Log("[ActionPlanner] 관찰 (Observe)");
-                    break;
-
-                case "APPROACH_AND_INTERACT":
-                    string action = bestTarget.planner_directives.animation_trigger;
-                    Debug.Log($"[ActionPlanner] 접근 및 상호작용. ID: {bestTarget.object_id}, 액션: {action}");
-                    
-                    if (avatarController != null)
-                    {
-                        avatarController.MoveToAndInteract(bestTarget.object_id, action);
-                    }
-                    break;
-
-                default:
-                    break;
+                Debug.LogError("[ActionPlanner] AvatarController가 연결되지 않아 큐를 실행할 수 없습니다.");
+                return;
             }
+
+            QueuedAction nextAction = actionQueue.Peek();
+            isActionInProgress = true;
+
+            Debug.Log(
+                $"[ActionPlanner] 큐 실행: {nextAction.ObjectName} (ID: {nextAction.ObjectId}) | " +
+                $"affordances: {nextAction.AffordanceLog} | action: {nextAction.ActionName}"
+            );
+            avatarController.MoveToAndInteract(nextAction.ObjectId, nextAction.ActionName);
+        }
+
+        private void HandleActionCompleted(int objectId)
+        {
+            if (actionQueue.Count == 0)
+            {
+                isActionInProgress = false;
+                return;
+            }
+
+            QueuedAction completedAction = actionQueue.Dequeue();
+            queuedObjectIds.Remove(completedAction.ObjectId);
+            isActionInProgress = false;
+
+            Debug.Log(
+                $"[ActionPlanner] 큐 완료: {completedAction.ObjectName} " +
+                $"(ID: {completedAction.ObjectId}) | 남은 큐: {actionQueue.Count}/{MaxActionQueueSize}"
+            );
+
+            TryStartNextAction();
         }
     }
 }

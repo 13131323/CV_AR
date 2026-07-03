@@ -67,6 +67,9 @@ AffordanceTag = Literal[
     "Write",
 ]
 어포던스 종류 명시, 프롬프트에서 이 어포던스 내에서만 선택 가능하게 수정
+그 후 vlm이 객체에 대해 가장 적합한 액션을 action_trigger로 설정하고 unity에 전송하면 unity에서 해당 행동을 실행
+추가적으로 큐를 통해 APPROACH_AND_INTERACT 상태인 객체를 관리하면서 차례대로 움직이며 상호작용 진행.
+큐의 크기는 5로 제한.
 
 
 ### 추가 수정 사항
