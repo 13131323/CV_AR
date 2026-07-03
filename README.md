@@ -1,61 +1,96 @@
-## 7. 현재 한계와 해결 방향
+# CV-AR
 
-### 7-1. VLM 추론 지연 (11~18초)
+CV-AR 프로젝트의 성능 개선 사항과 Windows 환경 설정 및 실행 방법을 정리한 문서입니다.
 
-- **Micro CoT 도입:** LLM 출력의 배경 묘사와 추론 과정을 15단어 이내로 강제 제한하여 출력 토큰 수를 줄인다.
+## 목차
 
-변경 파일 : interpreter.py
-USE_MICRO_COT 변수로 설정 가능하며 True(기본값)인 경우 배경 묘사와 추론 과정을 15단어 이내로 강제하는 프롬프트를 vlm 입력으로 사용한다.
+- [성능 및 기능 개선](#성능-및-기능-개선)
+  - [VLM 추론 지연 개선](#vlm-추론-지연-개선)
+  - [비전 파이프라인 최적화](#비전-파이프라인-최적화)
+  - [멀티스레딩 구조](#멀티스레딩-구조)
+  - [어포던스 기반 명령 시스템](#어포던스-기반-명령-시스템)
+  - [기타 수정 사항](#기타-수정-사항)
+- [Windows 환경 설정](#windows-환경-설정)
+- [서버 및 Unity 실행](#서버-및-unity-실행)
+- [추가 검증 항목](#추가-검증-항목)
 
-- **이미지 해상도 경량화:** VLM 전송 전에 이미지를 추가로 다운샘플링한다.
+## 성능 및 기능 개선
 
-변경 파일 : interpreter.py
-ENABLE_VLM_IMAGE_DOWNSAMPLING 변수를 통해 설정 가능하다.
-prepare_vlm_image()을 통해 vlm으로 전송되는 이미지의 가로 해상도를 최대 320px로 제한하였다.
-이때 가로 세로 비율은 유지하되 가로가 320px 이하일지 추가로 다운샘플링 하지 않는다.
-또한 JPEG 압축 품질 파라미터를 70으로 설정하여 전송량을 줄였다.
+### VLM 추론 지연 개선
 
-=> 이미지의 품질이 너무 떨어져 인식에 오류가 나는지 확인이 필요.
+현재 VLM 추론에는 약 **11~18초**가 소요됩니다. 이를 줄이기 위해 Micro CoT와 이미지 다운샘플링을 적용했습니다.
 
+#### Micro CoT
 
-### 7-6. 너무 느린 속도
+- 변경 파일: `llm/interpreter.py`
+- 설정 변수: `USE_MICRO_COT`
+- 기본값: `True`
+- 배경 묘사와 추론 과정을 각각 15단어 이내로 제한하는 프롬프트를 사용해 출력 토큰 수를 줄입니다.
 
-- **비전 파이프라인 경량화:** 현재 YOLO → SAM → Depth Anything V2가 매 프레임 순차 실행된다. SAM은 YOLO가 탐지한 객체가 이전 프레임 대비 크게 변하지 않았을 때 재실행을 생략하는 캐싱 로직을 추가하면 연산량을 줄일 수 있다.
+#### VLM 입력 이미지 경량화
 
-변경 파일 : server_websocket.py
-YOLO는 매번 vision 분석에서 실행된다.
-기본적으로 SAM은 최초 1회를 제외하고 5번의 vision 분석당 한 번 실행되고 나머지는 캐싱을 한다.
-추가적으로 이전 프레임과 비교했을 때 객체의 id, 갯수 모두 일치하는 경우일 때 이전 vision 분석의 YOLO 결과를 통해 IoU = (두 박스가 겹친 면적 / 두 박스가 차지하는 전체 면적)를 계산하고 threshold = 0.7 보다 클 때 캐싱이 진행되고 이 중 하나라도 만족을 못할 시 캐싱될 차례임에도 연산을 진행한다.
-동시에 SAM의 연산이 일어나면 depth도 계산, SAM이 캐싱되면 depth 정보도 캐싱된다.
+- 변경 파일: `llm/interpreter.py`
+- 설정 변수: `ENABLE_VLM_IMAGE_DOWNSAMPLING`
+- 처리 함수: `prepare_vlm_image()`
+- 이미지의 가로 해상도를 최대 320px로 제한합니다.
+- 원본의 가로세로 비율을 유지합니다.
+- 가로 해상도가 이미 320px 이하인 경우 추가로 축소하지 않습니다.
+- JPEG 압축 품질을 70으로 설정해 전송량을 줄입니다.
 
-=> SAM_INTERVAL = 5, SAM_IOU_THRESHOLD = 0.7 에 대한 검증 필요
+> 이미지 품질 저하로 인해 인식 오류가 발생하는지 추가 검증이 필요합니다.
 
-- **멀티스레딩 분리:** 현재 비전 연산과 WebSocket 전송이 같은 루프에서 돌고 있다. 비전 연산을 별도 스레드로 분리하면 전송 지연이 줄어든다.
+### 비전 파이프라인 최적화
 
-스레드 1 : WebSocket 네트워크 서버 전용 스레드
-서버 실행, unity로 데이터 송수신 이벤트 담당
+기존에는 YOLO → SAM → Depth Anything V2가 매 프레임 순차적으로 실행되었습니다. 연산량을 줄이기 위해 SAM과 Depth 결과에 캐싱을 적용했습니다.
 
-스레드 2 : ai_worker_thread
-vision, geometry layer 연산 및 결과 전송 담당 스레드, 이를 통해 만든 데이터 6fps로 끊김없이 전송
-또한 vlm 전송용 작업 생성하고 트리거, 호출 쿨타임을 통한 호출 판단
-이때 호출이 결정되면 크기가 1인 큐에 삽입. 이때 만약 큐에 대기 중인 작업이 있을 시 바로 버리고 새 작업 투입
-이는 항상 가장 최신 프레임을 vlm으로 보내기 위함임.
+- 변경 파일: `llm/server_websocket.py`
+- YOLO는 비전 분석마다 실행합니다.
+- SAM은 최초 1회 실행한 뒤, 기본적으로 비전 분석 5회마다 다시 실행합니다.
+- 이전 프레임과 객체 ID 및 개수가 모두 일치하면 YOLO 바운딩 박스의 IoU를 계산합니다.
+- IoU가 임계값 이상일 때 이전 SAM 결과를 재사용합니다.
+- 객체 ID, 개수 또는 IoU 조건 중 하나라도 충족하지 못하면 캐싱 차례에도 SAM을 다시 실행합니다.
+- SAM 실행 시 Depth도 함께 계산하며, SAM 결과를 재사용할 때 Depth 결과도 함께 재사용합니다.
 
-스레드 3 : vlm_worker_thread
-vlm 호출 및 판단 결과 전송 담당 스레드
-큐를 확인하고 작업이 존재하면 바로 큐에서 뽑아서 작업 진행
+기본 설정값은 다음과 같습니다.
 
-스레드 4 : main_vision_loop
-창에 카메라 띄우는 메인 스레드
+```python
+SAM_INTERVAL = 5
+SAM_IOU_THRESHOLD = 0.7
+```
 
-=> 스레드 2와 3분리 이유 : 기존에는 vlm 결과가 나올동안 vision, geometry 레이어가 연산을 못했지만 스레드 분리를 통해 두 로직을 따로따로 진행. 기존 vision, geometry 데이터는 상시 최신화 되야하므로 적절한 분리
-=> vlm 추론이 너무 오래 걸릴 시 그 데이터를 폐기할지 최신화 할지
+IoU는 다음과 같이 계산합니다.
 
+```text
+IoU = 두 바운딩 박스가 겹친 면적 / 두 바운딩 박스가 차지하는 전체 면적
+```
 
-### 7-7. 어포던스 기반 명령 시스템 구축
+### 멀티스레딩 구조
 
-- **어포던스 태그 체계 확장:** 현재 Observe / Grasp / Drink 세 가지 태그만 있다. 실제 사물 종류에 맞게 Sit / Open / Press / Read / Write 등 더 다양한 태그를 정의하고, VLM 프롬프트에 가능한 태그 목록을 명시하면 더 정밀한 명령이 가능해진다.
+비전 연산과 WebSocket 전송이 같은 루프에서 동작할 때 발생하는 전송 지연을 줄이기 위해 역할을 네 개의 스레드로 분리했습니다.
 
+- 변경 파일: `llm/server_websocket.py`
+
+| 스레드 | 역할 |
+|---|---|
+| WebSocket 네트워크 서버 | 서버 실행 및 Unity와의 데이터 송수신 이벤트 처리 |
+| `ai_worker_thread` | Vision·Geometry Layer 연산, 결과 전송, VLM 작업 생성 및 호출 주기 판단 |
+| `vlm_worker_thread` | 대기열의 작업을 가져와 VLM을 호출하고 판단 결과 전송 |
+| `main_vision_loop` | 카메라 영상을 창에 표시하는 메인 스레드 |
+
+`ai_worker_thread`는 Vision 및 Geometry 데이터를 약 6fps로 계속 전송합니다. VLM 호출이 필요하면 크기가 1인 큐에 작업을 넣으며, 기존 대기 작업이 있으면 이를 버리고 최신 프레임으로 교체합니다.
+
+VLM 호출을 별도 스레드로 분리해 추론이 진행되는 동안에도 Vision 및 Geometry 데이터를 계속 최신 상태로 유지합니다.
+
+### 어포던스 기반 명령 시스템
+
+기존의 Observe, Grasp, Drink 태그에 Sit, Open, Press, Read, Write를 추가했습니다.
+
+- 변경 파일: `llm/schemas.py`
+- 변경 파일: `llm/interpreter.py`
+- 변경 파일: `unity/CV_AR/Assets/Scripts/AI/ActionPlanner.cs`
+- 변경 파일: `unity/CV_AR/Assets/Scripts/Avatar/AvatarController.cs`
+
+```python
 AffordanceTag = Literal[
     "Observe",
     "Grasp",
@@ -66,15 +101,119 @@ AffordanceTag = Literal[
     "Read",
     "Write",
 ]
-어포던스 종류 명시, 프롬프트에서 이 어포던스 내에서만 선택 가능하게 수정
-그 후 vlm이 객체에 대해 가장 적합한 액션을 action_trigger로 설정하고 unity에 전송하면 unity에서 해당 행동을 실행
-추가적으로 큐를 통해 APPROACH_AND_INTERACT 상태인 객체를 관리하면서 차례대로 움직이며 상호작용 진행.
-이때 한 물체와 상호 작용 후 1초 대기 후 다음 물체로 이동.
-큐의 크기는 5로 제한.
+```
 
+- VLM은 명시된 어포던스 목록 안에서 객체에 가장 적합한 행동을 선택합니다.
+- 선택 결과를 `action_trigger`로 설정해 Unity에 전송합니다.
+- `APPROACH_AND_INTERACT` 상태의 객체는 큐로 관리하며 순서대로 이동하고 상호작용합니다.
+- 한 객체와 상호작용한 뒤 1초 동안 대기하고 다음 객체로 이동합니다.
+- 큐의 최대 크기는 5입니다.
 
-### 추가 수정 사항
-- depth_estimator.py
-visual_depth (시각화용) 계산을 필요 없기 때문에 제외
-- segmenter.py
-overlay_cached_masks() 에서 캐싱 조건 연산에 대한 로직 제외
+### 기타 수정 사항
+
+- `vision/depth/depth_estimator.py`: 불필요한 시각화용 `visual_depth` 계산을 제거했습니다.
+- `vision/segmentaion/segmenter.py`: `overlay_cached_masks()`의 캐싱 조건 연산 로직을 제거했습니다.
+
+## Windows 환경 설정
+
+초기 macOS/Linux 기준 실행 환경을 Windows에서도 사용할 수 있도록 가상환경 활성화 방식, 실행 명령, GPU 백엔드 감지 및 경로 처리를 조정했습니다.
+
+### 가상환경 활성화
+
+프로젝트 루트에서 사용하는 셸에 맞는 명령을 실행합니다.
+
+**Windows PowerShell**
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+**Windows CMD**
+
+```cmd
+.venv\Scripts\activate
+```
+
+**macOS/Linux**
+
+```bash
+source .venv/bin/activate
+```
+
+PowerShell 실행 정책으로 인해 활성화되지 않는 경우, 현재 사용자 범위의 정책을 변경한 뒤 다시 실행합니다.
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+.\.venv\Scripts\Activate.ps1
+```
+
+### GPU 백엔드 자동 감지
+
+실행 환경에 따라 CUDA, MPS, CPU 순서로 사용 가능한 연산 장치를 선택합니다.
+
+```python
+if torch.cuda.is_available():
+    self.device = "cuda:0"
+    gpu_name = torch.cuda.get_device_name(0)
+elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+    self.device = "mps"
+    gpu_name = "Apple MPS"
+else:
+    self.device = "cpu"
+    gpu_name = "CPU"
+```
+
+| 환경 | 선택되는 백엔드 |
+|---|---|
+| Windows + NVIDIA GPU + CUDA 지원 PyTorch | `cuda:0` |
+| macOS Apple Silicon + MPS 지원 PyTorch | `mps` |
+| GPU 미지원 또는 관련 PyTorch 미설치 | `cpu` |
+
+Windows에서 NVIDIA GPU를 사용하려면 CUDA 버전에 맞는 PyTorch가 필요합니다. 다음 명령으로 CUDA 사용 가능 여부를 확인할 수 있습니다.
+
+```powershell
+python -c "import torch; print(torch.cuda.is_available()); print(torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CUDA not available')"
+```
+
+결과가 `True`이면 CUDA를 사용할 수 있고, `False`이면 CPU 모드로 실행됩니다.
+
+### 운영체제별 차이
+
+| 항목 | macOS/Linux | Windows PowerShell |
+|---|---|---|
+| 가상환경 활성화 | `source .venv/bin/activate` | `.\.venv\Scripts\Activate.ps1` |
+| 서버 실행 | `python -m llm.server_websocket` | `python -m llm.server_websocket` |
+| 경로 구분자 | `/` | `\` |
+| GPU 백엔드 | `mps` 또는 `cpu` | `cuda:0` 또는 `cpu` |
+
+## 서버 및 Unity 실행
+
+Python 서버는 패키지 import 경로 문제를 방지하기 위해 **프로젝트 루트에서 모듈 방식으로 실행**합니다.
+
+```powershell
+cd C:\Projects\CV-AR
+.\.venv\Scripts\Activate.ps1
+python -m llm.server_websocket
+```
+
+다음과 같은 직접 실행 방식은 사용하지 않습니다.
+
+```powershell
+python llm/server_websocket.py
+```
+
+AR 연동 테스트는 다음 순서로 진행합니다.
+
+1. 프로젝트 루트에서 Python 가상환경을 활성화합니다.
+2. `python -m llm.server_websocket`을 실행합니다.
+3. 모델 로딩이 완료되고 OpenCV 웹캠 창이 표시되는지 확인합니다.
+4. Unity에서 `CV_AR` 프로젝트를 엽니다.
+5. Unity Editor의 Play 버튼을 누릅니다.
+6. WebSocket을 통해 `FAST_STREAM`, `SUCCESS` 메시지가 수신되는지 확인합니다.
+
+## 추가 검증 항목
+
+- VLM 입력 이미지의 해상도와 JPEG 품질 저하가 인식 정확도에 미치는 영향
+- `SAM_INTERVAL = 5`가 속도와 정확도 사이에서 적절한 값인지 여부
+- `SAM_IOU_THRESHOLD = 0.7`이 캐싱 판단 기준으로 적절한지 여부
+- VLM 추론 시간이 지나치게 길어질 경우 해당 결과를 폐기할지, 최신 데이터로 교체할지 여부
