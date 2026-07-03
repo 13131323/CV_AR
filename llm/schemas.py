@@ -9,6 +9,17 @@ from typing import Literal, Optional
 from pydantic import BaseModel, Field
 
 
+AffordanceTag = Literal[
+    "Observe",
+    "Grasp",
+    "Drink",
+    "Sit",
+    "Open",
+    "Press",
+    "Read",
+    "Write",
+]
+
 class SemanticInterpretationInput(BaseModel):
     """Geometry Layer -> Semantic Interpretation Layer 입력"""
 
@@ -46,7 +57,7 @@ class SemanticState(BaseModel):
     social_state: Literal["available", "held_by_user", "in_use_by_other"] = Field(
         ..., description="사물의 점유/사용 상태. 아바타가 건드려도 되는지 판별하는 핵심 정보."
     )
-    affordances: list[str] = Field(..., description="이 사물에 대해 가능한 행동 목록 (예: ['drink', 'grasp', 'read'])")
+    affordances: list[AffordanceTag] = Field(..., description="이 사물에 대해 가능한 행동 목록")
 
 class PlannerDirectives(BaseModel):
     action_policy: Literal["APPROACH_AND_INTERACT", "OBSERVE_ONLY", "IGNORE"] = Field(

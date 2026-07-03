@@ -95,7 +95,7 @@ class SpatialRelationGraph:
 
     def process_scene_relations(self, scene_data):
         """
-        최상위 scene 데이터에 생성된 관계 트리플 그래프를 병합합니다.
+        최상위 scene 데이터에 생성된 relation 그래프를 정보를 병합합니다.
         """
         if not scene_data:
             return scene_data

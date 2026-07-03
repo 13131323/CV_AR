@@ -8,18 +8,38 @@ from ultralytics import YOLO
 from vision.stream import WebcamStream
 
 class ObjectDetector:
+    """
+    Yolo 모델을 통해서 프레임의 객체를 인식하는 클래스
+    """
+    
     def __init__(self):
         # 검증된 YOLOv8 Nano 모델 로드
         self.model = YOLO("yolov8n.pt")
-        
+
+        # Windows + NVIDIA GPU면 CUDA 사용
         # 하드웨어 자동 감지 예외 처리 (M4 맥북 등)
-        self.device = "mps" if torch.backends.mps.is_available() else "cpu"
+        if torch.cuda.is_available():
+            self.device = "cuda:0"
+            gpu_name = torch.cuda.get_device_name(0)
+        elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+            self.device = "mps"
+            gpu_name = "Apple MPS"
+        else:
+            self.device = "cpu"
+            gpu_name = "CPU"
+        
         print(f"YOLOv8 모델이 [{self.device}] 가속 엔진 위에서 구동됩니다.")
 
     def detect(self, frame):
         """
         [7단계 가드 반영] conf=0.25 임계값을 적용하여 
         배경 노이즈나 그림자를 객체로 오탐지하는 현상을 원천 차단합니다.
+        
+        <results에 담기는 값들>
+        result.boxes : 탐지된 객체들의 bbox, confidence, class 정보
+        result.names : class 번호를 실제 이름으로 바꾸는 딕셔너리
+        result.orig_img : 원본 이미지
+        result.path : 이미지 경로, 웹캠이면 의미 없거나 기본값일 수 있음
         """
         results = self.model(frame, device=self.device, verbose=False, conf=0.25)
         return results[0]
@@ -27,6 +47,7 @@ class ObjectDetector:
     def build_scene(self, result, frame, frame_count):
         """
         [요청하신 개조식 트리 계층 구조 완벽 일치 반영]
+        개별 프레임을 yolo로 분석한 json 반환
         """
         height, width = frame.shape[:2]
         
@@ -37,9 +58,10 @@ class ObjectDetector:
                 "timestamp": time.time(),
                 "camera_resolution": [width, height]
             },
+            # 일단 기본값으로 채우기
             "scene": {
                 "floor_detected": False,
-                "floor_normal": [0, 1, 0],
+                "floor_normal": [0, 1, 0],   # 바닥 방향의 벡터
                 "camera_height": 0.0,
                 "scene_summary": None  # 하단에서 YOLO 데이터 기반으로 생성
             },
@@ -84,6 +106,7 @@ class ObjectDetector:
             
         return scene_data
 
+# python -m vision.detector로 실행
 if __name__ == "__main__":
     stream = WebcamStream()
     detector = ObjectDetector()

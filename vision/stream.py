@@ -11,6 +11,8 @@ class WebcamStream:
         self.cap = cv2.VideoCapture(video_source)
         
         # M4 맥북의 성능과 비전 연산 속도를 고려한 최적 해상도(720p HD) 고정
+        
+        # 1050 사용 이슈로 임시로 해상도 낮춤, 카메라 임시 행렬도 조정
         self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
         self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
         
@@ -22,6 +24,11 @@ class WebcamStream:
         # 캘리브레이션을 수행하여 실제 맥북 M4 카메라의 고유 서명 값으로 교체해야
         # 아바타 상호작용의 물리적 오차(수십 cm 단위)를 방지할 수 있습니다.
         # -----------------------------------------------------------------
+        
+        
+        # 카메라 행렬과 렌즈 왜곡 계수는 캠에 따라서 달라짐
+        
+        # 1280x720 기준 임시 추정값 => 체커보드 캘리브레이션으로 나중에 변경 필요
         self.camera_matrix = np.array([
             [900,   0, 640],
             [  0, 900, 360],

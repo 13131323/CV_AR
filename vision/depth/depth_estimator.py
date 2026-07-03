@@ -6,13 +6,17 @@ from PIL import Image
 
 class DepthEstimator:
     def __init__(self):
-        # [안정성 가이드] MPS/CUDA/CPU 안전한 Fallback 로직 구성
-        if torch.backends.mps.is_available():
+        # Windows + NVIDIA GPU면 CUDA 사용
+        # 하드웨어 자동 감지 예외 처리 (M4 맥북 등)
+        if torch.cuda.is_available():
+            self.device = "cuda:0"
+            gpu_name = torch.cuda.get_device_name(0)
+        elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
             self.device = "mps"
-        elif torch.cuda.is_available():
-            self.device = 0
+            gpu_name = "Apple MPS"
         else:
-            self.device = -1
+            self.device = "cpu"
+            gpu_name = "CPU"
         
         # 런타임 장치 로드 실패 시 CPU Fallback 예외 처리 적용
         try:
@@ -56,17 +60,21 @@ class DepthEstimator:
             align_corners=False
         ).squeeze().cpu().numpy()
 
-        # 4. 시각화용 0~255 정규화 맵 생성
-        d_min, d_max = raw_depth.min(), raw_depth.max()
-        if d_max - d_min > 1e-5:
-            visual_depth = (raw_depth - d_min) / (d_max - d_min) * 255.0
-        else:
-            visual_depth = np.zeros_like(raw_depth)
+        return {"raw_depth": raw_depth}
+             
+        ##### visual depth 연산은 메인로직에서 불필요함으로 제거
+        
+        # # 4. 시각화용 0~255 정규화 맵 생성
+        # d_min, d_max = raw_depth.min(), raw_depth.max()
+        # if d_max - d_min > 1e-5:
+        #     visual_depth = (raw_depth - d_min) / (d_max - d_min) * 255.0
+        # else:
+        #     visual_depth = np.zeros_like(raw_depth)
 
-        return {
-            "visual_depth": visual_depth.astype(np.uint8),
-            "raw_depth": raw_depth
-        }
+        # return {
+        #     "visual_depth": visual_depth.astype(np.uint8),
+        #     "raw_depth": raw_depth
+        # }
 
     def get_object_depth(self, depth_dict, mask_bool):
         """

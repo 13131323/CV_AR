@@ -153,12 +153,12 @@ def main():
 
             for input_data, output_data in zip(inputs, batch_output.results):
                 print(
-                    f"  [Obj {input_data.object_id}] YOLO={input_data.detected_class:<10} -> VLM={output_data.object_identity:<12} (conf: {output_data.confidence:.2f})\n"
-                    f"      배경 묘사: {output_data.visual_context}\n"
-                    f"      사물 상태: {output_data.object_state}\n"
-                    f"      행동 추론: {output_data.affordance_reasoning}\n"
-                    f"      상호작용성: {output_data.interaction_state} (is_interactable={output_data.is_interactable})\n"
-                    f"      행동 정책: {output_data.action_policy} | 세부 액션: {output_data.affordances}\n"
+                    f"  [Obj {input_data.object_id}] YOLO={input_data.detected_class:<10} (conf: {input_data.confidence:.2f}) -> VLM={output_data.identity.class_name:<12}\n"
+                    f"      공간 관계: {output_data.corrected_spatial_relation.camera_relative} / {output_data.corrected_spatial_relation.environment_relative}\n"
+                    f"      사물 상태: {output_data.semantic_state.social_state}\n"
+                    f"      판단 이유: {output_data.reasoning}\n"
+                    f"      접근 가능: {output_data.planner_directives.is_safe_to_approach}\n"
+                    f"      행동 정책: {output_data.planner_directives.action_policy} | 세부 액션: {output_data.semantic_state.affordances}\n"
                 )
 
     finally:
