@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 120,
-    "timestamp": 1780676781.076062,
+    "timestamp": 1782975661.191915,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, book 9개가 감지됨"
+    "scene_summary": "person 1개, bottle 2개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.92,
+        "confidence": 0.88,
         "bbox_2d": [
-          328,
-          111,
-          1146,
-          714
+          174,
+          83,
+          1043,
+          713
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "book",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.3,
+        "confidence": 0.28,
         "bbox_2d": [
-          1236,
-          496,
-          1277,
-          569
+          754,
+          378,
+          786,
+          458
         ]
       },
       "sam": null,
@@ -56,140 +56,14 @@
     },
     {
       "id": 2,
-      "label": "book",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.25,
+        "confidence": 0.27,
         "bbox_2d": [
-          1176,
-          352,
-          1279,
-          453
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 3,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.23,
-        "bbox_2d": [
-          1231,
-          497,
-          1269,
-          568
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 4,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.22,
-        "bbox_2d": [
-          1241,
-          610,
-          1276,
-          696
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 5,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.22,
-        "bbox_2d": [
-          1178,
-          371,
-          1268,
-          451
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 6,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.2,
-        "bbox_2d": [
-          1257,
-          371,
-          1279,
-          445
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 7,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.2,
-        "bbox_2d": [
-          1266,
-          493,
-          1279,
-          567
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 8,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.2,
-        "bbox_2d": [
-          1225,
-          379,
-          1251,
-          448
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 9,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.2,
-        "bbox_2d": [
-          1251,
-          611,
-          1279,
-          696
+          339,
+          373,
+          378,
+          479
         ]
       },
       "sam": null,

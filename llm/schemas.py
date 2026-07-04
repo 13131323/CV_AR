@@ -6,8 +6,31 @@ Semantic Interpretation Layer (Layer 5) 입출력 스키마
 """
 
 from typing import Literal, Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
+
+AffordanceTag = Literal[
+    "Observe",
+    "Grasp",
+    "Drink",
+    "Sit",
+    "Open",
+    "Press",
+    "Read",
+    "Write",
+]
+
+AnimationTrigger = Literal[
+    "None",
+    "Observe",
+    "Grasp",
+    "Drink",
+    "Sit",
+    "Open",
+    "Press",
+    "Read",
+    "Write",
+]
 
 class SemanticInterpretationInput(BaseModel):
     """Geometry Layer -> Semantic Interpretation Layer 입력"""
@@ -46,13 +69,17 @@ class SemanticState(BaseModel):
     social_state: Literal["available", "held_by_user", "in_use_by_other"] = Field(
         ..., description="사물의 점유/사용 상태. 아바타가 건드려도 되는지 판별하는 핵심 정보."
     )
-    affordances: list[str] = Field(..., description="이 사물에 대해 가능한 행동 목록 (예: ['drink', 'grasp', 'read'])")
+    affordances: list[AffordanceTag] = Field(
+        ...,
+        min_length=1,
+        description="허용 태그 중에서 선택한 하나 이상의 객체 행동 가능성",
+    )
 
 class PlannerDirectives(BaseModel):
     action_policy: Literal["APPROACH_AND_INTERACT", "OBSERVE_ONLY", "IGNORE"] = Field(
         ..., description="ActionPlanner를 위한 권고 행동 정책 (권고안일 뿐 최종 명령은 아님)"
     )
-    animation_trigger: str = Field(..., description="상호작용 시 사용할 애니메이션 이름 (예: grasp, drink, nod)")
+    animation_trigger: AnimationTrigger = Field(..., description="상호작용 시 사용할 애니메이션 이름")
     is_safe_to_approach: bool = Field(..., description="위험물이나 타인이 사용중인 물건이 아닌지 여부")
 
 
@@ -65,6 +92,25 @@ class SemanticInterpretationOutput(BaseModel):
     semantic_state: SemanticState
     planner_directives: PlannerDirectives
     reasoning: str = Field(..., description="상태 판단 및 정책 도출 이유 (한국어, 1문장 내외)")
+
+    @model_validator(mode="after")
+    def validate_action_selection(self):
+        """행동 정책, affordance 목록, 단일 trigger 사이의 의미적 일관성을 강제한다."""
+        policy = self.planner_directives.action_policy
+        trigger = self.planner_directives.animation_trigger
+        affordances = self.semantic_state.affordances
+
+        if policy == "IGNORE" and trigger != "None":
+            raise ValueError("IGNORE 정책의 animation_trigger는 None이어야 합니다.")
+        if policy == "OBSERVE_ONLY" and trigger != "Observe":
+            raise ValueError("OBSERVE_ONLY 정책의 animation_trigger는 Observe여야 합니다.")
+        if policy == "APPROACH_AND_INTERACT":
+            if trigger in ("None", "Observe"):
+                raise ValueError("APPROACH_AND_INTERACT에는 상호작용 trigger가 필요합니다.")
+            if trigger not in affordances:
+                raise ValueError("animation_trigger는 affordances 목록에 포함되어야 합니다.")
+
+        return self
 
 
 class SemanticInterpretationBatchInput(BaseModel):

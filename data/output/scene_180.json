@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 180,
-    "timestamp": 1780676785.068012,
+    "timestamp": 1782975663.629993,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, cell phone 1개, chair 2개, book 6개가 감지됨"
+    "scene_summary": "person 1개, bottle 1개, microwave 1개, book 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.88,
+        "confidence": 0.87,
         "bbox_2d": [
-          141,
-          111,
-          1124,
-          714
+          178,
+          87,
+          1044,
+          713
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "cell phone",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.55,
+        "confidence": 0.29,
         "bbox_2d": [
-          197,
-          314,
-          328,
-          472
+          753,
+          374,
+          786,
+          458
         ]
       },
       "sam": null,
@@ -56,14 +56,14 @@
     },
     {
       "id": 2,
-      "label": "chair",
+      "label": "microwave",
       "yolo": {
-        "confidence": 0.37,
+        "confidence": 0.27,
         "bbox_2d": [
-          786,
-          392,
-          978,
-          536
+          2,
+          249,
+          378,
+          471
         ]
       },
       "sam": null,
@@ -76,120 +76,12 @@
       "id": 3,
       "label": "book",
       "yolo": {
-        "confidence": 0.29,
+        "confidence": 0.26,
         "bbox_2d": [
-          1237,
-          496,
-          1277,
-          569
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 4,
-      "label": "chair",
-      "yolo": {
-        "confidence": 0.28,
-        "bbox_2d": [
-          528,
-          391,
-          979,
-          537
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 5,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.24,
-        "bbox_2d": [
-          1176,
-          354,
-          1279,
-          452
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 6,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.22,
-        "bbox_2d": [
-          1242,
-          611,
-          1277,
-          696
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 7,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.21,
-        "bbox_2d": [
-          1178,
-          372,
-          1267,
-          450
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 8,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.21,
-        "bbox_2d": [
-          1225,
-          379,
-          1251,
-          448
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 9,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.2,
-        "bbox_2d": [
-          1256,
-          372,
-          1279,
-          445
+          945,
+          46,
+          992,
+          174
         ]
       },
       "sam": null,

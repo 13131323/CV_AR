@@ -9,6 +9,7 @@ import json
 import time
 import cv2
 import threading
+import queue
 from PIL import Image
 
 from vision.stream import WebcamStream
@@ -25,8 +26,17 @@ from llm.schemas import SemanticInterpretationBatchInput, SemanticInterpretation
 # [TEST MODE] API 한도 회피용 모의(Mock) LLM 활성화 플래그
 MOCK_LLM = False
 
+# SAM은 계산 비용이 크므로 일정 주기 (5프레임)마다 새로 실행하고, 그 사이에는 이전 마스크를 재사용합니다.
+# 단, 객체의 위치가 크게 변한 경우에는 주기 전이라도 즉시 SAM을 다시 실행합니다.
+SAM_INTERVAL = 5
+SAM_IOU_THRESHOLD = 0.7
+
 # 글로벌 변수
 connected_clients = set()
+
+# VLM 요청은 최신 장면 하나만 보관합니다.
+# 추론이 느린 동안 과거 프레임 요청이 누적되는 것을 막기 위해 큐 크기를 1로 고정합니다.
+vlm_queue = queue.Queue(maxsize=1)
 
 # 비전 파이프라인 모듈들
 detector = None
@@ -46,17 +56,101 @@ def init_vision_modules():
     relation_graph = SpatialRelationGraph()
     print("[서버] 비전 모듈 초기화 완료.")
 
-def build_scene_graph_for_frame(frame, frame_count: int) -> dict:
+def bbox_iou(box_a, box_b) -> float:
+    """
+    [x1, y1, x2, y2] 형식인 두 YOLO bbox의 IoU를 계산합니다.
+    객체 박스 간 겹침 정도를 파악하는데 사용합니다.
+    """
+    if not box_a or not box_b or len(box_a) != 4 or len(box_b) != 4:
+        return 0.0
+
+    intersection_x1 = max(box_a[0], box_b[0])
+    intersection_y1 = max(box_a[1], box_b[1])
+    intersection_x2 = min(box_a[2], box_b[2])
+    intersection_y2 = min(box_a[3], box_b[3])
+
+    intersection_width = max(0.0, intersection_x2 - intersection_x1)
+    intersection_height = max(0.0, intersection_y2 - intersection_y1)
+    intersection_area = intersection_width * intersection_height
+
+    area_a = max(0.0, box_a[2] - box_a[0]) * max(0.0, box_a[3] - box_a[1])
+    area_b = max(0.0, box_b[2] - box_b[0]) * max(0.0, box_b[3] - box_b[1])
+    union_area = area_a + area_b - intersection_area
+
+    return intersection_area / union_area if union_area > 0.0 else 0.0
+
+
+def build_scene_graph_for_frame(
+    frame,
+    frame_count: int,
+    sam_frame_count: int,
+    sam_cache: dict,
+) -> dict:
+    """YOLO는 매번 실행하고, 조건이 안전할 때만 이전 SAM 마스크를 재사용합니다."""
+    # 객체 목록과 bbox는 프레임마다 달라질 수 있으므로 YOLO 처리 과정은 그대로 유지합니다.
     result = detector.detect(frame)
     scene_data = detector.build_scene(result, frame, frame_count)
-    annotated_frame, scene_data, masks_list = segmenter.segment_objects(frame, scene_data)
-    depth_map = depth_estimator.get_depth_map(frame)
+
+    current_objects = scene_data.get("objects", [])
+    current_labels = [obj["label"] for obj in current_objects]
+    current_bboxes = [obj["yolo"]["bbox_2d"] for obj in current_objects]
+
+    # 라벨과 객체 수가 같아도 bbox가 크게 이동했다면 과거 마스크는 더 이상 유효하지 않습니다.
+    # 모든 객체의 IoU가 기준값 이상일 때만 캐시를 안전하게 재사용합니다.
+    bboxes_are_stable = (
+        len(current_bboxes) == len(sam_cache["last_bboxes"])
+        and all(
+            bbox_iou(previous_bbox, current_bbox) >= SAM_IOU_THRESHOLD
+            for previous_bbox, current_bbox in zip(
+                sam_cache["last_bboxes"], current_bboxes
+            )
+        )
+    )
+    can_reuse_masks = (
+        bool(sam_cache["last_masks_list"])
+        and bool(sam_cache["last_sam_data"])
+        and sam_cache["cached_depth_map"] is not None
+        and all(sam_data is not None for sam_data in sam_cache["last_sam_data"])
+        and sam_frame_count % SAM_INTERVAL != 0
+        and len(current_objects) == len(sam_cache["last_masks_list"])
+        and len(current_objects) == len(sam_cache["last_sam_data"])
+        and current_labels == sam_cache["last_labels"]
+        and bboxes_are_stable
+    )
+
+    if can_reuse_masks:
+        # SAM과 Depth를 한 세트로 재사용합니다. 이 경로에서는 두 AI 모델 모두 실행하지 않습니다.
+        _, scene_data = segmenter.overlay_cached_masks(
+            frame, scene_data, sam_cache["last_sam_data"]
+        )
+        masks_list = sam_cache["last_masks_list"]
+        depth_map = sam_cache["cached_depth_map"]
+    else:
+        # SAM 갱신이 필요하면 같은 프레임으로 Depth도 함께 계산하여 두 캐시의 시점을 맞춥니다.
+        _, scene_data, masks_list = segmenter.segment_objects(frame, scene_data)
+        depth_map = depth_estimator.get_depth_map(frame)
+
+        sam_cache["last_masks_list"] = masks_list
+        sam_cache["last_sam_data"] = [
+            obj["sam"].copy() if obj.get("sam") is not None else None
+            for obj in scene_data["objects"]
+        ]
+        sam_cache["cached_depth_map"] = depth_map
+
+    # 다음 처리 프레임의 캐시 유효성 판단을 위해 최신 YOLO 결과를 보관합니다.
+    sam_cache["last_labels"] = current_labels
+    sam_cache["last_bboxes"] = current_bboxes
+
+    # 새로 계산했거나 캐시에서 가져온 동일 시점의 SAM 마스크와 Depth map을 결합합니다.
     scene_data = depth_attacher.attach_depth(scene_data, masks_list, depth_map)
     scene_data = spatial_converter.process_scene_3d(scene_data)
     scene_data = relation_graph.process_scene_relations(scene_data)
     return scene_data
 
 def is_significant_change(prev_inputs, curr_inputs):
+    """
+    delta tirgger에 관한 함수    
+    """
     if prev_inputs is None:
         return True
     if len(prev_inputs) != len(curr_inputs):
@@ -87,8 +181,17 @@ def ai_worker_thread():
     init_vision_modules()
     
     frame_count = 0
+    sam_frame_count = 0
     last_sent_inputs = None
     last_api_call_time = 0.0
+    # SAM과 Depth 캐시는 AI 작업 스레드 내부에서 한 세트로 관리합니다.
+    sam_cache = {
+        "last_labels": [],
+        "last_bboxes": [],
+        "last_masks_list": [],
+        "last_sam_data": [],
+        "cached_depth_map": None,
+    }
 
     print("[서버] 백그라운드 AI 비전 파이프라인 가동...")
     while True:
@@ -105,10 +208,17 @@ def ai_worker_thread():
         if frame_count % 5 != 0:
             continue
 
-        scene_data = build_scene_graph_for_frame(frame, frame_count)
+        # 원본 카메라 루프가 아니라 실제 Vision 처리 횟수를 기준으로 SAM 갱신 주기를 계산합니다.
+        sam_frame_count += 1
+        scene_data = build_scene_graph_for_frame(
+            frame,
+            frame_count,
+            sam_frame_count,
+            sam_cache,
+        )
         inputs = build_inputs_from_scene(scene_data)
 
-        # 박스 그리기
+        # 박스 그리기 (obj)
         annotated_frame = frame.copy()
         if inputs:
             for inp in inputs:
@@ -121,12 +231,13 @@ def ai_worker_thread():
         # 메인 쓰레드가 보여줄 화면 업데이트
         with annotated_lock:
             global annotated_frame_to_display
-            annotated_frame_to_display = annotated_frame
+            annotated_frame_to_display = annotated_frame    
 
         if not inputs:
             continue
             
         # [유니티용] 실시간 좌표 고속 스트림 (6FPS) 전송
+        # vlm 판단을 제외한 내용은 반복적으로 전송
         fast_stream_data = [
             {
                 "object_id": inp.object_id,
@@ -140,39 +251,68 @@ def ai_worker_thread():
             "data": fast_stream_data
         })
 
+        # vlm 호출 판단
         if not is_significant_change(last_sent_inputs, inputs):
             continue
-
+        
+        # vlm 호출 쿨타임 : 트리거가 발동해도 10초가 지나지 않았다면 큐에 작업 생성 안함.
         current_time = time.time()
         if current_time - last_api_call_time < 10.0:
             continue
 
+        # Vision worker는 VLM을 직접 호출하지 않고 최신 장면을 작업 큐에 넣은 뒤
+        # 즉시 다음 Vision 프레임 처리로 돌아갑니다.
+        pil_image = Image.fromarray(cv2.cvtColor(annotated_frame, cv2.COLOR_BGR2RGB))
+        job = {
+            "inputs": inputs,
+            "image": pil_image,
+            "created_at": current_time,
+        }
+
+        # 큐가 차 있다면 아직 처리되지 않은 과거 장면을 버리고 최신 장면으로 교체합니다.
+        if vlm_queue.full():
+            try:
+                vlm_queue.get_nowait()     # 큐에있던 작업을 바로 꺼내버림
+            except queue.Empty:         # vlm 스레드에서 작업을 바로 가져갔을 때    
+                pass
+        vlm_queue.put_nowait(job)       # 작업 바로 push
+
+        # delta trigger와 10초 쿨다운의 기준은 VLM 작업을 큐에 넣은 시점으로 유지합니다.
         last_sent_inputs = inputs
         last_api_call_time = current_time
 
-        # LLM 호출
-        pil_image = Image.fromarray(cv2.cvtColor(annotated_frame, cv2.COLOR_BGR2RGB))
-        wpercent = (448 / float(pil_image.size[0]))
-        hsize = int((float(pil_image.size[1]) * float(wpercent)))
-        pil_image = pil_image.resize((448, hsize), Image.Resampling.LANCZOS)
 
-        batch_input = SemanticInterpretationBatchInput(context=DEFAULT_CONTEXT, objects=inputs)
-        
-        print(f"--- [서버] VLM 호출 (객체 {len(inputs)}개) ---")
+def vlm_worker_thread():
+    """Vision worker와 독립적으로 큐의 최신 장면을 VLM으로 해석합니다."""
+    while True:
+        # 작업이 없을 때는 blocking 상태로 기다리므로 불필요하게 CPU를 사용하지 않습니다.
+        job = vlm_queue.get()
+        inputs = job["inputs"]
+        pil_image = job["image"]
+        batch_input = SemanticInterpretationBatchInput(
+            context=DEFAULT_CONTEXT,
+            objects=inputs,
+        )
+
+        print(f"--- [서버] VLM worker 호출 (객체 {len(inputs)}개) ---")
+        vlm_started_at = time.perf_counter()
         try:
             batch_output = interpret_batch(batch_input, image=pil_image)
-                
+
             broadcast_message({
                 "status": "SUCCESS",
                 "data": batch_output.model_dump()
             })
             print("-> 유니티로 실시간 좌표+GPT 데이터 전송 완료!")
         except Exception as e:
-            print(f"[OpenAI GPT 호출 에러] {e}")
+            print(f"[VLM worker OpenAI GPT 호출 에러] {e}")
             broadcast_message({
                 "status": "API_LIMIT_EXCEEDED",
                 "data": None
             })
+        finally:
+            vlm_elapsed = time.perf_counter() - vlm_started_at
+            print(f"[서버] VLM worker 판단 소요 시간: {vlm_elapsed:.2f}초")
 
 
 def main_vision_loop():
@@ -238,10 +378,14 @@ if __name__ == "__main__":
     ws_thread = threading.Thread(target=start_websocket_server, daemon=True)
     ws_thread.start()
 
-    # 2. 백그라운드 쓰레드에서 AI 비전 파이프라인(YOLO, SAM, GPT) 실행
+    # 2. 백그라운드 쓰레드에서 Vision 파이프라인과 FAST_STREAM 생성 실행
     ai_thread = threading.Thread(target=ai_worker_thread, daemon=True)
     ai_thread.start()
 
-    # 3. 메인 쓰레드에서 카메라 화면 띄우기 실행
+    # 3. 별도 백그라운드 쓰레드에서 느린 VLM 추론 실행
+    vlm_thread = threading.Thread(target=vlm_worker_thread, daemon=True)
+    vlm_thread.start()
+
+    # 4. 메인 쓰레드에서 카메라 화면 띄우기 실행
     # (macOS에서는 cv2.imshow를 반드시 메인 쓰레드에서 호출해야 함)
     main_vision_loop()
