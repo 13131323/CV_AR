@@ -12,7 +12,7 @@ import threading
 import queue
 from PIL import Image
 
-from vision.stream import WebcamStream
+from vision.stream import WebcamStream, CAMERA_MATRIX
 from vision.detector import ObjectDetector
 from vision.segmentation.segmenter import ObjectSegmenter, SceneDepthAttacher
 from vision.depth.depth_estimator import DepthEstimator
@@ -52,8 +52,12 @@ def init_vision_modules():
     segmenter = ObjectSegmenter()
     depth_estimator = DepthEstimator()
     depth_attacher = SceneDepthAttacher()
-    spatial_converter = Spatial3DConverter()
+    spatial_converter = Spatial3DConverter(
+        camera_matrix=CAMERA_MATRIX
+    )
+
     relation_graph = SpatialRelationGraph()
+
     print("[서버] 비전 모듈 초기화 완료.")
 
 def bbox_iou(box_a, box_b) -> float:
@@ -316,9 +320,10 @@ def vlm_worker_thread():
 
 
 def main_vision_loop():
+    global latest_frame, annotated_frame_to_display, spatial_converter
     stream = WebcamStream()
+
     
-    global latest_frame, annotated_frame_to_display
     print("[서버] 실시간 카메라 UI 렌더링 시작...")
     
     try:

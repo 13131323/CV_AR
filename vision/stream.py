@@ -1,6 +1,20 @@
 import cv2
 import numpy as np
 
+CAMERA_MATRIX = np.array([
+    [958.2263, 0.0, 624.0653],
+    [0.0, 956.1898, 362.6175],
+    [0.0, 0.0, 1.0]
+], dtype=np.float32)
+
+DIST_COEFFS = np.array([
+    -0.01487506,
+    -0.05894066,
+    0.00078448,
+    -0.00334399,
+    0.10029198
+], dtype=np.float32)
+
 class WebcamStream:
     """
     CV_AR 프로젝트의 실시간 카메라 스트리밍 및 영상 공급을 전담하는 클래스입니다.
@@ -24,20 +38,9 @@ class WebcamStream:
         # 캘리브레이션을 수행하여 실제 맥북 M4 카메라의 고유 서명 값으로 교체해야
         # 아바타 상호작용의 물리적 오차(수십 cm 단위)를 방지할 수 있습니다.
         # -----------------------------------------------------------------
+        self.camera_matrix = CAMERA_MATRIX.copy()
+        self.dist_coeffs = DIST_COEFFS.copy()
         
-        
-        # 카메라 행렬과 렌즈 왜곡 계수는 캠에 따라서 달라짐
-        
-        # 1280x720 기준 임시 추정값 => 체커보드 캘리브레이션으로 나중에 변경 필요
-        self.camera_matrix = np.array([
-            [900,   0, 640],
-            [  0, 900, 360],
-            [  0,   0,   1]
-        ], dtype=np.float32)
-        
-        # 렌즈 왜곡 계수 (캘리브레이션 전까지는 기본 0 세팅)
-        self.dist_coeffs = np.zeros((5, 1), dtype=np.float32)
-
     def get_frame(self):
         """
         카메라로부터 현재 프레임을 읽어와 안전하게 복사본을 반환합니다.

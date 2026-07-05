@@ -1,15 +1,29 @@
 import numpy as np
 
 class Spatial3DConverter:
-    def __init__(self, f_x=900.0, f_y=900.0):
+    def __init__(self, camera_matrix=None):
         """
-        [완결형] 1280x720 웹캠 기준 가상 내부 파라미터 세팅
-        # TODO: Camera Calibration 완료 후 실제 intrinsic matrix의 fx, fy로 교체할 것
+        camera_matrix를 전달받아 실제 카메라 내부 파라미터를 사용한다.
+        전달되지 않으면 기존 임시값을 사용한다.
         """
-        self.f_x = f_x
-        self.f_y = f_y
+        if camera_matrix is None:
+            self.f_x = 900.0
+            self.f_y = 900.0
+            self.c_x = 640.0
+            self.c_y = 360.0
+        else:
+            self.f_x = float(camera_matrix[0, 0])
+            self.f_y = float(camera_matrix[1, 1])
+            self.c_x = float(camera_matrix[0, 2])
+            self.c_y = float(camera_matrix[1, 2])
 
-    def convert_to_3d(self, centroid_2d, mean_relative_depth, c_x, c_y):
+        print(
+            f"[Spatial3D] Using calibrated camera: "
+            f"fx={self.f_x:.2f}, fy={self.f_y:.2f}, "
+            f"cx={self.c_x:.2f}, cy={self.c_y:.2f}"
+        )
+
+    def convert_to_3d(self, centroid_2d, mean_relative_depth):
         """
         [핀홀 역투영 가상 공간화 알고리즘]
         [피드백 반영] 음수 depth 유입 시 원점(0,0,0)으로 데이터가 튀어 디버깅이 꼬이는 현상 방지.
@@ -22,8 +36,8 @@ class Spatial3DConverter:
         z_final = max(mean_relative_depth, 0.0)
         
         # 투영 기하학 수식 적용 (방향 위상 보존)
-        X = (u - c_x) * z_project / self.f_x
-        Y = (v - c_y) * z_project / self.f_y
+        X = (u - self.c_x) * z_project / self.f_x
+        Y = (v - self.c_y) * z_project / self.f_y
         
         return {
             "x": round(float(X), 3),
@@ -38,10 +52,6 @@ class Spatial3DConverter:
         if not scene_data or "objects" not in scene_data or not scene_data["objects"]:
             return scene_data
 
-        frame_meta = scene_data.get("frame_metadata", {})
-        resolution = frame_meta.get("camera_resolution", [1280, 720])
-        c_x = resolution[0] / 2.0
-        c_y = resolution[1] / 2.0
         
         # 전역 좌표계 정보 상위 메타데이터 레벨로 최적화 이동 완료
         if "scene" not in scene_data:
@@ -56,7 +66,10 @@ class Spatial3DConverter:
             mean_depth = obj["depth"].get("mean_relative_depth", None)
 
             if centroid_2d is not None and mean_depth is not None:
-                spatial_coords = self.convert_to_3d(centroid_2d, mean_depth, c_x, c_y)
+                spatial_coords = self.convert_to_3d(
+                    centroid_2d,
+                    mean_depth
+                )
                 obj["spatial_3d"] = spatial_coords
             else:
                 obj["spatial_3d"] = {"x": 0.0, "y": 0.0, "z": 0.0}
@@ -68,22 +81,27 @@ class Spatial3DConverter:
 # 🚀 정밀 크로스 유닛 테스트 (수학적 정합성 100% 일치 버전)
 # =====================================================================
 if __name__ == "__main__":
-    converter = Spatial3DConverter()
-    c_x, c_y = 640.0, 360.0
+    camera_matrix = np.array([
+        [958.2263, 0.0, 624.0653],
+        [0.0, 956.1898, 362.6175],
+        [0.0, 0.0, 1.0]
+    ])
+
+    converter = Spatial3DConverter(camera_matrix)
     
     # [테스트 1] 우측 하단 이동 및 투영 공식 검증
-    res = converter.convert_to_3d([900, 540], 5.0, c_x, c_y)
-    expected_x = round((900 - 640) * 5.0 / 900.0, 3) # 1.444
-    expected_y = round((540 - 360) * 5.0 / 900.0, 3) # 1.0
+    res = converter.convert_to_3d([900, 540], 5.0)
+    expected_x = round((900 - converter.c_x) * 5.0 / converter.f_x, 3)
+    expected_y = round((540 - converter.c_y) * 5.0 / converter.f_y, 3)
     
     assert res["x"] == expected_x, f"X축 불일치: {res['x']} vs {expected_x}"
     assert res["y"] == expected_y, f"Y축 불일치: {res['y']} vs {expected_y}"
     assert res["z"] == 5.0, "Z값 오류"
     
     # [테스트 2] 음수 노이즈 유입 시 디버깅 원점 팅김 방지 검증 (Z만 0.0 고정)
-    res_neg = converter.convert_to_3d([900, 540], -1.0, c_x, c_y)
-    expected_neg_x = round((900 - 640) * 0.001 / 900.0, 3) # 0.000 (소수점 3자리 절사)
-    expected_neg_y = round((540 - 360) * 0.001 / 900.0, 3) # 0.000
+    res_neg = converter.convert_to_3d([900, 540], -1.0)
+    expected_neg_x = round((900 - converter.c_x) * 0.001 / converter.f_x, 3)
+    expected_neg_y = round((540 - converter.c_y) * 0.001 / converter.f_y, 3)
     
     assert res_neg["x"] == expected_neg_x, "음수 처리 X축 위상 오류"
     assert res_neg["y"] == expected_neg_y, "음수 처리 Y축 위상 오류"
