@@ -82,6 +82,20 @@ class PlannerDirectives(BaseModel):
     animation_trigger: AnimationTrigger = Field(..., description="상호작용 시 사용할 애니메이션 이름")
     is_safe_to_approach: bool = Field(..., description="위험물이나 타인이 사용중인 물건이 아닌지 여부")
 
+    @model_validator(mode="before")
+    @classmethod
+    def enforce_policy_trigger(cls, data):
+        """비상호작용 정책의 animation trigger를 정책에 맞게 강제한다."""
+        if not isinstance(data, dict):
+            return data
+
+        normalized = data.copy()
+        if normalized.get("action_policy") == "OBSERVE_ONLY":
+            normalized["animation_trigger"] = "Observe"
+        elif normalized.get("action_policy") == "IGNORE":
+            normalized["animation_trigger"] = "None"
+        return normalized
+
 
 class SemanticInterpretationOutput(BaseModel):
     """Semantic Interpretation Layer -> 다음 레이어(Action Planning) 출력 (V2 계층 구조)"""

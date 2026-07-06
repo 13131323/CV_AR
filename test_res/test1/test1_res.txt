@@ -1,0 +1,3302 @@
+test1: image-only VLM reasoning word-limit experiment (30 -> 0)
+restored_from: test1_res.csv
+
+[experiment 01]
+word_limit: 30
+vlm_inference_seconds: 8.314537
+timestamp: 2026-07-06T15:47:34.340+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "person",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사용자가 카메라를 들고 있어 카메라가 그를 향하고 있다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책상이 화면에 보이며, 사용자가 접근할 수 있는 상태이다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컴퓨터가 책상 위에 놓여 있어 접근 가능하다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "물병이 책상 위에 놓여 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 02]
+word_limit: 29
+vlm_inference_seconds: 7.162783
+timestamp: 2026-07-06T15:47:41.514+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "table",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "테이블은 사용자 앞에 위치하며, 물건을 놓을 수 있는 평평한 표면이다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컴퓨터는 테이블 위에 놓여 있으며, 사용 가능한 상태이다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "shelf",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "선반은 방의 한쪽에 위치하며, 물건을 보관할 수 있는 공간이다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "침대는 방의 한쪽에 위치하며, 누울 수 있는 공간이다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "물병은 테이블 위에 놓여 있으며, 마실 수 있는 물이 담겨 있다."
+    }
+  ]
+}
+
+[experiment 03]
+word_limit: 28
+vlm_inference_seconds: 6.729017
+timestamp: 2026-07-06T15:47:48.253+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "shelf",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "선반이 벽에 붙어 있으며, 사용 가능한 상태로 보인다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컴퓨터가 선반 위에 놓여 있으며, 사용 가능한 상태이다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "물병이 테이블 위에 놓여 있으며, 사용 가능한 상태이다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Sit"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "침대가 방의 한쪽에 위치해 있으며, 사용 가능한 상태이다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "담요가 침대 위에 놓여 있으며, 사용 가능한 상태이다."
+    }
+  ]
+}
+
+[experiment 04]
+word_limit: 27
+vlm_inference_seconds: 5.334842
+timestamp: 2026-07-06T15:47:53.598+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "책장",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책장이 화면 중앙에 위치하며, 사용 가능한 상태이다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "모니터",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "모니터가 책장 위에 위치하며, 사용 가능한 상태이다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "물병",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "물병이 테이블 위에 위치하며, 마실 수 있는 상태이다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "테이블",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "테이블이 화면 중앙에 위치하며, 사용 가능한 상태이다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "침대",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "침대가 화면 오른쪽에 위치하며, 사용 가능한 상태이다."
+    }
+  ]
+}
+
+[experiment 05]
+word_limit: 26
+vlm_inference_seconds: 7.166135
+timestamp: 2026-07-06T15:48:00.773+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "table",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "테이블이 화면 중앙에 위치하고 있으며, 사용 가능 상태이다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컴퓨터가 테이블 위에 놓여 있으며, 사용 가능 상태이다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "water bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "물병이 테이블 위에 놓여 있으며, 사용 가능 상태이다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Sit"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "침대가 방의 한쪽에 위치하고 있으며, 사용 가능 상태이다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "sheets",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "이불이 침대 위에 놓여 있으며, 사용 가능 상태이다."
+    }
+  ]
+}
+
+[experiment 06]
+word_limit: 25
+vlm_inference_seconds: 5.136046
+timestamp: 2026-07-06T15:48:05.920+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "사람",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 물병을 들고 있어 접근할 수 없다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "물병",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "물병이 사람의 손에 들려 있어 접근할 수 없다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "책상",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책상이 화면에 보이며 접근 가능하다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "컴퓨터",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컴퓨터가 책상 위에 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 07]
+word_limit: 24
+vlm_inference_seconds: 5.064131
+timestamp: 2026-07-06T15:48:10.996+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Person",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 물병을 들고 있어 접근할 수 없다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Water Bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "물병이 사람에 의해 들려 있어 접근할 수 없다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책상이 멀리 위치해 있어 접근 가능하다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컴퓨터가 책상 위에 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 08]
+word_limit: 23
+vlm_inference_seconds: 5.013984
+timestamp: 2026-07-06T15:48:16.021+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "사람",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 물병을 들고 있어 접근이 안전하지 않다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "물병",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "물병이 사람의 손에 들려 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "책상",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책상이 바닥에 놓여 있어 접근 가능하다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "모니터",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "모니터가 책상 위에 놓여 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 09]
+word_limit: 22
+vlm_inference_seconds: 4.043267
+timestamp: 2026-07-06T15:48:20.073+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "person",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 손에 물체를 들고 있어 접근할 수 없다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "object",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책상이 멀리 위치해 있어 접근 가능하다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "object",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "모니터가 책상 위에 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 10]
+word_limit: 21
+vlm_inference_seconds: 4.264606
+timestamp: 2026-07-06T15:48:24.348+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "사람",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 물병을 들고 있어 접근할 수 없다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "물병",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "물병이 사람의 손에 들려 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "책상",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책상이 화면에 보이며 접근 가능하다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "컴퓨터",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컴퓨터가 책상 위에 놓여 있다."
+    }
+  ]
+}
+
+[experiment 11]
+word_limit: 20
+vlm_inference_seconds: 4.976036
+timestamp: 2026-07-06T15:48:29.335+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "water bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사용자가 물병을 들고 있어 접근할 수 없음."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "person",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사용자가 물병을 들고 있어 접근할 수 없음."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컴퓨터는 사용 중이지 않아 접근 가능."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "table",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "테이블은 사용 중이지 않아 접근 가능."
+    }
+  ]
+}
+
+[experiment 12]
+word_limit: 19
+vlm_inference_seconds: 5.372774
+timestamp: 2026-07-06T15:48:34.718+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "사람",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 물병을 들고 있어 접근할 수 없다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "물병",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "물병이 사람의 손에 들려 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "책상",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책상이 화면에 보이고 접근 가능하다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "모니터",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "모니터가 책상 위에 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 13]
+word_limit: 18
+vlm_inference_seconds: 5.793028
+timestamp: 2026-07-06T15:48:40.521+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "사람",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 물병을 들고 있는 모습이므로 접근할 수 없다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "물병",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "물병이 사람의 손에 들려있어 접근할 수 없다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "책상",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책상이 화면에 보이며 접근 가능하다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "모니터",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "모니터가 책상 위에 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 14]
+word_limit: 17
+vlm_inference_seconds: 5.365500
+timestamp: 2026-07-06T15:48:45.897+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "사람",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 물병을 들고 있어 접근할 수 없다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "물병",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "물병이 사람의 손에 들려 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "책상",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책상이 화면에 보이며 접근 가능하다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "모니터",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "모니터가 책상 위에 놓여 있다."
+    }
+  ]
+}
+
+[experiment 15]
+word_limit: 16
+vlm_inference_seconds: 5.893793
+timestamp: 2026-07-06T15:48:51.800+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "person",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 물병을 들고 있는 모습이 보인다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "water bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 손에 물병을 들고 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "책상이 화면의 뒤쪽에 위치해 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "책상 위에 컴퓨터가 놓여 있다."
+    }
+  ]
+}
+
+[experiment 16]
+word_limit: 15
+vlm_inference_seconds: 5.774721
+timestamp: 2026-07-06T15:48:57.584+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "table",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "테이블이 화면 중앙에 위치하고 있다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "computer monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "모니터가 테이블 위에 놓여 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "person",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 화면에 빠르게 움직이고 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "침대가 화면의 오른쪽에 위치하고 있다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "water bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "물병이 테이블 위에 놓여 있다."
+    }
+  ]
+}
+
+[experiment 17]
+word_limit: 14
+vlm_inference_seconds: 6.029878
+timestamp: 2026-07-06T15:49:03.624+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "table",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "테이블이 사용자 앞에 위치해 있다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "computer monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "모니터가 테이블 위에 놓여 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "water bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "물병이 테이블 위에 놓여 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "침대가 방의 한쪽에 위치해 있다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "sheets",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "침대 위에 이불이 놓여 있다."
+    }
+  ]
+}
+
+[experiment 18]
+word_limit: 13
+vlm_inference_seconds: 12.776866
+timestamp: 2026-07-06T15:49:16.410+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "table",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "테이블이 사용자 앞에 위치하고 있다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컴퓨터가 테이블 위에 놓여 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "water bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "물병이 테이블 위에 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "to_the_right_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Sit"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "침대가 사용자 오른쪽에 위치한다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "to_the_right_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "담요가 침대 위에 있다."
+    }
+  ]
+}
+
+[experiment 19]
+word_limit: 12
+vlm_inference_seconds: 7.292237
+timestamp: 2026-07-06T15:49:23.712+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "책상",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책상이 화면 중앙에 위치해 있다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "모니터",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "모니터가 책상 위에 놓여 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "물병",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "물병이 책상 위에 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "침대",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "침대가 화면 오른쪽에 위치해 있다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "상자",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "상자가 책상 위에 놓여 있다."
+    }
+  ]
+}
+
+[experiment 20]
+word_limit: 11
+vlm_inference_seconds: 9.187788
+timestamp: 2026-07-06T15:49:32.909+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "table",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "테이블이 사용자 앞에 위치해 있다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컴퓨터가 테이블 위에 놓여 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "water bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "물병이 테이블 위에 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "to_the_right_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "침대가 사용자 오른쪽에 위치해 있다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "shelf",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "to_the_left_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "선반이 사용자 왼쪽에 있다."
+    }
+  ]
+}
+
+[experiment 21]
+word_limit: 10
+vlm_inference_seconds: 7.894910
+timestamp: 2026-07-06T15:49:40.813+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "table",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "테이블이 화면 중앙에 위치해 있다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "computer monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "모니터가 테이블 위에 놓여 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "water bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "물병이 테이블 위에 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "침대가 방의 한쪽에 있다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "sheets",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "침대 위에 이불이 있다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "shelf",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "선반이 방의 한쪽에 있다."
+    }
+  ]
+}
+
+[experiment 22]
+word_limit: 9
+vlm_inference_seconds: 7.289861
+timestamp: 2026-07-06T15:49:48.114+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "table",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "테이블 위에 여러 물건이 있다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "computer monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "모니터가 테이블 위에 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "shelf",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "선반 위에 물건이 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "침대가 방의 한쪽에 있다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "light",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "천장에 조명이 있다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "water bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "테이블 위에 물병이 있다."
+    }
+  ]
+}
+
+[experiment 23]
+word_limit: 8
+vlm_inference_seconds: 5.420199
+timestamp: 2026-07-06T15:49:53.544+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "table",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "테이블이 화면 중앙에 위치함."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "computer monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "모니터가 테이블 위에 놓여있음."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "water bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "물병이 테이블 위에 있음."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "침대가 방 한쪽에 위치함."
+    }
+  ]
+}
+
+[experiment 24]
+word_limit: 7
+vlm_inference_seconds: 6.988743
+timestamp: 2026-07-06T15:50:00.542+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "table",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "테이블이 화면 중앙에 위치함."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "computer monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "모니터가 테이블 위에 놓여있음."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "water bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "물병이 테이블 위에 있음."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "침대가 방의 한쪽에 위치함."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "box",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "상자가 테이블 위에 있음."
+    }
+  ]
+}
+
+[experiment 25]
+word_limit: 6
+vlm_inference_seconds: 5.549338
+timestamp: 2026-07-06T15:50:06.100+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Person",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 물병을 들고 있다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Water Bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 물병을 들고 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "책상이 화면에 보인다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "책상 위에 컴퓨터가 있다."
+    }
+  ]
+}
+
+[experiment 26]
+word_limit: 5
+vlm_inference_seconds: 7.381161
+timestamp: 2026-07-06T15:50:13.491+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "사람",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 물병을 들고 있다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "물병",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 물병을 들고 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "책상",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "책상이 화면에 보인다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "모니터",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "모니터가 책상 위에 있다."
+    }
+  ]
+}
+
+[experiment 27]
+word_limit: 4
+vlm_inference_seconds: 3.560893
+timestamp: 2026-07-06T15:50:17.063+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "사람",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 물병을 들고 있음"
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "물병",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 물병을 들고 있음"
+    }
+  ]
+}
+
+[experiment 28]
+word_limit: 3
+vlm_inference_seconds: 2.519277
+timestamp: 2026-07-06T15:50:19.592+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "사람",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 물병을 들고 있음"
+    }
+  ]
+}
+
+[experiment 29]
+word_limit: 2
+vlm_inference_seconds: 1.906798
+timestamp: 2026-07-06T15:50:21.508+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "사람",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람 존재"
+    }
+  ]
+}
+
+[experiment 30]
+word_limit: 1
+vlm_inference_seconds: 1.732844
+timestamp: 2026-07-06T15:50:23.251+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "사람",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람"
+    }
+  ]
+}
+
+[experiment 31]
+word_limit: 0
+vlm_inference_seconds: 5.181637
+timestamp: 2026-07-06T15:50:28.442+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "water bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": ""
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "person",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": ""
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": ""
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": ""
+    }
+  ]
+}

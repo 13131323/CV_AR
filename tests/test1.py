@@ -1,28 +1,38 @@
-"""VLM reasoning 단어 수(30 -> 0) 실험 실행기.
-
-프로젝트 루트에서 다음 명령으로 실행한다.
-
-    python -m tests.test1
-
-각 단어 제한에서 성공한 VLM 추론을 한 번씩 수집하고 종료한다.
-"""
+"""이미지만 사용하는 VLM의 Micro CoT 단어 제한 실험(30 -> 0)."""
 
 from __future__ import annotations
 
 import csv
 import json
 import sys
-import threading
 import time
 from datetime import datetime
 from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-RESULT_DIR = PROJECT_ROOT / "test_res"
+RESULT_DIR = PROJECT_ROOT / "test_res" / "test1"
 TEXT_RESULT = RESULT_DIR / "test1_res.txt"
 CSV_RESULT = RESULT_DIR / "test1_res.csv"
 WORD_LIMITS = tuple(range(30, -1, -1))
+
+# 단어 수만 독립 변수로 유지하기 위해 이미지 경량화 조건은 모든 실험에서 고정한다.
+VLM_IMAGE_MAX_WIDTH = 320
+VLM_JPEG_QUALITY = 70
+
+
+IMAGE_ONLY_SYSTEM_PROMPT = """
+너는 1인칭 실내 카메라 이미지를 분석하는 공간 분석가다.
+사용자 메시지에는 이미지 한 장만 주어진다. 이미지에서 명확히 보이는 주요 객체를 직접 탐지하고 분석하라.
+이미지에 보이지 않는 객체를 추측하거나 만들어 내지 마라.
+각 객체에는 화면에서 왼쪽에서 오른쪽 순서로 0부터 object_id를 부여하라.
+
+corrected_spatial_relation.environment_relative는 on_floor, on_surface, elevated, floating, held 중 선택하라.
+semantic_state.social_state는 available, held_by_user, in_use_by_other 중 선택하라.
+사람 또는 사람이 들거나 사용 중인 객체에는 접근하지 않도록 안전한 action_policy를 선택하라.
+affordances와 animation_trigger는 응답 JSON 스키마에 허용된 값만 사용하라.
+반드시 지정된 JSON 스키마로만 응답하라.
+"""
 
 
 def reasoning_prompt(word_limit: int) -> str:
@@ -45,13 +55,14 @@ def initialise_result_files() -> None:
     RESULT_DIR.mkdir(parents=True, exist_ok=True)
     started_at = datetime.now().astimezone().isoformat(timespec="seconds")
     TEXT_RESULT.write_text(
-        "test1: reasoning word-limit experiment (30 -> 0)\n"
-        f"started_at: {started_at}\n\n",
+        "test1: image-only VLM reasoning word-limit experiment (30 -> 0)\n"
+        f"started_at: {started_at}\n"
+        f"vlm_image_max_width: {VLM_IMAGE_MAX_WIDTH}\n"
+        f"vlm_jpeg_quality: {VLM_JPEG_QUALITY}\n\n",
         encoding="utf-8",
     )
-    with CSV_RESULT.open("w", newline="", encoding="utf-8-sig") as file:
-        writer = csv.writer(file)
-        writer.writerow(
+    with CSV_RESULT.open("w", newline="", encoding="utf-8") as file:
+        csv.writer(file).writerow(
             ["experiment", "word_limit", "vlm_inference_seconds", "timestamp", "json"]
         )
 
@@ -74,84 +85,96 @@ def append_result(experiment: int, word_limit: int, elapsed: float, result: dict
             f"json:\n{pretty_json}\n\n"
         )
 
-    with CSV_RESULT.open("a", newline="", encoding="utf-8-sig") as file:
+    with CSV_RESULT.open("a", newline="", encoding="utf-8") as file:
         csv.writer(file).writerow(
             [experiment, word_limit, f"{elapsed:.6f}", timestamp, compact_json]
         )
 
 
 def main() -> int:
-    # 직접 파일로 실행해도 프로젝트 패키지를 찾을 수 있게 한다.
     if str(PROJECT_ROOT) not in sys.path:
         sys.path.insert(0, str(PROJECT_ROOT))
 
     import cv2
+    from PIL import Image
 
     import llm.interpreter as interpreter
-    import llm.server_websocket as server
+    from llm.schemas import SemanticInterpretationBatchOutput
     from vision.stream import WebcamStream
 
     initialise_result_files()
-    experiment_done = threading.Event()
-    result_lock = threading.Lock()
-    next_result_index = 0
-    original_interpret_batch = server.interpret_batch
-
-    def measured_interpret_batch(batch_input, image=None):
-        nonlocal next_result_index
-
-        with result_lock:
-            word_limit = WORD_LIMITS[next_result_index]
-            experiment = next_result_index + 1
-
-        # server_websocket이 가져온 함수도 내부적으로 이 모듈의 전역 프롬프트를 읽는다.
-        interpreter.USE_MICRO_COT = True
-        interpreter.MICRO_COT_PROMPT = reasoning_prompt(word_limit)
-        print(f"[test1] 실험 {experiment}/31 시작: reasoning 최대 {word_limit}단어")
-
-        started_at = time.perf_counter()
-        output = original_interpret_batch(batch_input, image=image)
-        elapsed = time.perf_counter() - started_at
-        result = output.model_dump(mode="json")
-
-        with result_lock:
-            # 성공한 추론만 다음 제한값으로 진행한다. API 오류는 같은 조건으로 재시도된다.
-            append_result(experiment, word_limit, elapsed, result)
-            next_result_index += 1
-            print(f"[test1] 실험 {experiment}/31 저장 완료 ({elapsed:.3f}초)")
-            if next_result_index == len(WORD_LIMITS):
-                experiment_done.set()
-        return output
-
-    server.interpret_batch = measured_interpret_batch
-    # 같은 물체를 유지해도 매 조건을 연속 실험할 수 있게 delta trigger만 해제한다.
-    server.is_significant_change = lambda _previous, _current: True
-
-    threading.Thread(target=server.start_websocket_server, daemon=True).start()
-    threading.Thread(target=server.ai_worker_thread, daemon=True).start()
-    threading.Thread(target=server.vlm_worker_thread, daemon=True).start()
+    interpreter.ENABLE_VLM_IMAGE_DOWNSAMPLING = True
+    interpreter.VLM_IMAGE_MAX_WIDTH = VLM_IMAGE_MAX_WIDTH
+    interpreter.VLM_JPEG_QUALITY = VLM_JPEG_QUALITY
 
     stream = WebcamStream()
-    print("[test1] WebSocket/Vision/VLM 시작. q를 누르면 중단합니다.")
+    print("[test1] 이미지 단독 Micro CoT 실험을 시작합니다. q를 누르면 중단합니다.")
     try:
-        while not experiment_done.is_set():
-            ret, frame = stream.get_frame()
-            if not ret:
-                time.sleep(0.01)
-                continue
+        for index, word_limit in enumerate(WORD_LIMITS):
+            experiment = index + 1
 
-            with server.frame_lock:
-                server.latest_frame = frame
-            with server.annotated_lock:
-                display = (
-                    server.annotated_frame_to_display
-                    if server.annotated_frame_to_display is not None
-                    else frame
+            while True:
+                ret, frame = stream.get_frame()
+                if not ret:
+                    time.sleep(0.01)
+                    continue
+
+                cv2.imshow("test1 - image only, reasoning word limit 30 to 0", frame)
+                if cv2.waitKey(1) & 0xFF == ord("q"):
+                    print("[test1] 사용자 요청으로 실험을 중단합니다.")
+                    return 1
+
+                raw_image = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+                system_prompt = f"{IMAGE_ONLY_SYSTEM_PROMPT}\n{reasoning_prompt(word_limit)}"
+
+                print(
+                    f"[test1] 실험 {experiment}/{len(WORD_LIMITS)} 시작: "
+                    f"reasoning 최대 {word_limit}단어"
                 )
-            cv2.imshow("test1 - reasoning word limit 30 to 0", display)
-            if cv2.waitKey(1) & 0xFF == ord("q"):
-                print("[test1] 사용자 요청으로 실험을 중단합니다.")
-                return 1
+                started_at = time.perf_counter()
+                try:
+                    vlm_image = interpreter.prepare_vlm_image(raw_image)
+                    base64_image, jpeg_size = interpreter.encode_image_to_base64(vlm_image)
+                    print(
+                        f"[test1] 이미지 {raw_image.width}x{raw_image.height} -> "
+                        f"{vlm_image.width}x{vlm_image.height}, {jpeg_size / 1024:.1f}KB"
+                    )
+                    response = interpreter.client.beta.chat.completions.parse(
+                        model=interpreter.OPENAI_MODEL,
+                        messages=[
+                            {"role": "system", "content": system_prompt},
+                            {
+                                "role": "user",
+                                "content": [
+                                    {
+                                        "type": "image_url",
+                                        "image_url": {
+                                            "url": f"data:image/jpeg;base64,{base64_image}"
+                                        },
+                                    }
+                                ],
+                            },
+                        ],
+                        response_format=SemanticInterpretationBatchOutput,
+                        temperature=0.2,
+                    )
+                    output = response.choices[0].message.parsed
+                    if output is None:
+                        raise RuntimeError("VLM이 파싱 가능한 JSON을 반환하지 않았습니다.")
+                except Exception as error:
+                    print(f"[test1] 실험 {experiment} 실패, 같은 조건으로 재시도합니다: {error}")
+                    time.sleep(2.0)
+                    continue
+
+                elapsed = time.perf_counter() - started_at
+                append_result(
+                    experiment,
+                    word_limit,
+                    elapsed,
+                    output.model_dump(mode="json"),
+                )
+                print(f"[test1] 실험 {experiment}/{len(WORD_LIMITS)} 저장 완료 ({elapsed:.3f}초)")
+                break
     except KeyboardInterrupt:
         print("\n[test1] 사용자 요청으로 실험을 중단합니다.")
         return 1
