@@ -28,7 +28,7 @@ MOCK_LLM = False
 
 # SAM은 계산 비용이 크므로 일정 주기 (5프레임)마다 새로 실행하고, 그 사이에는 이전 마스크를 재사용합니다.
 # 단, 객체의 위치가 크게 변한 경우에는 주기 전이라도 즉시 SAM을 다시 실행합니다.
-SAM_INTERVAL = 5
+SAM_INTERVAL = 3
 SAM_IOU_THRESHOLD = 0.7
 
 # 글로벌 변수

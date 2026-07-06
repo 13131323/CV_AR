@@ -10,26 +10,17 @@ from pydantic import BaseModel, Field, model_validator
 
 
 AffordanceTag = Literal[
-    "Observe",
-    "Grasp",
-    "Drink",
-    "Sit",
-    "Open",
+    "Spherical grasp to open",
+    "Wrap grasp to open",
+    "Turn on/off switch",
     "Press",
-    "Read",
-    "Write",
-]
-
-AnimationTrigger = Literal[
+    "Two hands raise and move",
+    "Cylindrical grasp to move",
+    "Pinch grasp to move",
+    "Manipulate elongated tools",
+    "To sit/to place",
+    "Observe",
     "None",
-    "Observe",
-    "Grasp",
-    "Drink",
-    "Sit",
-    "Open",
-    "Press",
-    "Read",
-    "Write",
 ]
 
 class SemanticInterpretationInput(BaseModel):
@@ -79,7 +70,10 @@ class PlannerDirectives(BaseModel):
     action_policy: Literal["APPROACH_AND_INTERACT", "OBSERVE_ONLY", "IGNORE"] = Field(
         ..., description="ActionPlanner를 위한 권고 행동 정책 (권고안일 뿐 최종 명령은 아님)"
     )
-    animation_trigger: AnimationTrigger = Field(..., description="상호작용 시 사용할 애니메이션 이름")
+    animation_trigger: AffordanceTag = Field(
+        ...,
+        description="affordances에서 하나를 선택한 단일 실행 행동. 실행하지 않을 때는 None",
+    )
     is_safe_to_approach: bool = Field(..., description="위험물이나 타인이 사용중인 물건이 아닌지 여부")
 
     @model_validator(mode="before")
@@ -114,6 +108,8 @@ class SemanticInterpretationOutput(BaseModel):
         trigger = self.planner_directives.animation_trigger
         affordances = self.semantic_state.affordances
 
+        if trigger not in affordances:
+            raise ValueError("animation_trigger는 affordances 목록에 포함되어야 합니다.")
         if policy == "IGNORE" and trigger != "None":
             raise ValueError("IGNORE 정책의 animation_trigger는 None이어야 합니다.")
         if policy == "OBSERVE_ONLY" and trigger != "Observe":
@@ -121,8 +117,6 @@ class SemanticInterpretationOutput(BaseModel):
         if policy == "APPROACH_AND_INTERACT":
             if trigger in ("None", "Observe"):
                 raise ValueError("APPROACH_AND_INTERACT에는 상호작용 trigger가 필요합니다.")
-            if trigger not in affordances:
-                raise ValueError("animation_trigger는 affordances 목록에 포함되어야 합니다.")
 
         return self
 
