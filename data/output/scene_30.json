@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 30,
-    "timestamp": 1782975657.369385,
+    "timestamp": 1783312151.8362422,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, microwave 1개, bottle 1개, book 1개가 감지됨"
+    "scene_summary": "person 2개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.87,
+        "confidence": 0.76,
         "bbox_2d": [
-          171,
-          93,
-          1044,
-          713
+          66,
+          6,
+          1022,
+          711
         ]
       },
       "sam": null,
@@ -38,50 +38,14 @@
     },
     {
       "id": 1,
-      "label": "microwave",
+      "label": "person",
       "yolo": {
-        "confidence": 0.39,
+        "confidence": 0.31,
         "bbox_2d": [
-          1,
-          249,
-          377,
-          472
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 2,
-      "label": "bottle",
-      "yolo": {
-        "confidence": 0.28,
-        "bbox_2d": [
-          753,
-          378,
-          786,
-          459
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 3,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.26,
-        "bbox_2d": [
-          945,
-          45,
-          992,
-          173
+          922,
+          303,
+          1279,
+          707
         ]
       },
       "sam": null,

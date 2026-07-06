@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 360,
-    "timestamp": 1780676796.978904,
+    "timestamp": 1783312163.870259,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, book 4개가 감지됨"
+    "scene_summary": "person 1개, microwave 1개, book 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.85,
+        "confidence": 0.89,
         "bbox_2d": [
-          302,
-          118,
-          1276,
-          711
+          51,
+          97,
+          897,
+          714
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "book",
+      "label": "microwave",
       "yolo": {
-        "confidence": 0.29,
+        "confidence": 0.3,
         "bbox_2d": [
-          1236,
-          497,
-          1277,
-          567
+          3,
+          380,
+          296,
+          652
         ]
       },
       "sam": null,
@@ -58,48 +58,12 @@
       "id": 2,
       "label": "book",
       "yolo": {
-        "confidence": 0.26,
+        "confidence": 0.29,
         "bbox_2d": [
-          1239,
-          612,
-          1276,
-          695
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 3,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.23,
-        "bbox_2d": [
-          1251,
-          612,
-          1279,
-          695
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 4,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.21,
-        "bbox_2d": [
-          1227,
-          615,
-          1262,
-          694
+          830,
+          204,
+          865,
+          321
         ]
       },
       "sam": null,

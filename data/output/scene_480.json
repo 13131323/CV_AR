@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 480,
-    "timestamp": 1780676803.747684,
+    "timestamp": 1783312168.4872231,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,37 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개가 감지됨"
+    "scene_summary": "person 1개, umbrella 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.95,
+        "confidence": 0.89,
         "bbox_2d": [
-          333,
-          130,
-          1274,
-          715
+          402,
+          261,
+          869,
+          714
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 1,
+      "label": "umbrella",
+      "yolo": {
+        "confidence": 0.26,
+        "bbox_2d": [
+          1059,
+          394,
+          1204,
+          699
         ]
       },
       "sam": null,

@@ -1,0 +1,5713 @@
+test2: VLM image-width experiment (30/30 -> 1/30)
+started_at: 2026-07-06T13:34:47+09:00
+
+[experiment 01]
+original_width: 1280
+vlm_image_max_width: 1280
+width_ratio: 1.000000
+vlm_inference_seconds: 35.023914
+timestamp: 2026-07-06T13:35:59.773+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 안전하게 관찰할 수 있는 위치에 있다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 테이블 위에 있어 접근 가능하다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 테이블 위에 있어 접근 가능하다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 멀리 위치해 있어 관찰만 가능하다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 높은 곳에 있어 관찰만 가능하다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 높은 곳에 있어 관찰만 가능하다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 높은 곳에 있어 관찰만 가능하다."
+    }
+  ]
+}
+
+[experiment 02]
+original_width: 1280
+vlm_image_max_width: 1237
+width_ratio: 0.966406
+vlm_inference_seconds: 17.931889
+timestamp: 2026-07-06T13:36:17.715+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 벽에 걸려 있어 접근할 필요 없음."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 테이블 위에 있어 접근 가능."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 멀리 위치해 있어 접근할 필요 없음."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "물병은 테이블 위에 있어 접근 가능."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 위치해 있어 접근할 필요 없음."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 위치해 있어 접근할 필요 없음."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 위치해 있어 접근할 필요 없음."
+    }
+  ]
+}
+
+[experiment 03]
+original_width: 1280
+vlm_image_max_width: 1195
+width_ratio: 0.933594
+vlm_inference_seconds: 17.013573
+timestamp: 2026-07-06T13:36:34.731+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 마실 수 있는 대상으로 접근 가능하다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "물병은 마실 수 있는 대상으로 접근 가능하다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 안전하게 관찰할 수 있는 대상이다."
+    }
+  ]
+}
+
+[experiment 04]
+original_width: 1280
+vlm_image_max_width: 1152
+width_ratio: 0.900000
+vlm_inference_seconds: 16.471440
+timestamp: 2026-07-06T13:36:51.484+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 벽에 걸려 있어 접근할 필요 없음."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 테이블 위에 있어 접근 가능."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 테이블 위에 있어 접근 가능."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 멀리 위치해 있어 접근할 필요 없음."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 있어 접근할 필요 없음."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 있어 접근할 필요 없음."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 있어 접근할 필요 없음."
+    }
+  ]
+}
+
+[experiment 05]
+original_width: 1280
+vlm_image_max_width: 1109
+width_ratio: 0.866406
+vlm_inference_seconds: 26.608978
+timestamp: 2026-07-06T13:37:20.121+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 벽에 걸려 있어 관찰만 가능하다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 테이블 위에 있어 마실 수 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "물병은 테이블 위에 있어 마실 수 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 테이블 위에 있어 읽을 수 있다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 벽에 설치되어 있어 관찰만 가능하다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 높은 곳에 있어 관찰만 가능하다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 높은 곳에 있어 관찰만 가능하다."
+    }
+  ]
+}
+
+[experiment 06]
+original_width: 1280
+vlm_image_max_width: 1067
+width_ratio: 0.833594
+vlm_inference_seconds: 19.815513
+timestamp: 2026-07-06T13:37:39.940+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 벽에 걸려 있어 접근할 필요 없음."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 테이블 위에 있어 접근 가능."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 테이블 위에 있어 접근 가능."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 벽에 걸려 있어 접근할 필요 없음."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 선반에 있어 접근 가능."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 선반에 있어 접근 가능."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 선반에 있어 접근 가능."
+    }
+  ]
+}
+
+[experiment 07]
+original_width: 1280
+vlm_image_max_width: 1024
+width_ratio: 0.800000
+vlm_inference_seconds: 25.993409
+timestamp: 2026-07-06T13:38:05.940+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 사용 중이지 않으므로 관찰 가능하다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 사용 중이지 않아 마실 수 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 사용 중이지 않아 마실 수 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 사용 중이지 않아 읽을 수 있다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 사용 중이지 않으므로 관찰 가능하다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 사용 중이지 않아 읽을 수 있다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 사용 중이지 않아 읽을 수 있다."
+    }
+  ]
+}
+
+[experiment 08]
+original_width: 1280
+vlm_image_max_width: 981
+width_ratio: 0.766406
+vlm_inference_seconds: 17.334458
+timestamp: 2026-07-06T13:38:23.278+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 마실 수 있는 대상이다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 마실 수 있는 대상이다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 대상이다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 대상이다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "suitcase",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Grasp",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "가방은 잡을 수 있는 대상이다."
+    },
+    {
+      "object_id": 7,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 대상이다."
+    },
+    {
+      "object_id": 8,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 관찰할 수 있는 대상이다."
+    }
+  ]
+}
+
+[experiment 09]
+original_width: 1280
+vlm_image_max_width: 939
+width_ratio: 0.733594
+vlm_inference_seconds: 17.751643
+timestamp: 2026-07-06T13:38:41.034+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 마실 수 있는 대상으로 접근 가능하다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 마실 수 있는 대상으로 접근 가능하다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 대상으로 접근 가능하다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "knife",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "칼은 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 대상으로 접근 가능하다."
+    },
+    {
+      "object_id": 7,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 대상으로 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 10]
+original_width: 1280
+vlm_image_max_width: 896
+width_ratio: 0.700000
+vlm_inference_seconds: 12.966810
+timestamp: 2026-07-06T13:38:54.004+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 마실 수 있는 안전한 대상이다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 마실 수 있는 안전한 대상이다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 안전하게 관찰할 수 있는 대상이다."
+    }
+  ]
+}
+
+[experiment 11]
+original_width: 1280
+vlm_image_max_width: 853
+width_ratio: 0.666406
+vlm_inference_seconds: 16.688133
+timestamp: 2026-07-06T13:39:10.695+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 안전하게 관찰할 수 있는 위치에 있다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 사용 가능하며 마실 수 있는 상태이다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 사용 가능하며 마실 수 있는 상태이다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 안전하게 관찰할 수 있는 위치에 있다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 사용 가능하며 읽을 수 있는 상태이다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 사용 가능하며 읽을 수 있는 상태이다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 사용 가능하며 읽을 수 있는 상태이다."
+    }
+  ]
+}
+
+[experiment 12]
+original_width: 1280
+vlm_image_max_width: 811
+width_ratio: 0.633594
+vlm_inference_seconds: 15.935341
+timestamp: 2026-07-06T13:39:26.633+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 벽에 걸려 있어 관찰 가능하다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 테이블 위에 있어 접근 가능하다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 테이블 위에 있어 접근 가능하다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 테이블 위에 있어 접근 가능하다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 벽에 설치되어 있어 관찰 가능하다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 높은 곳에 있어 관찰 가능하다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 높은 곳에 있어 관찰 가능하다."
+    }
+  ]
+}
+
+[experiment 13]
+original_width: 1280
+vlm_image_max_width: 768
+width_ratio: 0.600000
+vlm_inference_seconds: 18.229528
+timestamp: 2026-07-06T13:39:47.398+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 안전하게 관찰할 수 있는 위치에 있다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 안전하게 접근하여 마실 수 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 안전하게 접근하여 마실 수 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 안전하게 관찰할 수 있는 위치에 있다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 안전하게 관찰할 수 있는 위치에 있다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 안전하게 관찰할 수 있는 위치에 있다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 안전하게 관찰할 수 있는 위치에 있다."
+    },
+    {
+      "object_id": 7,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 안전하게 관찰할 수 있는 위치에 있다."
+    }
+  ]
+}
+
+[experiment 14]
+original_width: 1280
+vlm_image_max_width: 725
+width_ratio: 0.566406
+vlm_inference_seconds: 16.742769
+timestamp: 2026-07-06T13:40:04.208+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 벽에 걸려 있어 안전하게 관찰 가능하다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 테이블 위에 있어 접근 가능하고 마실 수 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 테이블 위에 있어 접근 가능하고 마실 수 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 벽에 설치되어 있어 안전하게 관찰 가능하다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 선반에 있어 안전하게 관찰 가능하다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 선반에 있어 안전하게 관찰 가능하다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 선반에 있어 안전하게 관찰 가능하다."
+    }
+  ]
+}
+
+[experiment 15]
+original_width: 1280
+vlm_image_max_width: 683
+width_ratio: 0.533594
+vlm_inference_seconds: 15.296081
+timestamp: 2026-07-06T13:40:21.457+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 벽에 걸려 있어 관찰 가능하다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 테이블 위에 있어 마실 수 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 테이블 위에 있어 마실 수 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 테이블 위에 있어 읽을 수 있다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 멀리 있어 관찰 가능하다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 있어 관찰 가능하다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 있어 관찰 가능하다."
+    }
+  ]
+}
+
+[experiment 16]
+original_width: 1280
+vlm_image_max_width: 640
+width_ratio: 0.500000
+vlm_inference_seconds: 21.794488
+timestamp: 2026-07-06T13:40:46.411+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 안전하게 관찰할 수 있는 위치에 있다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 테이블 위에 있어 마실 수 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 테이블 위에 있어 마실 수 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 테이블 위에 있어 읽을 수 있다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 테이블 위에 있어 읽을 수 있다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 멀리 위치해 있어 관찰할 수 있다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 테이블 위에 있어 읽을 수 있다."
+    },
+    {
+      "object_id": 7,
+      "identity": {
+        "class_name": "knife",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "칼은 멀리 위치해 있어 관찰할 수 있다."
+    }
+  ]
+}
+
+[experiment 17]
+original_width: 1280
+vlm_image_max_width: 597
+width_ratio: 0.466406
+vlm_inference_seconds: 18.702561
+timestamp: 2026-07-06T13:41:05.118+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 벽에 걸려 있어 관찰만 가능하다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 테이블 위에 있어 마실 수 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 테이블 위에 있어 마실 수 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 멀리 있어 관찰만 가능하다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 있어 관찰만 가능하다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 있어 관찰만 가능하다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 있어 관찰만 가능하다."
+    },
+    {
+      "object_id": 7,
+      "identity": {
+        "class_name": "suitcase",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Grasp",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "가방은 테이블 위에 있어 잡을 수 있다."
+    }
+  ]
+}
+
+[experiment 18]
+original_width: 1280
+vlm_image_max_width: 555
+width_ratio: 0.433594
+vlm_inference_seconds: 16.044269
+timestamp: 2026-07-06T13:41:21.165+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 벽에 걸려 있어 관찰 가능하다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 테이블 위에 있어 접근 가능하다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 테이블 위에 있어 접근 가능하다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 멀리 위치해 있어 관찰 가능하다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 선반에 있어 관찰 가능하다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 선반에 있어 관찰 가능하다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 선반에 있어 관찰 가능하다."
+    }
+  ]
+}
+
+[experiment 19]
+original_width: 1280
+vlm_image_max_width: 512
+width_ratio: 0.400000
+vlm_inference_seconds: 17.614121
+timestamp: 2026-07-06T13:41:38.785+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 사용 중이지 않으므로 관찰 가능하다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 사용 중이지 않아 마실 수 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 사용 중이지 않아 마실 수 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 사용 중이지 않아 읽을 수 있다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 사용 중이지 않아 관찰 가능하다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 사용 중이지 않아 읽을 수 있다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 사용 중이지 않아 관찰 가능하다."
+    },
+    {
+      "object_id": 7,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 사용 중이지 않아 읽을 수 있다."
+    },
+    {
+      "object_id": 8,
+      "identity": {
+        "class_name": "knife",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Grasp",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "칼은 사용 중이지 않아 잡을 수 있다."
+    }
+  ]
+}
+
+[experiment 20]
+original_width: 1280
+vlm_image_max_width: 469
+width_ratio: 0.366406
+vlm_inference_seconds: 13.957730
+timestamp: 2026-07-06T13:41:52.747+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 벽에 걸려 있어 관찰 가능하다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 테이블 위에 있어 접근 가능하다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 멀리 위치해 있어 관찰 가능하다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 테이블 위에 있어 접근 가능하다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 위치해 있어 관찰 가능하다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 위치해 있어 관찰 가능하다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 위치해 있어 관찰 가능하다."
+    }
+  ]
+}
+
+[experiment 21]
+original_width: 1280
+vlm_image_max_width: 427
+width_ratio: 0.333594
+vlm_inference_seconds: 13.967710
+timestamp: 2026-07-06T13:42:10.136+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 접근 가능하며 관찰할 수 있다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 접근 가능하며 마실 수 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 접근 가능하며 마실 수 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 접근 가능하며 관찰할 수 있다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 접근 가능하며 읽을 수 있다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 접근 가능하며 읽을 수 있다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 접근 가능하며 읽을 수 있다."
+    }
+  ]
+}
+
+[experiment 22]
+original_width: 1280
+vlm_image_max_width: 384
+width_ratio: 0.300000
+vlm_inference_seconds: 15.684057
+timestamp: 2026-07-06T13:42:29.953+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 벽에 걸려 있어 관찰만 가능하다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 테이블 위에 있어 마실 수 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 멀리 위치해 있어 관찰만 가능하다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 테이블 위에 있어 마실 수 있다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 있어 관찰만 가능하다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 있어 관찰만 가능하다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 멀리 있어 관찰만 가능하다."
+    }
+  ]
+}
+
+[experiment 23]
+original_width: 1280
+vlm_image_max_width: 341
+width_ratio: 0.266406
+vlm_inference_seconds: 23.754016
+timestamp: 2026-07-06T13:42:56.778+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 마실 수 있는 안전한 대상이다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 마실 수 있는 안전한 대상이다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 안전한 대상이다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 안전한 대상이다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "suitcase",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Grasp",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "가방은 잡을 수 있는 안전한 대상이다."
+    },
+    {
+      "object_id": 7,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 안전한 대상이다."
+    },
+    {
+      "object_id": 8,
+      "identity": {
+        "class_name": "knife",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "칼은 접근하기에 위험한 대상이다."
+    }
+  ]
+}
+
+[experiment 24]
+original_width: 1280
+vlm_image_max_width: 299
+width_ratio: 0.233594
+vlm_inference_seconds: 17.681724
+timestamp: 2026-07-06T13:43:14.466+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 안전하게 관찰할 수 있는 상태입니다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 접근 가능하며 마실 수 있는 상태입니다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 접근 가능하며 마실 수 있는 상태입니다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 안전하게 관찰할 수 있는 상태입니다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 접근 가능하며 읽을 수 있는 상태입니다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 접근 가능하며 읽을 수 있는 상태입니다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "suitcase",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Grasp",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "가방은 접근 가능하며 잡을 수 있는 상태입니다."
+    },
+    {
+      "object_id": 7,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 접근 가능하며 읽을 수 있는 상태입니다."
+    }
+  ]
+}
+
+[experiment 25]
+original_width: 1280
+vlm_image_max_width: 256
+width_ratio: 0.200000
+vlm_inference_seconds: 15.965646
+timestamp: 2026-07-06T13:43:30.434+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 마실 수 있는 안전한 대상이다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 마실 수 있는 안전한 대상이다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 안전한 대상이다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 안전한 대상이다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "knife",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "칼은 위험하므로 접근하지 않는 것이 안전하다."
+    },
+    {
+      "object_id": 7,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 안전한 대상이다."
+    }
+  ]
+}
+
+[experiment 26]
+original_width: 1280
+vlm_image_max_width: 213
+width_ratio: 0.166406
+vlm_inference_seconds: 14.550431
+timestamp: 2026-07-06T13:43:44.987+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 접근할 수 있는 상태로 관찰 가능하다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 접근 가능하며 마실 수 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 접근 가능하며 마실 수 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 접근할 수 있는 상태로 관찰 가능하다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 접근 가능하며 읽을 수 있다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 접근 가능하며 읽을 수 있다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 접근 가능하며 읽을 수 있다."
+    }
+  ]
+}
+
+[experiment 27]
+original_width: 1280
+vlm_image_max_width: 171
+width_ratio: 0.133594
+vlm_inference_seconds: 12.821305
+timestamp: 2026-07-06T13:43:58.749+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 안전하게 관찰할 수 있는 상태입니다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 마실 수 있는 상태로 접근 가능합니다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 마실 수 있는 상태로 접근 가능합니다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 상태로 접근 가능합니다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 안전하게 관찰할 수 있는 상태입니다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 상태로 접근 가능합니다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 상태로 접근 가능합니다."
+    }
+  ]
+}
+
+[experiment 28]
+original_width: 1280
+vlm_image_max_width: 128
+width_ratio: 0.100000
+vlm_inference_seconds: 14.836694
+timestamp: 2026-07-06T13:44:24.809+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 마실 수 있는 대상으로 접근 가능하다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 마실 수 있는 대상으로 접근 가능하다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 대상으로 접근 가능하다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 안전하게 관찰할 수 있는 대상이다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 대상으로 접근 가능하다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "knife",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Grasp",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "칼은 잡을 수 있는 대상으로 접근 가능하다."
+    },
+    {
+      "object_id": 7,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 읽을 수 있는 대상으로 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 29]
+original_width: 1280
+vlm_image_max_width: 85
+width_ratio: 0.066406
+vlm_inference_seconds: 13.373774
+timestamp: 2026-07-06T13:44:41.447+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 사용 중이지 않으며 관찰 가능하다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 사용 중이지 않으며 마실 수 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 사용 중이지 않으며 마실 수 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 사용 중이지 않으며 관찰 가능하다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 사용 중이지 않으며 읽을 수 있다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 사용 중이지 않으며 읽을 수 있다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 사용 중이지 않으며 읽을 수 있다."
+    }
+  ]
+}
+
+[experiment 30]
+original_width: 1280
+vlm_image_max_width: 43
+width_ratio: 0.033594
+vlm_inference_seconds: 15.301936
+timestamp: 2026-07-06T13:45:01.582+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "clock",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "시계는 사용 중이지 않아 관찰 가능하다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 사용 중이지 않아 마실 수 있다."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "병은 사용 중이지 않아 마실 수 있다."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 사용 중이지 않아 읽을 수 있다."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 사용 중이지 않아 관찰 가능하다."
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 사용 중이지 않아 읽을 수 있다."
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "book",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Read"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Read",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "책은 사용 중이지 않아 읽을 수 있다."
+    }
+  ]
+}
+

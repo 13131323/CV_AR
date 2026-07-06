@@ -1,0 +1,1088 @@
+test1: reasoning word-limit experiment (30 -> 0)
+started_at: 2026-07-06T11:13:44+09:00
+
+[experiment 01]
+word_limit: 30
+vlm_inference_seconds: 4.076334
+timestamp: 2026-07-06T11:14:28.187+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 바닥에 놓여 있어 접근 가능하며, 마실 수 있는 상태입니다."
+    }
+  ]
+}
+
+[experiment 02]
+word_limit: 29
+vlm_inference_seconds: 2.777234
+timestamp: 2026-07-06T11:14:48.115+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵이 바닥에 놓여 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 03]
+word_limit: 28
+vlm_inference_seconds: 3.106887
+timestamp: 2026-07-06T11:15:08.014+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵이 바닥에 놓여 있어 접근이 안전하며, 마실 수 있는 상태입니다."
+    }
+  ]
+}
+
+[experiment 04]
+word_limit: 27
+vlm_inference_seconds: 2.552403
+timestamp: 2026-07-06T11:15:27.106+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵이 바닥에 놓여 있어 접근 가능하며, 마실 수 있는 상태이다."
+    }
+  ]
+}
+
+[experiment 05]
+word_limit: 26
+vlm_inference_seconds: 3.293837
+timestamp: 2026-07-06T11:15:49.091+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 바닥에 놓여 있어 접근이 안전하며 마실 수 있다."
+    }
+  ]
+}
+
+[experiment 06]
+word_limit: 25
+vlm_inference_seconds: 3.522358
+timestamp: 2026-07-06T11:16:09.347+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵이 바닥에 놓여 있어 접근이 안전하며 마실 수 있다."
+    }
+  ]
+}
+
+[experiment 07]
+word_limit: 24
+vlm_inference_seconds: 2.890310
+timestamp: 2026-07-06T11:16:28.645+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 바닥에 놓여 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 08]
+word_limit: 23
+vlm_inference_seconds: 2.770133
+timestamp: 2026-07-06T11:16:48.177+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵이 바닥에 놓여 있어 접근이 안전하며 마실 수 있다."
+    }
+  ]
+}
+
+[experiment 09]
+word_limit: 22
+vlm_inference_seconds: 2.577903
+timestamp: 2026-07-06T11:17:08.350+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵이 바닥에 놓여 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 10]
+word_limit: 21
+vlm_inference_seconds: 3.411972
+timestamp: 2026-07-06T11:17:28.989+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 바닥에 놓여 있어 접근이 안전하다."
+    }
+  ]
+}
+
+[experiment 11]
+word_limit: 20
+vlm_inference_seconds: 4.080533
+timestamp: 2026-07-06T11:17:49.207+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 바닥에 놓여 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 12]
+word_limit: 19
+vlm_inference_seconds: 3.201778
+timestamp: 2026-07-06T11:18:07.742+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵이 바닥에 놓여 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 13]
+word_limit: 18
+vlm_inference_seconds: 3.066546
+timestamp: 2026-07-06T11:18:26.343+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 바닥에 놓여 있어 접근이 안전하다."
+    }
+  ]
+}
+
+[experiment 14]
+word_limit: 17
+vlm_inference_seconds: 4.344411
+timestamp: 2026-07-06T11:18:46.131+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 바닥에 놓여 있으며 접근이 안전하다."
+    }
+  ]
+}
+
+[experiment 15]
+word_limit: 16
+vlm_inference_seconds: 3.520630
+timestamp: 2026-07-06T11:19:03.794+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 바닥에 놓여 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 16]
+word_limit: 15
+vlm_inference_seconds: 2.617008
+timestamp: 2026-07-06T11:19:21.134+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵이 바닥에 놓여 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 17]
+word_limit: 14
+vlm_inference_seconds: 3.448624
+timestamp: 2026-07-06T11:19:40.364+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 바닥에 놓여 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 18]
+word_limit: 13
+vlm_inference_seconds: 2.742103
+timestamp: 2026-07-06T11:19:58.112+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵이 바닥에 놓여 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 19]
+word_limit: 12
+vlm_inference_seconds: 2.539319
+timestamp: 2026-07-06T11:20:16.278+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 바닥에 놓여 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 20]
+word_limit: 11
+vlm_inference_seconds: 3.485703
+timestamp: 2026-07-06T11:20:35.700+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 바닥에 놓여 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 21]
+word_limit: 10
+vlm_inference_seconds: 2.630362
+timestamp: 2026-07-06T11:20:53.214+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 바닥에 놓여 있어 접근 가능하다."
+    }
+  ]
+}
+
+[experiment 22]
+word_limit: 9
+vlm_inference_seconds: 2.950632
+timestamp: 2026-07-06T11:21:11.935+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵이 바닥에 놓여 있어 접근 가능."
+    }
+  ]
+}
+
+[experiment 23]
+word_limit: 8
+vlm_inference_seconds: 4.047806
+timestamp: 2026-07-06T11:21:31.436+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵이 바닥에 놓여 있어 접근 가능."
+    }
+  ]
+}
+
+[experiment 24]
+word_limit: 7
+vlm_inference_seconds: 2.521714
+timestamp: 2026-07-06T11:21:48.299+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵이 바닥에 놓여있어 접근 가능."
+    }
+  ]
+}
+
+[experiment 25]
+word_limit: 6
+vlm_inference_seconds: 2.572409
+timestamp: 2026-07-06T11:22:06.800+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵은 바닥에 놓여있다."
+    }
+  ]
+}
+
+[experiment 26]
+word_limit: 5
+vlm_inference_seconds: 2.573423
+timestamp: 2026-07-06T11:22:25.225+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵이 바닥에 놓여있음."
+    }
+  ]
+}
+
+[experiment 27]
+word_limit: 4
+vlm_inference_seconds: 3.278172
+timestamp: 2026-07-06T11:22:44.286+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵 접근 가능"
+    }
+  ]
+}
+
+[experiment 28]
+word_limit: 3
+vlm_inference_seconds: 2.417700
+timestamp: 2026-07-06T11:23:01.784+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "컵 접근 가능"
+    }
+  ]
+}
+
+[experiment 29]
+word_limit: 2
+vlm_inference_seconds: 2.767001
+timestamp: 2026-07-06T11:23:20.449+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "접근 가능"
+    }
+  ]
+}
+
+[experiment 30]
+word_limit: 1
+vlm_inference_seconds: 3.147102
+timestamp: 2026-07-06T11:23:39.323+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "안전"
+    }
+  ]
+}
+
+[experiment 31]
+word_limit: 0
+vlm_inference_seconds: 2.351526
+timestamp: 2026-07-06T11:23:56.975+09:00
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe",
+          "Grasp",
+          "Drink"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Drink",
+        "is_safe_to_approach": true
+      },
+      "reasoning": ""
+    }
+  ]
+}
+

@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 570,
-    "timestamp": 1780676807.939874,
+    "timestamp": 1783312171.9188714,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, toothbrush 3개, book 3개가 감지됨"
+    "scene_summary": "person 2개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.92,
+        "confidence": 0.7,
         "bbox_2d": [
-          336,
-          124,
-          1247,
-          714
+          723,
+          344,
+          1274,
+          712
         ]
       },
       "sam": null,
@@ -38,104 +38,14 @@
     },
     {
       "id": 1,
-      "label": "toothbrush",
+      "label": "person",
       "yolo": {
-        "confidence": 0.45,
+        "confidence": 0.69,
         "bbox_2d": [
-          762,
-          322,
-          970,
-          389
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 2,
-      "label": "toothbrush",
-      "yolo": {
-        "confidence": 0.26,
-        "bbox_2d": [
-          762,
-          316,
-          1104,
-          386
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 3,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.24,
-        "bbox_2d": [
-          1239,
-          496,
-          1274,
-          566
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 4,
-      "label": "toothbrush",
-      "yolo": {
-        "confidence": 0.24,
-        "bbox_2d": [
-          759,
-          301,
-          1167,
-          385
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 5,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.24,
-        "bbox_2d": [
-          1248,
-          611,
-          1279,
-          695
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 6,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.22,
-        "bbox_2d": [
-          1237,
-          610,
-          1274,
-          695
+          1,
+          7,
+          676,
+          706
         ]
       },
       "sam": null,

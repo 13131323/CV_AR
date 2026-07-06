@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 1050,
-    "timestamp": 1780675102.203342,
+    "timestamp": 1783312190.2568538,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, cell phone 1개, remote 1개, book 1개, toothbrush 1개가 감지됨"
+    "scene_summary": "microwave 1개, person 1개, clock 1개, book 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
-      "label": "person",
+      "label": "microwave",
       "yolo": {
-        "confidence": 0.9,
+        "confidence": 0.89,
         "bbox_2d": [
-          361,
-          208,
-          1130,
-          714
+          61,
+          345,
+          448,
+          575
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "cell phone",
+      "label": "person",
       "yolo": {
-        "confidence": 0.51,
+        "confidence": 0.88,
         "bbox_2d": [
-          446,
-          458,
-          607,
-          712
+          296,
+          132,
+          1042,
+          714
         ]
       },
       "sam": null,
@@ -56,14 +56,14 @@
     },
     {
       "id": 2,
-      "label": "remote",
+      "label": "clock",
       "yolo": {
-        "confidence": 0.48,
+        "confidence": 0.53,
         "bbox_2d": [
-          446,
-          457,
-          608,
-          713
+          624,
+          15,
+          726,
+          119
         ]
       },
       "sam": null,
@@ -76,30 +76,12 @@
       "id": 3,
       "label": "book",
       "yolo": {
-        "confidence": 0.33,
+        "confidence": 0.28,
         "bbox_2d": [
-          1108,
-          539,
-          1147,
-          611
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 4,
-      "label": "toothbrush",
-      "yolo": {
-        "confidence": 0.25,
-        "bbox_2d": [
-          899,
-          463,
-          984,
-          633
+          963,
+          141,
+          1014,
+          272
         ]
       },
       "sam": null,
