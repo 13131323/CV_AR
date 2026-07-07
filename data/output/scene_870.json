@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 870,
-    "timestamp": 1780675092.273491,
+    "timestamp": 1783312183.0858653,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, toothbrush 2개, book 4개, cell phone 1개가 감지됨"
+    "scene_summary": "person 1개, microwave 1개, clock 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.94,
+        "confidence": 0.88,
         "bbox_2d": [
-          357,
-          218,
-          1042,
-          712
+          267,
+          88,
+          1062,
+          713
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "toothbrush",
+      "label": "microwave",
       "yolo": {
-        "confidence": 0.52,
+        "confidence": 0.62,
         "bbox_2d": [
-          646,
-          486,
-          837,
-          613
+          63,
+          345,
+          448,
+          572
         ]
       },
       "sam": null,
@@ -56,104 +56,14 @@
     },
     {
       "id": 2,
-      "label": "book",
+      "label": "clock",
       "yolo": {
         "confidence": 0.34,
         "bbox_2d": [
-          1107,
-          539,
-          1146,
-          611
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 3,
-      "label": "cell phone",
-      "yolo": {
-        "confidence": 0.3,
-        "bbox_2d": [
-          824,
-          380,
-          1005,
-          604
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 4,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.28,
-        "bbox_2d": [
-          1048,
-          544,
-          1075,
-          612
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 5,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.26,
-        "bbox_2d": [
-          1064,
-          407,
-          1105,
-          499
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 6,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.26,
-        "bbox_2d": [
-          1051,
-          401,
-          1108,
-          500
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 7,
-      "label": "toothbrush",
-      "yolo": {
-        "confidence": 0.26,
-        "bbox_2d": [
-          645,
-          485,
-          886,
-          644
+          623,
+          15,
+          726,
+          115
         ]
       },
       "sam": null,

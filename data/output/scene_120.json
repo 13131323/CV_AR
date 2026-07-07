@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 120,
-    "timestamp": 1782975661.191915,
+    "timestamp": 1783312155.0745344,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, bottle 2개가 감지됨"
+    "scene_summary": "person 1개, umbrella 1개, clock 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.88,
+        "confidence": 0.87,
         "bbox_2d": [
-          174,
-          83,
-          1043,
-          713
+          183,
+          245,
+          707,
+          714
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "bottle",
+      "label": "umbrella",
       "yolo": {
-        "confidence": 0.28,
+        "confidence": 0.33,
         "bbox_2d": [
-          754,
-          378,
-          786,
-          458
+          1002,
+          257,
+          1133,
+          547
         ]
       },
       "sam": null,
@@ -56,14 +56,14 @@
     },
     {
       "id": 2,
-      "label": "bottle",
+      "label": "clock",
       "yolo": {
-        "confidence": 0.27,
+        "confidence": 0.28,
         "bbox_2d": [
-          339,
-          373,
-          378,
-          479
+          527,
+          63,
+          642,
+          175
         ]
       },
       "sam": null,

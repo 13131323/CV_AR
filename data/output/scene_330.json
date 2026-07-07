@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 330,
-    "timestamp": 1782975670.2657082,
+    "timestamp": 1783312162.772809,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, microwave 1개, bottle 1개가 감지됨"
+    "scene_summary": "person 1개, microwave 1개, umbrella 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.88,
+        "confidence": 0.92,
         "bbox_2d": [
-          181,
-          86,
-          1043,
-          713
+          64,
+          114,
+          843,
+          714
         ]
       },
       "sam": null,
@@ -42,10 +42,10 @@
       "yolo": {
         "confidence": 0.28,
         "bbox_2d": [
-          2,
-          249,
-          377,
-          465
+          0,
+          372,
+          295,
+          703
         ]
       },
       "sam": null,
@@ -56,14 +56,14 @@
     },
     {
       "id": 2,
-      "label": "bottle",
+      "label": "umbrella",
       "yolo": {
         "confidence": 0.27,
         "bbox_2d": [
-          339,
-          374,
-          379,
-          479
+          958,
+          243,
+          1087,
+          523
         ]
       },
       "sam": null,

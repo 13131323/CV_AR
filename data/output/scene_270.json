@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 270,
-    "timestamp": 1782975667.8214173,
+    "timestamp": 1783312160.6027608,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, microwave 1개, book 2개, bowl 1개가 감지됨"
+    "scene_summary": "person 2개, book 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.88,
+        "confidence": 0.76,
         "bbox_2d": [
-          214,
-          89,
-          1039,
-          713
+          4,
+          181,
+          890,
+          715
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "microwave",
+      "label": "book",
       "yolo": {
-        "confidence": 0.31,
+        "confidence": 0.27,
         "bbox_2d": [
-          1,
-          249,
-          377,
-          470
+          857,
+          211,
+          907,
+          342
         ]
       },
       "sam": null,
@@ -56,50 +56,14 @@
     },
     {
       "id": 2,
-      "label": "book",
+      "label": "person",
       "yolo": {
-        "confidence": 0.31,
+        "confidence": 0.25,
         "bbox_2d": [
-          945,
-          47,
-          994,
-          173
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 3,
-      "label": "bowl",
-      "yolo": {
-        "confidence": 0.26,
-        "bbox_2d": [
-          33,
-          190,
-          225,
-          253
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 4,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.26,
-        "bbox_2d": [
-          897,
-          54,
-          946,
-          187
+          1,
+          145,
+          294,
+          712
         ]
       },
       "sam": null,

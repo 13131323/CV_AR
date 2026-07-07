@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 540,
-    "timestamp": 1780676806.001566,
+    "timestamp": 1783312170.7643178,
     "camera_resolution": [
       1280,
       720
@@ -15,62 +15,7 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, chair 1개, book 1개가 감지됨"
+    "scene_summary": "감지된 객체 없음"
   },
-  "objects": [
-    {
-      "id": 0,
-      "label": "person",
-      "yolo": {
-        "confidence": 0.94,
-        "bbox_2d": [
-          334,
-          128,
-          1274,
-          715
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 1,
-      "label": "chair",
-      "yolo": {
-        "confidence": 0.32,
-        "bbox_2d": [
-          783,
-          394,
-          986,
-          493
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 2,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.22,
-        "bbox_2d": [
-          1236,
-          497,
-          1276,
-          567
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    }
-  ]
+  "objects": []
 }

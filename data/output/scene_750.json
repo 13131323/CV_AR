@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 750,
-    "timestamp": 1780675084.601436,
+    "timestamp": 1783312178.4177408,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, cell phone 1개, book 2개, toothbrush 1개가 감지됨"
+    "scene_summary": "person 1개, clock 1개, book 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.89,
+        "confidence": 0.92,
         "bbox_2d": [
-          236,
-          215,
-          1108,
-          715
+          317,
+          125,
+          1052,
+          714
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "cell phone",
+      "label": "clock",
       "yolo": {
-        "confidence": 0.56,
+        "confidence": 0.53,
         "bbox_2d": [
-          864,
-          284,
-          1050,
-          562
+          651,
+          0,
+          761,
+          87
         ]
       },
       "sam": null,
@@ -58,48 +58,12 @@
       "id": 2,
       "label": "book",
       "yolo": {
-        "confidence": 0.35,
+        "confidence": 0.3,
         "bbox_2d": [
-          1053,
-          400,
-          1107,
-          498
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 3,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.33,
-        "bbox_2d": [
-          1108,
-          539,
-          1148,
-          611
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 4,
-      "label": "toothbrush",
-      "yolo": {
-        "confidence": 0.31,
-        "bbox_2d": [
-          420,
-          438,
-          560,
-          529
+          1010,
+          104,
+          1052,
+          240
         ]
       },
       "sam": null,

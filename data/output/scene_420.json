@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 420,
-    "timestamp": 1780676800.345613,
+    "timestamp": 1783312166.0992587,
     "camera_resolution": [
       1280,
       720
@@ -15,73 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, book 3개가 감지됨"
+    "scene_summary": "person 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.93,
+        "confidence": 0.89,
         "bbox_2d": [
-          278,
-          25,
-          1260,
-          715
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 1,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.26,
-        "bbox_2d": [
-          1230,
-          610,
-          1260,
-          692
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 2,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.24,
-        "bbox_2d": [
-          1249,
-          612,
-          1279,
-          694
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 3,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.23,
-        "bbox_2d": [
-          1239,
-          609,
-          1276,
-          693
+          30,
+          94,
+          950,
+          713
         ]
       },
       "sam": null,

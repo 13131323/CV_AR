@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 660,
-    "timestamp": 1780676813.239817,
+    "timestamp": 1783312175.1427877,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,37 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개가 감지됨"
+    "scene_summary": "person 1개, microwave 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.92,
+        "confidence": 0.87,
         "bbox_2d": [
-          216,
-          3,
-          1278,
-          711
+          28,
+          6,
+          1096,
+          710
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 1,
+      "label": "microwave",
+      "yolo": {
+        "confidence": 0.27,
+        "bbox_2d": [
+          90,
+          217,
+          479,
+          557
         ]
       },
       "sam": null,
