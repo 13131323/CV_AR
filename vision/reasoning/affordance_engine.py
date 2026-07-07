@@ -1,7 +1,27 @@
 import numpy as np
+import csv
+import os
 
 class AffordanceEngine:
     def __init__(self):
+
+        #csv 저장
+        self.log_file = os.path.join(
+            os.path.dirname(__file__),
+            "mask_norm_log.csv"
+        )
+
+        if not os.path.exists(self.log_file):
+            with open(self.log_file, "w", newline="") as f:
+                writer = csv.writer(f)
+                writer.writerow([
+                    "label",
+                    "mask_area",
+                    "target_z",
+                    "floor_margin",
+                    "mask_norm",
+                    "state"
+                ])
         """
         [8-2단계: 최종 연구 마스터형 어포던스 및 상태 추론기]
         - 피드백을 수용하여 'm(미터)' 단위를 'pseudo-unit'으로 정정하여 학술적 엄밀성을 확보했습니다.
@@ -27,8 +47,9 @@ class AffordanceEngine:
         }
 
         self.semantic_prior_db = {
-            "cell phone": {"real_area": 12000.0, "aspect_ratio": 2.16}, # 일반적인 스마트폰 평균 스케일
-            "bottle": {"real_area": 15400.0, "aspect_ratio": 3.14},
+            "cell phone": {"real_area": 12773.16, "aspect_ratio": 2.09}, # 163.6mm × 78.1mm (실측)
+            "bottle": {"real_area": 13975.0, "aspect_ratio": 3.31},   # 215mm × 65mm (실측)
+            "mouse":  {"real_area": 6893.0,  "aspect_ratio": 1.85},   # 113mm × 61mm (실측)
             "suitcase": {"real_area": 220000.0, "aspect_ratio": 1.37},
             "chair": {"real_area": 250000.0, "aspect_ratio": 1.0}
         }
@@ -115,7 +136,7 @@ class AffordanceEngine:
                     f"mask_norm={mask_norm:.8f}"
                 )
             else:
-                mask_norm = 1.0 # Prior 데이터가 없는 사물은 기본 가중치 유지
+                mask_norm = None # Prior 데이터가 없는 사물은 None 처리
 
             # 정규화된 척도(mask_norm)와 거리를 연동하여 거리 독립적인 상태 추론 수행
             # TODO:
@@ -124,16 +145,25 @@ class AffordanceEngine:
             if abs(floor_margin) <= 0.5:
                 object_state = "placed_on_floor"
             elif floor_margin > 0.5:
-                # 5장 분석 결과 반영: 임계값이 거리(3m vs 4.86m)에 무너지지 않도록 mask_norm 조건 결합
-                if mask_norm < 0.8: 
-                    object_state = "elevated"        # 탁자나 선반 위 고정 상태
+                if mask_norm is not None and mask_norm >= 0.8:
+                    object_state = "held_in_hand"   # 손에 들린 상태
                 else:
-                    object_state = "held_in_hand"     # 손에 들려 원근왜곡이 상쇄된 동적 상태
+                    object_state = "elevated"       # 탁자나 선반 위
             elif floor_margin < -0.5:
                 object_state = "background_layer"
 
             obj["state"] = object_state
             # ---------------------------
+            with open(self.log_file, "a", newline="") as f:
+                writer = csv.writer(f)
+                writer.writerow([
+                    label,
+                    mask_area,
+                    target_z,
+                    floor_margin,
+                    mask_norm,
+                    object_state
+                ])
 
             # 속성 + 기하 정량 마진 기반 행동 결정 규칙 엔진
             active_actions = []

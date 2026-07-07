@@ -13,13 +13,15 @@ while True:
     ret, frame = cap.read()
     if not ret:
         break
+    
+    display = cv2.flip(frame, 1)  # 화면만 좌우 반전
 
-    cv2.imshow("Camera", frame)
+    cv2.imshow("Camera", display)
 
     key = cv2.waitKey(1)
 
     if key == ord('s'):
-        cv2.imwrite(f"calibration/img_{count:02d}.jpg", frame)
+        cv2.imwrite(f"calibration/img_{count:02d}.jpg", frame) # 원본 저장
         print(f"Saved {count}")
         count += 1
 

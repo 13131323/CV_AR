@@ -13,7 +13,7 @@ criteria = (
 
 objp = np.zeros((CHECKERBOARD[0]*CHECKERBOARD[1],3), np.float32)
 # 기존 코드: objp[:,:2] = np.mgrid[0:CHECKERBOARD[0],0:CHECKERBOARD[1]].T.reshape(-1,2)
-square_size = 19.0  # mm 단위
+square_size = 19.0 # mm 단위
 objp[:,:2] = np.mgrid[0:CHECKERBOARD[0], 0:CHECKERBOARD[1]].T.reshape(-1, 2) * square_size
 
 objpoints = []
