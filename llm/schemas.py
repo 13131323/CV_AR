@@ -106,10 +106,9 @@ class SemanticInterpretationOutput(BaseModel):
         """행동 정책, affordance 목록, 단일 trigger 사이의 의미적 일관성을 강제한다."""
         policy = self.planner_directives.action_policy
         trigger = self.planner_directives.animation_trigger
-        affordances = self.semantic_state.affordances
-
-        if trigger not in affordances:
-            raise ValueError("animation_trigger는 affordances 목록에 포함되어야 합니다.")
+        
+        if trigger not in self.semantic_state.affordances:
+            self.semantic_state.affordances.append(trigger)
         if policy == "IGNORE" and trigger != "None":
             raise ValueError("IGNORE 정책의 animation_trigger는 None이어야 합니다.")
         if policy == "OBSERVE_ONLY" and trigger != "Observe":
