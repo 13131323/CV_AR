@@ -77,12 +77,19 @@ def main():
                 real_w_cm = (pixel_w * z_val / f_x) * 100.0
                 real_h_cm = (pixel_h * z_val / f_y) * 100.0
                 
-                # 박스 그리기
-                cv2.rectangle(annotated_frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                # PPS(Peripersonal Space) 70cm(0.7m) 기준 보정 및 시각화
+                if z_val <= 0.7:
+                    box_color = (0, 0, 255)  # BGR: Red (PPS 진입 시)
+                    text = f"[PPS] {lbl} ({real_w_cm:.1f}x{real_h_cm:.1f}cm) | D: {z_val:.2f}m"
+                else:
+                    box_color = (0, 255, 0)  # BGR: Green (PPS 밖)
+                    text = f"{lbl} ({real_w_cm:.1f}x{real_h_cm:.1f}cm) | D: {z_val:.2f}m"
                 
-                # 텍스트 오버레이 (라벨 및 가로x세로 크기)
-                text = f"{lbl} ({real_w_cm:.1f}x{real_h_cm:.1f}cm)"
-                cv2.putText(annotated_frame, text, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+                # 박스 그리기
+                cv2.rectangle(annotated_frame, (x1, y1), (x2, y2), box_color, 2)
+                
+                # 텍스트 오버레이
+                cv2.putText(annotated_frame, text, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.7, box_color, 2)
 
         # 화면 출력
         cv2.imshow("CV_AR Size Measurement Test", annotated_frame)

@@ -116,7 +116,7 @@ class AffordanceEngine:
                     
                     # [피드백 1 반영] m 단사 주석 제거 및 보수적 pseudo-distance 임계값 기반 계층화 적용
                     if action_candidate in ["grasp", "drink", "read", "open", "carry"]:
-                        if is_near_agent and agent_distance <= 0.6: # pseudo-distance threshold
+                        if is_near_agent and agent_distance <= 0.7: # Validated PPS distance threshold
                             active_actions.append(action_candidate)
                             
                     elif action_candidate == "use":
