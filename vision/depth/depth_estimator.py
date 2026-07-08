@@ -23,13 +23,13 @@ class DepthEstimator:
             print(f"Depth 모델을 [{self.device}] 장치에서 로드 시도 중...")
             self.pipe = pipeline(
                 task="depth-estimation",
-                model="depth-anything/Depth-Anything-V2-Base-hf",
+                model="depth-anything/Depth-Anything-V2-Metric-Indoor-Base-hf",
                 device=self.device
             )
         except Exception as e:
             print(f"[경고] 장치 로드 실패: {e}. CPU(-1)로 대체합니다.")
-            self.pipe = pipeline(task="depth-estimation", model="depth-anything/Depth-Anything-V2-Base-hf", device=-1)
-        print("Depth Anything V2 모델이 성공적으로 준비되었습니다.")
+            self.pipe = pipeline(task="depth-estimation", model="depth-anything/Depth-Anything-V2-Metric-Indoor-Base-hf", device=-1)
+        print("Depth Anything V2 Metric 모델이 성공적으로 준비되었습니다.")
 
     def get_depth_map(self, frame):
         """
@@ -59,6 +59,10 @@ class DepthEstimator:
             mode="bilinear",
             align_corners=False
         ).squeeze().cpu().numpy()
+
+        # [스케일 보정] 맥북 웹캠 전용 깊이 보정 계수 (가상 미터를 실제 물리적 미터로 스케일링)
+        DEPTH_SCALE_FACTOR = 0.44
+        raw_depth = raw_depth * DEPTH_SCALE_FACTOR
 
         return {"raw_depth": raw_depth}
              

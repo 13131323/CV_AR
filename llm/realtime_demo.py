@@ -25,6 +25,9 @@ from vision.segmentation.segmenter import ObjectSegmenter, SceneDepthAttacher
 from vision.depth.depth_estimator import DepthEstimator
 from vision.spatial.transformer import Spatial3DConverter
 from vision.reasoning.relation_graph import SpatialRelationGraph
+from vision.reasoning.affordance_engine import AffordanceEngine
+from vision.spatial.floor_detector import FloorPlaneDetector  # <--- 바닥 감지 모듈 추가!
+
 
 from llm.feature_extractor import build_inputs_from_scene, DEFAULT_CONTEXT
 from llm.interpreter import interpret_batch
@@ -50,13 +53,14 @@ def build_scene_graph_for_frame(frame, frame_count: int) -> dict:
     scene_data = depth_attacher.attach_depth(scene_data, masks_list, depth_map)
 
     scene_data = spatial_converter.process_scene_3d(scene_data)
+    scene_data = floor_detector.update_scene_with_floor(scene_data, depth_map)
     scene_data = relation_graph.process_scene_relations(scene_data)
-
+    scene_data = affordance_engine.infer_affordances(scene_data)
     return scene_data
 
 
 def main():
-    global detector, segmenter, depth_estimator, depth_attacher, spatial_converter, relation_graph
+    global detector, segmenter, depth_estimator, depth_attacher, spatial_converter, relation_graph, affordance_engine, floor_detector
 
     stream = WebcamStream()
     detector = ObjectDetector()
@@ -65,6 +69,8 @@ def main():
     depth_attacher = SceneDepthAttacher()
     spatial_converter = Spatial3DConverter()
     relation_graph = SpatialRelationGraph()
+    affordance_engine = AffordanceEngine()
+    floor_detector = FloorPlaneDetector()
 
     frame_count = 0
     last_sent_inputs = None
@@ -86,8 +92,8 @@ def main():
             # 크기가 50% 이상 변했을 때만 감지 (손떨림 노이즈 무시)
             if abs(p_obj.mask_area - c_obj.mask_area) / max(p_obj.mask_area, 1) > 0.5:
                 return True
-            # 깊이(z) 값이 2.0 이상 크게 튀었을 때만 감지 (상대 깊이 노이즈 무시)
-            if abs(p_obj.target_z - c_obj.target_z) > 2.0:
+            # 깊이(z) 값이 20cm 이상 크게 튀었을 때만 감지 (카메라 깊이 센서 노이즈 무시)
+            if abs(p_obj.target_z - c_obj.target_z) > 0.2:
                 return True
         return False
 
