@@ -17,6 +17,7 @@ from vision.detector import ObjectDetector
 from vision.segmentation.segmenter import ObjectSegmenter, SceneDepthAttacher
 from vision.depth.depth_estimator import DepthEstimator
 from vision.spatial.transformer import Spatial3DConverter
+from vision.spatial.stabilizer import CoordinateStabilizer
 from vision.reasoning.relation_graph import SpatialRelationGraph
 from vision.reasoning.affordance_engine import AffordanceEngine
 from vision.spatial.floor_detector import FloorPlaneDetector
@@ -46,12 +47,13 @@ segmenter = None
 depth_estimator = None
 depth_attacher = None
 spatial_converter = None
+stabilizer = None
 relation_graph = None
 affordance_engine = None
 floor_detector = None
 
 def init_vision_modules():
-    global detector, segmenter, depth_estimator, depth_attacher, spatial_converter, relation_graph, affordance_engine, floor_detector
+    global detector, segmenter, depth_estimator, depth_attacher, spatial_converter, stabilizer, relation_graph, affordance_engine, floor_detector
     detector = ObjectDetector()
     segmenter = ObjectSegmenter()
     depth_estimator = DepthEstimator()
@@ -59,6 +61,7 @@ def init_vision_modules():
     spatial_converter = Spatial3DConverter(
         camera_matrix=CAMERA_MATRIX
     )
+    stabilizer = CoordinateStabilizer()
     relation_graph = SpatialRelationGraph()
     affordance_engine = AffordanceEngine()
     floor_detector = FloorPlaneDetector()
@@ -153,6 +156,8 @@ def build_scene_graph_for_frame(
     # 새로 계산했거나 캐시에서 가져온 동일 시점의 SAM 마스크와 Depth map을 결합합니다.
     scene_data = depth_attacher.attach_depth(scene_data, masks_list, depth_map)
     scene_data = spatial_converter.process_scene_3d(scene_data)
+    # [Task4] 3D 변환 직후 좌표 안정화(1€ 필터)로 프레임 간 지터 제거
+    scene_data = stabilizer.process_scene(scene_data)
     # <--- 추가: 3D 변환 직후에 바닥을 감지하여 델타값을 구합니다 --->
     scene_data = floor_detector.update_scene_with_floor(scene_data, depth_map)
     scene_data = relation_graph.process_scene_relations(scene_data)

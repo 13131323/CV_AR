@@ -19,7 +19,7 @@ import time
 import cv2
 from PIL import Image
 
-from vision.stream import WebcamStream
+from vision.stream import WebcamStream, CAMERA_MATRIX
 from vision.detector import ObjectDetector
 from vision.segmentation.segmenter import ObjectSegmenter, SceneDepthAttacher
 from vision.depth.depth_estimator import DepthEstimator
@@ -67,7 +67,8 @@ def main():
     segmenter = ObjectSegmenter()
     depth_estimator = DepthEstimator()
     depth_attacher = SceneDepthAttacher()
-    spatial_converter = Spatial3DConverter()
+    # [Task3 결함1 수정] 캘리브레이션된 내부 파라미터 주입 (기본값 fx=900 사용 방지)
+    spatial_converter = Spatial3DConverter(CAMERA_MATRIX)
     relation_graph = SpatialRelationGraph()
     affordance_engine = AffordanceEngine()
     floor_detector = FloorPlaneDetector()

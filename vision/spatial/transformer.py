@@ -1,6 +1,20 @@
 import numpy as np
 import math
 
+
+# =====================================================================
+# [좌표계 정의 — Task 3 문서화 요건]
+# 원점(Origin)   : 카메라 광학 중심 (pinhole)
+# 단위(Unit)     : 미터(m). Z는 Metric Depth, X/Y는 역투영으로 동일 스케일.
+# 축 방향(Axes)  : OpenCV 카메라 좌표계(오른손) 관례를 따른다.
+#   +X : 이미지 오른쪽 방향 (u 증가)
+#   +Y : 이미지 아래쪽 방향 (v 증가)   ← 화면 좌표계라 위가 아니라 아래가 +
+#   +Z : 카메라 정면(광축) 방향, 피사체 쪽이 양수
+# 역투영식     : X=(u-cx)*Z/fx,  Y=(v-cy)*Z/fy
+# scene["coordinate_system"] 값 "camera_opencv_meters" 로 이 규약을 표기한다.
+# =====================================================================
+
+
 class Spatial3DConverter:
     def __init__(self, camera_matrix=None):
         """
@@ -85,7 +99,8 @@ class Spatial3DConverter:
         # 전역 좌표계 정보 상위 메타데이터 레벨로 최적화 이동 완료
         if "scene" not in scene_data:
             scene_data["scene"] = {}
-        scene_data["scene"]["coordinate_system"] = "pseudo_3d"
+        # 좌표계 규약: 카메라 광학중심 원점, OpenCV 오른손 축(+X우/+Y하/+Z정면), 단위 m
+        scene_data["scene"]["coordinate_system"] = "camera_opencv_meters"
 
         for obj in scene_data["objects"]:
             if obj is None or "sam" not in obj or "depth" not in obj:
