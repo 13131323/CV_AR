@@ -60,8 +60,8 @@ class DepthEstimator:
             align_corners=False
         ).squeeze().cpu().numpy()
 
-        # [스케일 보정] 맥북 웹캠 전용 깊이 보정 계수 (가상 미터를 실제 물리적 미터로 스케일링)
-        DEPTH_SCALE_FACTOR = 0.44
+        # [스케일 보정] 맥북 웹캠 전용 깊이 보정 계수 (실제 22cm / 화면 43cm = 약 0.51)
+        DEPTH_SCALE_FACTOR = 0.51
         raw_depth = raw_depth * DEPTH_SCALE_FACTOR
 
         return {"raw_depth": raw_depth}

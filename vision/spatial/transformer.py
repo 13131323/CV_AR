@@ -1,4 +1,5 @@
 import numpy as np
+import math
 
 class Spatial3DConverter:
     def __init__(self, camera_matrix=None):
@@ -45,6 +46,34 @@ class Spatial3DConverter:
             "z": round(float(z_final), 3)
         }
 
+    def calculate_3d_bounding_box(self, bbox_2d, z_val):
+        x1, y1, x2, y2 = bbox_2d
+        
+        TL_X = (x1 - self.c_x) * z_val / self.f_x
+        TL_Y = (y1 - self.c_y) * z_val / self.f_y
+        TR_X = (x2 - self.c_x) * z_val / self.f_x
+        TR_Y = (y1 - self.c_y) * z_val / self.f_y
+        BL_X = (x1 - self.c_x) * z_val / self.f_x
+        BL_Y = (y2 - self.c_y) * z_val / self.f_y
+        BR_X = (x2 - self.c_x) * z_val / self.f_x
+        BR_Y = (y2 - self.c_y) * z_val / self.f_y
+
+        width_cm = abs(TR_X - TL_X) * 100.0
+        height_cm = abs(BL_Y - TL_Y) * 100.0
+
+        return {
+            "dimensions_cm": {
+                "width": round(float(width_cm), 1),
+                "height": round(float(height_cm), 1)
+            },
+            "corners": {
+                "TL": [round(float(TL_X), 3), round(float(TL_Y), 3)],
+                "TR": [round(float(TR_X), 3), round(float(TR_Y), 3)],
+                "BL": [round(float(BL_X), 3), round(float(BL_Y), 3)],
+                "BR": [round(float(BR_X), 3), round(float(BR_Y), 3)]
+            }
+        }
+
     def process_scene_3d(self, scene_data):
         """
         글로벌 JSON 데이터를 순회하며 spatial_3d 방 구조를 완성합니다.
@@ -70,9 +99,19 @@ class Spatial3DConverter:
                     centroid_2d,
                     mean_depth
                 )
+                
+                # 1. 아바타로부터 떨어진 유클리디안 거리 (Distance from Agent)
+                dist = math.sqrt(spatial_coords["x"]**2 + spatial_coords["y"]**2 + spatial_coords["z"]**2)
+                spatial_coords["distance_from_agent"] = round(dist, 3)
+
+                # 2. 3D 물리적 크기 및 4개 꼭짓점 좌표 (Bounding Box in 3D)
+                if "yolo" in obj and obj["yolo"] and "bbox_2d" in obj["yolo"]:
+                    bbox_3d_info = self.calculate_3d_bounding_box(obj["yolo"]["bbox_2d"], spatial_coords["z"])
+                    spatial_coords.update(bbox_3d_info)
+
                 obj["spatial_3d"] = spatial_coords
             else:
-                obj["spatial_3d"] = {"x": 0.0, "y": 0.0, "z": 0.0}
+                obj["spatial_3d"] = {"x": 0.0, "y": 0.0, "z": 0.0, "distance_from_agent": 0.0}
 
         return scene_data
 
