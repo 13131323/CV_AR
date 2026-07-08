@@ -64,7 +64,7 @@ def main():
             roi_depth = depth_map[max(0, cy-5):min(h, cy+5), max(0, cx-5):min(w, cx+5)]
             
             # [스케일 보정] 갤럭시 S26 Ultra (실제 가로 약 7.9cm) 측정치 18.0cm 기준 보정 (7.9 / 18.0 = 0.44)
-            DEPTH_SCALE_FACTOR = 0.44
+            DEPTH_SCALE_FACTOR = 0.72
             z_val = float(np.mean(roi_depth)) if roi_depth.size > 0 else 0.0
             z_val = z_val * DEPTH_SCALE_FACTOR
 

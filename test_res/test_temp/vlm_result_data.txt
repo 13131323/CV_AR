@@ -1,0 +1,639 @@
+test_temp: VLM SUCCESS payload log
+started_at: 2026-07-08T14:32:46.293+09:00
+
+[2026-07-08T14:33:14.356+09:00] status=SUCCESS
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "person",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "None"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이므로 접근 불가."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Cylindrical grasp to move"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Cylindrical grasp to move",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "사용 가능하여 접근 가능."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "bowl",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "None"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사용 불가 상태."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "관찰만 가능."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "cup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Cylindrical grasp to move"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Cylindrical grasp to move",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "사용 가능하여 접근 가능."
+    }
+  ]
+}
+
+[2026-07-08T14:33:23.667+09:00] status=SUCCESS
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "person",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "None"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 존재함."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Pinch grasp to move",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Pinch grasp to move",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "사용 가능 병이 있음."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "TV는 멀리 있음."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bowl",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Pinch grasp to move",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Pinch grasp to move",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "사용 가능 그릇이 있음."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "microwave",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "None"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "전자레인지 사용 불가."
+    }
+  ]
+}
+
+[2026-07-08T14:33:35.541+09:00] status=SUCCESS
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "person",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "None"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 존재함."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Cylindrical grasp to move"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Cylindrical grasp to move",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "사용 가능 병."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "TV를 관찰 가능."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bowl",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "None"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사용 불가 그릇."
+    }
+  ]
+}
+
+[2026-07-08T14:33:50.289+09:00] status=SUCCESS
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "person",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "None"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 존재함."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Cylindrical grasp to move"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "APPROACH_AND_INTERACT",
+        "animation_trigger": "Cylindrical grasp to move",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "사용 가능 병이 있음."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "TV를 관찰 가능."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bowl",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "None"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사용할 수 없는 그릇."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "microwave",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "None"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사용할 수 없는 전자레인지."
+    }
+  ]
+}
+
+[2026-07-08T14:33:59.504+09:00] status=SUCCESS
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "person",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "None"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 사용 중이다."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "침대는 접근 가능하다."
+    }
+  ]
+}
+
+[2026-07-08T14:34:15.375+09:00] status=SUCCESS
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "person",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "None"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 손에 물체를 쥐고 있음."
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "bottle",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "None"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      },
+      "reasoning": "사람이 물병을 들고 있음."
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "tv",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "TV는 멀리 위치해 있음."
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "bowl",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "그릇은 접근 가능함."
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "far_away",
+        "environment_relative": "elevated"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      },
+      "reasoning": "노트북은 멀리 위치해 있음."
+    }
+  ]
+}
+
