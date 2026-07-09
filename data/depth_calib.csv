@@ -1,6 +1,0 @@
-true_distance_m,pred_depth_m,n_framepython3 -m tools.calibrate_depth_scale data/depth_calib.csvs,pred_std_m
-0.4,0.7857,60,0.0097
-0.6,1.0823,60,0.0096
-0.8,1.3588,60,0.0245
-1.0,1.5173,60,0.0486
-1.2,1.5368,60,0.0258
