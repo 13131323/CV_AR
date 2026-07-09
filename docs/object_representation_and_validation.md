@@ -89,13 +89,15 @@ VLM 입력 스키마: `llm/schemas.py :: SemanticInterpretationInput`.
 - **결과**: δ₁(<1.25) = **1.00**, AbsRel = **6.3%**, RMSE = **4.5cm**, 최대오차 7.1cm.
 - **허용 기준 근거**: 단안 깊이 표준지표 δ₁<1.25 (Eigen et al., NIPS 2014). δ₁=1.0으로 통과.
 - **신뢰 범위 0.4~1.2m** (≳1.5m는 모델 포화로 제외).
-- **프레임 간 변동**: 안정화(1€ 필터) 적용으로 정지 z_std 14mm→5.7mm.
+- **프레임 간 변동(실측)**: 라이브 전체 파이프라인에서 정지 z_std @0.5m 6.5→5.7mm, @0.9m 28.5→26.8mm (안정화 감소 6~12%).
 
 ## 5. 좌표 안정화 (Task 4)
 
 `vision/spatial/stabilizer.py :: CoordinateStabilizer` (One Euro Filter, Casiez et al. 2012).
 - 객체 연결: 라벨 + bbox IoU(≥0.3) greedy 매칭(YOLO id는 프레임 내 인덱스라 시간축 정체성 없음).
-- **파라미터 근거**: 실측 정지 지터 ≈8mm/frame vs 이동 ≈235mm/frame(30배차) → 속도적응형 채택.
-  미터 단위 스케일 보정 위해 `beta=10` (스윕 결과: 정지지터 2.5mm, 보행1m/s 지연 1.5cm).
-- 효과: 정지 z_std 14mm → 5.7mm, 급이동 지연 <2cm. `raw_xyz`로 원본 보존.
-- **최종 beta 확정은 4장 정지 측정으로 검증 예정.**
+- **파라미터 근거**: 실측 정지 지터 ≈8mm/frame vs 동적 객체 ≈235mm/frame(30배차) → 속도적응형 채택.
+  미터 단위 보정 위해 `beta=10`. 아래 두 수치는 **합성 스윕(30fps 가정)** 값이라 설계 근거일 뿐 라이브 미검증:
+  스윕 상 정지지터 2.5mm, 보행 1m/s 지연 1.5cm, ±15mm 인공지터 z_std 14→5.7mm, 급이동 지연 <2cm.
+- **실측 효과(라이브)**: 정지 z_std @0.5m 6.5→5.7mm (감소 12%). `raw_xyz`로 원본 보존.
+- **프로덕션 완전 재현(캐싱+실측FPS)**: z std ≈6.5mm(불변, depth 노이즈 하한)이나 **프레임간 |Δz| 7.7→0.76mm(≈10× 개선)**.
+  이 매끄러움은 **주로 depth 캐싱**이 만들고 One Euro는 보조. 상세: `coordinate_accuracy_validation_result.md` §5.1.
