@@ -174,9 +174,11 @@ def is_significant_change(prev_inputs, curr_inputs):
     if len(prev_inputs) != len(curr_inputs):
         return True
     for p_obj, c_obj in zip(prev_inputs, curr_inputs):
-        if p_obj.detected_class != c_obj.detected_class:
-            return True
         if abs(p_obj.mask_area - c_obj.mask_area) / max(p_obj.mask_area, 1) > 0.5:
+            return True
+        previous_box = p_obj.bbox_2d or []
+        current_box = c_obj.bbox_2d or []
+        if bbox_iou(previous_box, current_box) < SAM_IOU_THRESHOLD:
             return True
         if abs(p_obj.target_z - c_obj.target_z) > 0.2:
             return True

@@ -18,8 +18,6 @@ def test_openai_integration():
             SemanticInterpretationInput(
                 object_id=0,
                 bbox_2d=[10.0, 10.0, 50.0, 50.0],
-                detected_class="bottle",
-                confidence=0.85,
                 mask_area=1500,
                 centroid_y=30,
                 object_x=0.0,
@@ -32,8 +30,6 @@ def test_openai_integration():
             SemanticInterpretationInput(
                 object_id=1,
                 bbox_2d=[60.0, 10.0, 90.0, 90.0],
-                detected_class="person",
-                confidence=0.92,
                 mask_area=3000,
                 centroid_y=50,
                 object_x=0.0,
@@ -59,7 +55,6 @@ def test_openai_integration():
             print(f"어포던스: {obj.semantic_state.affordances}")
             print(f"행동 정책: {obj.planner_directives.action_policy} (안전 여부: {obj.planner_directives.is_safe_to_approach})")
             print(f"애니메이션 트리거: {obj.planner_directives.animation_trigger}")
-            print(f"이유: {obj.reasoning}")
             print("-" * 30)
     except Exception as e:
         print(f"\n[실패] 에러 발생: {e}")

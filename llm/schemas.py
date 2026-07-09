@@ -46,8 +46,6 @@ class SemanticInterpretationInput(BaseModel):
 
     object_id: int = Field(..., description="객체 식별 ID (이미지 상의 Bounding Box 번호와 매칭됨)")
     bbox_2d: Optional[list[float]] = Field(None, description="YOLO Bounding Box [x1, y1, x2, y2]")
-    detected_class: str = Field(..., description="YOLO가 탐지한 클래스명 (오탐지 가능성 있음)")
-    confidence: float = Field(..., ge=0.0, le=1.0, description="YOLO 탐지 신뢰도")
     mask_area: int = Field(..., ge=0, description="SAM 마스크 픽셀 면적")
     centroid_y: int = Field(..., description="마스크 중심점의 y좌표 (픽셀, 화면 세로축)")
     # [Task 5] 최소 요건: 3D 좌표 (X, Y, Z) 전부 + 단위(미터) 명시.
@@ -121,7 +119,6 @@ class SemanticInterpretationOutput(BaseModel):
     corrected_spatial_relation: SpatialContext
     semantic_state: SemanticState
     planner_directives: PlannerDirectives
-    reasoning: str = Field(..., description="상태 판단 및 정책 도출 이유 (한국어, 1문장 내외)")
 
     @model_validator(mode="after")
     def validate_action_selection(self):
