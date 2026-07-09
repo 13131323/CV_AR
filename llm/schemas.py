@@ -32,7 +32,11 @@ class SemanticInterpretationInput(BaseModel):
     confidence: float = Field(..., ge=0.0, le=1.0, description="YOLO 탐지 신뢰도")
     mask_area: int = Field(..., ge=0, description="SAM 마스크 픽셀 면적")
     centroid_y: int = Field(..., description="마스크 중심점의 y좌표 (픽셀, 화면 세로축)")
-    target_z: float = Field(..., description="카메라로부터 객체까지의 추정 거리(m), spatial_3d.z")
+    # [Task 5] 최소 요건: 3D 좌표 (X, Y, Z) 전부 + 단위(미터) 명시.
+    # 좌표계 = camera_opencv_meters (원점: 카메라 광학중심, +X 우 / +Y 하 / +Z 정면)
+    object_x: float = Field(..., description="객체 3D 좌표 X (미터). spatial_3d.x. +는 카메라 오른쪽")
+    object_y: float = Field(..., description="객체 3D 좌표 Y (미터). spatial_3d.y. +는 카메라 아래쪽")
+    target_z: float = Field(..., description="객체 3D 좌표 Z (미터). spatial_3d.z. 카메라로부터의 정면 거리")
     near_distance: Optional[float] = Field(None, description="가장 가까운 인접 객체와의 거리(m)")
     floor_depth_delta: Optional[float] = Field(
         None, description="바닥 추정 깊이와 객체 깊이의 차이(m) (바닥 접촉 추론 참고용)"

@@ -1,0 +1,12 @@
+{
+  "model": "true_m = scale * pred_m + offset",
+  "scale": 1.103085,
+  "offset": -0.393163,
+  "unit": "meter",
+  "provenance": "data/depth_calib.csv 다거리 회귀 (scale+offset 채택)",
+  "n_samples": 5,
+  "r2": 0.9747,
+  "rmse_m": 0.045,
+  "calibrated_at": null,
+  "note": "tools/calibrate_depth_scale.py 자동 생성."
+}

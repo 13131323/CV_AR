@@ -43,6 +43,8 @@ def build_input_from_object(
         confidence=obj["yolo"]["confidence"],
         mask_area=obj["sam"]["mask_area"],
         centroid_y=obj["sam"]["centroid_2d"][1],
+        object_x=obj["spatial_3d"]["x"],
+        object_y=obj["spatial_3d"]["y"],
         target_z=obj["spatial_3d"]["z"],
         near_distance=obj.get("near_distance"),
         floor_depth_delta=obj.get("floor_depth_delta"),
