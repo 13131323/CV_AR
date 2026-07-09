@@ -19,9 +19,27 @@ AffordanceTag = Literal[
     "Pinch grasp to move",
     "Manipulate elongated tools",
     "To sit/to place",
+    "Bend down and pick up",
+    "Reach up and take",
+    "Observe",
+]
+
+ActionTrigger = Literal[
+    "Spherical grasp to open",
+    "Wrap grasp to open",
+    "Turn on/off switch",
+    "Press",
+    "Two hands raise and move",
+    "Cylindrical grasp to move",
+    "Pinch grasp to move",
+    "Manipulate elongated tools",
+    "To sit/to place",
+    "Bend down and pick up",
+    "Reach up and take",
     "Observe",
     "None",
 ]
+
 
 class SemanticInterpretationInput(BaseModel):
     """Geometry Layer -> Semantic Interpretation Layer 입력"""
@@ -74,7 +92,7 @@ class PlannerDirectives(BaseModel):
     action_policy: Literal["APPROACH_AND_INTERACT", "OBSERVE_ONLY", "IGNORE"] = Field(
         ..., description="ActionPlanner를 위한 권고 행동 정책 (권고안일 뿐 최종 명령은 아님)"
     )
-    animation_trigger: AffordanceTag = Field(
+    animation_trigger: ActionTrigger = Field(
         ...,
         description="affordances에서 하나를 선택한 단일 실행 행동. 실행하지 않을 때는 None",
     )
@@ -111,7 +129,7 @@ class SemanticInterpretationOutput(BaseModel):
         policy = self.planner_directives.action_policy
         trigger = self.planner_directives.animation_trigger
 
-        if trigger not in self.semantic_state.affordances:
+        if trigger != "None" and trigger not in self.semantic_state.affordances:
             self.semantic_state.affordances.append(trigger)
         if policy == "IGNORE" and trigger != "None":
             raise ValueError("IGNORE 정책의 animation_trigger는 None이어야 합니다.")
