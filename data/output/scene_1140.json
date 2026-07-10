@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 1140,
-    "timestamp": 1780675107.304716,
+    "timestamp": 1783665225.899633,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, remote 1개, book 1개가 감지됨"
+    "scene_summary": "bottle 1개, cell phone 1개, mouse 1개, chair 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
-      "label": "person",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.88,
+        "confidence": 0.83,
         "bbox_2d": [
-          367,
-          209,
-          1034,
-          714
+          431,
+          104,
+          559,
+          409
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "remote",
+      "label": "cell phone",
       "yolo": {
-        "confidence": 0.33,
+        "confidence": 0.47,
         "bbox_2d": [
-          484,
-          463,
-          640,
-          712
+          618,
+          295,
+          734,
+          478
         ]
       },
       "sam": null,
@@ -56,14 +56,32 @@
     },
     {
       "id": 2,
-      "label": "book",
+      "label": "mouse",
       "yolo": {
-        "confidence": 0.26,
+        "confidence": 0.36,
         "bbox_2d": [
-          1109,
-          540,
-          1144,
-          609
+          350,
+          180,
+          443,
+          287
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 3,
+      "label": "chair",
+      "yolo": {
+        "confidence": 0.27,
+        "bbox_2d": [
+          0,
+          1,
+          306,
+          313
         ]
       },
       "sam": null,

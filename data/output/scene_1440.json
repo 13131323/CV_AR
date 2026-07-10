@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 1440,
-    "timestamp": 1780675125.731959,
+    "timestamp": 1783665240.4335008,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, book 5개가 감지됨"
+    "scene_summary": "remote 1개, bottle 1개, cell phone 1개, person 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
-      "label": "person",
+      "label": "remote",
       "yolo": {
-        "confidence": 0.88,
+        "confidence": 0.91,
         "bbox_2d": [
-          342,
-          142,
-          924,
-          714
+          273,
+          274,
+          384,
+          453
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "book",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.38,
+        "confidence": 0.86,
         "bbox_2d": [
-          1060,
-          419,
-          1106,
-          500
+          433,
+          102,
+          560,
+          412
         ]
       },
       "sam": null,
@@ -56,14 +56,14 @@
     },
     {
       "id": 2,
-      "label": "book",
+      "label": "cell phone",
       "yolo": {
-        "confidence": 0.35,
+        "confidence": 0.56,
         "bbox_2d": [
-          1102,
-          424,
-          1127,
-          494
+          618,
+          294,
+          734,
+          477
         ]
       },
       "sam": null,
@@ -74,50 +74,14 @@
     },
     {
       "id": 3,
-      "label": "book",
+      "label": "person",
       "yolo": {
-        "confidence": 0.32,
+        "confidence": 0.44,
         "bbox_2d": [
-          1119,
-          402,
-          1155,
-          493
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 4,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.3,
-        "bbox_2d": [
-          1110,
-          542,
-          1144,
-          610
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 5,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.3,
-        "bbox_2d": [
-          1053,
-          403,
-          1107,
-          499
+          239,
+          5,
+          759,
+          162
         ]
       },
       "sam": null,

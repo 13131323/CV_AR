@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 1290,
-    "timestamp": 1780675116.604264,
+    "timestamp": 1783665233.2044983,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, book 2개, remote 1개, toothbrush 1개가 감지됨"
+    "scene_summary": "bottle 1개, person 1개, cell phone 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
-      "label": "person",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.95,
+        "confidence": 0.84,
         "bbox_2d": [
-          363,
-          203,
-          1086,
-          713
+          434,
+          104,
+          561,
+          409
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "book",
+      "label": "person",
       "yolo": {
-        "confidence": 0.33,
+        "confidence": 0.6,
         "bbox_2d": [
-          1108,
-          539,
-          1148,
-          611
+          0,
+          2,
+          346,
+          440
         ]
       },
       "sam": null,
@@ -56,50 +56,14 @@
     },
     {
       "id": 2,
-      "label": "remote",
+      "label": "cell phone",
       "yolo": {
-        "confidence": 0.31,
+        "confidence": 0.39,
         "bbox_2d": [
-          484,
-          474,
-          638,
-          711
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 3,
-      "label": "toothbrush",
-      "yolo": {
-        "confidence": 0.3,
-        "bbox_2d": [
-          976,
-          320,
-          1040,
-          516
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 4,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.29,
-        "bbox_2d": [
-          1055,
-          400,
-          1107,
-          498
+          618,
+          295,
+          734,
+          477
         ]
       },
       "sam": null,

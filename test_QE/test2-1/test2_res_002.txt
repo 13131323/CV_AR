@@ -1,0 +1,15 @@
+test2_res_001 cleaned analysis
+?? ??? ???? ??.
+?? ??:
+- 0.4m ?? ?? ??
+- 1.0m ?? ?? IQR ??? ??: ?? sample 1, 14, 15, 16
+
+position_index? 0.4m ?? ?? ? 1?? ?? ???.
+kept_samples: 116
+removed_rows: 34
+
+position summaries:
+position=1 true_z=0.600 n=30 mean_z=0.557400 MAE=0.046933 RMSE=0.048526 z_std=0.023635 mean_3d_jitter=0.016959 max_3d_jitter=0.125340
+position=2 true_z=0.800 n=30 mean_z=0.896500 MAE=0.096500 RMSE=0.101038 z_std=0.030453 mean_3d_jitter=0.024909 max_3d_jitter=0.159393
+position=3 true_z=1.000 n=26 mean_z=1.109231 MAE=0.109231 RMSE=0.111942 z_std=0.024971 mean_3d_jitter=0.022037 max_3d_jitter=0.046184
+position=4 true_z=1.200 n=30 mean_z=1.145100 MAE=0.077033 RMSE=0.091531 z_std=0.074491 mean_3d_jitter=0.036373 max_3d_jitter=0.327866

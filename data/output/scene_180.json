@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 180,
-    "timestamp": 1783312157.2967339,
+    "timestamp": 1783668449.704984,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, clock 1개, book 1개가 감지됨"
+    "scene_summary": "person 1개, bowl 1개, bed 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.89,
+        "confidence": 0.95,
         "bbox_2d": [
-          292,
-          275,
-          778,
-          715
+          172,
+          1,
+          1279,
+          710
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "clock",
+      "label": "bowl",
       "yolo": {
-        "confidence": 0.52,
+        "confidence": 0.34,
         "bbox_2d": [
-          531,
-          67,
-          640,
-          174
+          254,
+          274,
+          375,
+          368
         ]
       },
       "sam": null,
@@ -56,14 +56,14 @@
     },
     {
       "id": 2,
-      "label": "book",
+      "label": "bed",
       "yolo": {
-        "confidence": 0.35,
+        "confidence": 0.27,
         "bbox_2d": [
-          857,
-          210,
-          907,
-          340
+          0,
+          283,
+          246,
+          711
         ]
       },
       "sam": null,

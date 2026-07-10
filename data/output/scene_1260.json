@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 1260,
-    "timestamp": 1780675114.6719391,
+    "timestamp": 1783665231.7732933,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, toothbrush 1개, remote 1개, book 2개가 감지됨"
+    "scene_summary": "bottle 1개, cell phone 1개, chair 2개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
-      "label": "person",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.95,
+        "confidence": 0.82,
         "bbox_2d": [
-          360,
-          203,
-          1087,
-          713
+          435,
+          104,
+          561,
+          409
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "toothbrush",
+      "label": "cell phone",
       "yolo": {
-        "confidence": 0.48,
+        "confidence": 0.31,
         "bbox_2d": [
-          969,
-          336,
-          1038,
-          535
+          619,
+          295,
+          734,
+          477
         ]
       },
       "sam": null,
@@ -56,14 +56,14 @@
     },
     {
       "id": 2,
-      "label": "remote",
+      "label": "chair",
       "yolo": {
-        "confidence": 0.37,
+        "confidence": 0.3,
         "bbox_2d": [
-          476,
-          481,
-          627,
-          711
+          0,
+          0,
+          177,
+          312
         ]
       },
       "sam": null,
@@ -74,32 +74,14 @@
     },
     {
       "id": 3,
-      "label": "book",
+      "label": "chair",
       "yolo": {
-        "confidence": 0.32,
+        "confidence": 0.3,
         "bbox_2d": [
-          1108,
-          539,
-          1146,
-          611
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 4,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.28,
-        "bbox_2d": [
-          1054,
-          400,
-          1106,
-          498
+          0,
+          2,
+          277,
+          313
         ]
       },
       "sam": null,

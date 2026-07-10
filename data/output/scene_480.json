@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 480,
-    "timestamp": 1783312168.4872231,
+    "timestamp": 1783667675.609547,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, umbrella 1개가 감지됨"
+    "scene_summary": "person 1개, bottle 1개, cup 1개, tv 1개, couch 1개, bowl 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.89,
+        "confidence": 0.92,
         "bbox_2d": [
-          402,
-          261,
-          869,
-          714
+          939,
+          0,
+          1279,
+          709
         ]
       },
       "sam": null,
@@ -38,14 +38,86 @@
     },
     {
       "id": 1,
-      "label": "umbrella",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.26,
+        "confidence": 0.81,
         "bbox_2d": [
-          1059,
-          394,
-          1204,
-          699
+          641,
+          16,
+          679,
+          148
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 2,
+      "label": "cup",
+      "yolo": {
+        "confidence": 0.5,
+        "bbox_2d": [
+          604,
+          529,
+          670,
+          603
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 3,
+      "label": "tv",
+      "yolo": {
+        "confidence": 0.44,
+        "bbox_2d": [
+          355,
+          74,
+          509,
+          294
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 4,
+      "label": "couch",
+      "yolo": {
+        "confidence": 0.41,
+        "bbox_2d": [
+          839,
+          47,
+          1279,
+          689
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 5,
+      "label": "bowl",
+      "yolo": {
+        "confidence": 0.28,
+        "bbox_2d": [
+          222,
+          234,
+          382,
+          336
         ]
       },
       "sam": null,

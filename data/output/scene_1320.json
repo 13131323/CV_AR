@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 1320,
-    "timestamp": 1780675118.6048052,
+    "timestamp": 1783665234.673305,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, toothbrush 1개, book 2개가 감지됨"
+    "scene_summary": "bottle 1개, cell phone 1개, person 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
-      "label": "person",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.8,
+        "confidence": 0.84,
         "bbox_2d": [
-          366,
-          203,
-          1038,
-          716
+          432,
+          104,
+          561,
+          411
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "toothbrush",
+      "label": "cell phone",
       "yolo": {
-        "confidence": 0.59,
+        "confidence": 0.39,
         "bbox_2d": [
-          803,
-          485,
-          887,
-          603
+          618,
+          295,
+          734,
+          477
         ]
       },
       "sam": null,
@@ -56,32 +56,14 @@
     },
     {
       "id": 2,
-      "label": "book",
+      "label": "person",
       "yolo": {
         "confidence": 0.3,
         "bbox_2d": [
-          1108,
-          539,
-          1146,
-          611
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 3,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.26,
-        "bbox_2d": [
-          1058,
-          401,
-          1106,
-          498
+          0,
+          1,
+          369,
+          268
         ]
       },
       "sam": null,

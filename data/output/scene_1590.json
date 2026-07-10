@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 1590,
-    "timestamp": 1780675134.777511,
+    "timestamp": 1783665247.6842022,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, book 2개가 감지됨"
+    "scene_summary": "remote 1개, bottle 1개, cell phone 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
-      "label": "person",
+      "label": "remote",
       "yolo": {
-        "confidence": 0.88,
+        "confidence": 0.9,
         "bbox_2d": [
-          341,
-          133,
-          1084,
-          714
+          274,
+          274,
+          384,
+          453
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "book",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.27,
+        "confidence": 0.83,
         "bbox_2d": [
-          1108,
-          539,
-          1147,
-          611
+          421,
+          102,
+          554,
+          408
         ]
       },
       "sam": null,
@@ -56,14 +56,14 @@
     },
     {
       "id": 2,
-      "label": "book",
+      "label": "cell phone",
       "yolo": {
-        "confidence": 0.25,
+        "confidence": 0.31,
         "bbox_2d": [
-          1057,
-          400,
-          1106,
-          497
+          619,
+          294,
+          734,
+          476
         ]
       },
       "sam": null,

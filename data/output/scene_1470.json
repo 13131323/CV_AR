@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 1470,
-    "timestamp": 1780675127.703307,
+    "timestamp": 1783665241.919415,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, toothbrush 1개, cell phone 1개, book 2개가 감지됨"
+    "scene_summary": "remote 1개, bottle 1개, person 1개, cell phone 1개, dining table 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
-      "label": "person",
+      "label": "remote",
       "yolo": {
-        "confidence": 0.89,
+        "confidence": 0.94,
         "bbox_2d": [
-          347,
-          133,
-          1077,
-          716
+          274,
+          274,
+          383,
+          453
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "toothbrush",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.85,
+        "confidence": 0.87,
         "bbox_2d": [
-          655,
-          411,
-          731,
-          571
+          433,
+          104,
+          561,
+          411
         ]
       },
       "sam": null,
@@ -56,14 +56,14 @@
     },
     {
       "id": 2,
-      "label": "cell phone",
+      "label": "person",
       "yolo": {
-        "confidence": 0.31,
+        "confidence": 0.62,
         "bbox_2d": [
-          314,
-          391,
-          566,
-          720
+          93,
+          4,
+          480,
+          230
         ]
       },
       "sam": null,
@@ -74,14 +74,14 @@
     },
     {
       "id": 3,
-      "label": "book",
+      "label": "cell phone",
       "yolo": {
-        "confidence": 0.28,
+        "confidence": 0.55,
         "bbox_2d": [
-          1108,
-          539,
-          1146,
-          612
+          618,
+          294,
+          734,
+          477
         ]
       },
       "sam": null,
@@ -92,14 +92,14 @@
     },
     {
       "id": 4,
-      "label": "book",
+      "label": "dining table",
       "yolo": {
-        "confidence": 0.25,
+        "confidence": 0.26,
         "bbox_2d": [
-          1056,
-          401,
-          1106,
-          498
+          88,
+          159,
+          1074,
+          601
         ]
       },
       "sam": null,

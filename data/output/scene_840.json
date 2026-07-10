@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 840,
-    "timestamp": 1783312181.9570577,
+    "timestamp": 1783665211.3893921,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 3개가 감지됨"
+    "scene_summary": "bottle 1개, spoon 1개, bed 1개, cell phone 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
-      "label": "person",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.9,
+        "confidence": 0.85,
         "bbox_2d": [
-          419,
-          88,
-          1050,
-          712
+          445,
+          98,
+          565,
+          392
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "person",
+      "label": "spoon",
       "yolo": {
-        "confidence": 0.44,
+        "confidence": 0.39,
         "bbox_2d": [
-          1,
-          5,
-          584,
-          707
+          285,
+          179,
+          394,
+          518
         ]
       },
       "sam": null,
@@ -56,14 +56,32 @@
     },
     {
       "id": 2,
-      "label": "person",
+      "label": "bed",
+      "yolo": {
+        "confidence": 0.34,
+        "bbox_2d": [
+          41,
+          518,
+          1276,
+          604
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 3,
+      "label": "cell phone",
       "yolo": {
         "confidence": 0.26,
         "bbox_2d": [
-          2,
-          5,
-          913,
-          699
+          618,
+          287,
+          733,
+          460
         ]
       },
       "sam": null,

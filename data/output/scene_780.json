@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 780,
-    "timestamp": 1783312179.616088,
+    "timestamp": 1783665208.47223,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, microwave 1개, clock 1개, book 2개가 감지됨"
+    "scene_summary": "bottle 1개, person 1개, bed 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
-      "label": "person",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.92,
+        "confidence": 0.83,
         "bbox_2d": [
-          314,
-          120,
-          1052,
-          713
+          447,
+          99,
+          561,
+          321
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "microwave",
+      "label": "person",
       "yolo": {
-        "confidence": 0.66,
+        "confidence": 0.81,
         "bbox_2d": [
-          95,
-          316,
-          475,
-          543
+          0,
+          3,
+          789,
+          518
         ]
       },
       "sam": null,
@@ -56,50 +56,14 @@
     },
     {
       "id": 2,
-      "label": "clock",
+      "label": "bed",
       "yolo": {
-        "confidence": 0.65,
+        "confidence": 0.33,
         "bbox_2d": [
-          652,
-          0,
-          757,
-          91
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 3,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.29,
-        "bbox_2d": [
-          1011,
-          112,
-          1048,
-          241
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 4,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.26,
-        "bbox_2d": [
-          1048,
-          101,
-          1094,
-          226
+          50,
+          516,
+          1276,
+          607
         ]
       },
       "sam": null,

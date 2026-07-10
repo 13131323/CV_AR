@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 1050,
-    "timestamp": 1783312190.2568538,
+    "timestamp": 1783665221.5265036,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "microwave 1개, person 1개, clock 1개, book 1개가 감지됨"
+    "scene_summary": "bottle 1개, person 1개, chair 1개, cell phone 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
-      "label": "microwave",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.89,
+        "confidence": 0.87,
         "bbox_2d": [
-          61,
-          345,
-          448,
-          575
+          431,
+          105,
+          561,
+          410
         ]
       },
       "sam": null,
@@ -40,12 +40,12 @@
       "id": 1,
       "label": "person",
       "yolo": {
-        "confidence": 0.88,
+        "confidence": 0.42,
         "bbox_2d": [
-          296,
-          132,
-          1042,
-          714
+          119,
+          2,
+          409,
+          269
         ]
       },
       "sam": null,
@@ -56,14 +56,14 @@
     },
     {
       "id": 2,
-      "label": "clock",
+      "label": "chair",
       "yolo": {
-        "confidence": 0.53,
+        "confidence": 0.33,
         "bbox_2d": [
-          624,
-          15,
-          726,
-          119
+          0,
+          6,
+          202,
+          378
         ]
       },
       "sam": null,
@@ -74,14 +74,14 @@
     },
     {
       "id": 3,
-      "label": "book",
+      "label": "cell phone",
       "yolo": {
         "confidence": 0.28,
         "bbox_2d": [
-          963,
-          141,
-          1014,
-          272
+          618,
+          295,
+          734,
+          478
         ]
       },
       "sam": null,

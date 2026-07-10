@@ -62,7 +62,7 @@ ExportedObj/
 *.VC.db
 
 # 이종화 관련 파일
-로컬관리파일.txt
+로컬관리파일.md
 vision/depth/depth_scale.json
 data/depth_calib.csv
 

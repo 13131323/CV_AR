@@ -1,0 +1,251 @@
+sample,object_id,class_name,affordance,animation_trigger,action_policy
+1,0,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+1,0,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+1,1,Remote control,Press,Press,APPROACH_AND_INTERACT
+1,1,Remote control,Observe,Press,APPROACH_AND_INTERACT
+1,2,Smartphone,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+1,2,Smartphone,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+1,3,Earbuds case,Pinch grasp to move,Pinch grasp to move,APPROACH_AND_INTERACT
+1,3,Earbuds case,Observe,Pinch grasp to move,APPROACH_AND_INTERACT
+2,0,Remote control,Press,Observe,OBSERVE_ONLY
+2,0,Remote control,Observe,Observe,OBSERVE_ONLY
+2,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+2,1,Water bottle,Bend down and pick up,Cylindrical grasp to move,APPROACH_AND_INTERACT
+2,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+2,2,Smartphone,Cylindrical grasp to move,Observe,OBSERVE_ONLY
+2,2,Smartphone,Observe,Observe,OBSERVE_ONLY
+2,3,Earbuds case,Pinch grasp to move,Observe,OBSERVE_ONLY
+2,3,Earbuds case,Observe,Observe,OBSERVE_ONLY
+3,0,Remote control,Press,Observe,OBSERVE_ONLY
+3,0,Remote control,Observe,Observe,OBSERVE_ONLY
+3,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+3,1,Water bottle,Bend down and pick up,Cylindrical grasp to move,APPROACH_AND_INTERACT
+3,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+3,2,Smartphone,Cylindrical grasp to move,Observe,OBSERVE_ONLY
+3,2,Smartphone,Observe,Observe,OBSERVE_ONLY
+3,3,Wireless earbuds case,Pinch grasp to move,Observe,OBSERVE_ONLY
+3,3,Wireless earbuds case,Observe,Observe,OBSERVE_ONLY
+4,0,Remote control,Observe,Observe,OBSERVE_ONLY
+4,1,Water bottle,Bend down and pick up,Bend down and pick up,APPROACH_AND_INTERACT
+4,1,Water bottle,Cylindrical grasp to move,Bend down and pick up,APPROACH_AND_INTERACT
+4,1,Water bottle,Observe,Bend down and pick up,APPROACH_AND_INTERACT
+4,2,None,Observe,Observe,OBSERVE_ONLY
+4,3,Smartphone,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+4,3,Smartphone,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+4,4,None,Observe,Observe,OBSERVE_ONLY
+5,0,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+5,0,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+5,1,Remote control,Press,Press,APPROACH_AND_INTERACT
+5,1,Remote control,Observe,Press,APPROACH_AND_INTERACT
+5,2,Smartphone,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+5,2,Smartphone,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+5,3,Earbuds case,Pinch grasp to move,Pinch grasp to move,APPROACH_AND_INTERACT
+5,3,Earbuds case,Observe,Pinch grasp to move,APPROACH_AND_INTERACT
+6,0,Remote control,Observe,Observe,OBSERVE_ONLY
+6,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+6,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+6,2,Smartphone,Observe,Observe,OBSERVE_ONLY
+6,3,Wireless earbuds case,Observe,Observe,OBSERVE_ONLY
+7,0,Remote control,Press,Press,APPROACH_AND_INTERACT
+7,0,Remote control,Observe,Press,APPROACH_AND_INTERACT
+7,1,Water bottle,Cylindrical grasp to move,Bend down and pick up,APPROACH_AND_INTERACT
+7,1,Water bottle,Bend down and pick up,Bend down and pick up,APPROACH_AND_INTERACT
+7,1,Water bottle,Observe,Bend down and pick up,APPROACH_AND_INTERACT
+7,2,Smartphone,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+7,2,Smartphone,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+7,3,Case,Observe,Observe,OBSERVE_ONLY
+8,0,Remote control,Press,Press,APPROACH_AND_INTERACT
+8,0,Remote control,Observe,Press,APPROACH_AND_INTERACT
+8,1,Water bottle,Cylindrical grasp to move,Bend down and pick up,APPROACH_AND_INTERACT
+8,1,Water bottle,Bend down and pick up,Bend down and pick up,APPROACH_AND_INTERACT
+8,1,Water bottle,Observe,Bend down and pick up,APPROACH_AND_INTERACT
+8,2,Smartphone,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+8,2,Smartphone,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+8,3,Earbuds case,Pinch grasp to move,Pinch grasp to move,APPROACH_AND_INTERACT
+8,3,Earbuds case,Observe,Pinch grasp to move,APPROACH_AND_INTERACT
+9,0,Remote control,Press,Press,APPROACH_AND_INTERACT
+9,0,Remote control,Observe,Press,APPROACH_AND_INTERACT
+9,1,Water bottle,Bend down and pick up,Bend down and pick up,APPROACH_AND_INTERACT
+9,1,Water bottle,Cylindrical grasp to move,Bend down and pick up,APPROACH_AND_INTERACT
+9,1,Water bottle,Observe,Bend down and pick up,APPROACH_AND_INTERACT
+9,2,Smartphone,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+9,2,Smartphone,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+9,3,Earbuds case,Pinch grasp to move,Pinch grasp to move,APPROACH_AND_INTERACT
+9,3,Earbuds case,Observe,Pinch grasp to move,APPROACH_AND_INTERACT
+10,0,Remote control,Press,Press,APPROACH_AND_INTERACT
+10,0,Remote control,Observe,Press,APPROACH_AND_INTERACT
+10,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+10,1,Water bottle,Bend down and pick up,Cylindrical grasp to move,APPROACH_AND_INTERACT
+10,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+10,2,Smartphone,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+10,2,Smartphone,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+10,3,Wireless earbuds case,Pinch grasp to move,Pinch grasp to move,APPROACH_AND_INTERACT
+10,3,Wireless earbuds case,Observe,Pinch grasp to move,APPROACH_AND_INTERACT
+11,0,Remote control,Observe,Observe,OBSERVE_ONLY
+11,1,Water bottle,Bend down and pick up,Bend down and pick up,APPROACH_AND_INTERACT
+11,1,Water bottle,Cylindrical grasp to move,Bend down and pick up,APPROACH_AND_INTERACT
+11,1,Water bottle,Observe,Bend down and pick up,APPROACH_AND_INTERACT
+11,2,Phone,Observe,Observe,OBSERVE_ONLY
+11,3,Earbuds case,Observe,Observe,OBSERVE_ONLY
+11,4,Earbuds case,Observe,Observe,OBSERVE_ONLY
+12,0,Remote control,Press,Press,APPROACH_AND_INTERACT
+12,0,Remote control,Observe,Press,APPROACH_AND_INTERACT
+12,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+12,1,Water bottle,Bend down and pick up,Cylindrical grasp to move,APPROACH_AND_INTERACT
+12,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+12,2,Phone,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+12,2,Phone,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+12,3,Earbuds case,Pinch grasp to move,Pinch grasp to move,APPROACH_AND_INTERACT
+12,3,Earbuds case,Observe,Pinch grasp to move,APPROACH_AND_INTERACT
+13,0,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+13,0,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+13,1,Remote control,Press,Press,APPROACH_AND_INTERACT
+13,1,Remote control,Observe,Press,APPROACH_AND_INTERACT
+13,2,Earbuds case,Pinch grasp to move,Pinch grasp to move,APPROACH_AND_INTERACT
+13,2,Earbuds case,Observe,Pinch grasp to move,APPROACH_AND_INTERACT
+13,3,Smartphone,Manipulate elongated tools,Manipulate elongated tools,APPROACH_AND_INTERACT
+13,3,Smartphone,Observe,Manipulate elongated tools,APPROACH_AND_INTERACT
+14,0,Remote control,Press,Observe,OBSERVE_ONLY
+14,0,Remote control,Observe,Observe,OBSERVE_ONLY
+14,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+14,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+14,2,Cat,Observe,None,IGNORE
+14,3,Earbuds case,Observe,Observe,OBSERVE_ONLY
+14,4,Smartphone,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+14,4,Smartphone,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+15,0,Remote control,Press,Press,APPROACH_AND_INTERACT
+15,0,Remote control,Observe,Press,APPROACH_AND_INTERACT
+15,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+15,1,Water bottle,Bend down and pick up,Cylindrical grasp to move,APPROACH_AND_INTERACT
+15,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+15,2,Smartphone,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+15,2,Smartphone,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+15,3,Earbuds case,Pinch grasp to move,Pinch grasp to move,APPROACH_AND_INTERACT
+15,3,Earbuds case,Observe,Pinch grasp to move,APPROACH_AND_INTERACT
+16,0,Remote control,Press,Observe,OBSERVE_ONLY
+16,0,Remote control,Observe,Observe,OBSERVE_ONLY
+16,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+16,1,Water bottle,Bend down and pick up,Cylindrical grasp to move,APPROACH_AND_INTERACT
+16,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+16,2,Smartphone,Pinch grasp to move,Observe,OBSERVE_ONLY
+16,2,Smartphone,Observe,Observe,OBSERVE_ONLY
+16,3,Wireless earbuds case,Pinch grasp to move,Observe,OBSERVE_ONLY
+16,3,Wireless earbuds case,Observe,Observe,OBSERVE_ONLY
+17,0,Remote control,Press,Observe,OBSERVE_ONLY
+17,0,Remote control,Observe,Observe,OBSERVE_ONLY
+17,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+17,1,Water bottle,Bend down and pick up,Cylindrical grasp to move,APPROACH_AND_INTERACT
+17,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+17,2,Phone,Cylindrical grasp to move,Observe,OBSERVE_ONLY
+17,2,Phone,Observe,Observe,OBSERVE_ONLY
+17,3,Notebook,Observe,Observe,OBSERVE_ONLY
+17,4,Earbuds case,Observe,Observe,OBSERVE_ONLY
+18,0,Remote control,Press,Observe,OBSERVE_ONLY
+18,0,Remote control,Observe,Observe,OBSERVE_ONLY
+18,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+18,1,Water bottle,Bend down and pick up,Cylindrical grasp to move,APPROACH_AND_INTERACT
+18,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+18,2,Smartphone,Cylindrical grasp to move,Observe,OBSERVE_ONLY
+18,2,Smartphone,Observe,Observe,OBSERVE_ONLY
+18,3,Earbuds case,Pinch grasp to move,Observe,OBSERVE_ONLY
+18,3,Earbuds case,Observe,Observe,OBSERVE_ONLY
+19,0,Remote control,Press,Observe,OBSERVE_ONLY
+19,0,Remote control,Observe,Observe,OBSERVE_ONLY
+19,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+19,1,Water bottle,Bend down and pick up,Cylindrical grasp to move,APPROACH_AND_INTERACT
+19,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+19,2,Smartphone,Cylindrical grasp to move,Observe,OBSERVE_ONLY
+19,2,Smartphone,Observe,Observe,OBSERVE_ONLY
+19,3,Earbuds case,Pinch grasp to move,Observe,OBSERVE_ONLY
+19,3,Earbuds case,Observe,Observe,OBSERVE_ONLY
+20,0,Remote control,Press,Press,APPROACH_AND_INTERACT
+20,0,Remote control,Observe,Press,APPROACH_AND_INTERACT
+20,1,Water bottle,Cylindrical grasp to move,Bend down and pick up,APPROACH_AND_INTERACT
+20,1,Water bottle,Bend down and pick up,Bend down and pick up,APPROACH_AND_INTERACT
+20,1,Water bottle,Observe,Bend down and pick up,APPROACH_AND_INTERACT
+20,2,Smartphone,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+20,2,Smartphone,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+20,3,Wireless earbuds case,Pinch grasp to move,Pinch grasp to move,APPROACH_AND_INTERACT
+20,3,Wireless earbuds case,Observe,Pinch grasp to move,APPROACH_AND_INTERACT
+21,0,Remote control,Press,Press,APPROACH_AND_INTERACT
+21,0,Remote control,Observe,Press,APPROACH_AND_INTERACT
+21,1,Water bottle,Cylindrical grasp to move,Bend down and pick up,APPROACH_AND_INTERACT
+21,1,Water bottle,Bend down and pick up,Bend down and pick up,APPROACH_AND_INTERACT
+21,1,Water bottle,Observe,Bend down and pick up,APPROACH_AND_INTERACT
+21,2,None,Observe,Observe,OBSERVE_ONLY
+21,3,Phone,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+21,3,Phone,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+21,4,Earbuds case,Observe,Observe,OBSERVE_ONLY
+22,0,Remote control,Press,Press,APPROACH_AND_INTERACT
+22,0,Remote control,Observe,Press,APPROACH_AND_INTERACT
+22,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+22,1,Water bottle,Bend down and pick up,Cylindrical grasp to move,APPROACH_AND_INTERACT
+22,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+22,2,Smartphone,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+22,2,Smartphone,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+22,3,Earbuds case,Pinch grasp to move,Pinch grasp to move,APPROACH_AND_INTERACT
+22,3,Earbuds case,Observe,Pinch grasp to move,APPROACH_AND_INTERACT
+23,0,Remote control,Press,Observe,OBSERVE_ONLY
+23,0,Remote control,Observe,Observe,OBSERVE_ONLY
+23,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+23,1,Water bottle,Bend down and pick up,Cylindrical grasp to move,APPROACH_AND_INTERACT
+23,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+23,2,Smartphone,Pinch grasp to move,Observe,OBSERVE_ONLY
+23,2,Smartphone,Observe,Observe,OBSERVE_ONLY
+23,3,Earbuds case,Pinch grasp to move,Observe,OBSERVE_ONLY
+23,3,Earbuds case,Observe,Observe,OBSERVE_ONLY
+24,0,Remote control,Press,Press,APPROACH_AND_INTERACT
+24,0,Remote control,Observe,Press,APPROACH_AND_INTERACT
+24,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+24,1,Water bottle,Bend down and pick up,Cylindrical grasp to move,APPROACH_AND_INTERACT
+24,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+24,2,Smartphone,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+24,2,Smartphone,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+24,3,Earbuds case,Pinch grasp to move,Pinch grasp to move,APPROACH_AND_INTERACT
+24,3,Earbuds case,Observe,Pinch grasp to move,APPROACH_AND_INTERACT
+25,0,Remote control,Observe,Observe,OBSERVE_ONLY
+25,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+25,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+25,2,Smartphone,Observe,Observe,OBSERVE_ONLY
+25,3,Earbuds case,Observe,Observe,OBSERVE_ONLY
+26,0,Remote control,Press,Observe,OBSERVE_ONLY
+26,0,Remote control,Observe,Observe,OBSERVE_ONLY
+26,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+26,1,Water bottle,Bend down and pick up,Cylindrical grasp to move,APPROACH_AND_INTERACT
+26,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+26,2,Smartphone,Cylindrical grasp to move,Observe,OBSERVE_ONLY
+26,2,Smartphone,Observe,Observe,OBSERVE_ONLY
+26,3,Earbuds case,Pinch grasp to move,Observe,OBSERVE_ONLY
+26,3,Earbuds case,Observe,Observe,OBSERVE_ONLY
+27,0,Remote control,Observe,Observe,OBSERVE_ONLY
+27,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+27,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+27,2,Smartphone,Observe,Observe,OBSERVE_ONLY
+27,3,Earbuds case,Observe,Observe,OBSERVE_ONLY
+28,0,Remote control,Press,Observe,OBSERVE_ONLY
+28,0,Remote control,Observe,Observe,OBSERVE_ONLY
+28,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+28,1,Water bottle,Bend down and pick up,Cylindrical grasp to move,APPROACH_AND_INTERACT
+28,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+28,2,Smartphone,Cylindrical grasp to move,Observe,OBSERVE_ONLY
+28,2,Smartphone,Observe,Observe,OBSERVE_ONLY
+28,3,Earbuds case,Pinch grasp to move,Observe,OBSERVE_ONLY
+28,3,Earbuds case,Observe,Observe,OBSERVE_ONLY
+29,0,Remote control,Press,Observe,OBSERVE_ONLY
+29,0,Remote control,Observe,Observe,OBSERVE_ONLY
+29,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+29,1,Water bottle,Bend down and pick up,Cylindrical grasp to move,APPROACH_AND_INTERACT
+29,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+29,2,Smartphone,Cylindrical grasp to move,Observe,OBSERVE_ONLY
+29,2,Smartphone,Observe,Observe,OBSERVE_ONLY
+29,3,Earbuds case,Pinch grasp to move,Observe,OBSERVE_ONLY
+29,3,Earbuds case,Observe,Observe,OBSERVE_ONLY
+30,0,Remote control,Press,Observe,OBSERVE_ONLY
+30,0,Remote control,Observe,Observe,OBSERVE_ONLY
+30,1,Water bottle,Cylindrical grasp to move,Cylindrical grasp to move,APPROACH_AND_INTERACT
+30,1,Water bottle,Bend down and pick up,Cylindrical grasp to move,APPROACH_AND_INTERACT
+30,1,Water bottle,Observe,Cylindrical grasp to move,APPROACH_AND_INTERACT
+30,2,Smartphone,Pinch grasp to move,Observe,OBSERVE_ONLY
+30,2,Smartphone,Observe,Observe,OBSERVE_ONLY
+30,3,Earbuds case,Pinch grasp to move,Observe,OBSERVE_ONLY
+30,3,Earbuds case,Observe,Observe,OBSERVE_ONLY

@@ -1,0 +1,3 @@
+target_object,expected_tag,detected_object_count,expected_tag_count,missing_expected_tag_count,object_level_success_rate,detected_sample_count,success_sample_count,sample_level_success_rate,matched_classes
+Low object: cup,Bend down and pick up,31,30,1,0.967741935483871,30,30,1.0,Cup:19; Mug:10; cup:1; Bowl:1
+High object: water bottle,Reach up and take,29,23,6,0.7931034482758621,29,23,0.7931034482758621,Water Bottle:19; Water bottle:7; Bottle:2; water bottle:1

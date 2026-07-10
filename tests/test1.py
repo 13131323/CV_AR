@@ -1,4 +1,7 @@
-"""전체 Vision/Geometry/VLM 파이프라인의 Micro CoT 단어 제한 실험(30 -> 0)."""
+"""전체 Vision/Geometry/VLM 파이프라인의 Micro CoT 단어 제한 실험(30 -> 0).
+총 30번의 실험이 진행되며 vlm의 추론 시간과 vlm 추론 결과가 출력된다
+
+주의!!! 최종 버전에는 reasoning 스키마가 존재하지 않으므로 이 test 파일의 실행이 불가하다"""
 
 from __future__ import annotations
 

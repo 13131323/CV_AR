@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 1830,
-    "timestamp": 1780675148.7316961,
+    "timestamp": 1783665259.3358538,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, book 2개가 감지됨"
+    "scene_summary": "remote 1개, bottle 1개, mouse 1개, cell phone 1개, chair 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
-      "label": "person",
+      "label": "remote",
       "yolo": {
-        "confidence": 0.89,
+        "confidence": 0.91,
         "bbox_2d": [
-          217,
-          36,
-          1147,
-          713
+          274,
+          274,
+          383,
+          452
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "book",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.34,
+        "confidence": 0.88,
         "bbox_2d": [
-          1108,
-          537,
-          1144,
-          610
+          422,
+          104,
+          557,
+          406
         ]
       },
       "sam": null,
@@ -56,14 +56,50 @@
     },
     {
       "id": 2,
-      "label": "book",
+      "label": "mouse",
       "yolo": {
-        "confidence": 0.27,
+        "confidence": 0.53,
         "bbox_2d": [
-          1057,
-          401,
-          1107,
-          498
+          782,
+          354,
+          872,
+          428
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 3,
+      "label": "cell phone",
+      "yolo": {
+        "confidence": 0.45,
+        "bbox_2d": [
+          619,
+          294,
+          734,
+          476
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 4,
+      "label": "chair",
+      "yolo": {
+        "confidence": 0.26,
+        "bbox_2d": [
+          0,
+          2,
+          220,
+          315
         ]
       },
       "sam": null,

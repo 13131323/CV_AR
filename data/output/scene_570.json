@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 570,
-    "timestamp": 1783312171.9188714,
+    "timestamp": 1783667679.9802785,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 2개가 감지됨"
+    "scene_summary": "person 1개, bottle 1개, cup 1개, couch 1개, tv 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.7,
+        "confidence": 0.87,
         "bbox_2d": [
-          723,
-          344,
-          1274,
-          712
+          971,
+          27,
+          1278,
+          705
         ]
       },
       "sam": null,
@@ -38,14 +38,68 @@
     },
     {
       "id": 1,
-      "label": "person",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.69,
+        "confidence": 0.79,
         "bbox_2d": [
-          1,
-          7,
-          676,
-          706
+          642,
+          16,
+          679,
+          148
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 2,
+      "label": "cup",
+      "yolo": {
+        "confidence": 0.48,
+        "bbox_2d": [
+          604,
+          530,
+          667,
+          602
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 3,
+      "label": "couch",
+      "yolo": {
+        "confidence": 0.44,
+        "bbox_2d": [
+          840,
+          53,
+          1280,
+          674
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 4,
+      "label": "tv",
+      "yolo": {
+        "confidence": 0.42,
+        "bbox_2d": [
+          356,
+          77,
+          508,
+          294
         ]
       },
       "sam": null,

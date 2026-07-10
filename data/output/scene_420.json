@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 420,
-    "timestamp": 1783312166.0992587,
+    "timestamp": 1783667672.739521,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,91 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개가 감지됨"
+    "scene_summary": "bottle 2개, person 1개, remote 1개, bowl 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
+      "label": "bottle",
+      "yolo": {
+        "confidence": 0.78,
+        "bbox_2d": [
+          641,
+          16,
+          679,
+          147
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 1,
       "label": "person",
       "yolo": {
-        "confidence": 0.89,
+        "confidence": 0.67,
         "bbox_2d": [
-          30,
-          94,
-          950,
-          713
+          656,
+          19,
+          1279,
+          700
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 2,
+      "label": "bottle",
+      "yolo": {
+        "confidence": 0.58,
+        "bbox_2d": [
+          632,
+          474,
+          671,
+          584
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 3,
+      "label": "remote",
+      "yolo": {
+        "confidence": 0.4,
+        "bbox_2d": [
+          576,
+          291,
+          678,
+          354
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 4,
+      "label": "bowl",
+      "yolo": {
+        "confidence": 0.38,
+        "bbox_2d": [
+          222,
+          234,
+          383,
+          337
         ]
       },
       "sam": null,

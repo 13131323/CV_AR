@@ -1,0 +1,71 @@
+test2: bottle 3D 위치 정보 정확도 측정
+run_id: 001
+started_at: 2026-07-10T14:01:40.559+09:00
+samples_per_position: 30
+true_z_distances_m: [0.4, 0.6, 0.8, 1.0, 1.2]
+
+[position 1] true_z=0.400m summary
+n_samples: 30
+mean_target_z_m: 0.270433
+z_mae_m: 0.129567
+z_rmse_m: 0.129895
+object_x_std_m: 0.000944
+object_y_std_m: 0.000000
+target_z_std_m: 0.009383
+mean_3d_jitter_m: 0.012587
+max_3d_jitter_m: 0.028160
+mean_z_jitter_m: 0.012517
+max_z_jitter_m: 0.028000
+
+[position 2] true_z=0.600m summary
+n_samples: 30
+mean_target_z_m: 0.557400
+z_mae_m: 0.046933
+z_rmse_m: 0.048526
+object_x_std_m: 0.001253
+object_y_std_m: 0.001279
+target_z_std_m: 0.023635
+mean_3d_jitter_m: 0.016959
+max_3d_jitter_m: 0.125340
+mean_z_jitter_m: 0.016897
+max_z_jitter_m: 0.125000
+
+[position 3] true_z=0.800m summary
+n_samples: 30
+mean_target_z_m: 0.896500
+z_mae_m: 0.096500
+z_rmse_m: 0.101038
+object_x_std_m: 0.001042
+object_y_std_m: 0.001864
+target_z_std_m: 0.030453
+mean_3d_jitter_m: 0.024909
+max_3d_jitter_m: 0.159393
+mean_z_jitter_m: 0.024828
+max_z_jitter_m: 0.159000
+
+[position 4] true_z=1.000m summary
+n_samples: 30
+mean_target_z_m: 1.135133
+z_mae_m: 0.135133
+z_rmse_m: 0.156814
+object_x_std_m: 0.002674
+object_y_std_m: 0.006516
+target_z_std_m: 0.080920
+mean_3d_jitter_m: 0.047111
+max_3d_jitter_m: 0.387542
+mean_z_jitter_m: 0.046897
+max_z_jitter_m: 0.386000
+
+[position 5] true_z=1.200m summary
+n_samples: 30
+mean_target_z_m: 1.145100
+z_mae_m: 0.077033
+z_rmse_m: 0.091531
+object_x_std_m: 0.001794
+object_y_std_m: 0.007400
+target_z_std_m: 0.074491
+mean_3d_jitter_m: 0.036373
+max_3d_jitter_m: 0.327866
+mean_z_jitter_m: 0.036172
+max_z_jitter_m: 0.326000
+

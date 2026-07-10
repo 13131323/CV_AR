@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 360,
-    "timestamp": 1783312163.870259,
+    "timestamp": 1783667669.8796782,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, microwave 1개, book 1개가 감지됨"
+    "scene_summary": "person 1개, bottle 2개, remote 1개, tv 1개, bowl 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.89,
+        "confidence": 0.88,
         "bbox_2d": [
-          51,
-          97,
-          897,
-          714
+          835,
+          29,
+          1279,
+          709
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "microwave",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.3,
+        "confidence": 0.81,
         "bbox_2d": [
-          3,
-          380,
-          296,
-          652
+          642,
+          16,
+          679,
+          149
         ]
       },
       "sam": null,
@@ -56,14 +56,68 @@
     },
     {
       "id": 2,
-      "label": "book",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.29,
+        "confidence": 0.57,
         "bbox_2d": [
-          830,
-          204,
-          865,
-          321
+          633,
+          474,
+          671,
+          584
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 3,
+      "label": "remote",
+      "yolo": {
+        "confidence": 0.28,
+        "bbox_2d": [
+          683,
+          96,
+          733,
+          122
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 4,
+      "label": "tv",
+      "yolo": {
+        "confidence": 0.28,
+        "bbox_2d": [
+          356,
+          78,
+          507,
+          295
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 5,
+      "label": "bowl",
+      "yolo": {
+        "confidence": 0.27,
+        "bbox_2d": [
+          223,
+          234,
+          383,
+          337
         ]
       },
       "sam": null,

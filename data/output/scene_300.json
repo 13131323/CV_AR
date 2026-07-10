@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 300,
-    "timestamp": 1783312161.696148,
+    "timestamp": 1783667666.963663,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,73 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개가 감지됨"
+    "scene_summary": "person 1개, bottle 2개, tv 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.77,
+        "confidence": 0.95,
         "bbox_2d": [
-          124,
-          29,
-          911,
+          753,
+          1,
+          1278,
           713
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 1,
+      "label": "bottle",
+      "yolo": {
+        "confidence": 0.74,
+        "bbox_2d": [
+          642,
+          16,
+          679,
+          148
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 2,
+      "label": "bottle",
+      "yolo": {
+        "confidence": 0.7,
+        "bbox_2d": [
+          632,
+          473,
+          670,
+          583
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 3,
+      "label": "tv",
+      "yolo": {
+        "confidence": 0.46,
+        "bbox_2d": [
+          356,
+          75,
+          508,
+          295
         ]
       },
       "sam": null,

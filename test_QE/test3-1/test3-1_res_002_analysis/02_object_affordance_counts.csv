@@ -1,0 +1,12 @@
+target_object,matched_object_count,matched_classes,affordance,count
+Water bottle,30,Water bottle:30,Cylindrical grasp to move,30
+Water bottle,30,Water bottle:30,Observe,30
+Water bottle,30,Water bottle:30,Bend down and pick up,23
+Remote control,30,Remote control:30,Observe,30
+Remote control,30,Remote control:30,Press,25
+Smartphone,30,Smartphone:26; Phone:4,Observe,30
+Smartphone,30,Smartphone:26; Phone:4,Cylindrical grasp to move,22
+Smartphone,30,Smartphone:26; Phone:4,Pinch grasp to move,3
+Smartphone,30,Smartphone:26; Phone:4,Manipulate elongated tools,1
+Earbud case,29,Earbuds case:24; Wireless earbuds case:5,Observe,29
+Earbud case,29,Earbuds case:24; Wireless earbuds case:5,Pinch grasp to move,21

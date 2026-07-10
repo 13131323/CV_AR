@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 1920,
-    "timestamp": 1780675153.2388768,
+    "timestamp": 1783665263.79832,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, book 1개가 감지됨"
+    "scene_summary": "remote 1개, bottle 1개, mouse 1개, cell phone 1개, chair 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
-      "label": "person",
+      "label": "remote",
       "yolo": {
-        "confidence": 0.94,
+        "confidence": 0.9,
         "bbox_2d": [
-          298,
-          185,
-          1018,
-          715
+          273,
+          274,
+          383,
+          453
         ]
       },
       "sam": null,
@@ -38,14 +38,68 @@
     },
     {
       "id": 1,
-      "label": "book",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.28,
+        "confidence": 0.87,
         "bbox_2d": [
-          1107,
-          537,
-          1145,
-          609
+          421,
+          102,
+          555,
+          408
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 2,
+      "label": "mouse",
+      "yolo": {
+        "confidence": 0.64,
+        "bbox_2d": [
+          782,
+          353,
+          872,
+          428
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 3,
+      "label": "cell phone",
+      "yolo": {
+        "confidence": 0.37,
+        "bbox_2d": [
+          618,
+          294,
+          734,
+          476
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 4,
+      "label": "chair",
+      "yolo": {
+        "confidence": 0.31,
+        "bbox_2d": [
+          0,
+          0,
+          184,
+          304
         ]
       },
       "sam": null,

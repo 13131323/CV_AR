@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 240,
-    "timestamp": 1783312159.5041332,
+    "timestamp": 1783667664.072772,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, clock 1개, book 1개가 감지됨"
+    "scene_summary": "person 1개, bottle 1개, bowl 1개, tv 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.87,
+        "confidence": 0.88,
         "bbox_2d": [
-          267,
-          267,
-          774,
-          715
+          836,
+          2,
+          1278,
+          711
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "clock",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.52,
+        "confidence": 0.86,
         "bbox_2d": [
-          531,
-          68,
-          640,
-          174
+          626,
+          18,
+          666,
+          146
         ]
       },
       "sam": null,
@@ -56,14 +56,32 @@
     },
     {
       "id": 2,
-      "label": "book",
+      "label": "bowl",
       "yolo": {
-        "confidence": 0.35,
+        "confidence": 0.3,
         "bbox_2d": [
-          857,
-          210,
-          907,
-          341
+          208,
+          237,
+          374,
+          340
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 3,
+      "label": "tv",
+      "yolo": {
+        "confidence": 0.27,
+        "bbox_2d": [
+          338,
+          71,
+          495,
+          296
         ]
       },
       "sam": null,

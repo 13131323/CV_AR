@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 660,
-    "timestamp": 1783312175.1427877,
+    "timestamp": 1783667684.343282,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, microwave 1개가 감지됨"
+    "scene_summary": "person 1개, bowl 1개, chair 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.87,
+        "confidence": 0.95,
         "bbox_2d": [
-          28,
-          6,
-          1096,
-          710
+          251,
+          0,
+          1274,
+          712
         ]
       },
       "sam": null,
@@ -38,14 +38,32 @@
     },
     {
       "id": 1,
-      "label": "microwave",
+      "label": "bowl",
       "yolo": {
-        "confidence": 0.27,
+        "confidence": 0.67,
         "bbox_2d": [
-          90,
-          217,
-          479,
-          557
+          221,
+          234,
+          387,
+          335
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 2,
+      "label": "chair",
+      "yolo": {
+        "confidence": 0.28,
+        "bbox_2d": [
+          353,
+          70,
+          506,
+          281
         ]
       },
       "sam": null,

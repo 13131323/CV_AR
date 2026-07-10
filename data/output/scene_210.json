@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 210,
-    "timestamp": 1783312158.4135036,
+    "timestamp": 1783667662.6277516,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, clock 1개, book 1개가 감지됨"
+    "scene_summary": "person 1개, bottle 2개, tv 2개, bowl 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.89,
+        "confidence": 0.92,
         "bbox_2d": [
-          293,
-          276,
-          775,
-          714
+          868,
+          2,
+          1278,
+          712
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "clock",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.49,
+        "confidence": 0.83,
         "bbox_2d": [
-          531,
-          68,
-          640,
-          174
+          621,
+          42,
+          658,
+          171
         ]
       },
       "sam": null,
@@ -56,14 +56,68 @@
     },
     {
       "id": 2,
-      "label": "book",
+      "label": "bottle",
+      "yolo": {
+        "confidence": 0.72,
+        "bbox_2d": [
+          616,
+          499,
+          658,
+          609
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 3,
+      "label": "tv",
+      "yolo": {
+        "confidence": 0.42,
+        "bbox_2d": [
+          480,
+          2,
+          743,
+          149
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 4,
+      "label": "bowl",
       "yolo": {
         "confidence": 0.32,
         "bbox_2d": [
-          857,
-          210,
-          907,
-          342
+          197,
+          259,
+          363,
+          364
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 5,
+      "label": "tv",
+      "yolo": {
+        "confidence": 0.26,
+        "bbox_2d": [
+          332,
+          96,
+          489,
+          321
         ]
       },
       "sam": null,

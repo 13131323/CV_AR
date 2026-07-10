@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 720,
-    "timestamp": 1783312177.3357837,
+    "timestamp": 1783667501.3932402,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,37 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개가 감지됨"
+    "scene_summary": "person 1개, bowl 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
       "label": "person",
       "yolo": {
-        "confidence": 0.84,
+        "confidence": 0.95,
         "bbox_2d": [
-          289,
-          56,
-          1133,
+          286,
+          5,
+          1277,
           712
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 1,
+      "label": "bowl",
+      "yolo": {
+        "confidence": 0.77,
+        "bbox_2d": [
+          181,
+          288,
+          342,
+          391
         ]
       },
       "sam": null,

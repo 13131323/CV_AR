@@ -1,4 +1,6 @@
-"""SAM/Depth Anything 캐시 interval 1~10 정확도 비교 실험."""
+"""SAM/Depth Anything 캐시 interval 1~10 정확도 비교 실험.
+우선 10초 동안 interval = 1로 연산하여 기준값을 선정하고,
+interval 2~10 을 가정하고 각 interval 별로 속도 개선량, SAM mask와 depth의 차이를 측정한다"""
 
 from __future__ import annotations
 

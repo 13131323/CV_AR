@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 810,
-    "timestamp": 1783312180.8287401,
+    "timestamp": 1783665209.930608,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개가 감지됨"
+    "scene_summary": "bottle 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
-      "label": "person",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.73,
+        "confidence": 0.68,
         "bbox_2d": [
-          173,
-          62,
-          1106,
-          712
+          445,
+          97,
+          555,
+          281
         ]
       },
       "sam": null,

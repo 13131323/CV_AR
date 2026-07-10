@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 1620,
-    "timestamp": 1780675136.438569,
+    "timestamp": 1783665249.148145,
     "camera_resolution": [
       1280,
       720
@@ -15,19 +15,19 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "person 1개, toothbrush 1개, cell phone 1개, book 2개가 감지됨"
+    "scene_summary": "remote 1개, bottle 1개, cell phone 1개가 감지됨"
   },
   "objects": [
     {
       "id": 0,
-      "label": "person",
+      "label": "remote",
       "yolo": {
-        "confidence": 0.94,
+        "confidence": 0.88,
         "bbox_2d": [
-          320,
-          140,
-          1063,
-          713
+          273,
+          274,
+          384,
+          452
         ]
       },
       "sam": null,
@@ -38,14 +38,14 @@
     },
     {
       "id": 1,
-      "label": "toothbrush",
+      "label": "bottle",
       "yolo": {
-        "confidence": 0.72,
+        "confidence": 0.85,
         "bbox_2d": [
-          583,
-          334,
-          680,
-          520
+          420,
+          102,
+          554,
+          408
         ]
       },
       "sam": null,
@@ -58,48 +58,12 @@
       "id": 2,
       "label": "cell phone",
       "yolo": {
-        "confidence": 0.38,
+        "confidence": 0.31,
         "bbox_2d": [
-          414,
-          337,
-          581,
-          531
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 3,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.3,
-        "bbox_2d": [
-          1108,
-          540,
-          1147,
-          611
-        ]
-      },
-      "sam": null,
-      "depth": null,
-      "spatial_3d": null,
-      "affordance": null,
-      "description": null
-    },
-    {
-      "id": 4,
-      "label": "book",
-      "yolo": {
-        "confidence": 0.26,
-        "bbox_2d": [
-          1058,
-          401,
-          1106,
-          498
+          618,
+          294,
+          734,
+          476
         ]
       },
       "sam": null,

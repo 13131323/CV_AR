@@ -1,7 +1,7 @@
 {
   "frame_metadata": {
     "frame_id": 540,
-    "timestamp": 1783312170.7643178,
+    "timestamp": 1783667678.5043533,
     "camera_resolution": [
       1280,
       720
@@ -15,7 +15,98 @@
       0
     ],
     "camera_height": 0.0,
-    "scene_summary": "감지된 객체 없음"
+    "scene_summary": "person 1개, bottle 1개, cup 1개, couch 1개, tv 1개가 감지됨"
   },
-  "objects": []
+  "objects": [
+    {
+      "id": 0,
+      "label": "person",
+      "yolo": {
+        "confidence": 0.88,
+        "bbox_2d": [
+          977,
+          3,
+          1279,
+          709
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 1,
+      "label": "bottle",
+      "yolo": {
+        "confidence": 0.81,
+        "bbox_2d": [
+          642,
+          16,
+          679,
+          148
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 2,
+      "label": "cup",
+      "yolo": {
+        "confidence": 0.45,
+        "bbox_2d": [
+          604,
+          530,
+          667,
+          603
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 3,
+      "label": "couch",
+      "yolo": {
+        "confidence": 0.45,
+        "bbox_2d": [
+          836,
+          41,
+          1279,
+          702
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    },
+    {
+      "id": 4,
+      "label": "tv",
+      "yolo": {
+        "confidence": 0.39,
+        "bbox_2d": [
+          356,
+          77,
+          508,
+          294
+        ]
+      },
+      "sam": null,
+      "depth": null,
+      "spatial_3d": null,
+      "affordance": null,
+      "description": null
+    }
+  ]
 }
