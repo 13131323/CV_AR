@@ -1,0 +1,997 @@
+Ablation: without YOLO full pipeline
+run_id: 001
+started_at: 2026-07-10T18:35:51.449+09:00
+target_samples: 30
+condition: YOLO removed. Full-frame pseudo bbox is used instead.
+
+[vlm results]
+[sample 01]
+timestamp: 2026-07-10T18:36:07.230+09:00
+frame_count: 5
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 02]
+timestamp: 2026-07-10T18:36:16.097+09:00
+frame_count: 10
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 03]
+timestamp: 2026-07-10T18:36:23.974+09:00
+frame_count: 15
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 04]
+timestamp: 2026-07-10T18:36:31.868+09:00
+frame_count: 20
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 05]
+timestamp: 2026-07-10T18:36:39.743+09:00
+frame_count: 25
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 06]
+timestamp: 2026-07-10T18:36:47.628+09:00
+frame_count: 30
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 07]
+timestamp: 2026-07-10T18:36:55.101+09:00
+frame_count: 35
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 08]
+timestamp: 2026-07-10T18:37:02.782+09:00
+frame_count: 40
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room with furniture",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 09]
+timestamp: 2026-07-10T18:37:11.078+09:00
+frame_count: 45
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 10]
+timestamp: 2026-07-10T18:37:20.292+09:00
+frame_count: 50
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 11]
+timestamp: 2026-07-10T18:37:28.074+09:00
+frame_count: 55
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 12]
+timestamp: 2026-07-10T18:37:35.862+09:00
+frame_count: 60
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room furniture",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 13]
+timestamp: 2026-07-10T18:37:43.643+09:00
+frame_count: 65
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 14]
+timestamp: 2026-07-10T18:37:51.492+09:00
+frame_count: 70
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 15]
+timestamp: 2026-07-10T18:38:02.272+09:00
+frame_count: 75
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room with furniture",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 16]
+timestamp: 2026-07-10T18:38:10.367+09:00
+frame_count: 80
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 17]
+timestamp: 2026-07-10T18:38:19.892+09:00
+frame_count: 85
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 18]
+timestamp: 2026-07-10T18:38:27.745+09:00
+frame_count: 90
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 19]
+timestamp: 2026-07-10T18:38:35.868+09:00
+frame_count: 95
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 20]
+timestamp: 2026-07-10T18:38:43.548+09:00
+frame_count: 100
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 21]
+timestamp: 2026-07-10T18:38:52.148+09:00
+frame_count: 105
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 22]
+timestamp: 2026-07-10T18:38:59.623+09:00
+frame_count: 110
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Desk with computer setup",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 23]
+timestamp: 2026-07-10T18:39:07.052+09:00
+frame_count: 115
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 24]
+timestamp: 2026-07-10T18:39:14.883+09:00
+frame_count: 120
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 25]
+timestamp: 2026-07-10T18:39:22.388+09:00
+frame_count: 125
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 26]
+timestamp: 2026-07-10T18:39:30.255+09:00
+frame_count: 130
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": false
+      }
+    }
+  ]
+}
+
+[sample 27]
+timestamp: 2026-07-10T18:39:37.922+09:00
+frame_count: 135
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 28]
+timestamp: 2026-07-10T18:39:45.596+09:00
+frame_count: 140
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 29]
+timestamp: 2026-07-10T18:39:53.288+09:00
+frame_count: 145
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 30]
+timestamp: 2026-07-10T18:40:00.991+09:00
+frame_count: 150
+object_count: 1
+vlm_object_count: 1
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Room interior",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+

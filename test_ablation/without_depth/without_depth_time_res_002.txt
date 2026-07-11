@@ -1,0 +1,228 @@
+Ablation: without Depth Anything full pipeline
+run_id: 002
+started_at: 2026-07-10T19:01:31.939+09:00
+target_samples: 30
+condition: Depth Anything removed. depth/spatial_3d are filled with dummy zero values.
+
+[time results]
+[sample 01]
+timestamp: 2026-07-10T19:02:03.822+09:00
+frame_count: 5
+sam_frame_count: 1
+object_count: 9
+total_pipeline_seconds: 30.417988
+
+[sample 02]
+timestamp: 2026-07-10T19:02:15.745+09:00
+frame_count: 10
+sam_frame_count: 2
+object_count: 6
+total_pipeline_seconds: 11.770521
+
+[sample 03]
+timestamp: 2026-07-10T19:02:30.305+09:00
+frame_count: 15
+sam_frame_count: 3
+object_count: 6
+total_pipeline_seconds: 14.476720
+
+[sample 04]
+timestamp: 2026-07-10T19:02:43.704+09:00
+frame_count: 20
+sam_frame_count: 4
+object_count: 6
+total_pipeline_seconds: 13.285454
+
+[sample 05]
+timestamp: 2026-07-10T19:02:55.986+09:00
+frame_count: 25
+sam_frame_count: 5
+object_count: 6
+total_pipeline_seconds: 12.219949
+
+[sample 06]
+timestamp: 2026-07-10T19:03:08.376+09:00
+frame_count: 30
+sam_frame_count: 6
+object_count: 6
+total_pipeline_seconds: 12.308520
+
+[sample 07]
+timestamp: 2026-07-10T19:03:21.077+09:00
+frame_count: 35
+sam_frame_count: 7
+object_count: 6
+total_pipeline_seconds: 12.563829
+
+[sample 08]
+timestamp: 2026-07-10T19:03:33.156+09:00
+frame_count: 40
+sam_frame_count: 8
+object_count: 6
+total_pipeline_seconds: 11.993914
+
+[sample 09]
+timestamp: 2026-07-10T19:03:43.909+09:00
+frame_count: 45
+sam_frame_count: 9
+object_count: 5
+total_pipeline_seconds: 10.654606
+
+[sample 10]
+timestamp: 2026-07-10T19:03:56.467+09:00
+frame_count: 50
+sam_frame_count: 10
+object_count: 6
+total_pipeline_seconds: 12.458836
+
+[sample 11]
+timestamp: 2026-07-10T19:04:08.690+09:00
+frame_count: 55
+sam_frame_count: 11
+object_count: 6
+total_pipeline_seconds: 12.118132
+
+[sample 12]
+timestamp: 2026-07-10T19:04:25.377+09:00
+frame_count: 60
+sam_frame_count: 12
+object_count: 6
+total_pipeline_seconds: 16.528139
+
+[sample 13]
+timestamp: 2026-07-10T19:04:37.769+09:00
+frame_count: 65
+sam_frame_count: 13
+object_count: 6
+total_pipeline_seconds: 12.255627
+
+[sample 14]
+timestamp: 2026-07-10T19:04:54.665+09:00
+frame_count: 70
+sam_frame_count: 14
+object_count: 6
+total_pipeline_seconds: 16.795497
+
+[sample 15]
+timestamp: 2026-07-10T19:05:07.379+09:00
+frame_count: 75
+sam_frame_count: 15
+object_count: 6
+total_pipeline_seconds: 12.645772
+
+[sample 16]
+timestamp: 2026-07-10T19:05:18.518+09:00
+frame_count: 80
+sam_frame_count: 16
+object_count: 5
+total_pipeline_seconds: 11.024705
+
+[sample 17]
+timestamp: 2026-07-10T19:05:30.198+09:00
+frame_count: 85
+sam_frame_count: 17
+object_count: 6
+total_pipeline_seconds: 11.608267
+
+[sample 18]
+timestamp: 2026-07-10T19:05:42.289+09:00
+frame_count: 90
+sam_frame_count: 18
+object_count: 6
+total_pipeline_seconds: 11.952885
+
+[sample 19]
+timestamp: 2026-07-10T19:05:54.464+09:00
+frame_count: 95
+sam_frame_count: 19
+object_count: 6
+total_pipeline_seconds: 12.070445
+
+[sample 20]
+timestamp: 2026-07-10T19:06:06.417+09:00
+frame_count: 100
+sam_frame_count: 20
+object_count: 6
+total_pipeline_seconds: 11.867153
+
+[sample 21]
+timestamp: 2026-07-10T19:06:18.728+09:00
+frame_count: 105
+sam_frame_count: 21
+object_count: 6
+total_pipeline_seconds: 12.185326
+
+[sample 22]
+timestamp: 2026-07-10T19:06:29.941+09:00
+frame_count: 110
+sam_frame_count: 22
+object_count: 6
+total_pipeline_seconds: 11.138646
+
+[sample 23]
+timestamp: 2026-07-10T19:06:41.124+09:00
+frame_count: 115
+sam_frame_count: 23
+object_count: 6
+total_pipeline_seconds: 11.060775
+
+[sample 24]
+timestamp: 2026-07-10T19:06:56.412+09:00
+frame_count: 120
+sam_frame_count: 24
+object_count: 6
+total_pipeline_seconds: 15.192210
+
+[sample 25]
+timestamp: 2026-07-10T19:07:13.423+09:00
+frame_count: 125
+sam_frame_count: 25
+object_count: 6
+total_pipeline_seconds: 16.877537
+
+[sample 26]
+timestamp: 2026-07-10T19:07:29.185+09:00
+frame_count: 130
+sam_frame_count: 26
+object_count: 6
+total_pipeline_seconds: 15.607250
+
+[sample 27]
+timestamp: 2026-07-10T19:07:43.116+09:00
+frame_count: 135
+sam_frame_count: 27
+object_count: 6
+total_pipeline_seconds: 13.796636
+
+[sample 28]
+timestamp: 2026-07-10T19:07:58.599+09:00
+frame_count: 140
+sam_frame_count: 28
+object_count: 6
+total_pipeline_seconds: 15.376286
+
+[sample 29]
+timestamp: 2026-07-10T19:08:13.323+09:00
+frame_count: 145
+sam_frame_count: 29
+object_count: 6
+total_pipeline_seconds: 14.561808
+
+[sample 30]
+timestamp: 2026-07-10T19:08:31.165+09:00
+frame_count: 150
+sam_frame_count: 30
+object_count: 6
+total_pipeline_seconds: 17.720076
+
+[summary]
+mean: 13.817784
+std: 3.705079
+median: 12.383678
+q1: 11.963142
+q3: 15.034610
+iqr: 3.071468
+outlier_lower_bound: 7.355940
+outlier_upper_bound: 19.641811
+outlier_count: 1
+outliers: 1:30.417988

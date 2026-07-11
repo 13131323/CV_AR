@@ -1,0 +1,15 @@
+normalized_class,count,raw_classes
+bed,27,Bed:20; bed:5; Bed Cover:1; Bed blanket:1
+fan,25,Fan:21; fan:4
+drawer,22,Drawer:17; drawer:4; Wooden Drawer:1
+laptop,20,Laptop:16; laptop:4
+box/container,19,Green box:4; Green Container:4; Storage Box:3; Green container:2; Storage box:2; Green Box:1; Glass container:1; green_box:1; Container:1
+desk,13,Desk:10; desk:2; Table:1
+blanket,10,Blanket:8; Green blanket:1; Green Blanket:1
+monitor,9,Monitor:4; monitor:3; Computer Monitor:2
+basket,9,Basket:5; basket:3; Green Basket:1
+keyboard,8,Keyboard:6; keyboard:1; Computer Keyboard:1
+computer,7,Computer:6; computer:1
+trash can,6,Trash Bin:2; Trash Can:2; trash_can:1; trash can:1
+printer,2,Printer:2
+green bowl,1,Green Bowl:1

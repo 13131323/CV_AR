@@ -1,0 +1,2 @@
+metric,mean,std,median,q1,q3,iqr,outlier_lower_bound,outlier_upper_bound,outlier_count,outliers
+pipeline_to_fast_stream_seconds,4.430032,2.717759,5.884016,1.505178,5.943824,4.438646,-5.152790,12.601793,0,None

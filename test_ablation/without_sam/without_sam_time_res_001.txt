@@ -1,0 +1,228 @@
+Ablation: without SAM full pipeline
+run_id: 001
+started_at: 2026-07-10T18:49:07.434+09:00
+target_samples: 30
+condition: SAM removed. YOLO bbox coarse centroid/area is used instead of SAM mask.
+
+[time results]
+[sample 01]
+timestamp: 2026-07-10T18:49:19.620+09:00
+frame_count: 5
+sam_frame_count: 0
+object_count: 5
+total_pipeline_seconds: 8.321710
+
+[sample 02]
+timestamp: 2026-07-10T18:49:27.669+09:00
+frame_count: 10
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 8.008105
+
+[sample 03]
+timestamp: 2026-07-10T18:49:38.517+09:00
+frame_count: 15
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 10.777345
+
+[sample 04]
+timestamp: 2026-07-10T18:49:48.352+09:00
+frame_count: 20
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 9.734278
+
+[sample 05]
+timestamp: 2026-07-10T18:49:56.641+09:00
+frame_count: 25
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 8.180678
+
+[sample 06]
+timestamp: 2026-07-10T18:50:05.561+09:00
+frame_count: 30
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 8.826192
+
+[sample 07]
+timestamp: 2026-07-10T18:50:13.536+09:00
+frame_count: 35
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 7.815405
+
+[sample 08]
+timestamp: 2026-07-10T18:50:21.731+09:00
+frame_count: 40
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 8.041496
+
+[sample 09]
+timestamp: 2026-07-10T18:50:30.742+09:00
+frame_count: 45
+sam_frame_count: 0
+object_count: 7
+total_pipeline_seconds: 8.934862
+
+[sample 10]
+timestamp: 2026-07-10T18:50:39.641+09:00
+frame_count: 50
+sam_frame_count: 0
+object_count: 7
+total_pipeline_seconds: 8.767174
+
+[sample 11]
+timestamp: 2026-07-10T18:50:48.376+09:00
+frame_count: 55
+sam_frame_count: 0
+object_count: 7
+total_pipeline_seconds: 8.630972
+
+[sample 12]
+timestamp: 2026-07-10T18:50:57.161+09:00
+frame_count: 60
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 8.633355
+
+[sample 13]
+timestamp: 2026-07-10T18:51:06.803+09:00
+frame_count: 65
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 9.511820
+
+[sample 14]
+timestamp: 2026-07-10T18:51:15.583+09:00
+frame_count: 70
+sam_frame_count: 0
+object_count: 7
+total_pipeline_seconds: 8.739397
+
+[sample 15]
+timestamp: 2026-07-10T18:51:24.334+09:00
+frame_count: 75
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 8.616914
+
+[sample 16]
+timestamp: 2026-07-10T18:51:34.024+09:00
+frame_count: 80
+sam_frame_count: 0
+object_count: 7
+total_pipeline_seconds: 9.634826
+
+[sample 17]
+timestamp: 2026-07-10T18:51:42.418+09:00
+frame_count: 85
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 8.265987
+
+[sample 18]
+timestamp: 2026-07-10T18:51:53.073+09:00
+frame_count: 90
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 10.550059
+
+[sample 19]
+timestamp: 2026-07-10T18:52:01.466+09:00
+frame_count: 95
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 8.264955
+
+[sample 20]
+timestamp: 2026-07-10T18:52:13.965+09:00
+frame_count: 100
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 12.407605
+
+[sample 21]
+timestamp: 2026-07-10T18:52:23.415+09:00
+frame_count: 105
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 9.377763
+
+[sample 22]
+timestamp: 2026-07-10T18:52:32.491+09:00
+frame_count: 110
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 9.007903
+
+[sample 23]
+timestamp: 2026-07-10T18:52:41.843+09:00
+frame_count: 115
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 9.290387
+
+[sample 24]
+timestamp: 2026-07-10T18:52:50.931+09:00
+frame_count: 120
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 9.015465
+
+[sample 25]
+timestamp: 2026-07-10T18:53:01.980+09:00
+frame_count: 125
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 10.989462
+
+[sample 26]
+timestamp: 2026-07-10T18:53:10.891+09:00
+frame_count: 130
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 8.845621
+
+[sample 27]
+timestamp: 2026-07-10T18:53:19.634+09:00
+frame_count: 135
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 8.615081
+
+[sample 28]
+timestamp: 2026-07-10T18:53:28.825+09:00
+frame_count: 140
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 9.045004
+
+[sample 29]
+timestamp: 2026-07-10T18:53:37.840+09:00
+frame_count: 145
+sam_frame_count: 0
+object_count: 6
+total_pipeline_seconds: 8.894792
+
+[sample 30]
+timestamp: 2026-07-10T18:53:47.550+09:00
+frame_count: 150
+sam_frame_count: 0
+object_count: 7
+total_pipeline_seconds: 9.633880
+
+[summary]
+mean: 9.112616
+std: 0.997574
+median: 8.870206
+q1: 8.615539
+q3: 9.478306
+iqr: 0.862766
+outlier_lower_bound: 7.321390
+outlier_upper_bound: 10.772455
+outlier_count: 3
+outliers: 3:10.777345; 20:12.407605; 25:10.989462

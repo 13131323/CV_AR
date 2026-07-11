@@ -1,0 +1,228 @@
+Ablation: without Semantic Layer
+run_id: 001
+started_at: 2026-07-10T19:24:55.300+09:00
+target_samples: 30
+condition: VLM/Semantic Layer removed. Pipeline stops after FAST_STREAM data generation.
+
+[time results]
+[sample 01]
+timestamp: 2026-07-10T19:25:08.281+09:00
+frame_count: 5
+sam_frame_count: 1
+object_count: 5
+total_pipeline_seconds: 8.264110
+
+[sample 02]
+timestamp: 2026-07-10T19:25:14.305+09:00
+frame_count: 10
+sam_frame_count: 2
+object_count: 6
+total_pipeline_seconds: 5.923345
+
+[sample 03]
+timestamp: 2026-07-10T19:25:20.274+09:00
+frame_count: 15
+sam_frame_count: 3
+object_count: 6
+total_pipeline_seconds: 5.914359
+
+[sample 04]
+timestamp: 2026-07-10T19:25:26.240+09:00
+frame_count: 20
+sam_frame_count: 4
+object_count: 6
+total_pipeline_seconds: 5.823584
+
+[sample 05]
+timestamp: 2026-07-10T19:25:26.345+09:00
+frame_count: 25
+sam_frame_count: 5
+object_count: 6
+total_pipeline_seconds: 0.057852
+
+[sample 06]
+timestamp: 2026-07-10T19:25:32.330+09:00
+frame_count: 30
+sam_frame_count: 6
+object_count: 6
+total_pipeline_seconds: 5.868391
+
+[sample 07]
+timestamp: 2026-07-10T19:25:38.275+09:00
+frame_count: 35
+sam_frame_count: 7
+object_count: 6
+total_pipeline_seconds: 5.866352
+
+[sample 08]
+timestamp: 2026-07-10T19:25:44.277+09:00
+frame_count: 40
+sam_frame_count: 8
+object_count: 6
+total_pipeline_seconds: 5.902839
+
+[sample 09]
+timestamp: 2026-07-10T19:25:50.287+09:00
+frame_count: 45
+sam_frame_count: 9
+object_count: 6
+total_pipeline_seconds: 5.936226
+
+[sample 10]
+timestamp: 2026-07-10T19:25:56.388+09:00
+frame_count: 50
+sam_frame_count: 10
+object_count: 6
+total_pipeline_seconds: 5.991904
+
+[sample 11]
+timestamp: 2026-07-10T19:25:56.544+09:00
+frame_count: 55
+sam_frame_count: 11
+object_count: 6
+total_pipeline_seconds: 0.055516
+
+[sample 12]
+timestamp: 2026-07-10T19:26:02.529+09:00
+frame_count: 60
+sam_frame_count: 12
+object_count: 6
+total_pipeline_seconds: 5.881749
+
+[sample 13]
+timestamp: 2026-07-10T19:26:02.686+09:00
+frame_count: 65
+sam_frame_count: 13
+object_count: 6
+total_pipeline_seconds: 0.060425
+
+[sample 14]
+timestamp: 2026-07-10T19:26:08.752+09:00
+frame_count: 70
+sam_frame_count: 14
+object_count: 6
+total_pipeline_seconds: 5.951133
+
+[sample 15]
+timestamp: 2026-07-10T19:26:14.716+09:00
+frame_count: 75
+sam_frame_count: 15
+object_count: 6
+total_pipeline_seconds: 5.874391
+
+[sample 16]
+timestamp: 2026-07-10T19:26:20.685+09:00
+frame_count: 80
+sam_frame_count: 16
+object_count: 6
+total_pipeline_seconds: 5.864114
+
+[sample 17]
+timestamp: 2026-07-10T19:26:20.831+09:00
+frame_count: 85
+sam_frame_count: 17
+object_count: 6
+total_pipeline_seconds: 0.065710
+
+[sample 18]
+timestamp: 2026-07-10T19:26:26.918+09:00
+frame_count: 90
+sam_frame_count: 18
+object_count: 6
+total_pipeline_seconds: 5.948008
+
+[sample 19]
+timestamp: 2026-07-10T19:26:32.911+09:00
+frame_count: 95
+sam_frame_count: 19
+object_count: 6
+total_pipeline_seconds: 5.904802
+
+[sample 20]
+timestamp: 2026-07-10T19:26:39.003+09:00
+frame_count: 100
+sam_frame_count: 20
+object_count: 6
+total_pipeline_seconds: 6.022042
+
+[sample 21]
+timestamp: 2026-07-10T19:26:39.190+09:00
+frame_count: 105
+sam_frame_count: 21
+object_count: 6
+total_pipeline_seconds: 0.049822
+
+[sample 22]
+timestamp: 2026-07-10T19:26:39.336+09:00
+frame_count: 110
+sam_frame_count: 22
+object_count: 6
+total_pipeline_seconds: 0.043320
+
+[sample 23]
+timestamp: 2026-07-10T19:26:45.361+09:00
+frame_count: 115
+sam_frame_count: 23
+object_count: 6
+total_pipeline_seconds: 5.893451
+
+[sample 24]
+timestamp: 2026-07-10T19:26:51.437+09:00
+frame_count: 120
+sam_frame_count: 24
+object_count: 6
+total_pipeline_seconds: 5.987748
+
+[sample 25]
+timestamp: 2026-07-10T19:26:51.583+09:00
+frame_count: 125
+sam_frame_count: 25
+object_count: 6
+total_pipeline_seconds: 0.055409
+
+[sample 26]
+timestamp: 2026-07-10T19:26:51.727+09:00
+frame_count: 130
+sam_frame_count: 26
+object_count: 6
+total_pipeline_seconds: 0.046588
+
+[sample 27]
+timestamp: 2026-07-10T19:26:57.686+09:00
+frame_count: 135
+sam_frame_count: 27
+object_count: 5
+total_pipeline_seconds: 5.839150
+
+[sample 28]
+timestamp: 2026-07-10T19:27:03.692+09:00
+frame_count: 140
+sam_frame_count: 28
+object_count: 6
+total_pipeline_seconds: 5.886284
+
+[sample 29]
+timestamp: 2026-07-10T19:27:09.724+09:00
+frame_count: 145
+sam_frame_count: 29
+object_count: 6
+total_pipeline_seconds: 5.946357
+
+[sample 30]
+timestamp: 2026-07-10T19:27:15.841+09:00
+frame_count: 150
+sam_frame_count: 30
+object_count: 6
+total_pipeline_seconds: 5.975992
+
+[summary]
+mean: 4.430032
+std: 2.717759
+median: 5.884016
+q1: 1.505178
+q3: 5.943824
+iqr: 4.438646
+outlier_lower_bound: -5.152790
+outlier_upper_bound: 12.601793
+outlier_count: 0
+outliers: None

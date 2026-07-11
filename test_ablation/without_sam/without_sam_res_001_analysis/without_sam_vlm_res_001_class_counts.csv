@@ -1,0 +1,19 @@
+normalized_class,count,raw_classes
+bed,30,bed:27; Bed:3
+computer,27,computer:24; Computer:3
+keyboard,25,keyboard:23; Keyboard:2
+drawer,25,drawer:24; Drawer:1
+monitor,22,monitor:21; Monitor:1
+fan,18,fan:16; Fan:2
+pillow,11,pillow:8; cushion:2; Pillow:1
+desk,10,desk:7; Desk:3
+mouse,4,mouse:4
+bowl,3,bowl:3
+cabinet,2,cabinet:2
+fridge,2,fridge:2
+box/container,1,container:1
+printer,1,printer:1
+cupboard,1,cupboard:1
+blanket,1,Blanket:1
+basket,1,basket:1
+chair,1,Chair:1

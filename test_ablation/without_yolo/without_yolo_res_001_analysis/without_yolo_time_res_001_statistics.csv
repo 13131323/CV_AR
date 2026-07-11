@@ -1,0 +1,2 @@
+metric,mean,std,median,q1,q3,iqr,outlier_lower_bound,outlier_upper_bound,outlier_count,outliers
+total_pipeline_seconds,8.086011,0.967186,7.750909,7.589739,8.030191,0.440452,6.929061,8.690869,5,1:11.556903; 2:8.784946; 10:9.146185; 15:10.702596; 17:9.386759

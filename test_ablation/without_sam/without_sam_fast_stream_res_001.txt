@@ -1,0 +1,2312 @@
+Ablation: without SAM full pipeline
+run_id: 001
+started_at: 2026-07-10T18:49:07.434+09:00
+target_samples: 30
+condition: SAM removed. YOLO bbox coarse centroid/area is used instead of SAM mask.
+
+[fast stream results]
+[sample 01]
+timestamp: 2026-07-10T18:49:19.616+09:00
+frame_count: 5
+sam_frame_count: 0
+object_count: 5
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.656,
+    "centroid_y": 491,
+    "bbox_2d": [
+      859.0,
+      272.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.113,
+    "centroid_y": 240,
+    "bbox_2d": [
+      573.0,
+      167.0,
+      778.0,
+      313.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.064,
+    "centroid_y": 320,
+    "bbox_2d": [
+      570.0,
+      308.0,
+      753.0,
+      333.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.897,
+    "centroid_y": 387,
+    "bbox_2d": [
+      407.0,
+      287.0,
+      542.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.894,
+    "centroid_y": 478,
+    "bbox_2d": [
+      268.0,
+      428.0,
+      418.0,
+      528.0
+    ]
+  }
+]
+
+[sample 02]
+timestamp: 2026-07-10T18:49:27.665+09:00
+frame_count: 10
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.608,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.107,
+    "centroid_y": 250,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      777.0,
+      332.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.029,
+    "centroid_y": 319,
+    "bbox_2d": [
+      555.0,
+      306.0,
+      751.0,
+      333.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.889,
+    "centroid_y": 388,
+    "bbox_2d": [
+      407.0,
+      289.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 2.109,
+    "centroid_y": 238,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      308.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 1.856,
+    "centroid_y": 479,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      418.0,
+      529.0
+    ]
+  }
+]
+
+[sample 03]
+timestamp: 2026-07-10T18:49:38.509+09:00
+frame_count: 15
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.58,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 1.994,
+    "centroid_y": 321,
+    "bbox_2d": [
+      569.0,
+      308.0,
+      753.0,
+      335.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.079,
+    "centroid_y": 237,
+    "bbox_2d": [
+      573.0,
+      167.0,
+      777.0,
+      308.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.849,
+    "centroid_y": 389,
+    "bbox_2d": [
+      407.0,
+      291.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.815,
+    "centroid_y": 478,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      418.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 2.077,
+    "centroid_y": 250,
+    "bbox_2d": [
+      567.0,
+      169.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 04]
+timestamp: 2026-07-10T18:49:48.342+09:00
+frame_count: 20
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.596,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.018,
+    "centroid_y": 319,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.083,
+    "centroid_y": 239,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.858,
+    "centroid_y": 388,
+    "bbox_2d": [
+      407.0,
+      289.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 2.079,
+    "centroid_y": 250,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      776.0,
+      332.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 1.834,
+    "centroid_y": 479,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      418.0,
+      529.0
+    ]
+  }
+]
+
+[sample 05]
+timestamp: 2026-07-10T18:49:56.635+09:00
+frame_count: 25
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.594,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.016,
+    "centroid_y": 319,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.09,
+    "centroid_y": 238,
+    "bbox_2d": [
+      573.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.882,
+    "centroid_y": 388,
+    "bbox_2d": [
+      407.0,
+      291.0,
+      541.0,
+      486.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.839,
+    "centroid_y": 479,
+    "bbox_2d": [
+      267.0,
+      430.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 2.087,
+    "centroid_y": 250,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 06]
+timestamp: 2026-07-10T18:50:05.552+09:00
+frame_count: 30
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.587,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.022,
+    "centroid_y": 319,
+    "bbox_2d": [
+      563.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.086,
+    "centroid_y": 238,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.86,
+    "centroid_y": 388,
+    "bbox_2d": [
+      407.0,
+      289.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 2.083,
+    "centroid_y": 250,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 1.828,
+    "centroid_y": 478,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  }
+]
+
+[sample 07]
+timestamp: 2026-07-10T18:50:13.529+09:00
+frame_count: 35
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.608,
+    "centroid_y": 491,
+    "bbox_2d": [
+      859.0,
+      272.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.027,
+    "centroid_y": 319,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.099,
+    "centroid_y": 239,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.877,
+    "centroid_y": 389,
+    "bbox_2d": [
+      407.0,
+      291.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.838,
+    "centroid_y": 478,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 2.095,
+    "centroid_y": 250,
+    "bbox_2d": [
+      566.0,
+      170.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 08]
+timestamp: 2026-07-10T18:50:21.723+09:00
+frame_count: 40
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.588,
+    "centroid_y": 491,
+    "bbox_2d": [
+      859.0,
+      272.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.004,
+    "centroid_y": 319,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.078,
+    "centroid_y": 239,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      778.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 2.074,
+    "centroid_y": 250,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.851,
+    "centroid_y": 389,
+    "bbox_2d": [
+      407.0,
+      291.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 1.823,
+    "centroid_y": 479,
+    "bbox_2d": [
+      267.0,
+      430.0,
+      416.0,
+      528.0
+    ]
+  }
+]
+
+[sample 09]
+timestamp: 2026-07-10T18:50:30.738+09:00
+frame_count: 45
+sam_frame_count: 0
+object_count: 7
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.589,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.012,
+    "centroid_y": 319,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.086,
+    "centroid_y": 239,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.853,
+    "centroid_y": 388,
+    "bbox_2d": [
+      407.0,
+      290.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 2.083,
+    "centroid_y": 250,
+    "bbox_2d": [
+      567.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 1.842,
+    "centroid_y": 479,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 6,
+    "target_z": 2.063,
+    "centroid_y": 321,
+    "bbox_2d": [
+      756.0,
+      312.0,
+      793.0,
+      331.0
+    ]
+  }
+]
+
+[sample 10]
+timestamp: 2026-07-10T18:50:39.639+09:00
+frame_count: 50
+sam_frame_count: 0
+object_count: 7
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.589,
+    "centroid_y": 491,
+    "bbox_2d": [
+      859.0,
+      272.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.009,
+    "centroid_y": 319,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.088,
+    "centroid_y": 237,
+    "bbox_2d": [
+      573.0,
+      167.0,
+      777.0,
+      308.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 2.085,
+    "centroid_y": 250,
+    "bbox_2d": [
+      567.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.851,
+    "centroid_y": 387,
+    "bbox_2d": [
+      407.0,
+      288.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 1.842,
+    "centroid_y": 479,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      418.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 6,
+    "target_z": 2.051,
+    "centroid_y": 321,
+    "bbox_2d": [
+      756.0,
+      311.0,
+      793.0,
+      331.0
+    ]
+  }
+]
+
+[sample 11]
+timestamp: 2026-07-10T18:50:48.367+09:00
+frame_count: 55
+sam_frame_count: 0
+object_count: 7
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.592,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 1.997,
+    "centroid_y": 321,
+    "bbox_2d": [
+      569.0,
+      308.0,
+      753.0,
+      335.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.079,
+    "centroid_y": 238,
+    "bbox_2d": [
+      573.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.859,
+    "centroid_y": 387,
+    "bbox_2d": [
+      407.0,
+      288.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.833,
+    "centroid_y": 478,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      418.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 2.075,
+    "centroid_y": 250,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      776.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 6,
+    "target_z": 2.046,
+    "centroid_y": 321,
+    "bbox_2d": [
+      756.0,
+      312.0,
+      794.0,
+      331.0
+    ]
+  }
+]
+
+[sample 12]
+timestamp: 2026-07-10T18:50:57.153+09:00
+frame_count: 60
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.586,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.013,
+    "centroid_y": 320,
+    "bbox_2d": [
+      564.0,
+      306.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.078,
+    "centroid_y": 239,
+    "bbox_2d": [
+      573.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.859,
+    "centroid_y": 389,
+    "bbox_2d": [
+      407.0,
+      292.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.812,
+    "centroid_y": 479,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 2.074,
+    "centroid_y": 250,
+    "bbox_2d": [
+      567.0,
+      169.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 13]
+timestamp: 2026-07-10T18:51:06.794+09:00
+frame_count: 65
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.585,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 1.997,
+    "centroid_y": 321,
+    "bbox_2d": [
+      568.0,
+      308.0,
+      753.0,
+      335.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.087,
+    "centroid_y": 238,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.866,
+    "centroid_y": 389,
+    "bbox_2d": [
+      407.0,
+      291.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.829,
+    "centroid_y": 478,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 2.085,
+    "centroid_y": 250,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  }
+]
+
+[sample 14]
+timestamp: 2026-07-10T18:51:15.580+09:00
+frame_count: 70
+sam_frame_count: 0
+object_count: 7
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.595,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.021,
+    "centroid_y": 319,
+    "bbox_2d": [
+      563.0,
+      305.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.093,
+    "centroid_y": 239,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.874,
+    "centroid_y": 387,
+    "bbox_2d": [
+      407.0,
+      289.0,
+      541.0,
+      486.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.837,
+    "centroid_y": 479,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 2.09,
+    "centroid_y": 250,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      776.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 6,
+    "target_z": 2.069,
+    "centroid_y": 321,
+    "bbox_2d": [
+      755.0,
+      311.0,
+      793.0,
+      331.0
+    ]
+  }
+]
+
+[sample 15]
+timestamp: 2026-07-10T18:51:24.331+09:00
+frame_count: 75
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.601,
+    "centroid_y": 491,
+    "bbox_2d": [
+      859.0,
+      272.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.037,
+    "centroid_y": 319,
+    "bbox_2d": [
+      564.0,
+      304.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.098,
+    "centroid_y": 238,
+    "bbox_2d": [
+      573.0,
+      168.0,
+      777.0,
+      308.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.881,
+    "centroid_y": 386,
+    "bbox_2d": [
+      407.0,
+      287.0,
+      541.0,
+      486.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.848,
+    "centroid_y": 478,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      418.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 2.094,
+    "centroid_y": 250,
+    "bbox_2d": [
+      567.0,
+      169.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 16]
+timestamp: 2026-07-10T18:51:34.016+09:00
+frame_count: 80
+sam_frame_count: 0
+object_count: 7
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.595,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 1.996,
+    "centroid_y": 320,
+    "bbox_2d": [
+      564.0,
+      306.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.077,
+    "centroid_y": 238,
+    "bbox_2d": [
+      573.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.849,
+    "centroid_y": 388,
+    "bbox_2d": [
+      407.0,
+      289.0,
+      542.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.835,
+    "centroid_y": 479,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 2.062,
+    "centroid_y": 321,
+    "bbox_2d": [
+      756.0,
+      311.0,
+      793.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 6,
+    "target_z": 2.074,
+    "centroid_y": 250,
+    "bbox_2d": [
+      567.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  }
+]
+
+[sample 17]
+timestamp: 2026-07-10T18:51:42.411+09:00
+frame_count: 85
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.587,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.011,
+    "centroid_y": 320,
+    "bbox_2d": [
+      564.0,
+      306.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.094,
+    "centroid_y": 239,
+    "bbox_2d": [
+      573.0,
+      168.0,
+      778.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.859,
+    "centroid_y": 388,
+    "bbox_2d": [
+      407.0,
+      289.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.833,
+    "centroid_y": 478,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 2.091,
+    "centroid_y": 250,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  }
+]
+
+[sample 18]
+timestamp: 2026-07-10T18:51:53.064+09:00
+frame_count: 90
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.595,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.009,
+    "centroid_y": 321,
+    "bbox_2d": [
+      569.0,
+      308.0,
+      753.0,
+      335.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.088,
+    "centroid_y": 238,
+    "bbox_2d": [
+      573.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.861,
+    "centroid_y": 387,
+    "bbox_2d": [
+      407.0,
+      288.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 2.085,
+    "centroid_y": 250,
+    "bbox_2d": [
+      568.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 1.838,
+    "centroid_y": 479,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      418.0,
+      529.0
+    ]
+  }
+]
+
+[sample 19]
+timestamp: 2026-07-10T18:52:01.458+09:00
+frame_count: 95
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.575,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.002,
+    "centroid_y": 319,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.076,
+    "centroid_y": 239,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.861,
+    "centroid_y": 386,
+    "bbox_2d": [
+      407.0,
+      287.0,
+      541.0,
+      486.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 2.073,
+    "centroid_y": 250,
+    "bbox_2d": [
+      567.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 1.82,
+    "centroid_y": 479,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      529.0
+    ]
+  }
+]
+
+[sample 20]
+timestamp: 2026-07-10T18:52:13.956+09:00
+frame_count: 100
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.602,
+    "centroid_y": 491,
+    "bbox_2d": [
+      859.0,
+      272.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.027,
+    "centroid_y": 319,
+    "bbox_2d": [
+      564.0,
+      304.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.092,
+    "centroid_y": 238,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 2.088,
+    "centroid_y": 250,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      777.0,
+      332.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.866,
+    "centroid_y": 388,
+    "bbox_2d": [
+      407.0,
+      290.0,
+      542.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 1.839,
+    "centroid_y": 479,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      529.0
+    ]
+  }
+]
+
+[sample 21]
+timestamp: 2026-07-10T18:52:23.404+09:00
+frame_count: 105
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.582,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.018,
+    "centroid_y": 319,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.092,
+    "centroid_y": 238,
+    "bbox_2d": [
+      573.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.859,
+    "centroid_y": 386,
+    "bbox_2d": [
+      406.0,
+      287.0,
+      541.0,
+      486.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 2.09,
+    "centroid_y": 250,
+    "bbox_2d": [
+      567.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 1.828,
+    "centroid_y": 479,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      529.0
+    ]
+  }
+]
+
+[sample 22]
+timestamp: 2026-07-10T18:52:32.484+09:00
+frame_count: 110
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.6,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.011,
+    "centroid_y": 319,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.082,
+    "centroid_y": 238,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.85,
+    "centroid_y": 387,
+    "bbox_2d": [
+      407.0,
+      288.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.83,
+    "centroid_y": 478,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 2.079,
+    "centroid_y": 250,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 23]
+timestamp: 2026-07-10T18:52:41.834+09:00
+frame_count: 115
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.596,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.017,
+    "centroid_y": 319,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.088,
+    "centroid_y": 239,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.857,
+    "centroid_y": 388,
+    "bbox_2d": [
+      407.0,
+      289.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.833,
+    "centroid_y": 479,
+    "bbox_2d": [
+      267.0,
+      430.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 2.085,
+    "centroid_y": 250,
+    "bbox_2d": [
+      567.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  }
+]
+
+[sample 24]
+timestamp: 2026-07-10T18:52:50.924+09:00
+frame_count: 120
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.588,
+    "centroid_y": 491,
+    "bbox_2d": [
+      859.0,
+      272.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.008,
+    "centroid_y": 319,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      756.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.087,
+    "centroid_y": 238,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.837,
+    "centroid_y": 479,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      418.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.855,
+    "centroid_y": 386,
+    "bbox_2d": [
+      406.0,
+      287.0,
+      541.0,
+      486.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 2.084,
+    "centroid_y": 250,
+    "bbox_2d": [
+      567.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  }
+]
+
+[sample 25]
+timestamp: 2026-07-10T18:53:01.977+09:00
+frame_count: 125
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.596,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.016,
+    "centroid_y": 320,
+    "bbox_2d": [
+      564.0,
+      306.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.086,
+    "centroid_y": 239,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.867,
+    "centroid_y": 388,
+    "bbox_2d": [
+      407.0,
+      289.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 2.082,
+    "centroid_y": 250,
+    "bbox_2d": [
+      567.0,
+      170.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 1.842,
+    "centroid_y": 479,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      529.0
+    ]
+  }
+]
+
+[sample 26]
+timestamp: 2026-07-10T18:53:10.883+09:00
+frame_count: 130
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.581,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.021,
+    "centroid_y": 319,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.087,
+    "centroid_y": 239,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.868,
+    "centroid_y": 388,
+    "bbox_2d": [
+      407.0,
+      289.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 2.084,
+    "centroid_y": 250,
+    "bbox_2d": [
+      567.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 1.832,
+    "centroid_y": 478,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  }
+]
+
+[sample 27]
+timestamp: 2026-07-10T18:53:19.626+09:00
+frame_count: 135
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.599,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.02,
+    "centroid_y": 319,
+    "bbox_2d": [
+      563.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.087,
+    "centroid_y": 237,
+    "bbox_2d": [
+      573.0,
+      167.0,
+      777.0,
+      308.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 2.084,
+    "centroid_y": 250,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 1.855,
+    "centroid_y": 389,
+    "bbox_2d": [
+      408.0,
+      292.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 1.832,
+    "centroid_y": 479,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      418.0,
+      529.0
+    ]
+  }
+]
+
+[sample 28]
+timestamp: 2026-07-10T18:53:28.821+09:00
+frame_count: 140
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.593,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.025,
+    "centroid_y": 320,
+    "bbox_2d": [
+      564.0,
+      306.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.097,
+    "centroid_y": 239,
+    "bbox_2d": [
+      573.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.871,
+    "centroid_y": 388,
+    "bbox_2d": [
+      407.0,
+      290.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 2.094,
+    "centroid_y": 250,
+    "bbox_2d": [
+      567.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 1.844,
+    "centroid_y": 479,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      418.0,
+      529.0
+    ]
+  }
+]
+
+[sample 29]
+timestamp: 2026-07-10T18:53:37.836+09:00
+frame_count: 145
+sam_frame_count: 0
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.591,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.005,
+    "centroid_y": 320,
+    "bbox_2d": [
+      564.0,
+      306.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.092,
+    "centroid_y": 237,
+    "bbox_2d": [
+      573.0,
+      167.0,
+      777.0,
+      308.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.855,
+    "centroid_y": 389,
+    "bbox_2d": [
+      407.0,
+      291.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 2.09,
+    "centroid_y": 250,
+    "bbox_2d": [
+      567.0,
+      169.0,
+      776.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 1.825,
+    "centroid_y": 478,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  }
+]
+
+[sample 30]
+timestamp: 2026-07-10T18:53:47.542+09:00
+frame_count: 150
+sam_frame_count: 0
+object_count: 7
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 1.583,
+    "centroid_y": 492,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 2.015,
+    "centroid_y": 319,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 2.082,
+    "centroid_y": 239,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 1.847,
+    "centroid_y": 389,
+    "bbox_2d": [
+      407.0,
+      291.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 2.079,
+    "centroid_y": 250,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 1.825,
+    "centroid_y": 479,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 6,
+    "target_z": 2.068,
+    "centroid_y": 321,
+    "bbox_2d": [
+      756.0,
+      311.0,
+      793.0,
+      331.0
+    ]
+  }
+]
+

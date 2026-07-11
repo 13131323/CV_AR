@@ -1,0 +1,4375 @@
+Ablation: without Depth Anything full pipeline
+run_id: 002
+started_at: 2026-07-10T19:01:31.939+09:00
+target_samples: 30
+condition: Depth Anything removed. depth/spatial_3d are filled with dummy zero values.
+
+[vlm results]
+[sample 01]
+timestamp: 2026-07-10T19:02:03.820+09:00
+frame_count: 5
+sam_frame_count: 1
+object_count: 9
+vlm_object_count: 9
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Person",
+        "is_person": true
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "held"
+      },
+      "semantic_state": {
+        "social_state": "held_by_user",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "IGNORE",
+        "animation_trigger": "None",
+        "is_safe_to_approach": false
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": false
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": false
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": false
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Notebook",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": false
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": false
+      }
+    },
+    {
+      "object_id": 6,
+      "identity": {
+        "class_name": "Trash Can",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": false
+      }
+    },
+    {
+      "object_id": 7,
+      "identity": {
+        "class_name": "Cable",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": false
+      }
+    },
+    {
+      "object_id": 8,
+      "identity": {
+        "class_name": "Container",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": false
+      }
+    }
+  ]
+}
+
+[sample 02]
+timestamp: 2026-07-10T19:02:15.739+09:00
+frame_count: 10
+sam_frame_count: 2
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Green Container",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Pinch grasp to move",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "To sit/to place",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 03]
+timestamp: 2026-07-10T19:02:30.300+09:00
+frame_count: 15
+sam_frame_count: 3
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Green Blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Green Container",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 04]
+timestamp: 2026-07-10T19:02:43.700+09:00
+frame_count: 20
+sam_frame_count: 4
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "To sit/to place",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Bedding",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 05]
+timestamp: 2026-07-10T19:02:55.982+09:00
+frame_count: 25
+sam_frame_count: 5
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Green container",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Chair",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 06]
+timestamp: 2026-07-10T19:03:08.371+09:00
+frame_count: 30
+sam_frame_count: 6
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "green box",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Cylindrical grasp to move",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "green box",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Cylindrical grasp to move",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Wrap grasp to open",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "green box",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Cylindrical grasp to move",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 07]
+timestamp: 2026-07-10T19:03:21.073+09:00
+frame_count: 35
+sam_frame_count: 7
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Green Container",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Basket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 08]
+timestamp: 2026-07-10T19:03:33.152+09:00
+frame_count: 40
+sam_frame_count: 8
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 09]
+timestamp: 2026-07-10T19:03:43.905+09:00
+frame_count: 45
+sam_frame_count: 9
+object_count: 5
+vlm_object_count: 5
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "To sit/to place",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Computer Monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 10]
+timestamp: 2026-07-10T19:03:56.465+09:00
+frame_count: 50
+sam_frame_count: 10
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "basket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 11]
+timestamp: 2026-07-10T19:04:08.684+09:00
+frame_count: 55
+sam_frame_count: 11
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Keyboard",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 12]
+timestamp: 2026-07-10T19:04:25.373+09:00
+frame_count: 60
+sam_frame_count: 12
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "To sit/to place",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Chair",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in front of user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "To sit/to place",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in front of user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "To sit/to place",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in front of user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 13]
+timestamp: 2026-07-10T19:04:37.764+09:00
+frame_count: 65
+sam_frame_count: 13
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Keyboard",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 14]
+timestamp: 2026-07-10T19:04:54.661+09:00
+frame_count: 70
+sam_frame_count: 14
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 15]
+timestamp: 2026-07-10T19:05:07.374+09:00
+frame_count: 75
+sam_frame_count: 15
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Green Blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 16]
+timestamp: 2026-07-10T19:05:18.516+09:00
+frame_count: 80
+sam_frame_count: 16
+object_count: 5
+vlm_object_count: 5
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Printer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Trash Can",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 17]
+timestamp: 2026-07-10T19:05:30.193+09:00
+frame_count: 85
+sam_frame_count: 17
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Keyboard",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 18]
+timestamp: 2026-07-10T19:05:42.285+09:00
+frame_count: 90
+sam_frame_count: 18
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Chair",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "To sit/to place",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Green Blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Basket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 19]
+timestamp: 2026-07-10T19:05:54.458+09:00
+frame_count: 95
+sam_frame_count: 19
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Basket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Pinch grasp to move",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Manipulate elongated tools",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Wrap grasp to open",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "To sit/to place",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 20]
+timestamp: 2026-07-10T19:06:06.413+09:00
+frame_count: 100
+sam_frame_count: 20
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Keyboard",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Green Blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 21]
+timestamp: 2026-07-10T19:06:18.725+09:00
+frame_count: 105
+sam_frame_count: 21
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Printer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Basket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 22]
+timestamp: 2026-07-10T19:06:29.937+09:00
+frame_count: 110
+sam_frame_count: 22
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Printer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Storage Box",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Notebook",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 23]
+timestamp: 2026-07-10T19:06:41.120+09:00
+frame_count: 115
+sam_frame_count: 23
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "To sit/to place",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Computer Monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Keyboard",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "To sit/to place",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 24]
+timestamp: 2026-07-10T19:06:56.408+09:00
+frame_count: 120
+sam_frame_count: 24
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "bed blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "computer monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "computer keyboard",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "storage box",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "storage container",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 25]
+timestamp: 2026-07-10T19:07:13.418+09:00
+frame_count: 125
+sam_frame_count: 25
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Storage Box",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 26]
+timestamp: 2026-07-10T19:07:29.180+09:00
+frame_count: 130
+sam_frame_count: 26
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Storage box",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Chair",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "To sit/to place",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "To sit/to place",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 27]
+timestamp: 2026-07-10T19:07:43.109+09:00
+frame_count: 135
+sam_frame_count: 27
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Trash Can",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 28]
+timestamp: 2026-07-10T19:07:58.597+09:00
+frame_count: 140
+sam_frame_count: 28
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Desk",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "To sit/to place",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Manipulate elongated tools",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Green Container",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Cylindrical grasp to move",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Green Bowl",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Cylindrical grasp to move",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Green Blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 29]
+timestamp: 2026-07-10T19:08:13.315+09:00
+frame_count: 145
+sam_frame_count: 29
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Computer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Monitor",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_floor"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Basket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+
+[sample 30]
+timestamp: 2026-07-10T19:08:31.157+09:00
+frame_count: 150
+sam_frame_count: 30
+object_count: 6
+vlm_object_count: 6
+json:
+{
+  "results": [
+    {
+      "object_id": 0,
+      "identity": {
+        "class_name": "Fan",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 1,
+      "identity": {
+        "class_name": "Drawer",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "To sit/to place",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 2,
+      "identity": {
+        "class_name": "Laptop",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 3,
+      "identity": {
+        "class_name": "Bed",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "To sit/to place",
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 4,
+      "identity": {
+        "class_name": "Blanket",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    },
+    {
+      "object_id": 5,
+      "identity": {
+        "class_name": "Notebook",
+        "is_person": false
+      },
+      "corrected_spatial_relation": {
+        "camera_relative": "in_front_of_user",
+        "environment_relative": "on_surface"
+      },
+      "semantic_state": {
+        "social_state": "available",
+        "affordances": [
+          "Observe"
+        ]
+      },
+      "planner_directives": {
+        "action_policy": "OBSERVE_ONLY",
+        "animation_trigger": "Observe",
+        "is_safe_to_approach": true
+      }
+    }
+  ]
+}
+

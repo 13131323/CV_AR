@@ -1,0 +1,7 @@
+Ablation: without Depth Anything full pipeline
+run_id: 001
+started_at: 2026-07-10T18:59:47.118+09:00
+target_samples: 30
+condition: Depth Anything removed. depth/spatial_3d are filled with dummy zero values.
+
+[time results]

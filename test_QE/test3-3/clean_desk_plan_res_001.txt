@@ -1,0 +1,1743 @@
+clean_desk_plan: 좌표 기반 책상 정리 시퀀스 한 문장 생성 테스트
+run_id: 001
+started_at: 2026-07-10T20:04:51.611+09:00
+target_samples: 30
+
+[run 001 / sample 01]
+timestamp: 2026-07-10T20:05:17.734+09:00
+frame_count: 5
+object_count: 2
+vlm_inference_seconds: 6.899663
+cleaning_sequence_sentence: 가까운 왼쪽의 리모컨부터 치우고, 그 다음 오른쪽의 신발을 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      621.0,
+      258.0,
+      802.0,
+      400.0
+    ],
+    "mask_area": 8921,
+    "centroid_y": 326,
+    "object_x": 0.077,
+    "object_y": -0.045,
+    "target_z": 0.769,
+    "near_distance": null,
+    "floor_depth_delta": -0.072
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      1061.0,
+      155.0,
+      1279.0,
+      376.0
+    ],
+    "mask_area": 23981,
+    "centroid_y": 275,
+    "object_x": 1.167,
+    "object_y": -0.203,
+    "target_z": 1.621,
+    "near_distance": null,
+    "floor_depth_delta": -0.033
+  }
+]
+
+[run 001 / sample 02]
+timestamp: 2026-07-10T20:05:26.867+09:00
+frame_count: 10
+object_count: 2
+vlm_inference_seconds: 3.131462
+cleaning_sequence_sentence: 먼저 가까운 왼쪽의 컵을 치우고, 그 다음 오른쪽의 리모컨을 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      241.0,
+      208.0,
+      494.0,
+      414.0
+    ],
+    "mask_area": 32839,
+    "centroid_y": 303,
+    "object_x": -0.154,
+    "object_y": -0.038,
+    "target_z": 0.427,
+    "near_distance": null,
+    "floor_depth_delta": 0.115
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      678.0,
+      293.0,
+      898.0,
+      504.0
+    ],
+    "mask_area": 14712,
+    "centroid_y": 395,
+    "object_x": 0.111,
+    "object_y": 0.018,
+    "target_z": 0.554,
+    "near_distance": null,
+    "floor_depth_delta": -0.052
+  }
+]
+
+[run 001 / sample 03]
+timestamp: 2026-07-10T20:05:34.653+09:00
+frame_count: 15
+object_count: 3
+vlm_inference_seconds: 1.779087
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 중앙의 작은 물체를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      240.0,
+      207.0,
+      494.0,
+      414.0
+    ],
+    "mask_area": 32831,
+    "centroid_y": 302,
+    "object_x": -0.154,
+    "object_y": -0.038,
+    "target_z": 0.425,
+    "near_distance": null,
+    "floor_depth_delta": 0.121
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      678.0,
+      289.0,
+      897.0,
+      502.0
+    ],
+    "mask_area": 14659,
+    "centroid_y": 393,
+    "object_x": 0.112,
+    "object_y": 0.017,
+    "target_z": 0.558,
+    "near_distance": null,
+    "floor_depth_delta": -0.049
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      557.0,
+      400.0,
+      664.0,
+      490.0
+    ],
+    "mask_area": 7089,
+    "centroid_y": 444,
+    "object_x": -0.016,
+    "object_y": 0.049,
+    "target_z": 0.506,
+    "near_distance": null,
+    "floor_depth_delta": 0.01
+  }
+]
+
+[run 001 / sample 04]
+timestamp: 2026-07-10T20:05:42.126+09:00
+frame_count: 20
+object_count: 4
+vlm_inference_seconds: 1.401723
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 작은 물체인 시계를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      240.0,
+      206.0,
+      494.0,
+      413.0
+    ],
+    "mask_area": 33060,
+    "centroid_y": 301,
+    "object_x": -0.151,
+    "object_y": -0.038,
+    "target_z": 0.417,
+    "near_distance": null,
+    "floor_depth_delta": 0.113
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      677.0,
+      289.0,
+      897.0,
+      501.0
+    ],
+    "mask_area": 14637,
+    "centroid_y": 392,
+    "object_x": 0.108,
+    "object_y": 0.016,
+    "target_z": 0.541,
+    "near_distance": null,
+    "floor_depth_delta": -0.05
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      3.0,
+      1.0,
+      1253.0,
+      720.0
+    ],
+    "mask_area": 362612,
+    "centroid_y": 250,
+    "object_x": 0.133,
+    "object_y": -0.265,
+    "target_z": 1.676,
+    "near_distance": null,
+    "floor_depth_delta": -1.498
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      558.0,
+      399.0,
+      663.0,
+      488.0
+    ],
+    "mask_area": 7067,
+    "centroid_y": 443,
+    "object_x": -0.015,
+    "object_y": 0.047,
+    "target_z": 0.487,
+    "near_distance": null,
+    "floor_depth_delta": 0.011
+  }
+]
+
+[run 001 / sample 05]
+timestamp: 2026-07-10T20:05:43.579+09:00
+frame_count: 25
+object_count: 4
+vlm_inference_seconds: 1.217740
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 작은 물체인 시계를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      240.0,
+      205.0,
+      493.0,
+      413.0
+    ],
+    "mask_area": 33060,
+    "centroid_y": 301,
+    "object_x": -0.151,
+    "object_y": -0.038,
+    "target_z": 0.417,
+    "near_distance": null,
+    "floor_depth_delta": 0.112
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      676.0,
+      288.0,
+      897.0,
+      500.0
+    ],
+    "mask_area": 14637,
+    "centroid_y": 392,
+    "object_x": 0.108,
+    "object_y": 0.016,
+    "target_z": 0.541,
+    "near_distance": null,
+    "floor_depth_delta": -0.049
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      14.0,
+      0.0,
+      1213.0,
+      657.0
+    ],
+    "mask_area": 362612,
+    "centroid_y": 250,
+    "object_x": 0.133,
+    "object_y": -0.265,
+    "target_z": 1.676,
+    "near_distance": null,
+    "floor_depth_delta": -1.476
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      557.0,
+      399.0,
+      663.0,
+      487.0
+    ],
+    "mask_area": 7067,
+    "centroid_y": 443,
+    "object_x": -0.015,
+    "object_y": 0.047,
+    "target_z": 0.487,
+    "near_distance": null,
+    "floor_depth_delta": 0.012
+  }
+]
+
+[run 001 / sample 06]
+timestamp: 2026-07-10T20:05:50.829+09:00
+frame_count: 30
+object_count: 4
+vlm_inference_seconds: 1.258998
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 중앙에 있는 작은 물체를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      240.0,
+      204.0,
+      493.0,
+      413.0
+    ],
+    "mask_area": 32978,
+    "centroid_y": 300,
+    "object_x": -0.156,
+    "object_y": -0.04,
+    "target_z": 0.431,
+    "near_distance": null,
+    "floor_depth_delta": 0.113
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      676.0,
+      288.0,
+      897.0,
+      500.0
+    ],
+    "mask_area": 14685,
+    "centroid_y": 391,
+    "object_x": 0.112,
+    "object_y": 0.015,
+    "target_z": 0.557,
+    "near_distance": null,
+    "floor_depth_delta": -0.05
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      13.0,
+      0.0,
+      1230.0,
+      663.0
+    ],
+    "mask_area": 322447,
+    "centroid_y": 206,
+    "object_x": 0.248,
+    "object_y": -0.363,
+    "target_z": 1.71,
+    "near_distance": null,
+    "floor_depth_delta": -1.51
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      559.0,
+      399.0,
+      663.0,
+      487.0
+    ],
+    "mask_area": 7079,
+    "centroid_y": 443,
+    "object_x": -0.016,
+    "object_y": 0.048,
+    "target_z": 0.503,
+    "near_distance": null,
+    "floor_depth_delta": 0.013
+  }
+]
+
+[run 001 / sample 07]
+timestamp: 2026-07-10T20:05:52.777+09:00
+frame_count: 35
+object_count: 4
+vlm_inference_seconds: 1.775730
+cleaning_sequence_sentence: 먼저 가까운 왼쪽 앞쪽의 컵을 치운 다음, 오른쪽의 리모컨을 정리하고 마지막으로 가까운 오른쪽의 작은 물체를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      240.0,
+      204.0,
+      493.0,
+      413.0
+    ],
+    "mask_area": 32978,
+    "centroid_y": 300,
+    "object_x": -0.157,
+    "object_y": -0.04,
+    "target_z": 0.432,
+    "near_distance": null,
+    "floor_depth_delta": 0.112
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      676.0,
+      288.0,
+      897.0,
+      499.0
+    ],
+    "mask_area": 14685,
+    "centroid_y": 391,
+    "object_x": 0.112,
+    "object_y": 0.015,
+    "target_z": 0.559,
+    "near_distance": null,
+    "floor_depth_delta": -0.051
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      14.0,
+      0.0,
+      1227.0,
+      641.0
+    ],
+    "mask_area": 322447,
+    "centroid_y": 206,
+    "object_x": 0.255,
+    "object_y": -0.37,
+    "target_z": 1.713,
+    "near_distance": null,
+    "floor_depth_delta": -1.507
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      558.0,
+      399.0,
+      663.0,
+      486.0
+    ],
+    "mask_area": 7079,
+    "centroid_y": 443,
+    "object_x": -0.016,
+    "object_y": 0.048,
+    "target_z": 0.505,
+    "near_distance": null,
+    "floor_depth_delta": 0.013
+  }
+]
+
+[run 001 / sample 08]
+timestamp: 2026-07-10T20:05:54.210+09:00
+frame_count: 40
+object_count: 4
+vlm_inference_seconds: 1.282330
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후 마지막으로 중앙의 물체를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      240.0,
+      204.0,
+      493.0,
+      413.0
+    ],
+    "mask_area": 32978,
+    "centroid_y": 300,
+    "object_x": -0.157,
+    "object_y": -0.04,
+    "target_z": 0.432,
+    "near_distance": null,
+    "floor_depth_delta": 0.112
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      676.0,
+      287.0,
+      897.0,
+      499.0
+    ],
+    "mask_area": 14685,
+    "centroid_y": 391,
+    "object_x": 0.112,
+    "object_y": 0.015,
+    "target_z": 0.559,
+    "near_distance": null,
+    "floor_depth_delta": -0.052
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      13.0,
+      0.0,
+      1219.0,
+      629.0
+    ],
+    "mask_area": 322447,
+    "centroid_y": 206,
+    "object_x": 0.255,
+    "object_y": -0.37,
+    "target_z": 1.713,
+    "near_distance": null,
+    "floor_depth_delta": -1.504
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      558.0,
+      399.0,
+      663.0,
+      486.0
+    ],
+    "mask_area": 7079,
+    "centroid_y": 443,
+    "object_x": -0.016,
+    "object_y": 0.048,
+    "target_z": 0.505,
+    "near_distance": null,
+    "floor_depth_delta": 0.013
+  }
+]
+
+[run 001 / sample 09]
+timestamp: 2026-07-10T20:05:55.706+09:00
+frame_count: 45
+object_count: 4
+vlm_inference_seconds: 1.277371
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 중앙에 있는 스마트워치를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      240.0,
+      204.0,
+      493.0,
+      413.0
+    ],
+    "mask_area": 32978,
+    "centroid_y": 300,
+    "object_x": -0.157,
+    "object_y": -0.04,
+    "target_z": 0.432,
+    "near_distance": null,
+    "floor_depth_delta": 0.112
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      676.0,
+      287.0,
+      897.0,
+      499.0
+    ],
+    "mask_area": 14685,
+    "centroid_y": 391,
+    "object_x": 0.112,
+    "object_y": 0.015,
+    "target_z": 0.559,
+    "near_distance": null,
+    "floor_depth_delta": -0.052
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      12.0,
+      0.0,
+      1248.0,
+      626.0
+    ],
+    "mask_area": 322447,
+    "centroid_y": 206,
+    "object_x": 0.255,
+    "object_y": -0.37,
+    "target_z": 1.713,
+    "near_distance": null,
+    "floor_depth_delta": -1.504
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      557.0,
+      399.0,
+      663.0,
+      486.0
+    ],
+    "mask_area": 7079,
+    "centroid_y": 443,
+    "object_x": -0.016,
+    "object_y": 0.048,
+    "target_z": 0.505,
+    "near_distance": null,
+    "floor_depth_delta": 0.013
+  }
+]
+
+[run 001 / sample 10]
+timestamp: 2026-07-10T20:05:57.108+09:00
+frame_count: 50
+object_count: 4
+vlm_inference_seconds: 1.210421
+cleaning_sequence_sentence: 먼저 가까운 오른쪽의 리모컨부터 치우고, 그 다음 왼쪽의 컵을 정리한 후 마지막으로 작은 물체인 시계를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      240.0,
+      204.0,
+      493.0,
+      413.0
+    ],
+    "mask_area": 32978,
+    "centroid_y": 300,
+    "object_x": -0.157,
+    "object_y": -0.04,
+    "target_z": 0.432,
+    "near_distance": null,
+    "floor_depth_delta": 0.112
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      676.0,
+      287.0,
+      897.0,
+      499.0
+    ],
+    "mask_area": 14685,
+    "centroid_y": 391,
+    "object_x": 0.112,
+    "object_y": 0.015,
+    "target_z": 0.559,
+    "near_distance": null,
+    "floor_depth_delta": -0.052
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      4.0,
+      0.0,
+      1256.0,
+      720.0
+    ],
+    "mask_area": 322447,
+    "centroid_y": 206,
+    "object_x": 0.255,
+    "object_y": -0.37,
+    "target_z": 1.713,
+    "near_distance": null,
+    "floor_depth_delta": -1.532
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      559.0,
+      399.0,
+      663.0,
+      486.0
+    ],
+    "mask_area": 7079,
+    "centroid_y": 443,
+    "object_x": -0.016,
+    "object_y": 0.048,
+    "target_z": 0.505,
+    "near_distance": null,
+    "floor_depth_delta": 0.012
+  }
+]
+
+[run 001 / sample 11]
+timestamp: 2026-07-10T20:06:04.345+09:00
+frame_count: 55
+object_count: 3
+vlm_inference_seconds: 1.056651
+cleaning_sequence_sentence: 먼저 가까운 왼쪽의 컵부터 치우고, 그 다음 오른쪽의 리모컨을 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      240.0,
+      203.0,
+      493.0,
+      412.0
+    ],
+    "mask_area": 31964,
+    "centroid_y": 299,
+    "object_x": -0.154,
+    "object_y": -0.04,
+    "target_z": 0.424,
+    "near_distance": null,
+    "floor_depth_delta": 0.112
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      676.0,
+      287.0,
+      897.0,
+      499.0
+    ],
+    "mask_area": 14705,
+    "centroid_y": 390,
+    "object_x": 0.11,
+    "object_y": 0.014,
+    "target_z": 0.552,
+    "near_distance": null,
+    "floor_depth_delta": -0.051
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      4.0,
+      0.0,
+      1261.0,
+      720.0
+    ],
+    "mask_area": 340977,
+    "centroid_y": 225,
+    "object_x": 0.21,
+    "object_y": -0.329,
+    "target_z": 1.703,
+    "near_distance": null,
+    "floor_depth_delta": -1.53
+  }
+]
+
+[run 001 / sample 12]
+timestamp: 2026-07-10T20:06:11.937+09:00
+frame_count: 60
+object_count: 4
+vlm_inference_seconds: 1.433734
+cleaning_sequence_sentence: 먼저 가까운 왼쪽의 컵부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 중앙의 작은 물체를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      239.0,
+      203.0,
+      493.0,
+      412.0
+    ],
+    "mask_area": 33135,
+    "centroid_y": 298,
+    "object_x": -0.15,
+    "object_y": -0.039,
+    "target_z": 0.412,
+    "near_distance": null,
+    "floor_depth_delta": 0.115
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      676.0,
+      287.0,
+      897.0,
+      499.0
+    ],
+    "mask_area": 14722,
+    "centroid_y": 390,
+    "object_x": 0.108,
+    "object_y": 0.014,
+    "target_z": 0.541,
+    "near_distance": null,
+    "floor_depth_delta": -0.051
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      2.0,
+      0.0,
+      1258.0,
+      720.0
+    ],
+    "mask_area": 349384,
+    "centroid_y": 236,
+    "object_x": 0.173,
+    "object_y": -0.297,
+    "target_z": 1.677,
+    "near_distance": null,
+    "floor_depth_delta": -1.515
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      556.0,
+      398.0,
+      664.0,
+      486.0
+    ],
+    "mask_area": 7089,
+    "centroid_y": 441,
+    "object_x": -0.015,
+    "object_y": 0.046,
+    "target_z": 0.492,
+    "near_distance": null,
+    "floor_depth_delta": 0.009
+  }
+]
+
+[run 001 / sample 13]
+timestamp: 2026-07-10T20:06:13.429+09:00
+frame_count: 65
+object_count: 4
+vlm_inference_seconds: 1.244556
+cleaning_sequence_sentence: 먼저 가까운 왼쪽 앞쪽의 컵을 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 작은 물체인 시계를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      239.0,
+      202.0,
+      493.0,
+      412.0
+    ],
+    "mask_area": 33135,
+    "centroid_y": 298,
+    "object_x": -0.15,
+    "object_y": -0.039,
+    "target_z": 0.412,
+    "near_distance": null,
+    "floor_depth_delta": 0.115
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      676.0,
+      286.0,
+      897.0,
+      499.0
+    ],
+    "mask_area": 14722,
+    "centroid_y": 390,
+    "object_x": 0.108,
+    "object_y": 0.014,
+    "target_z": 0.541,
+    "near_distance": null,
+    "floor_depth_delta": -0.051
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      3.0,
+      0.0,
+      1254.0,
+      720.0
+    ],
+    "mask_area": 349384,
+    "centroid_y": 236,
+    "object_x": 0.172,
+    "object_y": -0.296,
+    "target_z": 1.676,
+    "near_distance": null,
+    "floor_depth_delta": -1.514
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      557.0,
+      398.0,
+      664.0,
+      486.0
+    ],
+    "mask_area": 7089,
+    "centroid_y": 441,
+    "object_x": -0.015,
+    "object_y": 0.046,
+    "target_z": 0.492,
+    "near_distance": null,
+    "floor_depth_delta": 0.009
+  }
+]
+
+[run 001 / sample 14]
+timestamp: 2026-07-10T20:06:14.995+09:00
+frame_count: 70
+object_count: 4
+vlm_inference_seconds: 1.355961
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 작은 물체인 시계를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      240.0,
+      202.0,
+      493.0,
+      412.0
+    ],
+    "mask_area": 33135,
+    "centroid_y": 298,
+    "object_x": -0.15,
+    "object_y": -0.039,
+    "target_z": 0.412,
+    "near_distance": null,
+    "floor_depth_delta": 0.115
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      677.0,
+      286.0,
+      897.0,
+      499.0
+    ],
+    "mask_area": 14722,
+    "centroid_y": 390,
+    "object_x": 0.108,
+    "object_y": 0.014,
+    "target_z": 0.541,
+    "near_distance": null,
+    "floor_depth_delta": -0.051
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      4.0,
+      0.0,
+      1257.0,
+      720.0
+    ],
+    "mask_area": 349384,
+    "centroid_y": 236,
+    "object_x": 0.172,
+    "object_y": -0.296,
+    "target_z": 1.676,
+    "near_distance": null,
+    "floor_depth_delta": -1.514
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      557.0,
+      398.0,
+      664.0,
+      486.0
+    ],
+    "mask_area": 7089,
+    "centroid_y": 441,
+    "object_x": -0.015,
+    "object_y": 0.046,
+    "target_z": 0.492,
+    "near_distance": null,
+    "floor_depth_delta": 0.009
+  }
+]
+
+[run 001 / sample 15]
+timestamp: 2026-07-10T20:06:16.383+09:00
+frame_count: 75
+object_count: 4
+vlm_inference_seconds: 1.184119
+cleaning_sequence_sentence: 먼저 가까운 왼쪽의 컵을 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 중앙의 작은 물체를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      239.0,
+      202.0,
+      493.0,
+      412.0
+    ],
+    "mask_area": 33135,
+    "centroid_y": 298,
+    "object_x": -0.15,
+    "object_y": -0.039,
+    "target_z": 0.412,
+    "near_distance": null,
+    "floor_depth_delta": 0.115
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      677.0,
+      286.0,
+      897.0,
+      499.0
+    ],
+    "mask_area": 14722,
+    "centroid_y": 390,
+    "object_x": 0.108,
+    "object_y": 0.014,
+    "target_z": 0.541,
+    "near_distance": null,
+    "floor_depth_delta": -0.051
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      1.0,
+      2.0,
+      1271.0,
+      702.0
+    ],
+    "mask_area": 349384,
+    "centroid_y": 236,
+    "object_x": 0.172,
+    "object_y": -0.296,
+    "target_z": 1.676,
+    "near_distance": null,
+    "floor_depth_delta": -1.509
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      556.0,
+      398.0,
+      664.0,
+      486.0
+    ],
+    "mask_area": 7089,
+    "centroid_y": 441,
+    "object_x": -0.015,
+    "object_y": 0.046,
+    "target_z": 0.492,
+    "near_distance": null,
+    "floor_depth_delta": 0.009
+  }
+]
+
+[run 001 / sample 16]
+timestamp: 2026-07-10T20:06:17.966+09:00
+frame_count: 80
+object_count: 4
+vlm_inference_seconds: 1.347750
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 오른쪽 뒤쪽의 작은 물체를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      239.0,
+      202.0,
+      493.0,
+      411.0
+    ],
+    "mask_area": 33135,
+    "centroid_y": 298,
+    "object_x": -0.15,
+    "object_y": -0.039,
+    "target_z": 0.412,
+    "near_distance": null,
+    "floor_depth_delta": 0.116
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      677.0,
+      286.0,
+      897.0,
+      499.0
+    ],
+    "mask_area": 14722,
+    "centroid_y": 390,
+    "object_x": 0.108,
+    "object_y": 0.014,
+    "target_z": 0.541,
+    "near_distance": null,
+    "floor_depth_delta": -0.051
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      3.0,
+      0.0,
+      1260.0,
+      720.0
+    ],
+    "mask_area": 349384,
+    "centroid_y": 236,
+    "object_x": 0.172,
+    "object_y": -0.296,
+    "target_z": 1.676,
+    "near_distance": null,
+    "floor_depth_delta": -1.514
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      557.0,
+      397.0,
+      664.0,
+      486.0
+    ],
+    "mask_area": 7089,
+    "centroid_y": 441,
+    "object_x": -0.015,
+    "object_y": 0.046,
+    "target_z": 0.492,
+    "near_distance": null,
+    "floor_depth_delta": 0.009
+  }
+]
+
+[run 001 / sample 17]
+timestamp: 2026-07-10T20:06:21.480+09:00
+frame_count: 85
+object_count: 4
+vlm_inference_seconds: 3.325795
+cleaning_sequence_sentence: 먼저 가까운 왼쪽 앞쪽의 컵을 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 중앙에 있는 작은 물체를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      239.0,
+      201.0,
+      493.0,
+      411.0
+    ],
+    "mask_area": 33135,
+    "centroid_y": 298,
+    "object_x": -0.15,
+    "object_y": -0.039,
+    "target_z": 0.412,
+    "near_distance": null,
+    "floor_depth_delta": 0.116
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      677.0,
+      286.0,
+      897.0,
+      499.0
+    ],
+    "mask_area": 14722,
+    "centroid_y": 390,
+    "object_x": 0.108,
+    "object_y": 0.014,
+    "target_z": 0.541,
+    "near_distance": null,
+    "floor_depth_delta": -0.051
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      3.0,
+      0.0,
+      1258.0,
+      720.0
+    ],
+    "mask_area": 349384,
+    "centroid_y": 236,
+    "object_x": 0.172,
+    "object_y": -0.296,
+    "target_z": 1.676,
+    "near_distance": null,
+    "floor_depth_delta": -1.514
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      556.0,
+      397.0,
+      664.0,
+      486.0
+    ],
+    "mask_area": 7089,
+    "centroid_y": 441,
+    "object_x": -0.015,
+    "object_y": 0.046,
+    "target_z": 0.492,
+    "near_distance": null,
+    "floor_depth_delta": 0.009
+  }
+]
+
+[run 001 / sample 18]
+timestamp: 2026-07-10T20:06:28.843+09:00
+frame_count: 90
+object_count: 4
+vlm_inference_seconds: 1.326490
+cleaning_sequence_sentence: 가까운 왼쪽의 컵부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 작은 물체인 시계를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      240.0,
+      201.0,
+      493.0,
+      411.0
+    ],
+    "mask_area": 33175,
+    "centroid_y": 298,
+    "object_x": -0.15,
+    "object_y": -0.039,
+    "target_z": 0.412,
+    "near_distance": null,
+    "floor_depth_delta": 0.119
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      677.0,
+      286.0,
+      897.0,
+      499.0
+    ],
+    "mask_area": 14730,
+    "centroid_y": 389,
+    "object_x": 0.11,
+    "object_y": 0.014,
+    "target_z": 0.547,
+    "near_distance": null,
+    "floor_depth_delta": -0.05
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      3.0,
+      0.0,
+      1254.0,
+      720.0
+    ],
+    "mask_area": 342040,
+    "centroid_y": 233,
+    "object_x": 0.203,
+    "object_y": -0.306,
+    "target_z": 1.697,
+    "near_distance": null,
+    "floor_depth_delta": -1.538
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      555.0,
+      397.0,
+      664.0,
+      486.0
+    ],
+    "mask_area": 7092,
+    "centroid_y": 441,
+    "object_x": -0.016,
+    "object_y": 0.046,
+    "target_z": 0.498,
+    "near_distance": null,
+    "floor_depth_delta": 0.008
+  }
+]
+
+[run 001 / sample 19]
+timestamp: 2026-07-10T20:06:30.357+09:00
+frame_count: 95
+object_count: 4
+vlm_inference_seconds: 1.275603
+cleaning_sequence_sentence: 먼저 가까운 왼쪽의 컵부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 오른쪽 앞쪽의 작은 물체를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      240.0,
+      201.0,
+      493.0,
+      411.0
+    ],
+    "mask_area": 33175,
+    "centroid_y": 298,
+    "object_x": -0.15,
+    "object_y": -0.039,
+    "target_z": 0.412,
+    "near_distance": null,
+    "floor_depth_delta": 0.119
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      677.0,
+      286.0,
+      897.0,
+      499.0
+    ],
+    "mask_area": 14730,
+    "centroid_y": 389,
+    "object_x": 0.11,
+    "object_y": 0.014,
+    "target_z": 0.547,
+    "near_distance": null,
+    "floor_depth_delta": -0.05
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      3.0,
+      0.0,
+      1247.0,
+      720.0
+    ],
+    "mask_area": 342040,
+    "centroid_y": 233,
+    "object_x": 0.204,
+    "object_y": -0.306,
+    "target_z": 1.698,
+    "near_distance": null,
+    "floor_depth_delta": -1.539
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      556.0,
+      397.0,
+      664.0,
+      487.0
+    ],
+    "mask_area": 7092,
+    "centroid_y": 441,
+    "object_x": -0.016,
+    "object_y": 0.046,
+    "target_z": 0.498,
+    "near_distance": null,
+    "floor_depth_delta": 0.007
+  }
+]
+
+[run 001 / sample 20]
+timestamp: 2026-07-10T20:06:31.690+09:00
+frame_count: 100
+object_count: 4
+vlm_inference_seconds: 1.141911
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 작은 물체인 시계를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      240.0,
+      201.0,
+      493.0,
+      411.0
+    ],
+    "mask_area": 33175,
+    "centroid_y": 298,
+    "object_x": -0.15,
+    "object_y": -0.039,
+    "target_z": 0.412,
+    "near_distance": null,
+    "floor_depth_delta": 0.119
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      677.0,
+      286.0,
+      897.0,
+      499.0
+    ],
+    "mask_area": 14730,
+    "centroid_y": 389,
+    "object_x": 0.11,
+    "object_y": 0.014,
+    "target_z": 0.547,
+    "near_distance": null,
+    "floor_depth_delta": -0.05
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      3.0,
+      0.0,
+      1246.0,
+      720.0
+    ],
+    "mask_area": 342040,
+    "centroid_y": 233,
+    "object_x": 0.204,
+    "object_y": -0.306,
+    "target_z": 1.698,
+    "near_distance": null,
+    "floor_depth_delta": -1.539
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      556.0,
+      397.0,
+      664.0,
+      486.0
+    ],
+    "mask_area": 7092,
+    "centroid_y": 441,
+    "object_x": -0.016,
+    "object_y": 0.046,
+    "target_z": 0.498,
+    "near_distance": null,
+    "floor_depth_delta": 0.008
+  }
+]
+
+[run 001 / sample 21]
+timestamp: 2026-07-10T20:06:33.123+09:00
+frame_count: 105
+object_count: 4
+vlm_inference_seconds: 1.225680
+cleaning_sequence_sentence: 가까운 왼쪽의 컵부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 오른쪽 앞쪽의 작은 물체를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      240.0,
+      201.0,
+      493.0,
+      411.0
+    ],
+    "mask_area": 33175,
+    "centroid_y": 298,
+    "object_x": -0.15,
+    "object_y": -0.039,
+    "target_z": 0.412,
+    "near_distance": null,
+    "floor_depth_delta": 0.119
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      677.0,
+      285.0,
+      897.0,
+      498.0
+    ],
+    "mask_area": 14730,
+    "centroid_y": 389,
+    "object_x": 0.11,
+    "object_y": 0.014,
+    "target_z": 0.547,
+    "near_distance": null,
+    "floor_depth_delta": -0.05
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      3.0,
+      0.0,
+      1251.0,
+      720.0
+    ],
+    "mask_area": 342040,
+    "centroid_y": 233,
+    "object_x": 0.204,
+    "object_y": -0.306,
+    "target_z": 1.698,
+    "near_distance": null,
+    "floor_depth_delta": -1.539
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      555.0,
+      397.0,
+      664.0,
+      487.0
+    ],
+    "mask_area": 7092,
+    "centroid_y": 441,
+    "object_x": -0.016,
+    "object_y": 0.046,
+    "target_z": 0.498,
+    "near_distance": null,
+    "floor_depth_delta": 0.007
+  }
+]
+
+[run 001 / sample 22]
+timestamp: 2026-07-10T20:06:40.597+09:00
+frame_count: 110
+object_count: 4
+vlm_inference_seconds: 1.409432
+cleaning_sequence_sentence: 먼저 가까운 왼쪽 앞쪽의 컵을 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 중앙에 있는 작은 물체인 시계 순으로 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      240.0,
+      201.0,
+      493.0,
+      411.0
+    ],
+    "mask_area": 32927,
+    "centroid_y": 297,
+    "object_x": -0.145,
+    "object_y": -0.038,
+    "target_z": 0.4,
+    "near_distance": null,
+    "floor_depth_delta": 0.125
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      676.0,
+      285.0,
+      897.0,
+      499.0
+    ],
+    "mask_area": 14771,
+    "centroid_y": 389,
+    "object_x": 0.109,
+    "object_y": 0.013,
+    "target_z": 0.542,
+    "near_distance": null,
+    "floor_depth_delta": -0.049
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      556.0,
+      397.0,
+      664.0,
+      486.0
+    ],
+    "mask_area": 7093,
+    "centroid_y": 440,
+    "object_x": -0.015,
+    "object_y": 0.045,
+    "target_z": 0.493,
+    "near_distance": null,
+    "floor_depth_delta": 0.01
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      3.0,
+      0.0,
+      1238.0,
+      720.0
+    ],
+    "mask_area": 317820,
+    "centroid_y": 212,
+    "object_x": 0.269,
+    "object_y": -0.345,
+    "target_z": 1.677,
+    "near_distance": null,
+    "floor_depth_delta": -1.521
+  }
+]
+
+[run 001 / sample 23]
+timestamp: 2026-07-10T20:06:41.921+09:00
+frame_count: 115
+object_count: 4
+vlm_inference_seconds: 1.182812
+cleaning_sequence_sentence: 먼저 가까운 왼쪽의 컵을 치운 다음, 그 오른쪽에 있는 리모컨을 정리하고 마지막으로 오른쪽의 작은 물체를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      239.0,
+      201.0,
+      493.0,
+      410.0
+    ],
+    "mask_area": 32927,
+    "centroid_y": 297,
+    "object_x": -0.145,
+    "object_y": -0.038,
+    "target_z": 0.399,
+    "near_distance": null,
+    "floor_depth_delta": 0.127
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      677.0,
+      285.0,
+      897.0,
+      498.0
+    ],
+    "mask_area": 14771,
+    "centroid_y": 389,
+    "object_x": 0.109,
+    "object_y": 0.013,
+    "target_z": 0.542,
+    "near_distance": null,
+    "floor_depth_delta": -0.048
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      556.0,
+      397.0,
+      664.0,
+      486.0
+    ],
+    "mask_area": 7093,
+    "centroid_y": 440,
+    "object_x": -0.015,
+    "object_y": 0.045,
+    "target_z": 0.493,
+    "near_distance": null,
+    "floor_depth_delta": 0.01
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      3.0,
+      0.0,
+      1240.0,
+      720.0
+    ],
+    "mask_area": 317820,
+    "centroid_y": 212,
+    "object_x": 0.274,
+    "object_y": -0.348,
+    "target_z": 1.675,
+    "near_distance": null,
+    "floor_depth_delta": -1.519
+  }
+]
+
+[run 001 / sample 24]
+timestamp: 2026-07-10T20:06:49.471+09:00
+frame_count: 120
+object_count: 4
+vlm_inference_seconds: 1.479073
+cleaning_sequence_sentence: 가까운 왼쪽의 컵부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후 마지막으로 중앙의 작은 물체를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      239.0,
+      201.0,
+      493.0,
+      410.0
+    ],
+    "mask_area": 31849,
+    "centroid_y": 297,
+    "object_x": -0.159,
+    "object_y": -0.042,
+    "target_z": 0.437,
+    "near_distance": null,
+    "floor_depth_delta": 0.129
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      678.0,
+      285.0,
+      897.0,
+      498.0
+    ],
+    "mask_area": 14686,
+    "centroid_y": 388,
+    "object_x": 0.115,
+    "object_y": 0.014,
+    "target_z": 0.577,
+    "near_distance": null,
+    "floor_depth_delta": -0.051
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      555.0,
+      396.0,
+      664.0,
+      486.0
+    ],
+    "mask_area": 7078,
+    "centroid_y": 440,
+    "object_x": -0.017,
+    "object_y": 0.048,
+    "target_z": 0.523,
+    "near_distance": null,
+    "floor_depth_delta": 0.015
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      4.0,
+      0.0,
+      1118.0,
+      706.0
+    ],
+    "mask_area": 257437,
+    "centroid_y": 259,
+    "object_x": -0.325,
+    "object_y": -0.284,
+    "target_z": 1.901,
+    "near_distance": null,
+    "floor_depth_delta": -1.726
+  }
+]
+
+[run 001 / sample 25]
+timestamp: 2026-07-10T20:07:08.191+09:00
+frame_count: 125
+object_count: 3
+vlm_inference_seconds: 2.170326
+cleaning_sequence_sentence: 가까운 왼쪽 아래의 가방부터 정리하고, 그 다음 오른쪽 위의 물건을 치운 후 마지막으로 책상 위의 물건을 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      421.0,
+      17.0,
+      1272.0,
+      712.0
+    ],
+    "mask_area": 358374,
+    "centroid_y": 424,
+    "object_x": 0.242,
+    "object_y": 0.062,
+    "target_z": 0.877,
+    "near_distance": null,
+    "floor_depth_delta": 0.261
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      577.0,
+      0.0,
+      669.0,
+      64.0
+    ],
+    "mask_area": 4253,
+    "centroid_y": 25,
+    "object_x": -0.037,
+    "object_y": -1.168,
+    "target_z": 2.571,
+    "near_distance": null,
+    "floor_depth_delta": -0.02
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      0.0,
+      497.0,
+      163.0,
+      715.0
+    ],
+    "mask_area": 24102,
+    "centroid_y": 585,
+    "object_x": -1.074,
+    "object_y": 0.408,
+    "target_z": 1.442,
+    "near_distance": null,
+    "floor_depth_delta": 0.119
+  }
+]
+

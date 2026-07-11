@@ -1,0 +1,577 @@
+Ablation: without YOLO full pipeline
+run_id: 001
+started_at: 2026-07-10T18:35:51.449+09:00
+target_samples: 30
+condition: YOLO removed. Full-frame pseudo bbox is used instead.
+
+[fast stream results]
+[sample 01]
+timestamp: 2026-07-10T18:36:07.228+09:00
+frame_count: 5
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.4,
+    "centroid_y": 261,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 02]
+timestamp: 2026-07-10T18:36:16.083+09:00
+frame_count: 10
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.328,
+    "centroid_y": 257,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 03]
+timestamp: 2026-07-10T18:36:23.970+09:00
+frame_count: 15
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.336,
+    "centroid_y": 259,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 04]
+timestamp: 2026-07-10T18:36:31.855+09:00
+frame_count: 20
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.316,
+    "centroid_y": 264,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 05]
+timestamp: 2026-07-10T18:36:39.739+09:00
+frame_count: 25
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.326,
+    "centroid_y": 262,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 06]
+timestamp: 2026-07-10T18:36:47.624+09:00
+frame_count: 30
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.334,
+    "centroid_y": 258,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 07]
+timestamp: 2026-07-10T18:36:55.098+09:00
+frame_count: 35
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.323,
+    "centroid_y": 243,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 08]
+timestamp: 2026-07-10T18:37:02.778+09:00
+frame_count: 40
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.339,
+    "centroid_y": 265,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 09]
+timestamp: 2026-07-10T18:37:11.074+09:00
+frame_count: 45
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.333,
+    "centroid_y": 260,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 10]
+timestamp: 2026-07-10T18:37:20.289+09:00
+frame_count: 50
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.337,
+    "centroid_y": 255,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 11]
+timestamp: 2026-07-10T18:37:28.072+09:00
+frame_count: 55
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.334,
+    "centroid_y": 261,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 12]
+timestamp: 2026-07-10T18:37:35.856+09:00
+frame_count: 60
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.317,
+    "centroid_y": 263,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 13]
+timestamp: 2026-07-10T18:37:43.639+09:00
+frame_count: 65
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.341,
+    "centroid_y": 253,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 14]
+timestamp: 2026-07-10T18:37:51.489+09:00
+frame_count: 70
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.345,
+    "centroid_y": 262,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 15]
+timestamp: 2026-07-10T18:38:02.271+09:00
+frame_count: 75
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.328,
+    "centroid_y": 255,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 16]
+timestamp: 2026-07-10T18:38:10.365+09:00
+frame_count: 80
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.323,
+    "centroid_y": 253,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 17]
+timestamp: 2026-07-10T18:38:19.889+09:00
+frame_count: 85
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.307,
+    "centroid_y": 263,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 18]
+timestamp: 2026-07-10T18:38:27.741+09:00
+frame_count: 90
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.325,
+    "centroid_y": 264,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 19]
+timestamp: 2026-07-10T18:38:35.864+09:00
+frame_count: 95
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.315,
+    "centroid_y": 263,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 20]
+timestamp: 2026-07-10T18:38:43.544+09:00
+frame_count: 100
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.342,
+    "centroid_y": 266,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 21]
+timestamp: 2026-07-10T18:38:52.144+09:00
+frame_count: 105
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.336,
+    "centroid_y": 262,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 22]
+timestamp: 2026-07-10T18:38:59.620+09:00
+frame_count: 110
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.332,
+    "centroid_y": 264,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 23]
+timestamp: 2026-07-10T18:39:07.051+09:00
+frame_count: 115
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.333,
+    "centroid_y": 262,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 24]
+timestamp: 2026-07-10T18:39:14.878+09:00
+frame_count: 120
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.326,
+    "centroid_y": 263,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 25]
+timestamp: 2026-07-10T18:39:22.384+09:00
+frame_count: 125
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.324,
+    "centroid_y": 253,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 26]
+timestamp: 2026-07-10T18:39:30.252+09:00
+frame_count: 130
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.332,
+    "centroid_y": 261,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 27]
+timestamp: 2026-07-10T18:39:37.919+09:00
+frame_count: 135
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.326,
+    "centroid_y": 248,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 28]
+timestamp: 2026-07-10T18:39:45.595+09:00
+frame_count: 140
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.341,
+    "centroid_y": 247,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 29]
+timestamp: 2026-07-10T18:39:53.283+09:00
+frame_count: 145
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.337,
+    "centroid_y": 256,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+
+[sample 30]
+timestamp: 2026-07-10T18:40:00.990+09:00
+frame_count: 150
+object_count: 1
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 2.302,
+    "centroid_y": 254,
+    "bbox_2d": [
+      0.0,
+      0.0,
+      1279.0,
+      719.0
+    ]
+  }
+]
+

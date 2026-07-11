@@ -1,0 +1,2235 @@
+Ablation: without Geometry Layer full pipeline
+run_id: 001
+started_at: 2026-07-10T19:13:57.790+09:00
+target_samples: 30
+condition: Geometry Layer removed. Depth remains real, spatial_3d is filled with dummy zero values.
+
+[fast stream results]
+[sample 01]
+timestamp: 2026-07-10T19:14:18.618+09:00
+frame_count: 5
+sam_frame_count: 1
+object_count: 5
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 509,
+    "bbox_2d": [
+      858.0,
+      272.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      570.0,
+      308.0,
+      752.0,
+      333.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      573.0,
+      166.0,
+      778.0,
+      311.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      408.0,
+      289.0,
+      542.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      418.0,
+      528.0
+    ]
+  }
+]
+
+[sample 02]
+timestamp: 2026-07-10T19:14:30.884+09:00
+frame_count: 10
+sam_frame_count: 2
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      287.0,
+      542.0,
+      486.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      170.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 03]
+timestamp: 2026-07-10T19:14:42.828+09:00
+frame_count: 15
+sam_frame_count: 3
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      306.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      290.0,
+      541.0,
+      487.0
+    ]
+  }
+]
+
+[sample 04]
+timestamp: 2026-07-10T19:14:54.197+09:00
+frame_count: 20
+sam_frame_count: 4
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      573.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      567.0,
+      170.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      288.0,
+      541.0,
+      487.0
+    ]
+  }
+]
+
+[sample 05]
+timestamp: 2026-07-10T19:15:05.317+09:00
+frame_count: 25
+sam_frame_count: 5
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      306.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      289.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      170.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  }
+]
+
+[sample 06]
+timestamp: 2026-07-10T19:15:17.542+09:00
+frame_count: 30
+sam_frame_count: 6
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      306.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      573.0,
+      169.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 378,
+    "bbox_2d": [
+      407.0,
+      287.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      567.0,
+      170.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 07]
+timestamp: 2026-07-10T19:15:29.830+09:00
+frame_count: 35
+sam_frame_count: 7
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      272.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      306.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      290.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      170.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 08]
+timestamp: 2026-07-10T19:15:47.952+09:00
+frame_count: 40
+sam_frame_count: 8
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      306.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      778.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      289.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 232,
+    "bbox_2d": [
+      566.0,
+      170.0,
+      777.0,
+      331.0
+    ]
+  }
+]
+
+[sample 09]
+timestamp: 2026-07-10T19:15:59.630+09:00
+frame_count: 45
+sam_frame_count: 9
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      306.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      573.0,
+      167.0,
+      777.0,
+      308.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      290.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      567.0,
+      169.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 10]
+timestamp: 2026-07-10T19:16:13.145+09:00
+frame_count: 50
+sam_frame_count: 10
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      753.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      287.0,
+      541.0,
+      486.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      170.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 11]
+timestamp: 2026-07-10T19:16:25.126+09:00
+frame_count: 55
+sam_frame_count: 11
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      418.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      289.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 232,
+    "bbox_2d": [
+      567.0,
+      170.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 12]
+timestamp: 2026-07-10T19:16:37.225+09:00
+frame_count: 60
+sam_frame_count: 12
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      573.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      290.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      567.0,
+      170.0,
+      777.0,
+      331.0
+    ]
+  }
+]
+
+[sample 13]
+timestamp: 2026-07-10T19:16:49.697+09:00
+frame_count: 65
+sam_frame_count: 13
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      274.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      573.0,
+      169.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      431.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      289.0,
+      541.0,
+      486.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      567.0,
+      170.0,
+      777.0,
+      331.0
+    ]
+  }
+]
+
+[sample 14]
+timestamp: 2026-07-10T19:17:01.355+09:00
+frame_count: 70
+sam_frame_count: 14
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      712.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      306.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      292.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      170.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 15]
+timestamp: 2026-07-10T19:17:14.072+09:00
+frame_count: 75
+sam_frame_count: 15
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      272.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      288.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      267.0,
+      430.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      170.0,
+      777.0,
+      331.0
+    ]
+  }
+]
+
+[sample 16]
+timestamp: 2026-07-10T19:17:25.744+09:00
+frame_count: 80
+sam_frame_count: 16
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      267.0,
+      430.0,
+      417.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      567.0,
+      170.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      408.0,
+      289.0,
+      541.0,
+      487.0
+    ]
+  }
+]
+
+[sample 17]
+timestamp: 2026-07-10T19:17:36.803+09:00
+frame_count: 85
+sam_frame_count: 17
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      272.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      563.0,
+      305.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      269.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      290.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 18]
+timestamp: 2026-07-10T19:17:49.910+09:00
+frame_count: 90
+sam_frame_count: 18
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      573.0,
+      167.0,
+      777.0,
+      308.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      292.0,
+      542.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 19]
+timestamp: 2026-07-10T19:18:01.853+09:00
+frame_count: 95
+sam_frame_count: 19
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      569.0,
+      308.0,
+      752.0,
+      335.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      574.0,
+      167.0,
+      777.0,
+      308.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      430.0,
+      417.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      288.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      567.0,
+      170.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 20]
+timestamp: 2026-07-10T19:18:14.177+09:00
+frame_count: 100
+sam_frame_count: 20
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      272.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      306.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      289.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  }
+]
+
+[sample 21]
+timestamp: 2026-07-10T19:18:26.671+09:00
+frame_count: 105
+sam_frame_count: 21
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      305.0,
+      755.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      573.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      289.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      170.0,
+      777.0,
+      331.0
+    ]
+  }
+]
+
+[sample 22]
+timestamp: 2026-07-10T19:18:40.596+09:00
+frame_count: 110
+sam_frame_count: 22
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      568.0,
+      308.0,
+      753.0,
+      335.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      291.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      267.0,
+      430.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 232,
+    "bbox_2d": [
+      566.0,
+      170.0,
+      777.0,
+      331.0
+    ]
+  }
+]
+
+[sample 23]
+timestamp: 2026-07-10T19:18:52.473+09:00
+frame_count: 115
+sam_frame_count: 23
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      272.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      563.0,
+      305.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      573.0,
+      168.0,
+      777.0,
+      308.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      418.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      288.0,
+      542.0,
+      486.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      170.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 24]
+timestamp: 2026-07-10T19:19:03.844+09:00
+frame_count: 120
+sam_frame_count: 24
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      568.0,
+      308.0,
+      753.0,
+      335.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      288.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      169.0,
+      777.0,
+      331.0
+    ]
+  }
+]
+
+[sample 25]
+timestamp: 2026-07-10T19:19:15.618+09:00
+frame_count: 125
+sam_frame_count: 25
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      568.0,
+      308.0,
+      753.0,
+      335.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      573.0,
+      167.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      267.0,
+      430.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      170.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      408.0,
+      292.0,
+      542.0,
+      486.0
+    ]
+  }
+]
+
+[sample 26]
+timestamp: 2026-07-10T19:19:27.905+09:00
+frame_count: 130
+sam_frame_count: 26
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      568.0,
+      308.0,
+      752.0,
+      335.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      418.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      170.0,
+      777.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      290.0,
+      542.0,
+      486.0
+    ]
+  }
+]
+
+[sample 27]
+timestamp: 2026-07-10T19:19:40.361+09:00
+frame_count: 135
+sam_frame_count: 27
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      568.0,
+      308.0,
+      752.0,
+      335.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      291.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      529.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      170.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 28]
+timestamp: 2026-07-10T19:19:51.471+09:00
+frame_count: 140
+sam_frame_count: 28
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      563.0,
+      305.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      573.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      289.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      170.0,
+      776.0,
+      331.0
+    ]
+  }
+]
+
+[sample 29]
+timestamp: 2026-07-10T19:20:02.002+09:00
+frame_count: 145
+sam_frame_count: 29
+object_count: 5
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      569.0,
+      308.0,
+      753.0,
+      335.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      573.0,
+      168.0,
+      777.0,
+      309.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      288.0,
+      541.0,
+      487.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      267.0,
+      430.0,
+      416.0,
+      528.0
+    ]
+  }
+]
+
+[sample 30]
+timestamp: 2026-07-10T19:20:13.983+09:00
+frame_count: 150
+sam_frame_count: 30
+object_count: 6
+json:
+[
+  {
+    "object_id": 0,
+    "target_z": 0.0,
+    "centroid_y": 510,
+    "bbox_2d": [
+      859.0,
+      273.0,
+      1279.0,
+      711.0
+    ]
+  },
+  {
+    "object_id": 1,
+    "target_z": 0.0,
+    "centroid_y": 321,
+    "bbox_2d": [
+      564.0,
+      306.0,
+      754.0,
+      334.0
+    ]
+  },
+  {
+    "object_id": 2,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      572.0,
+      168.0,
+      777.0,
+      310.0
+    ]
+  },
+  {
+    "object_id": 3,
+    "target_z": 0.0,
+    "centroid_y": 477,
+    "bbox_2d": [
+      268.0,
+      429.0,
+      417.0,
+      528.0
+    ]
+  },
+  {
+    "object_id": 4,
+    "target_z": 0.0,
+    "centroid_y": 231,
+    "bbox_2d": [
+      566.0,
+      170.0,
+      776.0,
+      331.0
+    ]
+  },
+  {
+    "object_id": 5,
+    "target_z": 0.0,
+    "centroid_y": 379,
+    "bbox_2d": [
+      407.0,
+      290.0,
+      541.0,
+      486.0
+    ]
+  }
+]
+

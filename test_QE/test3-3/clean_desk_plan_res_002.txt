@@ -1,0 +1,3233 @@
+clean_desk_plan: 좌표 기반 책상 정리 시퀀스 한 문장 생성 테스트
+run_id: 002
+started_at: 2026-07-10T20:08:05.950+09:00
+target_samples: 30
+
+[run 002 / sample 01]
+timestamp: 2026-07-10T20:08:20.146+09:00
+frame_count: 5
+object_count: 5
+vlm_inference_seconds: 2.265397
+cleaning_sequence_sentence: 먼저 가까운 오른쪽 앞쪽의 물병을 치우고, 그 다음 왼쪽의 컵을 정리한 후, 리모컨을 치우고 마지막으로 가방을 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      256.0,
+      652.0,
+      515.0
+    ],
+    "mask_area": 19946,
+    "centroid_y": 388,
+    "object_x": -0.03,
+    "object_y": 0.014,
+    "target_z": 0.601,
+    "near_distance": null,
+    "floor_depth_delta": -0.007
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      701.0,
+      446.0,
+      784.0,
+      647.0
+    ],
+    "mask_area": 13049,
+    "centroid_y": 549,
+    "object_x": 0.076,
+    "object_y": 0.133,
+    "target_z": 0.566,
+    "near_distance": null,
+    "floor_depth_delta": -0.088
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      666.0,
+      81.0,
+      1060.0,
+      434.0
+    ],
+    "mask_area": 98490,
+    "centroid_y": 260,
+    "object_x": 0.33,
+    "object_y": -0.163,
+    "target_z": 1.122,
+    "near_distance": null,
+    "floor_depth_delta": -0.464
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      262.0,
+      367.0,
+      470.0,
+      550.0
+    ],
+    "mask_area": 22383,
+    "centroid_y": 450,
+    "object_x": -0.188,
+    "object_y": 0.055,
+    "target_z": 0.524,
+    "near_distance": null,
+    "floor_depth_delta": 0.05
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      143.0,
+      367.0,
+      1191.0,
+      709.0
+    ],
+    "mask_area": 217138,
+    "centroid_y": 576,
+    "object_x": 0.027,
+    "object_y": 0.151,
+    "target_z": 0.558,
+    "near_distance": null,
+    "floor_depth_delta": -0.232
+  }
+]
+
+[run 002 / sample 02]
+timestamp: 2026-07-10T20:08:28.118+09:00
+frame_count: 10
+object_count: 6
+vlm_inference_seconds: 1.845122
+cleaning_sequence_sentence: 가까운 오른쪽 앞쪽의 물병부터 치우고, 그 다음에 리모컨을 정리한 후, 컵을 치우고 마지막으로 가방을 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      254.0,
+      652.0,
+      513.0
+    ],
+    "mask_area": 20013,
+    "centroid_y": 387,
+    "object_x": -0.028,
+    "object_y": 0.013,
+    "target_z": 0.567,
+    "near_distance": null,
+    "floor_depth_delta": -0.018
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      701.0,
+      445.0,
+      784.0,
+      646.0
+    ],
+    "mask_area": 11857,
+    "centroid_y": 547,
+    "object_x": 0.072,
+    "object_y": 0.122,
+    "target_z": 0.523,
+    "near_distance": null,
+    "floor_depth_delta": -0.09
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      665.0,
+      81.0,
+      1060.0,
+      434.0
+    ],
+    "mask_area": 98745,
+    "centroid_y": 259,
+    "object_x": 0.334,
+    "object_y": -0.166,
+    "target_z": 1.137,
+    "near_distance": null,
+    "floor_depth_delta": -0.516
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      263.0,
+      364.0,
+      469.0,
+      551.0
+    ],
+    "mask_area": 22171,
+    "centroid_y": 450,
+    "object_x": -0.179,
+    "object_y": 0.053,
+    "target_z": 0.499,
+    "near_distance": null,
+    "floor_depth_delta": 0.03
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      145.0,
+      366.0,
+      1199.0,
+      707.0
+    ],
+    "mask_area": 219357,
+    "centroid_y": 575,
+    "object_x": 0.024,
+    "object_y": 0.139,
+    "target_z": 0.516,
+    "near_distance": null,
+    "floor_depth_delta": -0.328
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      437.0,
+      1.0,
+      709.0,
+      177.0
+    ],
+    "mask_area": 22664,
+    "centroid_y": 66,
+    "object_x": -0.216,
+    "object_y": -0.877,
+    "target_z": 2.19,
+    "near_distance": null,
+    "floor_depth_delta": 0.072
+  }
+]
+
+[run 002 / sample 03]
+timestamp: 2026-07-10T20:08:35.800+09:00
+frame_count: 15
+object_count: 6
+vlm_inference_seconds: 1.645378
+cleaning_sequence_sentence: 가까운 오른쪽 앞쪽의 물병부터 치우고, 그 다음에 컵을 정리한 후, 리모컨을 치우고 마지막으로 가방을 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      254.0,
+      652.0,
+      512.0
+    ],
+    "mask_area": 19986,
+    "centroid_y": 386,
+    "object_x": -0.029,
+    "object_y": 0.012,
+    "target_z": 0.573,
+    "near_distance": null,
+    "floor_depth_delta": -0.024
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      701.0,
+      444.0,
+      784.0,
+      646.0
+    ],
+    "mask_area": 11948,
+    "centroid_y": 547,
+    "object_x": 0.071,
+    "object_y": 0.121,
+    "target_z": 0.521,
+    "near_distance": null,
+    "floor_depth_delta": -0.091
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      665.0,
+      79.0,
+      1060.0,
+      433.0
+    ],
+    "mask_area": 98517,
+    "centroid_y": 258,
+    "object_x": 0.329,
+    "object_y": -0.166,
+    "target_z": 1.122,
+    "near_distance": null,
+    "floor_depth_delta": -0.506
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      263.0,
+      365.0,
+      469.0,
+      550.0
+    ],
+    "mask_area": 22691,
+    "centroid_y": 449,
+    "object_x": -0.18,
+    "object_y": 0.052,
+    "target_z": 0.5,
+    "near_distance": null,
+    "floor_depth_delta": 0.028
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      434.0,
+      1.0,
+      707.0,
+      176.0
+    ],
+    "mask_area": 21698,
+    "centroid_y": 65,
+    "object_x": -0.211,
+    "object_y": -0.873,
+    "target_z": 2.174,
+    "near_distance": null,
+    "floor_depth_delta": 0.082
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      141.0,
+      364.0,
+      1191.0,
+      707.0
+    ],
+    "mask_area": 219831,
+    "centroid_y": 575,
+    "object_x": 0.024,
+    "object_y": 0.138,
+    "target_z": 0.511,
+    "near_distance": null,
+    "floor_depth_delta": -0.212
+  }
+]
+
+[run 002 / sample 04]
+timestamp: 2026-07-10T20:08:43.174+09:00
+frame_count: 20
+object_count: 7
+vlm_inference_seconds: 1.267017
+cleaning_sequence_sentence: 가까운 오른쪽 앞쪽의 리모컨부터 치우고, 그 다음 물병, 컵 순으로 정리한 후, 가방은 마지막에 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      253.0,
+      652.0,
+      512.0
+    ],
+    "mask_area": 20037,
+    "centroid_y": 386,
+    "object_x": -0.029,
+    "object_y": 0.012,
+    "target_z": 0.578,
+    "near_distance": null,
+    "floor_depth_delta": -0.023
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      701.0,
+      445.0,
+      784.0,
+      646.0
+    ],
+    "mask_area": 12026,
+    "centroid_y": 546,
+    "object_x": 0.072,
+    "object_y": 0.122,
+    "target_z": 0.529,
+    "near_distance": null,
+    "floor_depth_delta": -0.091
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      665.0,
+      78.0,
+      1060.0,
+      433.0
+    ],
+    "mask_area": 98760,
+    "centroid_y": 258,
+    "object_x": 0.328,
+    "object_y": -0.165,
+    "target_z": 1.116,
+    "near_distance": null,
+    "floor_depth_delta": -0.494
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      263.0,
+      364.0,
+      469.0,
+      549.0
+    ],
+    "mask_area": 22737,
+    "centroid_y": 449,
+    "object_x": -0.181,
+    "object_y": 0.052,
+    "target_z": 0.503,
+    "near_distance": null,
+    "floor_depth_delta": 0.032
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      433.0,
+      1.0,
+      707.0,
+      175.0
+    ],
+    "mask_area": 20917,
+    "centroid_y": 68,
+    "object_x": -0.208,
+    "object_y": -0.864,
+    "target_z": 2.173,
+    "near_distance": null,
+    "floor_depth_delta": 0.084
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      144.0,
+      363.0,
+      1179.0,
+      707.0
+    ],
+    "mask_area": 220007,
+    "centroid_y": 575,
+    "object_x": 0.024,
+    "object_y": 0.14,
+    "target_z": 0.517,
+    "near_distance": null,
+    "floor_depth_delta": -0.222
+  },
+  {
+    "object_id": 6,
+    "bbox_2d": [
+      0.0,
+      2.0,
+      253.0,
+      546.0
+    ],
+    "mask_area": 54705,
+    "centroid_y": 143,
+    "object_x": -0.813,
+    "object_y": -0.341,
+    "target_z": 1.142,
+    "near_distance": null,
+    "floor_depth_delta": 0.015
+  }
+]
+
+[run 002 / sample 05]
+timestamp: 2026-07-10T20:08:50.752+09:00
+frame_count: 25
+object_count: 7
+vlm_inference_seconds: 1.447363
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 물컵부터 치우고, 그 다음 오른쪽의 물병을 정리한 후, 리모컨을 치우고 마지막으로 가방을 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      252.0,
+      652.0,
+      512.0
+    ],
+    "mask_area": 20053,
+    "centroid_y": 386,
+    "object_x": -0.028,
+    "object_y": 0.012,
+    "target_z": 0.571,
+    "near_distance": null,
+    "floor_depth_delta": -0.027
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      666.0,
+      78.0,
+      1060.0,
+      433.0
+    ],
+    "mask_area": 98873,
+    "centroid_y": 257,
+    "object_x": 0.328,
+    "object_y": -0.166,
+    "target_z": 1.117,
+    "near_distance": null,
+    "floor_depth_delta": -0.506
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      701.0,
+      444.0,
+      784.0,
+      645.0
+    ],
+    "mask_area": 11902,
+    "centroid_y": 546,
+    "object_x": 0.072,
+    "object_y": 0.12,
+    "target_z": 0.519,
+    "near_distance": null,
+    "floor_depth_delta": -0.093
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      263.0,
+      364.0,
+      469.0,
+      549.0
+    ],
+    "mask_area": 23798,
+    "centroid_y": 448,
+    "object_x": -0.178,
+    "object_y": 0.051,
+    "target_z": 0.495,
+    "near_distance": null,
+    "floor_depth_delta": 0.031
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      435.0,
+      2.0,
+      705.0,
+      175.0
+    ],
+    "mask_area": 27440,
+    "centroid_y": 59,
+    "object_x": -0.204,
+    "object_y": -0.907,
+    "target_z": 2.216,
+    "near_distance": null,
+    "floor_depth_delta": 0.05
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      0.0,
+      2.0,
+      252.0,
+      545.0
+    ],
+    "mask_area": 54630,
+    "centroid_y": 143,
+    "object_x": -0.825,
+    "object_y": -0.346,
+    "target_z": 1.159,
+    "near_distance": null,
+    "floor_depth_delta": -0.001
+  },
+  {
+    "object_id": 6,
+    "bbox_2d": [
+      143.0,
+      362.0,
+      1183.0,
+      707.0
+    ],
+    "mask_area": 220579,
+    "centroid_y": 575,
+    "object_x": 0.023,
+    "object_y": 0.137,
+    "target_z": 0.507,
+    "near_distance": null,
+    "floor_depth_delta": -0.238
+  }
+]
+
+[run 002 / sample 06]
+timestamp: 2026-07-10T20:08:58.054+09:00
+frame_count: 30
+object_count: 7
+vlm_inference_seconds: 1.193368
+cleaning_sequence_sentence: 가까운 오른쪽 앞쪽의 물병부터 치우고, 그 다음에 컵과 리모컨을 정리한 후, 마지막으로 가방을 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      252.0,
+      652.0,
+      512.0
+    ],
+    "mask_area": 20015,
+    "centroid_y": 385,
+    "object_x": -0.029,
+    "object_y": 0.011,
+    "target_z": 0.581,
+    "near_distance": null,
+    "floor_depth_delta": -0.032
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      664.0,
+      77.0,
+      1060.0,
+      433.0
+    ],
+    "mask_area": 98734,
+    "centroid_y": 257,
+    "object_x": 0.327,
+    "object_y": -0.166,
+    "target_z": 1.113,
+    "near_distance": null,
+    "floor_depth_delta": -0.5
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      701.0,
+      443.0,
+      784.0,
+      645.0
+    ],
+    "mask_area": 11958,
+    "centroid_y": 546,
+    "object_x": 0.072,
+    "object_y": 0.121,
+    "target_z": 0.523,
+    "near_distance": null,
+    "floor_depth_delta": -0.091
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      263.0,
+      363.0,
+      469.0,
+      549.0
+    ],
+    "mask_area": 23519,
+    "centroid_y": 448,
+    "object_x": -0.181,
+    "object_y": 0.051,
+    "target_z": 0.501,
+    "near_distance": null,
+    "floor_depth_delta": 0.03
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      440.0,
+      1.0,
+      707.0,
+      175.0
+    ],
+    "mask_area": 24886,
+    "centroid_y": 61,
+    "object_x": -0.202,
+    "object_y": -0.892,
+    "target_z": 2.193,
+    "near_distance": null,
+    "floor_depth_delta": 0.076
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      140.0,
+      362.0,
+      1175.0,
+      708.0
+    ],
+    "mask_area": 220747,
+    "centroid_y": 574,
+    "object_x": 0.024,
+    "object_y": 0.137,
+    "target_z": 0.512,
+    "near_distance": null,
+    "floor_depth_delta": -0.128
+  },
+  {
+    "object_id": 6,
+    "bbox_2d": [
+      0.0,
+      2.0,
+      252.0,
+      546.0
+    ],
+    "mask_area": 54811,
+    "centroid_y": 143,
+    "object_x": -0.843,
+    "object_y": -0.354,
+    "target_z": 1.183,
+    "near_distance": null,
+    "floor_depth_delta": -0.024
+  }
+]
+
+[run 002 / sample 07]
+timestamp: 2026-07-10T20:08:59.558+09:00
+frame_count: 35
+object_count: 7
+vlm_inference_seconds: 1.320143
+cleaning_sequence_sentence: 가까운 오른쪽 앞쪽의 물병부터 치우고, 그 다음에 리모컨을 정리한 후, 컵을 치우고 마지막으로 가방을 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      252.0,
+      652.0,
+      512.0
+    ],
+    "mask_area": 20015,
+    "centroid_y": 385,
+    "object_x": -0.029,
+    "object_y": 0.011,
+    "target_z": 0.581,
+    "near_distance": null,
+    "floor_depth_delta": -0.032
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      666.0,
+      78.0,
+      1061.0,
+      432.0
+    ],
+    "mask_area": 98734,
+    "centroid_y": 257,
+    "object_x": 0.327,
+    "object_y": -0.166,
+    "target_z": 1.113,
+    "near_distance": null,
+    "floor_depth_delta": -0.498
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      701.0,
+      443.0,
+      784.0,
+      645.0
+    ],
+    "mask_area": 11958,
+    "centroid_y": 546,
+    "object_x": 0.072,
+    "object_y": 0.121,
+    "target_z": 0.523,
+    "near_distance": null,
+    "floor_depth_delta": -0.091
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      263.0,
+      364.0,
+      469.0,
+      549.0
+    ],
+    "mask_area": 23519,
+    "centroid_y": 448,
+    "object_x": -0.181,
+    "object_y": 0.051,
+    "target_z": 0.501,
+    "near_distance": null,
+    "floor_depth_delta": 0.03
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      436.0,
+      2.0,
+      705.0,
+      175.0
+    ],
+    "mask_area": 24886,
+    "centroid_y": 61,
+    "object_x": -0.202,
+    "object_y": -0.892,
+    "target_z": 2.193,
+    "near_distance": null,
+    "floor_depth_delta": 0.076
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      140.0,
+      361.0,
+      1182.0,
+      708.0
+    ],
+    "mask_area": 220747,
+    "centroid_y": 574,
+    "object_x": 0.024,
+    "object_y": 0.137,
+    "target_z": 0.512,
+    "near_distance": null,
+    "floor_depth_delta": -0.128
+  },
+  {
+    "object_id": 6,
+    "bbox_2d": [
+      0.0,
+      2.0,
+      250.0,
+      546.0
+    ],
+    "mask_area": 54811,
+    "centroid_y": 143,
+    "object_x": -0.843,
+    "object_y": -0.354,
+    "target_z": 1.184,
+    "near_distance": null,
+    "floor_depth_delta": -0.024
+  }
+]
+
+[run 002 / sample 08]
+timestamp: 2026-07-10T20:09:06.846+09:00
+frame_count: 40
+object_count: 6
+vlm_inference_seconds: 1.273794
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 물병을 정리한 후, 마지막으로 리모컨을 치우세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      252.0,
+      652.0,
+      512.0
+    ],
+    "mask_area": 20091,
+    "centroid_y": 385,
+    "object_x": -0.029,
+    "object_y": 0.011,
+    "target_z": 0.574,
+    "near_distance": null,
+    "floor_depth_delta": -0.028
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      665.0,
+      77.0,
+      1060.0,
+      433.0
+    ],
+    "mask_area": 98916,
+    "centroid_y": 257,
+    "object_x": 0.325,
+    "object_y": -0.165,
+    "target_z": 1.108,
+    "near_distance": null,
+    "floor_depth_delta": -0.495
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      701.0,
+      444.0,
+      785.0,
+      645.0
+    ],
+    "mask_area": 12014,
+    "centroid_y": 545,
+    "object_x": 0.072,
+    "object_y": 0.12,
+    "target_z": 0.522,
+    "near_distance": null,
+    "floor_depth_delta": -0.091
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      263.0,
+      364.0,
+      469.0,
+      549.0
+    ],
+    "mask_area": 23001,
+    "centroid_y": 448,
+    "object_x": -0.18,
+    "object_y": 0.051,
+    "target_z": 0.501,
+    "near_distance": null,
+    "floor_depth_delta": 0.027
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      439.0,
+      2.0,
+      705.0,
+      175.0
+    ],
+    "mask_area": 25018,
+    "centroid_y": 61,
+    "object_x": -0.207,
+    "object_y": -0.888,
+    "target_z": 2.185,
+    "near_distance": null,
+    "floor_depth_delta": 0.07
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      141.0,
+      361.0,
+      1190.0,
+      707.0
+    ],
+    "mask_area": 220637,
+    "centroid_y": 574,
+    "object_x": 0.024,
+    "object_y": 0.137,
+    "target_z": 0.51,
+    "near_distance": null,
+    "floor_depth_delta": -0.291
+  }
+]
+
+[run 002 / sample 09]
+timestamp: 2026-07-10T20:09:14.203+09:00
+frame_count: 45
+object_count: 6
+vlm_inference_seconds: 1.365869
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 물병을 정리한 후, 리모컨을 치우고 마지막으로 가방을 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      252.0,
+      652.0,
+      512.0
+    ],
+    "mask_area": 20047,
+    "centroid_y": 385,
+    "object_x": -0.029,
+    "object_y": 0.011,
+    "target_z": 0.578,
+    "near_distance": null,
+    "floor_depth_delta": -0.027
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      664.0,
+      78.0,
+      1061.0,
+      432.0
+    ],
+    "mask_area": 99132,
+    "centroid_y": 256,
+    "object_x": 0.327,
+    "object_y": -0.167,
+    "target_z": 1.112,
+    "near_distance": null,
+    "floor_depth_delta": -0.492
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      263.0,
+      364.0,
+      469.0,
+      549.0
+    ],
+    "mask_area": 22133,
+    "centroid_y": 448,
+    "object_x": -0.182,
+    "object_y": 0.052,
+    "target_z": 0.508,
+    "near_distance": null,
+    "floor_depth_delta": 0.025
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      443.0,
+      784.0,
+      645.0
+    ],
+    "mask_area": 12349,
+    "centroid_y": 545,
+    "object_x": 0.072,
+    "object_y": 0.121,
+    "target_z": 0.528,
+    "near_distance": null,
+    "floor_depth_delta": -0.095
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      436.0,
+      1.0,
+      705.0,
+      175.0
+    ],
+    "mask_area": 23824,
+    "centroid_y": 62,
+    "object_x": -0.213,
+    "object_y": -0.902,
+    "target_z": 2.223,
+    "near_distance": null,
+    "floor_depth_delta": 0.046
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      142.0,
+      361.0,
+      1171.0,
+      708.0
+    ],
+    "mask_area": 220721,
+    "centroid_y": 574,
+    "object_x": 0.024,
+    "object_y": 0.138,
+    "target_z": 0.515,
+    "near_distance": null,
+    "floor_depth_delta": -0.278
+  }
+]
+
+[run 002 / sample 10]
+timestamp: 2026-07-10T20:09:21.584+09:00
+frame_count: 50
+object_count: 7
+vlm_inference_seconds: 1.210642
+cleaning_sequence_sentence: 가까운 오른쪽 앞쪽의 물병부터 치우고, 그 다음에 리모컨을 정리한 후, 컵을 치우고 마지막으로 가방을 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      252.0,
+      652.0,
+      512.0
+    ],
+    "mask_area": 20038,
+    "centroid_y": 385,
+    "object_x": -0.029,
+    "object_y": 0.011,
+    "target_z": 0.582,
+    "near_distance": null,
+    "floor_depth_delta": -0.027
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      664.0,
+      76.0,
+      1060.0,
+      431.0
+    ],
+    "mask_area": 99091,
+    "centroid_y": 256,
+    "object_x": 0.324,
+    "object_y": -0.166,
+    "target_z": 1.104,
+    "near_distance": null,
+    "floor_depth_delta": -0.481
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      701.0,
+      443.0,
+      784.0,
+      645.0
+    ],
+    "mask_area": 12002,
+    "centroid_y": 545,
+    "object_x": 0.073,
+    "object_y": 0.122,
+    "target_z": 0.53,
+    "near_distance": null,
+    "floor_depth_delta": -0.093
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      263.0,
+      363.0,
+      469.0,
+      548.0
+    ],
+    "mask_area": 23239,
+    "centroid_y": 447,
+    "object_x": -0.184,
+    "object_y": 0.052,
+    "target_z": 0.509,
+    "near_distance": null,
+    "floor_depth_delta": 0.03
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      139.0,
+      361.0,
+      1182.0,
+      708.0
+    ],
+    "mask_area": 221136,
+    "centroid_y": 574,
+    "object_x": 0.024,
+    "object_y": 0.139,
+    "target_z": 0.518,
+    "near_distance": null,
+    "floor_depth_delta": -0.258
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      440.0,
+      2.0,
+      705.0,
+      175.0
+    ],
+    "mask_area": 20276,
+    "centroid_y": 65,
+    "object_x": -0.208,
+    "object_y": -0.87,
+    "target_z": 2.166,
+    "near_distance": null,
+    "floor_depth_delta": 0.068
+  },
+  {
+    "object_id": 6,
+    "bbox_2d": [
+      0.0,
+      2.0,
+      250.0,
+      545.0
+    ],
+    "mask_area": 54555,
+    "centroid_y": 144,
+    "object_x": -0.808,
+    "object_y": -0.338,
+    "target_z": 1.135,
+    "near_distance": null,
+    "floor_depth_delta": 0.039
+  }
+]
+
+[run 002 / sample 11]
+timestamp: 2026-07-10T20:09:28.947+09:00
+frame_count: 55
+object_count: 7
+vlm_inference_seconds: 1.265639
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 물컵부터 치우고, 그 다음 오른쪽의 물병을 정리한 후, 마지막으로 리모컨을 치우세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      251.0,
+      652.0,
+      512.0
+    ],
+    "mask_area": 20061,
+    "centroid_y": 384,
+    "object_x": -0.029,
+    "object_y": 0.011,
+    "target_z": 0.582,
+    "near_distance": null,
+    "floor_depth_delta": -0.026
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      664.0,
+      76.0,
+      1061.0,
+      431.0
+    ],
+    "mask_area": 99025,
+    "centroid_y": 256,
+    "object_x": 0.326,
+    "object_y": -0.167,
+    "target_z": 1.109,
+    "near_distance": null,
+    "floor_depth_delta": -0.483
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      263.0,
+      363.0,
+      469.0,
+      548.0
+    ],
+    "mask_area": 23892,
+    "centroid_y": 447,
+    "object_x": -0.184,
+    "object_y": 0.052,
+    "target_z": 0.511,
+    "near_distance": null,
+    "floor_depth_delta": 0.027
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      442.0,
+      784.0,
+      645.0
+    ],
+    "mask_area": 11941,
+    "centroid_y": 545,
+    "object_x": 0.073,
+    "object_y": 0.122,
+    "target_z": 0.532,
+    "near_distance": null,
+    "floor_depth_delta": -0.096
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      0.0,
+      2.0,
+      249.0,
+      546.0
+    ],
+    "mask_area": 54289,
+    "centroid_y": 143,
+    "object_x": -0.839,
+    "object_y": -0.353,
+    "target_z": 1.18,
+    "near_distance": null,
+    "floor_depth_delta": 0.001
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      142.0,
+      361.0,
+      1172.0,
+      708.0
+    ],
+    "mask_area": 221514,
+    "centroid_y": 574,
+    "object_x": 0.024,
+    "object_y": 0.139,
+    "target_z": 0.518,
+    "near_distance": null,
+    "floor_depth_delta": -0.228
+  },
+  {
+    "object_id": 6,
+    "bbox_2d": [
+      441.0,
+      2.0,
+      704.0,
+      175.0
+    ],
+    "mask_area": 27166,
+    "centroid_y": 59,
+    "object_x": -0.209,
+    "object_y": -0.918,
+    "target_z": 2.243,
+    "near_distance": null,
+    "floor_depth_delta": 0.028
+  }
+]
+
+[run 002 / sample 12]
+timestamp: 2026-07-10T20:09:36.319+09:00
+frame_count: 60
+object_count: 5
+vlm_inference_seconds: 1.325043
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 물병을 정리한 후, 마지막으로 원격 제어기를 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      547.0,
+      250.0,
+      652.0,
+      511.0
+    ],
+    "mask_area": 20014,
+    "centroid_y": 384,
+    "object_x": -0.028,
+    "object_y": 0.01,
+    "target_z": 0.555,
+    "near_distance": null,
+    "floor_depth_delta": -0.019
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      262.0,
+      362.0,
+      469.0,
+      548.0
+    ],
+    "mask_area": 23982,
+    "centroid_y": 447,
+    "object_x": -0.176,
+    "object_y": 0.049,
+    "target_z": 0.488,
+    "near_distance": null,
+    "floor_depth_delta": 0.02
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      667.0,
+      75.0,
+      1060.0,
+      431.0
+    ],
+    "mask_area": 98955,
+    "centroid_y": 256,
+    "object_x": 0.309,
+    "object_y": -0.158,
+    "target_z": 1.053,
+    "near_distance": null,
+    "floor_depth_delta": -0.438
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      443.0,
+      784.0,
+      645.0
+    ],
+    "mask_area": 11935,
+    "centroid_y": 544,
+    "object_x": 0.071,
+    "object_y": 0.117,
+    "target_z": 0.511,
+    "near_distance": null,
+    "floor_depth_delta": -0.101
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      51.0,
+      158.0,
+      1171.0,
+      705.0
+    ],
+    "mask_area": 147317,
+    "centroid_y": 420,
+    "object_x": -0.638,
+    "object_y": 0.109,
+    "target_z": 1.637,
+    "near_distance": null,
+    "floor_depth_delta": -1.242
+  }
+]
+
+[run 002 / sample 13]
+timestamp: 2026-07-10T20:09:43.691+09:00
+frame_count: 65
+object_count: 6
+vlm_inference_seconds: 1.337126
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 물병을 정리한 후, 마지막으로 리모컨을 치우세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      251.0,
+      652.0,
+      512.0
+    ],
+    "mask_area": 20039,
+    "centroid_y": 384,
+    "object_x": -0.029,
+    "object_y": 0.01,
+    "target_z": 0.572,
+    "near_distance": null,
+    "floor_depth_delta": -0.024
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      665.0,
+      76.0,
+      1060.0,
+      431.0
+    ],
+    "mask_area": 99108,
+    "centroid_y": 256,
+    "object_x": 0.324,
+    "object_y": -0.166,
+    "target_z": 1.103,
+    "near_distance": null,
+    "floor_depth_delta": -0.485
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      263.0,
+      362.0,
+      468.0,
+      548.0
+    ],
+    "mask_area": 22885,
+    "centroid_y": 447,
+    "object_x": -0.181,
+    "object_y": 0.051,
+    "target_z": 0.502,
+    "near_distance": null,
+    "floor_depth_delta": 0.029
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      442.0,
+      785.0,
+      644.0
+    ],
+    "mask_area": 12054,
+    "centroid_y": 545,
+    "object_x": 0.072,
+    "object_y": 0.121,
+    "target_z": 0.527,
+    "near_distance": null,
+    "floor_depth_delta": -0.098
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      433.0,
+      2.0,
+      704.0,
+      174.0
+    ],
+    "mask_area": 24553,
+    "centroid_y": 60,
+    "object_x": -0.211,
+    "object_y": -0.898,
+    "target_z": 2.2,
+    "near_distance": null,
+    "floor_depth_delta": 0.058
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      140.0,
+      361.0,
+      1190.0,
+      707.0
+    ],
+    "mask_area": 221433,
+    "centroid_y": 574,
+    "object_x": 0.016,
+    "object_y": 0.136,
+    "target_z": 0.521,
+    "near_distance": null,
+    "floor_depth_delta": -0.229
+  }
+]
+
+[run 002 / sample 14]
+timestamp: 2026-07-10T20:09:51.067+09:00
+frame_count: 70
+object_count: 6
+vlm_inference_seconds: 1.215019
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 물병을 정리한 후, 마지막으로 리모컨을 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      664.0,
+      75.0,
+      1060.0,
+      431.0
+    ],
+    "mask_area": 99170,
+    "centroid_y": 255,
+    "object_x": 0.323,
+    "object_y": -0.167,
+    "target_z": 1.101,
+    "near_distance": null,
+    "floor_depth_delta": -0.487
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      546.0,
+      251.0,
+      652.0,
+      512.0
+    ],
+    "mask_area": 20098,
+    "centroid_y": 384,
+    "object_x": -0.028,
+    "object_y": 0.01,
+    "target_z": 0.568,
+    "near_distance": null,
+    "floor_depth_delta": -0.022
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      262.0,
+      363.0,
+      468.0,
+      548.0
+    ],
+    "mask_area": 21684,
+    "centroid_y": 447,
+    "object_x": -0.18,
+    "object_y": 0.051,
+    "target_z": 0.502,
+    "near_distance": null,
+    "floor_depth_delta": 0.026
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      442.0,
+      785.0,
+      644.0
+    ],
+    "mask_area": 12206,
+    "centroid_y": 545,
+    "object_x": 0.072,
+    "object_y": 0.121,
+    "target_z": 0.524,
+    "near_distance": null,
+    "floor_depth_delta": -0.097
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      140.0,
+      361.0,
+      1188.0,
+      707.0
+    ],
+    "mask_area": 221658,
+    "centroid_y": 574,
+    "object_x": 0.024,
+    "object_y": 0.136,
+    "target_z": 0.508,
+    "near_distance": null,
+    "floor_depth_delta": -0.252
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      441.0,
+      2.0,
+      704.0,
+      174.0
+    ],
+    "mask_area": 25473,
+    "centroid_y": 59,
+    "object_x": -0.207,
+    "object_y": -0.907,
+    "target_z": 2.215,
+    "near_distance": null,
+    "floor_depth_delta": 0.051
+  }
+]
+
+[run 002 / sample 15]
+timestamp: 2026-07-10T20:09:58.780+09:00
+frame_count: 75
+object_count: 6
+vlm_inference_seconds: 1.520382
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 물병부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 컵을 치우세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      251.0,
+      652.0,
+      511.0
+    ],
+    "mask_area": 20096,
+    "centroid_y": 384,
+    "object_x": -0.029,
+    "object_y": 0.011,
+    "target_z": 0.582,
+    "near_distance": null,
+    "floor_depth_delta": -0.025
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      665.0,
+      75.0,
+      1060.0,
+      431.0
+    ],
+    "mask_area": 99005,
+    "centroid_y": 255,
+    "object_x": 0.324,
+    "object_y": -0.167,
+    "target_z": 1.102,
+    "near_distance": null,
+    "floor_depth_delta": -0.476
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      263.0,
+      363.0,
+      468.0,
+      548.0
+    ],
+    "mask_area": 22789,
+    "centroid_y": 447,
+    "object_x": -0.183,
+    "object_y": 0.051,
+    "target_z": 0.509,
+    "near_distance": null,
+    "floor_depth_delta": 0.028
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      441.0,
+      785.0,
+      644.0
+    ],
+    "mask_area": 12193,
+    "centroid_y": 544,
+    "object_x": 0.073,
+    "object_y": 0.123,
+    "target_z": 0.536,
+    "near_distance": null,
+    "floor_depth_delta": -0.1
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      141.0,
+      360.0,
+      1180.0,
+      707.0
+    ],
+    "mask_area": 221683,
+    "centroid_y": 574,
+    "object_x": 0.025,
+    "object_y": 0.139,
+    "target_z": 0.518,
+    "near_distance": null,
+    "floor_depth_delta": -0.222
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      435.0,
+      2.0,
+      704.0,
+      174.0
+    ],
+    "mask_area": 25386,
+    "centroid_y": 59,
+    "object_x": -0.213,
+    "object_y": -0.908,
+    "target_z": 2.217,
+    "near_distance": null,
+    "floor_depth_delta": 0.059
+  }
+]
+
+[run 002 / sample 16]
+timestamp: 2026-07-10T20:10:06.320+09:00
+frame_count: 80
+object_count: 7
+vlm_inference_seconds: 1.428780
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 물병부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 백팩을 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      251.0,
+      652.0,
+      512.0
+    ],
+    "mask_area": 20091,
+    "centroid_y": 384,
+    "object_x": -0.029,
+    "object_y": 0.011,
+    "target_z": 0.576,
+    "near_distance": null,
+    "floor_depth_delta": -0.029
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      664.0,
+      76.0,
+      1061.0,
+      430.0
+    ],
+    "mask_area": 99144,
+    "centroid_y": 255,
+    "object_x": 0.323,
+    "object_y": -0.167,
+    "target_z": 1.099,
+    "near_distance": null,
+    "floor_depth_delta": -0.484
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      262.0,
+      362.0,
+      468.0,
+      547.0
+    ],
+    "mask_area": 23644,
+    "centroid_y": 447,
+    "object_x": -0.181,
+    "object_y": 0.051,
+    "target_z": 0.501,
+    "near_distance": null,
+    "floor_depth_delta": 0.029
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      441.0,
+      784.0,
+      643.0
+    ],
+    "mask_area": 11909,
+    "centroid_y": 544,
+    "object_x": 0.073,
+    "object_y": 0.12,
+    "target_z": 0.525,
+    "near_distance": null,
+    "floor_depth_delta": -0.098
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      140.0,
+      361.0,
+      1190.0,
+      707.0
+    ],
+    "mask_area": 221901,
+    "centroid_y": 574,
+    "object_x": 0.023,
+    "object_y": 0.136,
+    "target_z": 0.508,
+    "near_distance": null,
+    "floor_depth_delta": -0.162
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      436.0,
+      2.0,
+      704.0,
+      174.0
+    ],
+    "mask_area": 27183,
+    "centroid_y": 58,
+    "object_x": -0.208,
+    "object_y": -0.915,
+    "target_z": 2.228,
+    "near_distance": null,
+    "floor_depth_delta": 0.039
+  },
+  {
+    "object_id": 6,
+    "bbox_2d": [
+      0.0,
+      2.0,
+      249.0,
+      545.0
+    ],
+    "mask_area": 53803,
+    "centroid_y": 142,
+    "object_x": -0.827,
+    "object_y": -0.349,
+    "target_z": 1.162,
+    "near_distance": null,
+    "floor_depth_delta": 0.01
+  }
+]
+
+[run 002 / sample 17]
+timestamp: 2026-07-10T20:10:13.800+09:00
+frame_count: 85
+object_count: 6
+vlm_inference_seconds: 1.319493
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 물병부터 치우고, 그 다음 오른쪽의 리모컨을 정리한 후, 마지막으로 가방을 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      250.0,
+      652.0,
+      511.0
+    ],
+    "mask_area": 20108,
+    "centroid_y": 384,
+    "object_x": -0.029,
+    "object_y": 0.011,
+    "target_z": 0.577,
+    "near_distance": null,
+    "floor_depth_delta": -0.025
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      665.0,
+      75.0,
+      1061.0,
+      430.0
+    ],
+    "mask_area": 99043,
+    "centroid_y": 255,
+    "object_x": 0.326,
+    "object_y": -0.168,
+    "target_z": 1.109,
+    "near_distance": null,
+    "floor_depth_delta": -0.489
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      262.0,
+      362.0,
+      468.0,
+      547.0
+    ],
+    "mask_area": 22531,
+    "centroid_y": 447,
+    "object_x": -0.182,
+    "object_y": 0.051,
+    "target_z": 0.504,
+    "near_distance": null,
+    "floor_depth_delta": 0.031
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      441.0,
+      785.0,
+      643.0
+    ],
+    "mask_area": 11979,
+    "centroid_y": 544,
+    "object_x": 0.072,
+    "object_y": 0.121,
+    "target_z": 0.528,
+    "near_distance": null,
+    "floor_depth_delta": -0.097
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      141.0,
+      360.0,
+      1187.0,
+      707.0
+    ],
+    "mask_area": 222011,
+    "centroid_y": 574,
+    "object_x": 0.024,
+    "object_y": 0.138,
+    "target_z": 0.513,
+    "near_distance": null,
+    "floor_depth_delta": -0.141
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      438.0,
+      2.0,
+      703.0,
+      173.0
+    ],
+    "mask_area": 27198,
+    "centroid_y": 57,
+    "object_x": -0.21,
+    "object_y": -0.929,
+    "target_z": 2.254,
+    "near_distance": null,
+    "floor_depth_delta": 0.043
+  }
+]
+
+[run 002 / sample 18]
+timestamp: 2026-07-10T20:10:21.108+09:00
+frame_count: 90
+object_count: 6
+vlm_inference_seconds: 1.264201
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 물병을 정리한 후, 리모컨을 치우고 마지막으로 가방을 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      250.0,
+      652.0,
+      511.0
+    ],
+    "mask_area": 20124,
+    "centroid_y": 384,
+    "object_x": -0.029,
+    "object_y": 0.01,
+    "target_z": 0.572,
+    "near_distance": null,
+    "floor_depth_delta": -0.027
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      664.0,
+      75.0,
+      1061.0,
+      430.0
+    ],
+    "mask_area": 99112,
+    "centroid_y": 255,
+    "object_x": 0.321,
+    "object_y": -0.166,
+    "target_z": 1.094,
+    "near_distance": null,
+    "floor_depth_delta": -0.478
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      262.0,
+      362.0,
+      468.0,
+      547.0
+    ],
+    "mask_area": 21372,
+    "centroid_y": 447,
+    "object_x": -0.18,
+    "object_y": 0.051,
+    "target_z": 0.499,
+    "near_distance": null,
+    "floor_depth_delta": 0.028
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      441.0,
+      785.0,
+      643.0
+    ],
+    "mask_area": 12090,
+    "centroid_y": 544,
+    "object_x": 0.072,
+    "object_y": 0.12,
+    "target_z": 0.524,
+    "near_distance": null,
+    "floor_depth_delta": -0.098
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      141.0,
+      360.0,
+      1187.0,
+      707.0
+    ],
+    "mask_area": 221896,
+    "centroid_y": 574,
+    "object_x": 0.023,
+    "object_y": 0.136,
+    "target_z": 0.507,
+    "near_distance": null,
+    "floor_depth_delta": -0.26
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      442.0,
+      2.0,
+      704.0,
+      173.0
+    ],
+    "mask_area": 27287,
+    "centroid_y": 57,
+    "object_x": -0.203,
+    "object_y": -0.912,
+    "target_z": 2.213,
+    "near_distance": null,
+    "floor_depth_delta": 0.057
+  }
+]
+
+[run 002 / sample 19]
+timestamp: 2026-07-10T20:10:28.545+09:00
+frame_count: 95
+object_count: 6
+vlm_inference_seconds: 1.348223
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 물병을 정리한 후, 마지막으로 리모컨을 치워주세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      664.0,
+      76.0,
+      1061.0,
+      430.0
+    ],
+    "mask_area": 99087,
+    "centroid_y": 255,
+    "object_x": 0.322,
+    "object_y": -0.166,
+    "target_z": 1.096,
+    "near_distance": null,
+    "floor_depth_delta": -0.477
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      546.0,
+      250.0,
+      652.0,
+      511.0
+    ],
+    "mask_area": 20103,
+    "centroid_y": 384,
+    "object_x": -0.029,
+    "object_y": 0.011,
+    "target_z": 0.578,
+    "near_distance": null,
+    "floor_depth_delta": -0.027
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      262.0,
+      361.0,
+      468.0,
+      547.0
+    ],
+    "mask_area": 22891,
+    "centroid_y": 446,
+    "object_x": -0.182,
+    "object_y": 0.05,
+    "target_z": 0.505,
+    "near_distance": null,
+    "floor_depth_delta": 0.028
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      440.0,
+      785.0,
+      643.0
+    ],
+    "mask_area": 12156,
+    "centroid_y": 544,
+    "object_x": 0.072,
+    "object_y": 0.121,
+    "target_z": 0.527,
+    "near_distance": null,
+    "floor_depth_delta": -0.097
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      142.0,
+      359.0,
+      1190.0,
+      708.0
+    ],
+    "mask_area": 221941,
+    "centroid_y": 574,
+    "object_x": 0.024,
+    "object_y": 0.137,
+    "target_z": 0.512,
+    "near_distance": null,
+    "floor_depth_delta": -0.219
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      440.0,
+      2.0,
+      704.0,
+      173.0
+    ],
+    "mask_area": 27400,
+    "centroid_y": 58,
+    "object_x": -0.205,
+    "object_y": -0.916,
+    "target_z": 2.229,
+    "near_distance": null,
+    "floor_depth_delta": 0.041
+  }
+]
+
+[run 002 / sample 20]
+timestamp: 2026-07-10T20:10:35.915+09:00
+frame_count: 100
+object_count: 7
+vlm_inference_seconds: 1.265298
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 물병을 정리한 후, 마지막으로 리모컨을 치우세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      250.0,
+      652.0,
+      511.0
+    ],
+    "mask_area": 20157,
+    "centroid_y": 384,
+    "object_x": -0.028,
+    "object_y": 0.01,
+    "target_z": 0.567,
+    "near_distance": null,
+    "floor_depth_delta": -0.024
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      664.0,
+      76.0,
+      1061.0,
+      430.0
+    ],
+    "mask_area": 99159,
+    "centroid_y": 255,
+    "object_x": 0.324,
+    "object_y": -0.167,
+    "target_z": 1.104,
+    "near_distance": null,
+    "floor_depth_delta": -0.491
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      262.0,
+      361.0,
+      468.0,
+      547.0
+    ],
+    "mask_area": 22594,
+    "centroid_y": 446,
+    "object_x": -0.181,
+    "object_y": 0.05,
+    "target_z": 0.501,
+    "near_distance": null,
+    "floor_depth_delta": 0.026
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      440.0,
+      785.0,
+      643.0
+    ],
+    "mask_area": 11961,
+    "centroid_y": 543,
+    "object_x": 0.072,
+    "object_y": 0.119,
+    "target_z": 0.522,
+    "near_distance": null,
+    "floor_depth_delta": -0.097
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      142.0,
+      359.0,
+      1185.0,
+      707.0
+    ],
+    "mask_area": 222339,
+    "centroid_y": 574,
+    "object_x": 0.023,
+    "object_y": 0.136,
+    "target_z": 0.506,
+    "near_distance": null,
+    "floor_depth_delta": -0.261
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      0.0,
+      2.0,
+      246.0,
+      546.0
+    ],
+    "mask_area": 53771,
+    "centroid_y": 142,
+    "object_x": -0.844,
+    "object_y": -0.355,
+    "target_z": 1.183,
+    "near_distance": null,
+    "floor_depth_delta": -0.018
+  },
+  {
+    "object_id": 6,
+    "bbox_2d": [
+      439.0,
+      1.0,
+      703.0,
+      173.0
+    ],
+    "mask_area": 27264,
+    "centroid_y": 57,
+    "object_x": -0.207,
+    "object_y": -0.927,
+    "target_z": 2.25,
+    "near_distance": null,
+    "floor_depth_delta": 0.032
+  }
+]
+
+[run 002 / sample 21]
+timestamp: 2026-07-10T20:10:43.595+09:00
+frame_count: 105
+object_count: 6
+vlm_inference_seconds: 1.417318
+cleaning_sequence_sentence: 가까운 오른쪽 앞쪽의 물병부터 치우고, 그 다음 왼쪽의 컵을 정리한 후, 리모컨을 치우고 마지막으로 가방을 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      250.0,
+      651.0,
+      512.0
+    ],
+    "mask_area": 20095,
+    "centroid_y": 384,
+    "object_x": -0.028,
+    "object_y": 0.01,
+    "target_z": 0.569,
+    "near_distance": null,
+    "floor_depth_delta": -0.025
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      664.0,
+      75.0,
+      1061.0,
+      430.0
+    ],
+    "mask_area": 99279,
+    "centroid_y": 254,
+    "object_x": 0.325,
+    "object_y": -0.169,
+    "target_z": 1.106,
+    "near_distance": null,
+    "floor_depth_delta": -0.492
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      262.0,
+      361.0,
+      468.0,
+      547.0
+    ],
+    "mask_area": 23637,
+    "centroid_y": 446,
+    "object_x": -0.181,
+    "object_y": 0.05,
+    "target_z": 0.502,
+    "near_distance": null,
+    "floor_depth_delta": 0.026
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      440.0,
+      785.0,
+      643.0
+    ],
+    "mask_area": 12142,
+    "centroid_y": 544,
+    "object_x": 0.072,
+    "object_y": 0.119,
+    "target_z": 0.522,
+    "near_distance": null,
+    "floor_depth_delta": -0.098
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      143.0,
+      359.0,
+      1191.0,
+      707.0
+    ],
+    "mask_area": 222239,
+    "centroid_y": 574,
+    "object_x": 0.023,
+    "object_y": 0.136,
+    "target_z": 0.507,
+    "near_distance": null,
+    "floor_depth_delta": -0.243
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      440.0,
+      1.0,
+      703.0,
+      173.0
+    ],
+    "mask_area": 26868,
+    "centroid_y": 57,
+    "object_x": -0.206,
+    "object_y": -0.921,
+    "target_z": 2.235,
+    "near_distance": null,
+    "floor_depth_delta": 0.036
+  }
+]
+
+[run 002 / sample 22]
+timestamp: 2026-07-10T20:10:51.096+09:00
+frame_count: 110
+object_count: 6
+vlm_inference_seconds: 1.384461
+cleaning_sequence_sentence: 가까운 왼쪽의 컵부터 치우고, 그 다음 오른쪽의 물병을 정리한 후, 리모컨을 치우고 마지막으로 가방을 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      665.0,
+      75.0,
+      1061.0,
+      429.0
+    ],
+    "mask_area": 99188,
+    "centroid_y": 254,
+    "object_x": 0.322,
+    "object_y": -0.168,
+    "target_z": 1.098,
+    "near_distance": null,
+    "floor_depth_delta": -0.48
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      546.0,
+      250.0,
+      651.0,
+      513.0
+    ],
+    "mask_area": 20083,
+    "centroid_y": 383,
+    "object_x": -0.029,
+    "object_y": 0.01,
+    "target_z": 0.573,
+    "near_distance": null,
+    "floor_depth_delta": -0.027
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      262.0,
+      361.0,
+      469.0,
+      547.0
+    ],
+    "mask_area": 22650,
+    "centroid_y": 446,
+    "object_x": -0.183,
+    "object_y": 0.051,
+    "target_z": 0.507,
+    "near_distance": null,
+    "floor_depth_delta": 0.026
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      440.0,
+      785.0,
+      643.0
+    ],
+    "mask_area": 12175,
+    "centroid_y": 543,
+    "object_x": 0.072,
+    "object_y": 0.119,
+    "target_z": 0.525,
+    "near_distance": null,
+    "floor_depth_delta": -0.096
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      144.0,
+      358.0,
+      1193.0,
+      707.0
+    ],
+    "mask_area": 222710,
+    "centroid_y": 574,
+    "object_x": 0.024,
+    "object_y": 0.137,
+    "target_z": 0.511,
+    "near_distance": null,
+    "floor_depth_delta": -0.177
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      441.0,
+      2.0,
+      703.0,
+      173.0
+    ],
+    "mask_area": 27196,
+    "centroid_y": 57,
+    "object_x": -0.204,
+    "object_y": -0.912,
+    "target_z": 2.212,
+    "near_distance": null,
+    "floor_depth_delta": 0.038
+  }
+]
+
+[run 002 / sample 23]
+timestamp: 2026-07-10T20:10:58.341+09:00
+frame_count: 115
+object_count: 6
+vlm_inference_seconds: 1.116577
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 물병을 정리한 후, 마지막으로 리모컨을 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      250.0,
+      651.0,
+      513.0
+    ],
+    "mask_area": 20078,
+    "centroid_y": 383,
+    "object_x": -0.029,
+    "object_y": 0.01,
+    "target_z": 0.576,
+    "near_distance": null,
+    "floor_depth_delta": -0.027
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      665.0,
+      75.0,
+      1061.0,
+      430.0
+    ],
+    "mask_area": 99272,
+    "centroid_y": 254,
+    "object_x": 0.325,
+    "object_y": -0.169,
+    "target_z": 1.105,
+    "near_distance": null,
+    "floor_depth_delta": -0.484
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      262.0,
+      360.0,
+      468.0,
+      547.0
+    ],
+    "mask_area": 23629,
+    "centroid_y": 446,
+    "object_x": -0.182,
+    "object_y": 0.05,
+    "target_z": 0.504,
+    "near_distance": null,
+    "floor_depth_delta": 0.031
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      440.0,
+      785.0,
+      643.0
+    ],
+    "mask_area": 12172,
+    "centroid_y": 543,
+    "object_x": 0.072,
+    "object_y": 0.12,
+    "target_z": 0.529,
+    "near_distance": null,
+    "floor_depth_delta": -0.096
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      143.0,
+      358.0,
+      1189.0,
+      708.0
+    ],
+    "mask_area": 222815,
+    "centroid_y": 574,
+    "object_x": 0.024,
+    "object_y": 0.138,
+    "target_z": 0.513,
+    "near_distance": null,
+    "floor_depth_delta": -0.204
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      437.0,
+      1.0,
+      703.0,
+      173.0
+    ],
+    "mask_area": 27193,
+    "centroid_y": 57,
+    "object_x": -0.209,
+    "object_y": -0.921,
+    "target_z": 2.235,
+    "near_distance": null,
+    "floor_depth_delta": 0.029
+  }
+]
+
+[run 002 / sample 24]
+timestamp: 2026-07-10T20:11:05.712+09:00
+frame_count: 120
+object_count: 5
+vlm_inference_seconds: 1.274724
+cleaning_sequence_sentence: 먼저 가까운 왼쪽의 컵을 치우고, 그 다음 오른쪽의 물병을 정리한 후, 리모컨을 치우고 마지막으로 가방을 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      665.0,
+      75.0,
+      1061.0,
+      429.0
+    ],
+    "mask_area": 99060,
+    "centroid_y": 254,
+    "object_x": 0.322,
+    "object_y": -0.168,
+    "target_z": 1.098,
+    "near_distance": null,
+    "floor_depth_delta": -0.475
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      546.0,
+      250.0,
+      651.0,
+      512.0
+    ],
+    "mask_area": 20089,
+    "centroid_y": 383,
+    "object_x": -0.029,
+    "object_y": 0.01,
+    "target_z": 0.572,
+    "near_distance": null,
+    "floor_depth_delta": -0.023
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      262.0,
+      361.0,
+      468.0,
+      547.0
+    ],
+    "mask_area": 22983,
+    "centroid_y": 446,
+    "object_x": -0.182,
+    "object_y": 0.05,
+    "target_z": 0.504,
+    "near_distance": null,
+    "floor_depth_delta": 0.03
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      440.0,
+      785.0,
+      643.0
+    ],
+    "mask_area": 12075,
+    "centroid_y": 543,
+    "object_x": 0.072,
+    "object_y": 0.12,
+    "target_z": 0.529,
+    "near_distance": null,
+    "floor_depth_delta": -0.098
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      144.0,
+      358.0,
+      1176.0,
+      707.0
+    ],
+    "mask_area": 222944,
+    "centroid_y": 573,
+    "object_x": 0.024,
+    "object_y": 0.137,
+    "target_z": 0.513,
+    "near_distance": null,
+    "floor_depth_delta": -0.181
+  }
+]
+
+[run 002 / sample 25]
+timestamp: 2026-07-10T20:11:07.066+09:00
+frame_count: 125
+object_count: 5
+vlm_inference_seconds: 1.166571
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 물병을 정리한 후, 리모컨을 치우고 마지막으로 가방을 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      664.0,
+      74.0,
+      1061.0,
+      429.0
+    ],
+    "mask_area": 99060,
+    "centroid_y": 254,
+    "object_x": 0.322,
+    "object_y": -0.168,
+    "target_z": 1.098,
+    "near_distance": null,
+    "floor_depth_delta": -0.475
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      546.0,
+      250.0,
+      651.0,
+      513.0
+    ],
+    "mask_area": 20089,
+    "centroid_y": 383,
+    "object_x": -0.029,
+    "object_y": 0.01,
+    "target_z": 0.572,
+    "near_distance": null,
+    "floor_depth_delta": -0.024
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      262.0,
+      360.0,
+      468.0,
+      547.0
+    ],
+    "mask_area": 22983,
+    "centroid_y": 446,
+    "object_x": -0.182,
+    "object_y": 0.05,
+    "target_z": 0.504,
+    "near_distance": null,
+    "floor_depth_delta": 0.03
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      439.0,
+      784.0,
+      642.0
+    ],
+    "mask_area": 12075,
+    "centroid_y": 543,
+    "object_x": 0.072,
+    "object_y": 0.12,
+    "target_z": 0.529,
+    "near_distance": null,
+    "floor_depth_delta": -0.097
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      142.0,
+      359.0,
+      1188.0,
+      707.0
+    ],
+    "mask_area": 222944,
+    "centroid_y": 573,
+    "object_x": 0.024,
+    "object_y": 0.137,
+    "target_z": 0.513,
+    "near_distance": null,
+    "floor_depth_delta": -0.181
+  }
+]
+
+[run 002 / sample 26]
+timestamp: 2026-07-10T20:11:14.419+09:00
+frame_count: 130
+object_count: 6
+vlm_inference_seconds: 1.213262
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 물병을 정리한 후, 마지막으로 리모컨을 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      250.0,
+      651.0,
+      513.0
+    ],
+    "mask_area": 20063,
+    "centroid_y": 383,
+    "object_x": -0.029,
+    "object_y": 0.01,
+    "target_z": 0.575,
+    "near_distance": null,
+    "floor_depth_delta": -0.028
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      665.0,
+      74.0,
+      1060.0,
+      429.0
+    ],
+    "mask_area": 99074,
+    "centroid_y": 254,
+    "object_x": 0.324,
+    "object_y": -0.168,
+    "target_z": 1.1,
+    "near_distance": null,
+    "floor_depth_delta": -0.48
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      262.0,
+      360.0,
+      468.0,
+      547.0
+    ],
+    "mask_area": 23335,
+    "centroid_y": 446,
+    "object_x": -0.182,
+    "object_y": 0.05,
+    "target_z": 0.504,
+    "near_distance": null,
+    "floor_depth_delta": 0.029
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      440.0,
+      784.0,
+      642.0
+    ],
+    "mask_area": 12075,
+    "centroid_y": 543,
+    "object_x": 0.072,
+    "object_y": 0.12,
+    "target_z": 0.527,
+    "near_distance": null,
+    "floor_depth_delta": -0.097
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      144.0,
+      359.0,
+      1178.0,
+      707.0
+    ],
+    "mask_area": 222943,
+    "centroid_y": 573,
+    "object_x": 0.024,
+    "object_y": 0.137,
+    "target_z": 0.512,
+    "near_distance": null,
+    "floor_depth_delta": -0.211
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      0.0,
+      2.0,
+      245.0,
+      545.0
+    ],
+    "mask_area": 53918,
+    "centroid_y": 143,
+    "object_x": -0.845,
+    "object_y": -0.354,
+    "target_z": 1.185,
+    "near_distance": null,
+    "floor_depth_delta": -0.009
+  }
+]
+
+[run 002 / sample 27]
+timestamp: 2026-07-10T20:11:21.790+09:00
+frame_count: 135
+object_count: 6
+vlm_inference_seconds: 1.232983
+cleaning_sequence_sentence: 가까운 왼쪽 앞쪽의 컵부터 치우고, 그 다음 오른쪽의 물병을 정리한 후, 마지막으로 리모컨을 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      665.0,
+      75.0,
+      1061.0,
+      429.0
+    ],
+    "mask_area": 98898,
+    "centroid_y": 254,
+    "object_x": 0.321,
+    "object_y": -0.167,
+    "target_z": 1.091,
+    "near_distance": null,
+    "floor_depth_delta": -0.471
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      546.0,
+      250.0,
+      651.0,
+      513.0
+    ],
+    "mask_area": 20086,
+    "centroid_y": 383,
+    "object_x": -0.029,
+    "object_y": 0.01,
+    "target_z": 0.572,
+    "near_distance": null,
+    "floor_depth_delta": -0.025
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      262.0,
+      361.0,
+      468.0,
+      546.0
+    ],
+    "mask_area": 22909,
+    "centroid_y": 446,
+    "object_x": -0.182,
+    "object_y": 0.05,
+    "target_z": 0.503,
+    "near_distance": null,
+    "floor_depth_delta": 0.031
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      702.0,
+      439.0,
+      784.0,
+      642.0
+    ],
+    "mask_area": 12040,
+    "centroid_y": 543,
+    "object_x": 0.072,
+    "object_y": 0.12,
+    "target_z": 0.528,
+    "near_distance": null,
+    "floor_depth_delta": -0.095
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      143.0,
+      359.0,
+      1189.0,
+      707.0
+    ],
+    "mask_area": 222982,
+    "centroid_y": 573,
+    "object_x": 0.024,
+    "object_y": 0.137,
+    "target_z": 0.513,
+    "near_distance": null,
+    "floor_depth_delta": -0.169
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      437.0,
+      2.0,
+      703.0,
+      172.0
+    ],
+    "mask_area": 26771,
+    "centroid_y": 57,
+    "object_x": -0.209,
+    "object_y": -0.923,
+    "target_z": 2.239,
+    "near_distance": null,
+    "floor_depth_delta": 0.042
+  }
+]
+
+[run 002 / sample 28]
+timestamp: 2026-07-10T20:11:29.263+09:00
+frame_count: 140
+object_count: 6
+vlm_inference_seconds: 1.321131
+cleaning_sequence_sentence: 가까운 오른쪽 앞쪽의 물병부터 치우고, 그 다음 왼쪽의 컵을 정리한 후, 리모컨을 치우고 마지막으로 가방을 정리하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      250.0,
+      650.0,
+      513.0
+    ],
+    "mask_area": 20102,
+    "centroid_y": 383,
+    "object_x": -0.029,
+    "object_y": 0.01,
+    "target_z": 0.575,
+    "near_distance": null,
+    "floor_depth_delta": -0.026
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      664.0,
+      75.0,
+      1061.0,
+      429.0
+    ],
+    "mask_area": 99140,
+    "centroid_y": 254,
+    "object_x": 0.323,
+    "object_y": -0.168,
+    "target_z": 1.099,
+    "near_distance": null,
+    "floor_depth_delta": -0.478
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      262.0,
+      360.0,
+      468.0,
+      547.0
+    ],
+    "mask_area": 23763,
+    "centroid_y": 446,
+    "object_x": -0.182,
+    "object_y": 0.05,
+    "target_z": 0.502,
+    "near_distance": null,
+    "floor_depth_delta": 0.033
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      439.0,
+      784.0,
+      642.0
+    ],
+    "mask_area": 11992,
+    "centroid_y": 543,
+    "object_x": 0.073,
+    "object_y": 0.12,
+    "target_z": 0.529,
+    "near_distance": null,
+    "floor_depth_delta": -0.096
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      143.0,
+      358.0,
+      1183.0,
+      708.0
+    ],
+    "mask_area": 223399,
+    "centroid_y": 573,
+    "object_x": 0.024,
+    "object_y": 0.137,
+    "target_z": 0.514,
+    "near_distance": null,
+    "floor_depth_delta": -0.137
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      434.0,
+      2.0,
+      703.0,
+      173.0
+    ],
+    "mask_area": 27124,
+    "centroid_y": 57,
+    "object_x": -0.206,
+    "object_y": -0.922,
+    "target_z": 2.237,
+    "near_distance": null,
+    "floor_depth_delta": 0.035
+  }
+]
+
+[run 002 / sample 29]
+timestamp: 2026-07-10T20:11:36.506+09:00
+frame_count: 145
+object_count: 6
+vlm_inference_seconds: 1.133614
+cleaning_sequence_sentence: 가까운 오른쪽 앞쪽의 물병부터 치우고, 그 다음 컵을 정리한 후 리모컨을 치우고 마지막으로 가방을 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      664.0,
+      74.0,
+      1060.0,
+      429.0
+    ],
+    "mask_area": 99168,
+    "centroid_y": 254,
+    "object_x": 0.322,
+    "object_y": -0.167,
+    "target_z": 1.096,
+    "near_distance": null,
+    "floor_depth_delta": -0.472
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      546.0,
+      250.0,
+      650.0,
+      512.0
+    ],
+    "mask_area": 20068,
+    "centroid_y": 383,
+    "object_x": -0.029,
+    "object_y": 0.01,
+    "target_z": 0.577,
+    "near_distance": null,
+    "floor_depth_delta": -0.026
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      262.0,
+      361.0,
+      468.0,
+      546.0
+    ],
+    "mask_area": 23399,
+    "centroid_y": 446,
+    "object_x": -0.182,
+    "object_y": 0.05,
+    "target_z": 0.506,
+    "near_distance": null,
+    "floor_depth_delta": 0.031
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      439.0,
+      784.0,
+      642.0
+    ],
+    "mask_area": 12007,
+    "centroid_y": 543,
+    "object_x": 0.073,
+    "object_y": 0.121,
+    "target_z": 0.53,
+    "near_distance": null,
+    "floor_depth_delta": -0.095
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      143.0,
+      359.0,
+      1170.0,
+      707.0
+    ],
+    "mask_area": 223111,
+    "centroid_y": 573,
+    "object_x": 0.024,
+    "object_y": 0.138,
+    "target_z": 0.515,
+    "near_distance": null,
+    "floor_depth_delta": -0.147
+  },
+  {
+    "object_id": 5,
+    "bbox_2d": [
+      440.0,
+      2.0,
+      703.0,
+      172.0
+    ],
+    "mask_area": 27136,
+    "centroid_y": 57,
+    "object_x": -0.207,
+    "object_y": -0.926,
+    "target_z": 2.247,
+    "near_distance": null,
+    "floor_depth_delta": 0.034
+  }
+]
+
+[run 002 / sample 30]
+timestamp: 2026-07-10T20:11:43.911+09:00
+frame_count: 150
+object_count: 5
+vlm_inference_seconds: 1.279825
+cleaning_sequence_sentence: 가까운 왼쪽의 컵부터 치우고, 그 다음 오른쪽의 물병을 정리한 후, 마지막으로 리모컨을 정돈하세요.
+objects:
+[
+  {
+    "object_id": 0,
+    "bbox_2d": [
+      546.0,
+      250.0,
+      650.0,
+      512.0
+    ],
+    "mask_area": 20064,
+    "centroid_y": 383,
+    "object_x": -0.029,
+    "object_y": 0.01,
+    "target_z": 0.576,
+    "near_distance": null,
+    "floor_depth_delta": -0.027
+  },
+  {
+    "object_id": 1,
+    "bbox_2d": [
+      664.0,
+      75.0,
+      1061.0,
+      429.0
+    ],
+    "mask_area": 99087,
+    "centroid_y": 253,
+    "object_x": 0.32,
+    "object_y": -0.168,
+    "target_z": 1.091,
+    "near_distance": null,
+    "floor_depth_delta": -0.471
+  },
+  {
+    "object_id": 2,
+    "bbox_2d": [
+      262.0,
+      360.0,
+      468.0,
+      546.0
+    ],
+    "mask_area": 23154,
+    "centroid_y": 445,
+    "object_x": -0.181,
+    "object_y": 0.05,
+    "target_z": 0.503,
+    "near_distance": null,
+    "floor_depth_delta": 0.031
+  },
+  {
+    "object_id": 3,
+    "bbox_2d": [
+      701.0,
+      439.0,
+      784.0,
+      642.0
+    ],
+    "mask_area": 12181,
+    "centroid_y": 542,
+    "object_x": 0.072,
+    "object_y": 0.12,
+    "target_z": 0.529,
+    "near_distance": null,
+    "floor_depth_delta": -0.097
+  },
+  {
+    "object_id": 4,
+    "bbox_2d": [
+      143.0,
+      359.0,
+      1188.0,
+      708.0
+    ],
+    "mask_area": 223370,
+    "centroid_y": 573,
+    "object_x": 0.024,
+    "object_y": 0.137,
+    "target_z": 0.512,
+    "near_distance": null,
+    "floor_depth_delta": -0.18
+  }
+]
+

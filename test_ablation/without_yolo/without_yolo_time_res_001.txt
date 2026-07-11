@@ -1,0 +1,198 @@
+Ablation: without YOLO full pipeline
+run_id: 001
+started_at: 2026-07-10T18:35:51.449+09:00
+target_samples: 30
+condition: YOLO removed. Full-frame pseudo bbox is used instead.
+
+[time results]
+[sample 01]
+timestamp: 2026-07-10T18:36:07.233+09:00
+frame_count: 5
+object_count: 1
+total_pipeline_seconds: 11.556903
+
+[sample 02]
+timestamp: 2026-07-10T18:36:16.100+09:00
+frame_count: 10
+object_count: 1
+total_pipeline_seconds: 8.784946
+
+[sample 03]
+timestamp: 2026-07-10T18:36:23.977+09:00
+frame_count: 15
+object_count: 1
+total_pipeline_seconds: 7.805189
+
+[sample 04]
+timestamp: 2026-07-10T18:36:31.870+09:00
+frame_count: 20
+object_count: 1
+total_pipeline_seconds: 7.799426
+
+[sample 05]
+timestamp: 2026-07-10T18:36:39.746+09:00
+frame_count: 25
+object_count: 1
+total_pipeline_seconds: 7.808367
+
+[sample 06]
+timestamp: 2026-07-10T18:36:47.633+09:00
+frame_count: 30
+object_count: 1
+total_pipeline_seconds: 7.821580
+
+[sample 07]
+timestamp: 2026-07-10T18:36:55.104+09:00
+frame_count: 35
+object_count: 1
+total_pipeline_seconds: 7.377675
+
+[sample 08]
+timestamp: 2026-07-10T18:37:02.785+09:00
+frame_count: 40
+object_count: 1
+total_pipeline_seconds: 7.580295
+
+[sample 09]
+timestamp: 2026-07-10T18:37:11.081+09:00
+frame_count: 45
+object_count: 1
+total_pipeline_seconds: 8.203765
+
+[sample 10]
+timestamp: 2026-07-10T18:37:20.295+09:00
+frame_count: 50
+object_count: 1
+total_pipeline_seconds: 9.146185
+
+[sample 11]
+timestamp: 2026-07-10T18:37:28.075+09:00
+frame_count: 55
+object_count: 1
+total_pipeline_seconds: 7.655919
+
+[sample 12]
+timestamp: 2026-07-10T18:37:35.865+09:00
+frame_count: 60
+object_count: 1
+total_pipeline_seconds: 7.674608
+
+[sample 13]
+timestamp: 2026-07-10T18:37:43.645+09:00
+frame_count: 65
+object_count: 1
+total_pipeline_seconds: 7.679165
+
+[sample 14]
+timestamp: 2026-07-10T18:37:51.496+09:00
+frame_count: 70
+object_count: 1
+total_pipeline_seconds: 7.787775
+
+[sample 15]
+timestamp: 2026-07-10T18:38:02.275+09:00
+frame_count: 75
+object_count: 1
+total_pipeline_seconds: 10.702596
+
+[sample 16]
+timestamp: 2026-07-10T18:38:10.370+09:00
+frame_count: 80
+object_count: 1
+total_pipeline_seconds: 8.031928
+
+[sample 17]
+timestamp: 2026-07-10T18:38:19.895+09:00
+frame_count: 85
+object_count: 1
+total_pipeline_seconds: 9.386759
+
+[sample 18]
+timestamp: 2026-07-10T18:38:27.749+09:00
+frame_count: 90
+object_count: 1
+total_pipeline_seconds: 7.772144
+
+[sample 19]
+timestamp: 2026-07-10T18:38:35.872+09:00
+frame_count: 95
+object_count: 1
+total_pipeline_seconds: 8.024980
+
+[sample 20]
+timestamp: 2026-07-10T18:38:43.551+09:00
+frame_count: 100
+object_count: 1
+total_pipeline_seconds: 7.625287
+
+[sample 21]
+timestamp: 2026-07-10T18:38:52.152+09:00
+frame_count: 105
+object_count: 1
+total_pipeline_seconds: 8.456354
+
+[sample 22]
+timestamp: 2026-07-10T18:38:59.627+09:00
+frame_count: 110
+object_count: 1
+total_pipeline_seconds: 7.365895
+
+[sample 23]
+timestamp: 2026-07-10T18:39:07.054+09:00
+frame_count: 115
+object_count: 1
+total_pipeline_seconds: 7.355714
+
+[sample 24]
+timestamp: 2026-07-10T18:39:14.886+09:00
+frame_count: 120
+object_count: 1
+total_pipeline_seconds: 7.708173
+
+[sample 25]
+timestamp: 2026-07-10T18:39:22.392+09:00
+frame_count: 125
+object_count: 1
+total_pipeline_seconds: 7.443474
+
+[sample 26]
+timestamp: 2026-07-10T18:39:30.258+09:00
+frame_count: 130
+object_count: 1
+total_pipeline_seconds: 7.729674
+
+[sample 27]
+timestamp: 2026-07-10T18:39:37.925+09:00
+frame_count: 135
+object_count: 1
+total_pipeline_seconds: 7.531584
+
+[sample 28]
+timestamp: 2026-07-10T18:39:45.598+09:00
+frame_count: 140
+object_count: 1
+total_pipeline_seconds: 7.569644
+
+[sample 29]
+timestamp: 2026-07-10T18:39:53.291+09:00
+frame_count: 145
+object_count: 1
+total_pipeline_seconds: 7.576256
+
+[sample 30]
+timestamp: 2026-07-10T18:40:00.993+09:00
+frame_count: 150
+object_count: 1
+total_pipeline_seconds: 7.618070
+
+[summary]
+mean: 8.086011
+std: 0.967186
+median: 7.750909
+q1: 7.589739
+q3: 8.030191
+iqr: 0.440452
+outlier_lower_bound: 6.929061
+outlier_upper_bound: 8.690869
+outlier_count: 5
+outliers: 1:11.556903; 2:8.784946; 10:9.146185; 15:10.702596; 17:9.386759
